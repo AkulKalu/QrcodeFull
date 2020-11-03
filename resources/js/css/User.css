@@ -1,0 +1,29 @@
+.CPUserCtrl {
+    font-size: 2vh;
+    font-weight: 600;
+    background-color: rgba(64, 224, 208, 0.726);
+    height: 75%;
+    overflow: hidden;
+}
+.CPUserCont {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    margin: 0 1.5rem;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s;
+}
+.CPUserIndicator {
+    border-radius: 50%;
+    background-color: yellowgreen;
+    margin-left: 0.8rem;
+    height: 2vh;
+    width: 2vh;
+}
+.CPUserCtrl:hover .CPUserCont {
+    transform: translateY(-100%);
+}
+.CPUserCtrl span {
+    cursor: pointer;
+}

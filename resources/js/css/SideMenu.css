@@ -1,0 +1,45 @@
+.SMCont {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20vh;
+}
+.SMbutton {
+    display: block;
+    cursor: pointer;
+    width: 85%;
+    height: 2rem;
+    border: 1px solid grey;
+    border-left: none;
+    color: honeydew;
+    background: rgb(90, 94, 84);
+    margin-top: 0.8rem;
+    border-radius: 0 15px 15px 0;
+    transform-origin: left;
+    outline: none;
+    transition: 0.4s;
+}
+.SMActive {
+    width: 90%;
+    background: rgb(155, 123, 36);
+}
+.SMbutton:hover {
+    width: 90%;
+    border-color: gold;
+    color: gold;
+}
+.SMOption {
+    display: inline-block;
+    margin-top: 1px;
+    background: rgb(108, 114, 99);
+    border-radius: 0 10px 10px 0;
+    width: 75%;
+    text-align: center;
+    color: honeydew;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.SMOption:hover {
+    width: 80% ;
+    border-color: gold;
+    color: gold;
+}

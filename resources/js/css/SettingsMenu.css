@@ -1,0 +1,72 @@
+.SettingsMenu {
+    position: relative;
+    height: fit-content;
+    width: 50vh;
+    background-color: rgb(243, 242, 240);
+    border-radius: 5px;
+    margin: 10vh auto;
+    padding: 1rem;
+    border: 1px solid rgb(170, 166, 166);
+    box-shadow: 5px 5px 10px rgb(196, 194, 194);
+}
+.FormGroup {
+    display: flex;
+    flex-direction: column;
+}
+.SettingsMenu textarea {
+    height: 15vh;
+    outline-color: orange;
+}
+.SettingsBtn {
+    width: 20%;
+    margin: auto;
+    outline: none;
+    height: 2rem!important;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgb(100, 71, 71);
+    color: white;
+    font-weight: 700;
+    border-color: transparent;
+    transition: 0.6s;
+}
+.SettingsBtnDisabled {
+    pointer-events: none;
+    width: 20%;
+    margin: auto;
+    outline: none;
+    height: 2rem!important;
+    border-radius: 5px;
+    background: rgb(100, 71, 71);
+    color: white;
+    font-weight: 700;
+    border-color: transparent;
+    transition: 0.6s;
+    opacity: 0.5;
+}
+.SettingsBtn:hover {
+    border-color: gold;
+    color: gold;
+}
+
+.SettingsMenuLabel{
+    font-size: 1.2vh;
+    padding: 0.4rem 0;
+    font-weight: 600;
+}
+.SettingsMenu h1 {
+    position: absolute;
+    text-align: right;
+    right: 1rem;
+    top: 0;
+}
+
+
+.SettingsMenu img {
+    height: 3vh;
+    max-width: 20%;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+
