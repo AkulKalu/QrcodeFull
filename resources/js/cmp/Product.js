@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState, Fragment} from 'react';
 import '../css/Product.css';
 import QrCodeImg from '../storage/SQCLogo.svg';
+import Backdrop from './Backdrop';
+import ProductPanel from './ProductPanel';
 
 export default function Product(props) {
-    return <div onClick={props.productEdit} data-id="1" className="PDCont">
+
+    const [editProductPanel, openEditProductPanel] = useState(false);
+    console.log(editProductPanel);
+    return <Fragment>
+        <div onClick={()=>openEditProductPanel(true)} data-id="1" className="PDCont">
                     <div style={{width: '10%'}} className="PDCell PDId">{props.product.id}</div>
                     <div style={{width: '20%'}} className="PDCell PDImg">
                         <img alt="Product" src={props.product.image_url}></img>
@@ -19,5 +25,16 @@ export default function Product(props) {
                     <div style={{width: '10%'}} className="PDCell PDQrCode">
                         <img alt="Generate QrCode" src={QrCodeImg}></img>
                     </div>
+                   
             </div>
+            {editProductPanel ? 
+                         <Backdrop>
+                         <ProductPanel
+                             product={props.product}
+                             closePanel={()=> openEditProductPanel(false)}
+                          />
+                     </Backdrop> : null
+                }
+           
+    </Fragment> 
 }

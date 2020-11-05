@@ -1,140 +1,116 @@
-import React, {Component} from 'react';
-import '../css/SettingsMenu.css';
+import React, {useState} from 'react';
 import TextInput from '../cmp/TextInput';
-import SelectList from '../cmp/SelectList';
+import SelectList from './SelectList';
+import BasicPanel from './BasicPanel';
 import StripeLogo from '../storage/StripeLogo.svg';
 import PayPalLogo from '../storage/PayPal.svg';
 
-
-
-
-export default class SettingsMenu extends Component {
-    state = {
-        store: null,
-        name: '',
-        website:'',
-        stripe: {
-            publicKey: '',
-            privateKey: '',
-        },
-        payPal: {
-            clientId: '',
-            privateKey: '',
-        },
-        changed: false
-    }
-  
+export default function StoreMenu(props) {
+        const [storeData, setStoreData] = useState({...props.stores[0]})
+        const [changed, setChanged] = useState(false)
    
-    inputChangeHandler = (value, key, key2 = null) => {
-        this.setState({
-            [key] : key2 ? { [key2] :value } : value,
-            changed: true,
-        });
-    }
+        const inputChange = (value, key) => {
+            setStoreData({
+                ...storeData,
+                [key]: value,
+            });
 
-    storeSwitchHandler = e => {
-        const storeId = parseInt(e.target.value);
-        const store = this.props.stores[storeId];
-        let update = null;
-
-        if(store) {
-           update =  {
-                store: store,
-                name:  store.name ,
-                website: store.website ,
-            }
-        }else {
-            update =  {
-                store: null,
-                name:  '',
-                website: '',
-            }
+            if(!changed) setChanged(true)
         }
 
-        this.setState({
-            ...update,
-            changed: false
-        })
-    }
-
-    createStoreHandler = () => {
-        const url =  window.location.origin + '/stores';
-        const data = {
-            name: this.state.name,
-            website:this.state.website,
+        const storeSwitch = e => {
+            const storeInd = parseInt(e.target.value);
+            const store = props.stores[storeInd];
+            setStoreData({...store});
+            if(changed) setChanged(false) 
         }
 
-        window.axios.post(url, data)
-        .then( res => {
-            this.props.closeSwitch();
-            this.props.updateStores(res.data.stores, res.data.created)
-        })
-        .catch( err => console.log(err));
-    }
+        const createStore = () => {
+            const url =  window.location.origin + '/stores';
+            //Clean object of ids
+            const data = {}
+            Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);
 
-    editStoreHandler = () => {
-        const url =  window.location.origin + '/stores' + `/${this.state.store.id}`;
-        const data = {
-            _method: 'PATCH',
-            name: this.state.name,
-            website:this.state.website,
-        }
-
-        window.axios.post(url, data)
-        .then( res => {
-            this.props.closeSwitch();
-            this.props.updateStores(res.data.stores, res.data.updated);
-        })
-        .catch( err => console.log(err));
-    }
-    
-    removeStoreHandler = () => {
-        const confirmed = confirm('Deleting the stor will also remove all its product.Are you sure?');
-        if(confirmed) {
-            const url = window.location.origin + '/stores' + `/${this.state.store.id}`;
-            const data = {
-                _method: 'DELETE'
-            }
             window.axios.post(url, data)
-            .then( res =>{
-               this.props.updateStores(res.data, res.data[Object.keys(res.data)[0]])
-               this.setState({
-                   store: null
-               })
+            .then( res => {
+                console.log(res);
+                props.closePanel();
+                props.updateStores(res.data.stores, res.data.created);
             })
             .catch( err => console.log(err));
         }
-    }
-    
-    render() {
-        let stores = null;
-        if(this.props.stores) {
-            stores = Object.keys(this.props.stores).map(
-                (storeKey, i) => {
-                    const store = this.props.stores[storeKey];
-                        return <option  key={`storeOption${i}`} value={store.id}>{store.name}</option>
+
+        const editStore = () => {
+            const url =  window.location.origin + '/stores' + `/${storeData.id}`;
+            const data = {
+                _method: 'PATCH',
+            }
+            Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);
+
+            window.axios.post(url, data)
+            .then( res => {
+                props.closePanel();
+                props.updateStores(res.data.stores, res.data.updated);
+            })
+            .catch( err => console.log(err));
+        }
+        
+        const removeStore = () => {
+            const confirmed = confirm('Deleting the store will also remove all its product. Are you sure?');
+            if(confirmed) {
+                const url = window.location.origin + '/stores' + `/${storeData.id}`;
+                const data = {
+                    _method: 'DELETE'
+                }
+                window.axios.post(url, data)
+                .then( res =>{
+                    props.closePanel();
+                    props.updateStores(res.data, res.data[0]);
+                })
+                .catch( err => console.log(err));
+            }
+        }
+       
+        const  stores = props.stores.map( (store, i) => {
+                if(i>0) {
+                    return <option  key={`storeOption${i}`} value={i}>{store.name}</option>
+                    }
                 }
             );
-        }
+       
+        let panelButtons = [
+            {
+                name: storeData['id'] ? 'EDIT': 'CREATE' ,
+                onClick : storeData['id'] ? editStore  : createStore,
+            },
+            {
+                name: "REMOVE",
+                onClick : removeStore,
+                disabled: !storeData['id'],
+                className: !storeData['id'] ?"SettingsBtnDisabled": "SettingsBtn" 
+            },
+            {
+                name: 'CLOSE',
+                onClick : props.closePanel
+            },
+        ]
 
-        return <div className="SettingsMenu">
-                <form>
-                <h1>Setup Store</h1>
+        return <BasicPanel name="Setup Store" buttons={panelButtons}>
                     <SelectList 
-                        select = {this.storeSwitchHandler}  
+                        select = {storeSwitch}  
                         storeMenu 
                         GroupStyle={{paddingBottom: '1rem'}} 
                         options={stores} 
                     />
                     <TextInput  
-                        onChange = {e => this.inputChangeHandler(e.target.value, 'name')} 
+                        onChange = {e => inputChange(e.target.value, 'name')} 
                         name="Name"
-                        value={this.state.name} 
+                        value={storeData.name} 
                     />
                     <TextInput  
-                        onChange = {e => this.inputChangeHandler(e.target.value, 'website')} 
+                        onChange = {e => inputChange(e.target.value, 'website')} 
                         name="Website" 
-                        value={this.state.website}
+                        value={storeData.website}
                     />
 
                     <div style={{paddingTop:'1rem'}}>
@@ -142,14 +118,14 @@ export default class SettingsMenu extends Component {
                             <img alt="stripe" src={StripeLogo}></img>
                         </div>
                         <TextInput
-                            onChange = {e => this.inputChangeHandler(e.target.value, 'stripe', 'publicKey')}
+                            onChange = {e => inputChange(e.target.value, 'stripe_public_key')}
                             name = "Public Key"
-                            value={this.state.stripe.publicKey} 
+                            value={storeData.stripe_public_key} 
                         />
                          <TextInput
-                            onChange = {e => this.inputChangeHandler(e.target.value, 'stripe', 'privateKey')}
+                            onChange = {e => inputChange(e.target.value, 'stripe_private_key')}
                             name = "Private Key"
-                            value={this.state.stripe.privateKey} 
+                            value={storeData.stripe_private_key} 
                         />
                     </div>
                     <div style={{paddingTop:'1rem'}}>
@@ -157,36 +133,16 @@ export default class SettingsMenu extends Component {
                             <img alt="PayPal" src={PayPalLogo}></img>
                         </div>
                         <TextInput
-                            onChange = {e => this.inputChangeHandler(e.target.value, 'payPal', 'clientId')}
+                            onChange = {e => inputChange(e.target.value, 'paypal_client_id')}
                             name = "Client Id"
-                            value={this.state.payPal.clientId} 
+                            value={storeData.paypal_client_id} 
                         />
                          <TextInput
-                            onChange = {e => this.inputChangeHandler(e.target.value, 'payPal', 'privateKey')}
+                            onChange = {e => inputChange(e.target.value, 'paypal_private_key')}
                             name = "Private Key"
-                            value={this.state.payPal.privateKey} 
+                            value={storeData.paypal_private_key} 
                         />
-
                     </div>
                    
-                    <div style={{margin:'2rem 0', flexDirection: "row"}} className="FormGroup">
-                        <button  
-                            type="button"
-                            onClick={ this.state.store ? this.editStoreHandler  : this.createStoreHandler }
-                            disabled={!this.state.changed} 
-                            className={this.state.changed ? "SettingsBtn" : "SettingsBtnDisabled"} >
-                            {this.state.store ? 'EDIT' : 'CREATE'}
-                        </button>
-                        <button  
-                            type="button"
-                            onClick={this.removeStoreHandler}
-                            disabled={ this.state.store === null } 
-                            className={this.state.store ? "SettingsBtn" : "SettingsBtnDisabled"} >
-                            REMOVE
-                        </button>
-                        <button onClick={this.props.closeSwitch}  type="button" className="SettingsBtn">CLOSE</button>
-                    </div>
-                </form>              
-            </div>
-    }   
+                </BasicPanel>
 }

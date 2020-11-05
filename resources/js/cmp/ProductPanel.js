@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import '../css/SettingsMenu.css';
-import TextInput from '../cmp/TextInput';
-
+import TextInput from './TextInput';
+import BasicPanel from './BasicPanel';
 
 export default function ProductPanel(props)  {
-    const [productData, setProductData] = useState({
+    const [productData, setProductData] = useState(props.product ? 
+        {...props.product}:{
         name: '',
         manufacturer: '',
         manufacturer_website: '',
@@ -13,7 +13,6 @@ export default function ProductPanel(props)  {
         price: '',
         description:'',
     });
-  
     const inputChange = (value, key) => {
         setProductData({
             ...productData,
@@ -24,19 +23,40 @@ export default function ProductPanel(props)  {
     const createProduct = () => {
         const url = window.location.origin + '/products';
         const data = {
-            storeId : props.activeStore.id,
-            productData:productData
+            store_id : props.activeStore.id,
+            ...productData
         };
         window.axios.post(url, data)
         .then( res =>{
             console.log(res);
+            // props.closePanel();
+        })
+        .catch( err=> console.log(err));
+    }
+    const editProduct = () => {
+        const url = window.location.origin + '/products' + `/${props.product.id}`;
+        const data = {
+            _method: 'PATCH',
+           ...productData
+        };
+        window.axios.post(url, data)
+        .then( res =>{
             props.closePanel();
         })
         .catch( err=> console.log(err));
     }
-        return <div className="SettingsMenu">
-                <form>
-                    <h1>{props.create ? 'Creater Product' : 'Edit Product'}</h1>
+        const panelButtons = [
+            { 
+                name : props.create ? 'CREATE' : 'SAVE',
+                onClick:  props.create ? createProduct : editProduct,
+            },
+            !props.create ? { name: 'REMOVE'} : null,
+            {
+                name: 'CLOSE',
+                onClick : props.closePanel
+            },
+        ]
+        return <BasicPanel name={props.create ? 'Create Product' : 'Edit Product'} buttons={panelButtons} >
                     <TextInput
                         style={{marginTop: '15%'}}
                         onChange = {e => inputChange(e.target.value, 'name')}
@@ -74,25 +94,7 @@ export default function ProductPanel(props)  {
                         onChange = {e => inputChange(e.target.value, 'price')}
                         name = "Price"
                         value={productData.price}  
-                    />
-                  
-                    <div style={{margin:'2rem 0', flexDirection: "row"}} className="FormGroup">
-                        <button  
-                            type="button"
-                            onClick={createProduct}
-                            className="SettingsBtn" >
-                            {props.create ? 'CREATE' : 'SAVE'}
-                        </button>
-                        {!props.create ? 
-                        <button  
-                            type="button"
-                            className="SettingsBtn" >
-                            REMOVE
-                        </button> : null
-                        }
-                        <button onClick={props.closePanel}  type="button" className="SettingsBtn">CLOSE</button>
-                    </div>
-                </form>              
-            </div>
+                    />          
+            </BasicPanel>
       
 }

@@ -12,7 +12,7 @@ export default function TextInput(props) {
                     className="TXIInput"
                     onChange = {props.onChange}
                     value={props.value} 
-                    type='text' id={name}
+                    type='text'
                     name={name}>
                 </input>
          </div>)

@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('url')->nullable();
             $table->text('description')->nullable();
             $table->float('price', 10, 4);
+            $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });
     }

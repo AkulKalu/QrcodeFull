@@ -1,41 +1,38 @@
 import React, {useState} from 'react';
 import '../css/SideMenu.css';
-import Backdrop from './Backdrop';
+import PanelSwitch from './PanelSwitch';
 import ProductPanel from './ProductPanel';
+import Button from './Button';
+
 
 export default function SideMenu(props) {
-    const [activeBtn, setActiveBtn] = useState('ProdBtn');
-    const [productPanelOpen, openProductPanel] = useState(false);
-    const buttonClick = (ev, closure) => {
-        setActiveBtn(ev.target.id);
+    const [activeBtn, setActiveBtn] = useState(["SMbutton SMActive", "SMbutton"]);
+ 
+    const buttonClick = (ind) => {
+        setActiveBtn(activeBtn.map( (val, i)=> i === ind ?  "SMbutton SMActive":  "SMbutton" ));
         // closure();
     }
-    const setClass = id => activeBtn === id ? "SMbutton SMActive" : "SMbutton";
-
+   
     return <div className="SMCont">
-                <button 
-                    onClick ={ e => buttonClick(e) } 
-                    id="ProdBtn" 
-                    className={setClass("ProdBtn")}
-                    type="button">
-                    Products
-                </button>
-                {activeBtn === 'ProdBtn' ? <span onClick={() => openProductPanel(true)} className="SMOption">new</span> : null }
-                <button 
-                    onClick ={ e => buttonClick(e) } 
-                    id="TranBtn" 
-                    className={setClass("TranBtn")} 
-                    type="button">
-                    Transactions
-                </button>
-                {productPanelOpen ? 
-                    <Backdrop>
-                        <ProductPanel
-                            closePanel={() => openProductPanel(false)}
-                            activeStore={props.activeStore}
-                            create
-                         />
-                    </Backdrop> : null
-                }
+                <Button 
+                    name="Products"
+                    onClick ={ () => buttonClick(0) } 
+                    className={activeBtn[0]}
+                />
+
+                {activeBtn[0].includes('Active') ?
+                <PanelSwitch panel={ProductPanel} panelProps={{
+                    activeStore : props.activeStore,
+                    create: true
+                }}>
+                     <span  className="SMOption">new</span>
+                </PanelSwitch> : null }
+
+                <Button 
+                    name="Transactions"
+                    onClick ={ () => buttonClick(1) } 
+                    className={activeBtn[1]}
+                />
+                
             </div>
 }

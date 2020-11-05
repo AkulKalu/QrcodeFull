@@ -15,13 +15,7 @@ class StoresController extends Controller
      */
     public function index()
     {
-        $storeModels = Auth::user()->stores;
-        $stores = [];
-        
-        foreach($storeModels as $store) {
-            $storeInfo = $store->getAttributes();
-            $stores[$storeInfo['id']] = $storeInfo;
-        };
+        $stores = Auth::user()->stores;
 
         return response()->json($stores);
     }

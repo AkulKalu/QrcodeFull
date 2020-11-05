@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -36,9 +37,9 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $store = Auth::user()->stores()->find($request->storeId);
-        $createdProduct = $store->products()->create($request->productData);
-        return response()->json($createdProduct);
+        $store = Auth::user()->stores()->find($request->store_id);
+        $createdProduct = $store->products()->create($request->all());
+        return response()->json($request->all());
     }
 
     /**
@@ -72,7 +73,11 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $status = $product->update($request->all());
+        if($status) {
+            return response()->json(['updated' =>  $product]);
+        }
     }
 
     /**

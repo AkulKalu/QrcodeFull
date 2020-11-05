@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Product from './Product';
 import TableHeader from './TableHeader';
+
 import '../css/Table.css';
 
 export default function Table(props) {
     const [products, setProducts] = useState(null);
+  
 
     useEffect( () => {
         if(props.activeStore) {
@@ -22,7 +24,7 @@ export default function Table(props) {
     if(products) {
         productList = Object.keys(products).map((key, i)=> {
             const product = products[key];
-            return <Product key={`product${i}`} product={product} />
+            return <Product  key={`product${i}`} product={product} />
         })
     }
     return <div className="TBCont">
@@ -30,5 +32,6 @@ export default function Table(props) {
                 <div className="TBTable">
                     {productList}
                 </div>
+                
             </div>
 }

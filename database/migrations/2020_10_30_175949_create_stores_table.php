@@ -18,10 +18,16 @@ class CreateStoresTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('website')->nullable();
+            $table->string('stripe_public_key')->nullable();
+            $table->string('stripe_private_key')->nullable();
+            $table->string('paypal_client_id')->nullable();
+            $table->string('paypal_private_key')->nullable();
             $table->timestamps();
         });
     }
+  
 
+  
     /**
      * Reverse the migrations.
      *

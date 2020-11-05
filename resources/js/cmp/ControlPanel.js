@@ -4,7 +4,6 @@ import Store from './Store';
 import Settings from './Settings';
 import User from './User';
 import SettingsMenu from './SettingsMenu';
-import ProductPanel from './ProductPanel';
 import SideMenu from './SideMenu';
 import Backdrop from './Backdrop';
 import Table from './Table';
@@ -19,7 +18,6 @@ import ReactDOM from 'react-dom';
         user: null,
         activeStore: null,
         settingsOpen: false,
-        productEditPanel : false,
     }
     componentDidMount() {
         window.axios.get(window.location.origin + '/user')
@@ -32,15 +30,12 @@ import ReactDOM from 'react-dom';
     setActiveStore = active => this.setState({activeStore : active});
 
     settingsSwitch = () => this.setState({settingsOpen: !this.state.settingsOpen});
-    productEdit = e =>{ 
-        this.setState({productEditPanel : e.target.parentElement.getAttribute('data-id')})
-    };
+   
 
 
     closeSettings = e => {
             this.setState({
                 settingsOpen: false,
-                productEditPanel : false,
             })
     }
 
@@ -63,7 +58,6 @@ import ReactDOM from 'react-dom';
                             <SideMenu activeStore = {this.state.activeStore} />
                         </aside>
                         <Table
-                            productEdit = {this.productEdit}
                             activeStore = {this.state.activeStore}
                         />
                     </div>: null
@@ -75,17 +69,7 @@ import ReactDOM from 'react-dom';
                         closeSwitch={this.closeSettings}
                          />
                     </Backdrop> : null
-                    }
-                   
-                     {this.state.productEditPanel ? 
-                    <Backdrop>
-                        <ProductPanel
-                            closeSwitch={this.closeSettings}
-                         />
-                    </Backdrop> : null
-                    }
-                    
-                   
+                    } 
                    
                </div>
     }
