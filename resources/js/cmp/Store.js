@@ -3,7 +3,7 @@ import '../css/Store.css';
 import Gear from '../storage/gear.svg';
 import PanelSwitch from './PanelSwitch';
 import StoreMenu from './StoreMenu';
-import Backdrop from './Backdrop';
+
 
 
 export default function Store(props) {
@@ -34,12 +34,11 @@ export default function Store(props) {
         if(active) props.setActiveStore(active);
         setStores([emptyStore, ...stores])
     }
-
-     const  storeList = stores.map((store, i) => {
-            if(i > 1) {
+    console.log(stores);
+    const storeList = stores.map((store, i) => {
+            if(i > 0 && store.name !== props.active.name) {
                 return <div onClick={() => props.setActiveStore(store)}  className="CPStoresItem" key={`storeLI${i}`}>{store.name}</div>;
             }
-            
         });
   
     

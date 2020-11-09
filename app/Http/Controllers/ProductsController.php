@@ -39,7 +39,7 @@ class ProductsController extends Controller
     {
         $store = Auth::user()->stores()->find($request->store_id);
         $createdProduct = $store->products()->create($request->all());
-        return response()->json($request->all());
+        return response()->json($createdProduct);
     }
 
     /**
@@ -73,11 +73,10 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Product::find($id);
-        $status = $product->update($request->all());
-        if($status) {
-            return response()->json(['updated' =>  $product]);
-        }
+        $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
+        $product->update($request->all());
+        return response()->json($product);
+        
     }
 
     /**
@@ -86,8 +85,10 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
+        $product->delete();
+        return response()->json(['deleted' => true]);
     }
 }

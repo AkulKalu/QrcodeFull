@@ -17,6 +17,8 @@ import ReactDOM from 'react-dom';
     state = {
         user: null,
         activeStore: null,
+        table: 'products',
+        toAdd: null,
         settingsOpen: false,
     }
     componentDidMount() {
@@ -28,11 +30,16 @@ import ReactDOM from 'react-dom';
         })
     }
     setActiveStore = active => this.setState({activeStore : active});
+    switchTable = table => this.setState({table : table});
 
     settingsSwitch = () => this.setState({settingsOpen: !this.state.settingsOpen});
    
 
-
+    addProduct = product => {
+        this.setState({
+            toAdd: product
+        })
+    }
     closeSettings = e => {
             this.setState({
                 settingsOpen: false,
@@ -55,10 +62,16 @@ import ReactDOM from 'react-dom';
                             </div>
                         </header>
                         <aside>
-                            <SideMenu activeStore = {this.state.activeStore} />
+                            <SideMenu 
+                                activeStore = {this.state.activeStore} 
+                                addProduct = {this.addProduct}
+                                switchTable = {this.switchTable}
+                            />
                         </aside>
                         <Table
+                            table = {this.state.table}
                             activeStore = {this.state.activeStore}
+                            toAdd={this.state.toAdd}
                         />
                     </div>: null
                     }

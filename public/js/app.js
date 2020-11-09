@@ -6377,7 +6377,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n    display: flex;\r\n    background: linear-gradient(to right, #8e9eab83, #eef2f38a); \r\n    cursor: pointer;\r\n    border-bottom: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-top: 1px solid rgba(128, 128, 128, 0.507);\r\n    transition: border-color 0.5s;\r\n}\r\n.PDCont:hover {\r\n    border-color: orange ;\r\n}\r\n\r\n.PDCell {\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center; \r\n}\r\n.PDQrCode img {\r\n    height: 70%;\r\n    border: 1px solid;\r\n    transition: 0.5s;\r\n}\r\n.PDQrCode img:hover {\r\n    filter: invert();\r\n}\r\n.PDImg img {\r\n    height: 85%;\r\n}\r\n\r\n\r\n.PDToggle {\r\n    width: 40px;\r\n    height: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    border: 1px solid  rgba(57, 80, 57, 0.562);\r\n    background-color: rgb(212, 212, 212);\r\n    opacity: 0.8;\r\n    transition: opacity 0.5s;\r\n    box-shadow: inset 0px 0px 8px grey;\r\n}\r\n.PDToggle:hover {\r\n    opacity: 1;\r\n}\r\n.PDToggleSW {\r\n    height:20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background-color:  rgba(57, 80, 57, 0.562);\r\n    \r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n    display: flex;\r\n    background: linear-gradient(to right, #8e9eab83, #eef2f38a); \r\n    cursor: pointer;\r\n    border-bottom: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-top: 1px solid rgba(128, 128, 128, 0.507);\r\n    transition: border-color 0.5s;\r\n}\r\n.PDCont:hover {\r\n    border-color: orange ;\r\n}\r\n\r\n.PDCell {\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center; \r\n}\r\n.PDQrCode img {\r\n    height: 70%;\r\n    border: 1px solid;\r\n    transition: 0.5s;\r\n}\r\n.PDQrCode img:hover {\r\n    filter: invert();\r\n}\r\n.PDImg img {\r\n    height: 85%;\r\n}\r\n\r\n\r\n.PDToggle {\r\n    width: 40px;\r\n    height: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    border: 1px solid  rgba(57, 80, 57, 0.562);\r\n    background-color:transparent;\r\n    transition: opacity 0.2s;\r\n    box-shadow: inset 0px 0px 8px grey;\r\n  \r\n}\r\n\r\n.PDToggleSW {\r\n    position: relative;\r\n    z-index: -10;\r\n    height:20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background-color:  rgba(57, 80, 57, 0.562); \r\n    transition: all 0.2s;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -66844,6 +66844,8 @@ var ControlPanel = /*#__PURE__*/function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "state", {
       user: null,
       activeStore: null,
+      table: 'products',
+      toAdd: null,
       settingsOpen: false
     });
 
@@ -66853,9 +66855,21 @@ var ControlPanel = /*#__PURE__*/function (_Component) {
       });
     });
 
+    _defineProperty(_assertThisInitialized(_this), "switchTable", function (table) {
+      return _this.setState({
+        table: table
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "settingsSwitch", function () {
       return _this.setState({
         settingsOpen: !_this.state.settingsOpen
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "addProduct", function (product) {
+      _this.setState({
+        toAdd: product
       });
     });
 
@@ -66896,9 +66910,13 @@ var ControlPanel = /*#__PURE__*/function (_Component) {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_4__["default"], {
         user: this.state.user
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        activeStore: this.state.activeStore
+        activeStore: this.state.activeStore,
+        addProduct: this.addProduct,
+        switchTable: this.switchTable
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        activeStore: this.state.activeStore
+        table: this.state.table,
+        activeStore: this.state.activeStore,
+        toAdd: this.state.toAdd
       })) : null, this.state.settingsOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Backdrop__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SettingsMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
         closeSwitch: this.closeSettings
       })) : null);
@@ -66949,14 +66967,16 @@ function PanelSwitch(props) {
       panelOpen = _useState2[0],
       openPanel = _useState2[1];
 
+  var panelSwitch = function panelSwitch(e) {
+    if (!e.target.getAttribute('data-escape')) {
+      openPanel(!panelOpen);
+    }
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: function onClick() {
-      return openPanel(true);
-    }
+    onClick: panelSwitch
   }, props.children), panelOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Backdrop__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(props.panel, _extends({
-    closePanel: function closePanel() {
-      return openPanel(false);
-    }
+    closePanel: panelSwitch
   }, props.panelProps))) : null);
 }
 
@@ -66978,19 +66998,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_Product_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_Product_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../storage/SQCLogo.svg */ "./resources/js/storage/SQCLogo.svg");
 /* harmony import */ var _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Backdrop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Backdrop */ "./resources/js/cmp/Backdrop.js");
-/* harmony import */ var _ProductPanel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProductPanel */ "./resources/js/cmp/ProductPanel.js");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+/* harmony import */ var _ProductPanel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductPanel */ "./resources/js/cmp/ProductPanel.js");
+/* harmony import */ var _PanelSwitch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PanelSwitch */ "./resources/js/cmp/PanelSwitch.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -66998,17 +67012,29 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Product(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      editProductPanel = _useState2[0],
-      openEditProductPanel = _useState2[1];
+  var productActive = {
+    transform: ' translateX(100%)',
+    backgroundColor: 'rgb(4, 161, 4)'
+  };
 
-  console.log(editProductPanel);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: function onClick() {
-      return openEditProductPanel(true);
-    },
-    "data-id": "1",
+  var toogleActive = function toogleActive() {
+    var url = window.location.origin + '/products' + "/".concat(props.product.id);
+    var data = {
+      _method: 'PATCH',
+      store_id: props.product.store_id,
+      active: props.product.active ? 0 : 1
+    };
+    window.axios.post(url, data).then(function (res) {
+      props.editProduct(res.data, props.product.index);
+    })["catch"](function (err) {
+      return console.log(err);
+    });
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_3__["default"],
+    panelProps: _objectSpread({}, props)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "PDCont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
@@ -67039,28 +67065,30 @@ function Product(props) {
     },
     className: "PDCell PDPrice"
   }, props.product.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "data-escape": true,
     style: {
       width: '10%'
     },
     className: "PDCell PDActive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "data-escape": true,
+    onClick: toogleActive,
     className: "PDToggle"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "data-escape": true,
+    style: props.product.active ? productActive : null,
     className: "PDToggleSW"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "data-escape": true,
     style: {
       width: '10%'
     },
     className: "PDCell PDQrCode"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    "data-escape": true,
     alt: "Generate QrCode",
     src: _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_2___default.a
-  }))), editProductPanel ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Backdrop__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductPanel__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    product: props.product,
-    closePanel: function closePanel() {
-      return openEditProductPanel(false);
-    }
-  })) : null);
+  }))));
 }
 
 /***/ }),
@@ -67101,7 +67129,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function ProductPanel(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.product ? _objectSpread({}, props.product) : {
+  var emptyProduct = {
     name: '',
     manufacturer: '',
     manufacturer_website: '',
@@ -67109,7 +67137,9 @@ function ProductPanel(props) {
     url: '',
     price: '',
     description: ''
-  }),
+  };
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.create ? _objectSpread({}, emptyProduct) : _objectSpread({}, props.product)),
       _useState2 = _slicedToArray(_useState, 2),
       productData = _useState2[0],
       setProductData = _useState2[1];
@@ -67126,7 +67156,8 @@ function ProductPanel(props) {
     }, productData);
 
     window.axios.post(url, data).then(function (res) {
-      console.log(res); // props.closePanel();
+      props.closePanel();
+      props.addProduct(res.data);
     })["catch"](function (err) {
       return console.log(err);
     });
@@ -67134,23 +67165,41 @@ function ProductPanel(props) {
 
   var editProduct = function editProduct() {
     var url = window.location.origin + '/products' + "/".concat(props.product.id);
-
-    var data = _objectSpread({
-      _method: 'PATCH'
-    }, productData);
-
+    var data = {
+      _method: 'PATCH',
+      store_id: productData.store_id
+    };
+    Object.keys(emptyProduct).forEach(function (key) {
+      return data[key] = productData[key];
+    });
     window.axios.post(url, data).then(function (res) {
       props.closePanel();
+      props.editProduct(res.data, productData.index);
+    })["catch"](function (err) {
+      return console.log(err);
+    });
+  };
+
+  var removeProduct = function removeProduct() {
+    var url = window.location.origin + '/products' + "/".concat(props.product.id);
+    var data = {
+      _method: 'DELETE',
+      store_id: productData.store_id
+    };
+    window.axios.post(url, data).then(function (res) {
+      props.closePanel();
+      props.removeProduct(productData.index);
     })["catch"](function (err) {
       return console.log(err);
     });
   };
 
   var panelButtons = [{
-    name: props.create ? 'CREATE' : 'SAVE',
+    name: props.create ? 'CREATE' : 'EDIT',
     onClick: props.create ? createProduct : editProduct
   }, !props.create ? {
-    name: 'REMOVE'
+    name: 'REMOVE',
+    onClick: removeProduct
   } : null, {
     name: 'CLOSE',
     onClick: props.closePanel
@@ -67501,10 +67550,11 @@ function SideMenu(props) {
       activeBtn = _useState2[0],
       setActiveBtn = _useState2[1];
 
-  var buttonClick = function buttonClick(ind) {
+  var buttonClick = function buttonClick(table, ind) {
     setActiveBtn(activeBtn.map(function (val, i) {
       return i === ind ? "SMbutton SMActive" : "SMbutton";
-    })); // closure();
+    }));
+    props.switchTable(table);
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -67512,21 +67562,22 @@ function SideMenu(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "Products",
     onClick: function onClick() {
-      return buttonClick(0);
+      return buttonClick('products', 0);
     },
     className: activeBtn[0]
   }), activeBtn[0].includes('Active') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_2__["default"], {
     panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_3__["default"],
     panelProps: {
       activeStore: props.activeStore,
-      create: true
+      create: true,
+      addProduct: props.addProduct
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "SMOption"
   }, "new")) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
     name: "Transactions",
     onClick: function onClick() {
-      return buttonClick(1);
+      return buttonClick('transactions', 1);
     },
     className: activeBtn[1]
   }));
@@ -67552,7 +67603,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_gear_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_storage_gear_svg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _PanelSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PanelSwitch */ "./resources/js/cmp/PanelSwitch.js");
 /* harmony import */ var _StoreMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./StoreMenu */ "./resources/js/cmp/StoreMenu.js");
-/* harmony import */ var _Backdrop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Backdrop */ "./resources/js/cmp/Backdrop.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -67572,7 +67622,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
@@ -67613,8 +67662,9 @@ function Store(props) {
     setStores([emptyStore].concat(_toConsumableArray(stores)));
   };
 
+  console.log(stores);
   var storeList = stores.map(function (store, i) {
-    if (i > 1) {
+    if (i > 0 && store.name !== props.active.name) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         onClick: function onClick() {
           return props.setActiveStore(store);
@@ -67720,7 +67770,6 @@ function StoreMenu(props) {
       return data[key] = storeData[key];
     });
     window.axios.post(url, data).then(function (res) {
-      console.log(res);
       props.closePanel();
       props.updateStores(res.data.stores, res.data.created);
     })["catch"](function (err) {
@@ -67866,6 +67915,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TableHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableHeader */ "./resources/js/cmp/TableHeader.js");
 /* harmony import */ var _css_Table_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/Table.css */ "./resources/js/css/Table.css");
 /* harmony import */ var _css_Table_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_Table_css__WEBPACK_IMPORTED_MODULE_3__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -67883,10 +67940,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Table(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
       products = _useState2[0],
       setProducts = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      transactions = _useState4[0],
+      setTransactions = _useState4[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (props.activeStore) {
@@ -67902,23 +67964,61 @@ function Table(props) {
       });
     }
   }, [props.activeStore]);
-  var productList = null;
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (props.toAdd) {
+      var updated = _toConsumableArray(products);
 
-  if (products) {
-    productList = Object.keys(products).map(function (key, i) {
-      var product = products[key];
+      updated.unshift(props.toAdd);
+      setProducts(updated);
+    }
+  }, [props.toAdd]);
+
+  var editProduct = function editProduct(toEdit, ind) {
+    var updated = _toConsumableArray(products);
+
+    updated[ind] = toEdit;
+    setProducts(updated);
+  };
+
+  var removeProduct = function removeProduct(ind) {
+    var updated = _toConsumableArray(products);
+
+    updated.splice(ind, 1);
+    setProducts(updated);
+  };
+
+  var sortProducts = function sortProducts(sortFun) {
+    var sorted = _toConsumableArray(products);
+
+    sorted.sort(sortFun);
+    setProducts(sorted);
+  };
+
+  var tableData = [];
+
+  if (props.table === 'products') {
+    tableData = products.map(function (product, i) {
+      product.index = i;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Product__WEBPACK_IMPORTED_MODULE_1__["default"], {
         key: "product".concat(i),
-        product: product
+        product: product,
+        removeProduct: removeProduct,
+        editProduct: editProduct
       });
+    });
+  } else {
+    tableData = transactions.map(function (transaction, i) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null);
     });
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TBCont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TableHeader__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TableHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    sortProducts: sortProducts
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TBTable"
-  }, productList));
+  }, tableData.length ? tableData : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.table === 'products' ? 'Add Products' : 'No Transactions')));
 }
 
 /***/ }),
@@ -67937,12 +68037,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_TableHeader_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/TableHeader.css */ "./resources/js/css/TableHeader.css");
 /* harmony import */ var _css_TableHeader_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_TableHeader_css__WEBPACK_IMPORTED_MODULE_1__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 function TableHeader(props) {
+  var sortDirectons = {
+    'id': false,
+    'name': true,
+    'manufacturer': true,
+    'price': true,
+    'active': true
+  };
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_objectSpread({}, sortDirectons)),
+      _useState2 = _slicedToArray(_useState, 2),
+      ascending = _useState2[0],
+      setAscending = _useState2[1];
+
+  var sortBy = function sortBy(rule) {
+    var sortFun = undefined;
+
+    if (['id', 'price', 'active'].includes(rule)) {
+      if (ascending[rule]) {
+        sortFun = function sortFun(a, b) {
+          return a[rule] - b[rule];
+        };
+      } else {
+        sortFun = function sortFun(a, b) {
+          return b[rule] - a[rule];
+        };
+      }
+    } else {
+      if (ascending[rule]) {
+        sortFun = function sortFun(a, b) {
+          return a[rule].localeCompare(b[rule]);
+        };
+      } else {
+        sortFun = function sortFun(a, b) {
+          return b[rule].localeCompare(a[rule]);
+        };
+      }
+    }
+
+    setAscending(_objectSpread(_objectSpread({}, sortDirectons), {}, _defineProperty({}, rule, !ascending[rule])));
+    props.sortProducts(sortFun);
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TBHCont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return sortBy('id');
+    },
     style: {
       width: '10%'
     },
@@ -67953,21 +68116,33 @@ function TableHeader(props) {
     },
     className: "TBHCell"
   }, "Image"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return sortBy('name');
+    },
     style: {
       width: '20%'
     },
     className: "TBHCell"
   }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return sortBy('manufacturer');
+    },
     style: {
       width: '20%'
     },
     className: "TBHCell"
   }, "Manufacturer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return sortBy('price');
+    },
     style: {
       width: '10%'
     },
     className: "TBHCell"
   }, "Price"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return sortBy('active');
+    },
     style: {
       width: '10%'
     },

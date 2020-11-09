@@ -7,7 +7,7 @@ import PayPalLogo from '../storage/PayPal.svg';
 
 export default function StoreMenu(props) {
         const [storeData, setStoreData] = useState({...props.stores[0]})
-        const [changed, setChanged] = useState(false)
+        const [changed, setChanged] = useState(false);
    
         const inputChange = (value, key) => {
             setStoreData({
@@ -15,14 +15,14 @@ export default function StoreMenu(props) {
                 [key]: value,
             });
 
-            if(!changed) setChanged(true)
+            if(!changed) setChanged(true);
         }
 
         const storeSwitch = e => {
             const storeInd = parseInt(e.target.value);
             const store = props.stores[storeInd];
             setStoreData({...store});
-            if(changed) setChanged(false) 
+            if(changed) setChanged(false) ;
         }
 
         const createStore = () => {
@@ -33,7 +33,6 @@ export default function StoreMenu(props) {
 
             window.axios.post(url, data)
             .then( res => {
-                console.log(res);
                 props.closePanel();
                 props.updateStores(res.data.stores, res.data.created);
             })
@@ -57,6 +56,7 @@ export default function StoreMenu(props) {
         
         const removeStore = () => {
             const confirmed = confirm('Deleting the store will also remove all its product. Are you sure?');
+            
             if(confirmed) {
                 const url = window.location.origin + '/stores' + `/${storeData.id}`;
                 const data = {

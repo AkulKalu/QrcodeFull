@@ -30,7 +30,14 @@ class HomeController extends Controller
     public function dd()
     {
        
-        $store = Auth::user()->stores()->find(1)->products()->create(['name'=> 'asdas', 'price'=> 400]);
+        $store = Auth::user()->stores()->find(1)->products()->create( ['description'=> "asd",
+        'image_url'=> "dasd",
+        'manufacturer'=> "asrd",
+        'manufacturer_website'=> "assd",
+        'name'=> "Tosters",
+        'price'=> "400",
+        'store_id'=> 1,
+        'url'=> "asdd"]);
        
        
        

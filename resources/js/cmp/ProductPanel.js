@@ -3,8 +3,7 @@ import TextInput from './TextInput';
 import BasicPanel from './BasicPanel';
 
 export default function ProductPanel(props)  {
-    const [productData, setProductData] = useState(props.product ? 
-        {...props.product}:{
+    const emptyProduct = {
         name: '',
         manufacturer: '',
         manufacturer_website: '',
@@ -12,7 +11,9 @@ export default function ProductPanel(props)  {
         url:'',
         price: '',
         description:'',
-    });
+    }
+    const [productData, setProductData] = useState(props.create ? {...emptyProduct} : {...props.product});
+
     const inputChange = (value, key) => {
         setProductData({
             ...productData,
@@ -28,8 +29,8 @@ export default function ProductPanel(props)  {
         };
         window.axios.post(url, data)
         .then( res =>{
-            console.log(res);
-            // props.closePanel();
+            props.closePanel();
+            props.addProduct(res.data);
         })
         .catch( err=> console.log(err));
     }
@@ -37,20 +38,41 @@ export default function ProductPanel(props)  {
         const url = window.location.origin + '/products' + `/${props.product.id}`;
         const data = {
             _method: 'PATCH',
-           ...productData
+            store_id: productData.store_id
         };
+
+        Object.keys(emptyProduct).forEach(key => data[key] = productData[key]);
+
         window.axios.post(url, data)
         .then( res =>{
             props.closePanel();
+            props.editProduct(res.data, productData.index)
+        })
+        .catch( err=> console.log(err));
+    }
+    const removeProduct = () => {
+        const url = window.location.origin + '/products' + `/${props.product.id}`;
+        const data = {
+            _method: 'DELETE',
+            store_id: productData.store_id
+        };
+
+        window.axios.post(url, data)
+        .then( res =>{
+            props.closePanel();
+            props.removeProduct( productData.index)
         })
         .catch( err=> console.log(err));
     }
         const panelButtons = [
             { 
-                name : props.create ? 'CREATE' : 'SAVE',
+                name : props.create ? 'CREATE' : 'EDIT',
                 onClick:  props.create ? createProduct : editProduct,
             },
-            !props.create ? { name: 'REMOVE'} : null,
+            !props.create ? { 
+                name: 'REMOVE',
+                onClick: removeProduct
+            } : null,
             {
                 name: 'CLOSE',
                 onClick : props.closePanel
