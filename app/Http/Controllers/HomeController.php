@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class HomeController extends Controller
 {
@@ -26,6 +28,13 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function generateQrCode($store, $product)
+    {
+        $store = Auth::user()->stores()->find($store);
+        $product = $store->products()->find($product);
+        $qrcode = QrCode::format('svg')->generate(url($store->name.'/'.$product->name.'/checkout'))->__toString(); 
+        return response()->json(['qrCode'=> $qrcode]);
     }
     public function dd()
     {

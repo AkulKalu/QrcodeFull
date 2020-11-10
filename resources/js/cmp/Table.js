@@ -7,7 +7,8 @@ import '../css/Table.css';
 export default function Table(props) {
     const [products, setProducts] = useState([]);
     const [transactions, setTransactions] = useState([]);
-  
+    const [searchIndex, setSearchIndex] = useState(null);
+   
     useEffect( () => {
         if(props.activeStore) {
             const url = window.location.origin + '/products';
@@ -28,7 +29,33 @@ export default function Table(props) {
             setProducts(updated);
         }
     }, [props.toAdd])
-    
+
+    useEffect( () => {
+        if(products.length) {
+            indexProducts();
+        }
+    }, [products])
+    const indexProducts = () => {
+        let index = {};
+        let level = null;
+        products.forEach((product, i) => {
+            level = index;
+            let name = product.name.toLowerCase();
+           
+            for(let j = 0; j < name.length; j++) {
+                let letter = name[j];
+                if(letter in level) {
+                    level[letter].index.push(i)
+                }else {
+                    level[letter] = {
+                        index: [i]
+                    }
+                }
+                level = level[letter];
+            } 
+        })
+        setSearchIndex(index)
+    }
     const editProduct = (toEdit, ind) => {
         let updated = [...products];
         updated[ind] = toEdit;
@@ -55,7 +82,7 @@ export default function Table(props) {
             return <div></div> });
     }
     
-
+    
  
     return <div className="TBCont">
                 <TableHeader sortProducts={sortProducts} />

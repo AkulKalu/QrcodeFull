@@ -24,6 +24,19 @@ export default function Product(props) {
         })
         .catch( err=> console.log(err));
     }
+    const downloadQrCode = () => {
+        const url = window.location.origin +'/qrcodes' + `/${props.product.store_id}` + `/${props.product.id}`;
+    
+        window.axios.get(url)
+        .then( res =>{
+            const url = window.URL.createObjectURL(new Blob([res.data.qrCode]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', `${props.product.name}.svg`); //or any other extension
+            link.click();
+        })
+        .catch( err=> console.log(err));
+    }
     
    
     return <PanelSwitch panel={ProductPanel} panelProps={{...props}}>
@@ -40,7 +53,7 @@ export default function Product(props) {
                                 <div data-escape style={ props.product.active ? productActive : null} className="PDToggleSW"></div>
                             </div>
                         </div>
-                        <div data-escape style={{width: '10%'}} className="PDCell PDQrCode">
+                        <div onClick={downloadQrCode} data-escape style={{width: '10%'}} className="PDCell PDQrCode">
                             <img data-escape alt="Generate QrCode" src={QrCodeImg}></img>
                         </div>
                 </div>

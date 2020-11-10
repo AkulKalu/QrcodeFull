@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StoresController;
 use Illuminate\Http\Request;
@@ -23,8 +24,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dd', [App\Http\Controllers\HomeController::class, 'dd'])->name('dd');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/qrcodes/{store}/{product}', [HomeController::class, 'generateQrCode'])->name('qrgen');
+Route::get('/dd', [HomeController::class, 'dd'])->name('dd');
 Route::get('/user', function () {
     return Auth::user();
 });

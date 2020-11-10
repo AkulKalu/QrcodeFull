@@ -67031,6 +67031,20 @@ function Product(props) {
     });
   };
 
+  var downloadQrCode = function downloadQrCode() {
+    var url = window.location.origin + '/qrcodes' + "/".concat(props.product.store_id) + "/".concat(props.product.id);
+    window.axios.get(url).then(function (res) {
+      var url = window.URL.createObjectURL(new Blob([res.data.qrCode]));
+      var link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', "".concat(props.product.name, ".svg")); //or any other extension
+
+      link.click();
+    })["catch"](function (err) {
+      return console.log(err);
+    });
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_4__["default"], {
     panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_3__["default"],
     panelProps: _objectSpread({}, props)
@@ -67079,6 +67093,7 @@ function Product(props) {
     style: props.product.active ? productActive : null,
     className: "PDToggleSW"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: downloadQrCode,
     "data-escape": true,
     style: {
       width: '10%'
@@ -67662,7 +67677,6 @@ function Store(props) {
     setStores([emptyStore].concat(_toConsumableArray(stores)));
   };
 
-  console.log(stores);
   var storeList = stores.map(function (store, i) {
     if (i > 0 && store.name !== props.active.name) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -67950,6 +67964,11 @@ function Table(props) {
       transactions = _useState4[0],
       setTransactions = _useState4[1];
 
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      searchIndex = _useState6[0],
+      setSearchIndex = _useState6[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (props.activeStore) {
       var url = window.location.origin + '/products';
@@ -67972,6 +67991,38 @@ function Table(props) {
       setProducts(updated);
     }
   }, [props.toAdd]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (products.length) {
+      indexProducts();
+    }
+  }, [products]);
+
+  var indexProducts = function indexProducts() {
+    var index = {};
+    var level = null;
+    console.log(products, 'll');
+    products.forEach(function (product, i) {
+      level = index;
+      var name = product.name.toLowerCase();
+
+      for (var j = 0; j < name.length; j++) {
+        var letter = name[j];
+
+        if (letter in level) {
+          level[letter].index.push(i);
+        } else {
+          level[letter] = {
+            index: [i]
+          };
+        }
+
+        level = level[letter];
+        console.log(level);
+      }
+    });
+    console.log(index, 'xx');
+    setSearchIndex(index);
+  };
 
   var editProduct = function editProduct(toEdit, ind) {
     var updated = _toConsumableArray(products);
