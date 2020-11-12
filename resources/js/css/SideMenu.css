@@ -2,16 +2,17 @@
     display: inline-block;
     width: 100%;
     margin-top: 20vh;
+    
 }
 .SMbutton {
     display: block;
     cursor: pointer;
     width: 85%;
     height: 2rem;
-    border: 1px solid grey;
+    border: 1px solid rgb(207, 205, 205);
     border-left: none;
-    color: honeydew;
-    background: rgb(90, 94, 84);
+    color: rgb(214, 230, 214);
+    background: rgb(53, 54, 52);
     margin-top: 0.8rem;
     border-radius: 0 15px 15px 0;
     transform-origin: left;
@@ -20,7 +21,11 @@
 }
 .SMActive {
     width: 90%;
-    background: rgb(155, 123, 36);
+    color: rgb(53, 54, 52);
+    font-weight: 700;
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.507);
+    border-color: rgba(54, 52, 52, 0.247);
+    background: rgb(231, 174, 15);
 }
 .SMbutton:hover {
     width: 90%;
@@ -29,12 +34,12 @@
 }
 .SMOption {
     display: inline-block;
-    margin-top: 1px;
-    background: rgb(108, 114, 99);
+    margin-top: 2px;
+    background: rgb(53, 54, 52);
     border-radius: 0 10px 10px 0;
     width: 75%;
     text-align: center;
-    color: honeydew;
+    color: rgb(214, 230, 214);
     cursor: pointer;
     transition: all 0.4s;
 }

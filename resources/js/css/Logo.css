@@ -1,7 +1,6 @@
 .CPLogo {
     width: fit-content;
     display: inline-block;
-    /* background-color: aliceblue; */
     padding-left: 1rem ;
     padding-top: 1rem ;
     text-indent: 0.2rem;
@@ -24,7 +23,7 @@
     font-weight: 800;
     vertical-align: text-bottom;
     text-indent: 0;
-    background-color: rgba(64, 224, 208, 0.726);
+    background-color:  rgb(231, 174, 15);
 }
 .CPLogoCode {
     display: flex;

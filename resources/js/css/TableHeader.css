@@ -1,6 +1,8 @@
 .TBHCont {
     display: flex;
     font-weight: 600;
+    color: rgb(214, 230, 214);
+    background: rgb(53, 54, 52);
 }
 .TBHCell{
     display: flex;
@@ -8,12 +10,12 @@
     justify-content: center;
     border: 1px solid rgba(128, 128, 128, 0.507);
     border-bottom: none;
-    background: linear-gradient(to bottom, #8e9eab83, #eef2f38a);
+    /* background: linear-gradient(to bottom, #8e9eab83, #eef2f38a); */
     height: 2rem; 
     cursor: pointer;
     transition: all 0.5s;
 }
 .TBHCell:hover {
-    border-color: orange;
-    color: rgb(150, 97, 0);
+    border-color:  rgb(231, 174, 15);
+    color: rgb(231, 174, 15);
 }

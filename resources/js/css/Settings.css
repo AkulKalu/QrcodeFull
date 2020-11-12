@@ -1,6 +1,6 @@
 .CPSettings img {
-    height: 3.5vh;
-    margin-right: 2rem;
+    height: 3vh;
+    margin-right: 1.5rem;
     cursor: pointer;
     transition: transform 1s;
 }

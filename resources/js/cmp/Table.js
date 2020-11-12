@@ -35,6 +35,13 @@ export default function Table(props) {
             indexProducts();
         }
     }, [products])
+
+    useEffect( () => {
+        if(products.length) {
+            indexProducts();
+        }
+    }, [props.searchFor])
+    
     const indexProducts = () => {
         let index = {};
         let level = null;

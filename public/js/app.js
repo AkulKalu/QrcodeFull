@@ -6339,7 +6339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "header {\r\n    display: flex;\r\n    position: fixed;\r\n    z-index: 10;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    /* background: rgb(173, 173, 173); */\r\n}\r\naside {\r\n    position: fixed;\r\n    background-color: rgba(88, 80, 79, 0.247);\r\n    height: 100vh;\r\n    width: 15vw;\r\n\r\n}\r\n.CPAccount {\r\n    position: absolute;\r\n    display: flex;\r\n    height: 100%;\r\n    align-items: center;\r\n    right: 2rem;\r\n    top: 0.5rem;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    background-color: rgba(143, 140, 140, 0.24);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}", ""]);
+exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margin-left: 15vw;\r\n    width: 85vw;\r\n}\r\n.CPBar {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.CPBarStore {\r\n    flex-basis: 45%;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.CPBarSearch {\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 45%;\r\n}\r\naside {\r\n    position: fixed;\r\n    display: inline-block;\r\n    background: linear-gradient(to right,  #c1b4dd, #e9e4f0);\r\n    height: 100vh;\r\n    width: 15vw;\r\n    border-right: 1px solid rgba(128, 128, 128, 0.507);\r\n    \r\n}\r\nbody {\r\n    background: linear-gradient(to left, #c1b4dd, #ebe8f0);\r\n}\r\n.CPAccount {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 10%;\r\n    align-items: center;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    top: 0;\r\n    background-color: rgba(143, 140, 140, 0.24);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}", ""]);
 
 // exports
 
@@ -6358,7 +6358,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPLogo {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    display: inline-block;\r\n    /* background-color: aliceblue; */\r\n    padding-left: 1rem ;\r\n    padding-top: 1rem ;\r\n    text-indent: 0.2rem;\r\n}\r\n.CPLogo img {\r\n    height: 5vh;\r\n}\r\n.CPLogoSimple {\r\n    position: absolute;\r\n    font-size: 1.5vh;\r\n    font-weight: 500;\r\n    top: 0;\r\n}\r\n.CPLogoText{\r\n    position: relative;\r\n    font-size: 3vh;\r\n    display: flex;\r\n    padding: 0 0.2rem;\r\n    align-items: flex-end;\r\n    font-weight: 800;\r\n    vertical-align: text-bottom;\r\n    text-indent: 0;\r\n    background-color: rgba(64, 224, 208, 0.726);\r\n}\r\n.CPLogoCode {\r\n    display: flex;\r\n}\r\n", ""]);
+exports.push([module.i, ".CPLogo {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    display: inline-block;\r\n    padding-left: 1rem ;\r\n    padding-top: 1rem ;\r\n    text-indent: 0.2rem;\r\n}\r\n.CPLogo img {\r\n    height: 5vh;\r\n}\r\n.CPLogoSimple {\r\n    position: absolute;\r\n    font-size: 1.5vh;\r\n    font-weight: 500;\r\n    top: 0;\r\n}\r\n.CPLogoText{\r\n    position: relative;\r\n    font-size: 3vh;\r\n    display: flex;\r\n    padding: 0 0.2rem;\r\n    align-items: flex-end;\r\n    font-weight: 800;\r\n    vertical-align: text-bottom;\r\n    text-indent: 0;\r\n    background-color:  rgb(231, 174, 15);\r\n}\r\n.CPLogoCode {\r\n    display: flex;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6377,7 +6377,26 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n    display: flex;\r\n    background: linear-gradient(to right, #8e9eab83, #eef2f38a); \r\n    cursor: pointer;\r\n    border-bottom: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-top: 1px solid rgba(128, 128, 128, 0.507);\r\n    transition: border-color 0.5s;\r\n}\r\n.PDCont:hover {\r\n    border-color: orange ;\r\n}\r\n\r\n.PDCell {\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center; \r\n}\r\n.PDQrCode img {\r\n    height: 70%;\r\n    border: 1px solid;\r\n    transition: 0.5s;\r\n}\r\n.PDQrCode img:hover {\r\n    filter: invert();\r\n}\r\n.PDImg img {\r\n    height: 85%;\r\n}\r\n\r\n\r\n.PDToggle {\r\n    width: 40px;\r\n    height: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    border: 1px solid  rgba(57, 80, 57, 0.562);\r\n    background-color:transparent;\r\n    transition: opacity 0.2s;\r\n    box-shadow: inset 0px 0px 8px grey;\r\n  \r\n}\r\n\r\n.PDToggleSW {\r\n    position: relative;\r\n    z-index: -10;\r\n    height:20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background-color:  rgba(57, 80, 57, 0.562); \r\n    transition: all 0.2s;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n    display: flex;\r\n    /* background: linear-gradient(to left, #f7f8f8, #acbb78); */\r\n    cursor: pointer;\r\n    border-bottom: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-top: 1px solid rgba(128, 128, 128, 0.507);\r\n    transition: background 0.5s;\r\n    background: rgba(128, 128, 128, 0.205);\r\n}\r\n.PDCont:hover {\r\n    background:  rgb(231, 174, 15)\r\n}\r\n\r\n.PDCell {\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center; \r\n}\r\n.PDQrCode img {\r\n    height: 70%;\r\n    border: 1px solid;\r\n    transition: 0.5s;\r\n}\r\n.PDQrCode img:hover {\r\n    filter: invert();\r\n}\r\n.PDImg img {\r\n    height: 85%;\r\n}\r\n\r\n\r\n.PDToggle {\r\n    width: 40px;\r\n    height: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    border: 1px solid  rgba(57, 80, 57, 0.562);\r\n    background-color: rgb(212, 212, 212);\r\n    opacity: 0.8;\r\n    transition: opacity 0.5s;\r\n    box-shadow: inset 0px 0px 8px grey;\r\n}\r\n.PDToggle:hover {\r\n    opacity: 1;\r\n}\r\n.PDToggleSW {\r\n    height:20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background-color:  rgba(57, 80, 57, 0.562);\r\n    \r\n}\r\n\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SearchBar.css":
+/*!************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/css/SearchBar.css ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".SBContainer {\r\n    font-size: 2vh;\r\n}\r\n\r\n.SBContainer input {\r\n    width: 60%;\r\n    height: 4vh;\r\n    outline: none;\r\n    margin-left: 1rem;\r\n    background: rgba(128, 128, 128, 0.096);\r\n    border: 1px solid rgba(128, 128, 128, 0.705);\r\n    box-shadow: 2px 2px 5px gray;\r\n}\r\n.SBContainer input:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}", ""]);
 
 // exports
 
@@ -6415,7 +6434,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPSettings img {\r\n    height: 3.5vh;\r\n    margin-right: 2rem;\r\n    cursor: pointer;\r\n    transition: transform 1s;\r\n}\r\n.CPSettings img:hover {\r\n    transform: rotate(180deg);\r\n}", ""]);
+exports.push([module.i, ".CPSettings img {\r\n    height: 3vh;\r\n    margin-right: 1.5rem;\r\n    cursor: pointer;\r\n    transition: transform 1s;\r\n}\r\n.CPSettings img:hover {\r\n    transform: rotate(180deg);\r\n}", ""]);
 
 // exports
 
@@ -6434,7 +6453,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SettingsMenu {\r\n    position: relative;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    width: 50vh;\r\n    background-color: rgb(243, 242, 240);\r\n    border-radius: 5px;\r\n    margin: 10vh auto;\r\n    padding: 1rem;\r\n    border: 1px solid rgb(170, 166, 166);\r\n    box-shadow: 5px 5px 10px rgb(196, 194, 194);\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    outline-color: orange;\r\n}\r\n.SettingsBtn {\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n.SettingsBtnDisabled {\r\n    pointer-events: none;\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n    opacity: 0.5;\r\n}\r\n.SettingsBtn:hover {\r\n    border-color: gold;\r\n    color: gold;\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.2vh;\r\n    padding: 0.4rem 0;\r\n    font-weight: 600;\r\n}\r\n.SettingsMenu h1 {\r\n    position: absolute;\r\n    text-align: right;\r\n    right: 1rem;\r\n    top: 0;\r\n}\r\n\r\n.SettingsMenu img {\r\n    height: 3vh;\r\n    max-width: 20%;\r\n    margin: auto;\r\n    padding-top: 1rem;\r\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".SettingsMenu {\r\n    position: relative;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    width: 50vh;\r\n    background-color: rgb(243, 242, 240);\r\n    border-radius: 5px;\r\n    margin: 10vh auto;\r\n    padding: 1rem;\r\n    border: 1px solid rgb(170, 166, 166);\r\n    box-shadow: 5px 5px 10px rgb(196, 194, 194);\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    outline-color: orange;\r\n}\r\n.SettingsBtn {\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n.SettingsBtnDisabled {\r\n    pointer-events: none;\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n    opacity: 0.5;\r\n}\r\n.SettingsBtn:hover {\r\n    border-color: gold;\r\n    color: gold;\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.2vh;\r\n    padding: 0.4rem 0;\r\n    font-weight: 600;\r\n}\r\n.SettingsMenu h1 {\r\n    position: absolute;\r\n    text-align: right;\r\n    right: 1rem;\r\n    top: 0;\r\n}\r\n\r\n\r\n.SettingsMenu img {\r\n    height: 3vh;\r\n    max-width: 20%;\r\n    margin: auto;\r\n    padding-top: 1rem;\r\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -6453,7 +6472,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SMCont {\r\n    display: inline-block;\r\n    width: 100%;\r\n    margin-top: 20vh;\r\n}\r\n.SMbutton {\r\n    display: block;\r\n    cursor: pointer;\r\n    width: 85%;\r\n    height: 2rem;\r\n    border: 1px solid grey;\r\n    border-left: none;\r\n    color: honeydew;\r\n    background: rgb(90, 94, 84);\r\n    margin-top: 0.8rem;\r\n    border-radius: 0 15px 15px 0;\r\n    transform-origin: left;\r\n    outline: none;\r\n    transition: 0.4s;\r\n}\r\n.SMActive {\r\n    width: 90%;\r\n    background: rgb(155, 123, 36);\r\n}\r\n.SMbutton:hover {\r\n    width: 90%;\r\n    border-color: gold;\r\n    color: gold;\r\n}\r\n.SMOption {\r\n    display: inline-block;\r\n    margin-top: 1px;\r\n    background: rgb(108, 114, 99);\r\n    border-radius: 0 10px 10px 0;\r\n    width: 75%;\r\n    text-align: center;\r\n    color: honeydew;\r\n    cursor: pointer;\r\n    transition: all 0.4s;\r\n}\r\n.SMOption:hover {\r\n    width: 80% ;\r\n    border-color: gold;\r\n    color: gold;\r\n}", ""]);
+exports.push([module.i, ".SMCont {\r\n    display: inline-block;\r\n    width: 100%;\r\n    margin-top: 20vh;\r\n    \r\n}\r\n.SMbutton {\r\n    display: block;\r\n    cursor: pointer;\r\n    width: 85%;\r\n    height: 2rem;\r\n    border: 1px solid rgb(207, 205, 205);\r\n    border-left: none;\r\n    color: rgb(214, 230, 214);\r\n    background: rgb(53, 54, 52);\r\n    margin-top: 0.8rem;\r\n    border-radius: 0 15px 15px 0;\r\n    transform-origin: left;\r\n    outline: none;\r\n    transition: 0.4s;\r\n}\r\n.SMActive {\r\n    width: 90%;\r\n    color: rgb(53, 54, 52);\r\n    font-weight: 700;\r\n    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.507);\r\n    border-color: rgba(54, 52, 52, 0.247);\r\n    background: rgb(231, 174, 15);\r\n}\r\n.SMbutton:hover {\r\n    width: 90%;\r\n    border-color: gold;\r\n    color: gold;\r\n}\r\n.SMOption {\r\n    display: inline-block;\r\n    margin-top: 2px;\r\n    background: rgb(53, 54, 52);\r\n    border-radius: 0 10px 10px 0;\r\n    width: 75%;\r\n    text-align: center;\r\n    color: rgb(214, 230, 214);\r\n    cursor: pointer;\r\n    transition: all 0.4s;\r\n}\r\n.SMOption:hover {\r\n    width: 80% ;\r\n    border-color: gold;\r\n    color: gold;\r\n}", ""]);
 
 // exports
 
@@ -6472,7 +6491,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPStore {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    display: flex;\r\n    margin-left: 8%;\r\n    padding-top: 1rem;\r\n    font-weight: 600;\r\n}\r\n\r\n.CPStoreBtn {\r\n    position: relative;\r\n    font-size: 3.5vh;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    text-align: center;\r\n    min-width: 10vw;\r\n    padding: 0 2rem;\r\n    margin-left: 1rem;\r\n    cursor: pointer;\r\n    background-color: rgba(64, 224, 208, 0.726);\r\n}\r\n.CPStore img {\r\n    height: 2.5vh;\r\n    cursor: pointer;\r\n    margin-left: 1rem;\r\n    transition: transform 1s;\r\n}\r\n.CPStore img:hover {\r\n    transform: rotate(180deg);\r\n}\r\n.CPStoresList {\r\n    position: absolute;\r\n    z-index: 10;\r\n    top: 110%;\r\n    left: 0;\r\n    width: 25vw;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n.CPStoresItem {\r\n    background-color: rgba(53, 185, 97, 0.726);\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 2.5vh;\r\n    padding: 0 0.3rem;\r\n    margin-top: 0.5rem;\r\n    margin-left: 0.5rem;\r\n    flex: 1 1 50px;\r\n}\r\n", ""]);
+exports.push([module.i, ".CPStore {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 0.5rem 0;\r\n    font-weight: 600;\r\n}\r\n\r\n.CPStoreBtn {\r\n    position: relative;\r\n    font-size: 3.5vh;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    text-align: center;\r\n    min-width: 10vw;\r\n    padding: 0 2rem;\r\n    margin-left: 1rem;\r\n    cursor: pointer;\r\n   \r\n}\r\n.CPStore img {\r\n    height: 2.5vh;\r\n    cursor: pointer;\r\n    margin-left: 1rem;\r\n    transition: transform 1s;\r\n}\r\n.CPStore img:hover {\r\n    transform: rotate(180deg);\r\n}\r\n.CPStoresList {\r\n    position: absolute;\r\n    top: 110%;\r\n    left: 0;\r\n    width: 25vw;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n.CPStoresItem {\r\n    background-color: rgba(53, 185, 97, 0.726);\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 2.5vh;\r\n    padding: 0 0.3rem;\r\n    margin-top: 0.5rem;\r\n    margin-left: 0.5rem;\r\n    flex: 1 1 50px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6491,7 +6510,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".TBCont {\r\n    display: inline-block;\r\n    height:70vh;\r\n    width: 85vw;\r\n    margin-left: 15vw;\r\n    margin-top: 10vh;\r\n}\r\n.TBTable {\r\n    display: flex;\r\n    flex-direction: column;\r\n    height: 100%;\r\n    width: 100%;\r\n}", ""]);
+exports.push([module.i, ".TBCont {\r\n    display: inline-block;\r\n    height:70vh;\r\n    width: 85vw;\r\n    margin-left: 15vw;\r\n    margin-top: 2vh;\r\n   \r\n}\r\n.TBTable {\r\n    display: flex;\r\n    flex-direction: column;\r\n    height: 100%;\r\n    width: 100%;\r\n}", ""]);
 
 // exports
 
@@ -6510,7 +6529,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".TBHCont {\r\n    display: flex;\r\n    font-weight: 600;\r\n}\r\n.TBHCell{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    border: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-bottom: none;\r\n    background: linear-gradient(to bottom, #8e9eab83, #eef2f38a);\r\n    height: 2rem; \r\n    cursor: pointer;\r\n    transition: all 0.5s;\r\n}\r\n.TBHCell:hover {\r\n    border-color: orange;\r\n    color: rgb(150, 97, 0);\r\n}", ""]);
+exports.push([module.i, ".TBHCont {\r\n    display: flex;\r\n    font-weight: 600;\r\n    color: rgb(214, 230, 214);\r\n    background: rgb(53, 54, 52);\r\n}\r\n.TBHCell{\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    border: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-bottom: none;\r\n    /* background: linear-gradient(to bottom, #8e9eab83, #eef2f38a); */\r\n    height: 2rem; \r\n    cursor: pointer;\r\n    transition: all 0.5s;\r\n}\r\n.TBHCell:hover {\r\n    border-color:  rgb(231, 174, 15);\r\n    color: rgb(231, 174, 15);\r\n}", ""]);
 
 // exports
 
@@ -6548,7 +6567,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPUserCtrl {\r\n    font-size: 2vh;\r\n    font-weight: 600;\r\n    background-color: rgba(64, 224, 208, 0.726);\r\n    height: 75%;\r\n    overflow: hidden;\r\n}\r\n.CPUserCont {\r\n    display: flex;\r\n    height: 100%;\r\n    width: -webkit-max-content;\r\n    width: -moz-max-content;\r\n    width: max-content;\r\n    margin: 0 1.5rem;\r\n    align-items: center;\r\n    justify-content: center;\r\n    transition: transform 0.4s;\r\n}\r\n.CPUserIndicator {\r\n    border-radius: 50%;\r\n    background-color: yellowgreen;\r\n    margin-left: 0.8rem;\r\n    height: 2vh;\r\n    width: 2vh;\r\n}\r\n.CPUserCtrl:hover .CPUserCont {\r\n    transform: translateY(-100%);\r\n}\r\n.CPUserCtrl span {\r\n    cursor: pointer;\r\n}", ""]);
+exports.push([module.i, ".CPUserCtrl {\r\n    font-size: 2vh;\r\n    font-weight: 600;\r\n    height: 3vh;\r\n    overflow: hidden;\r\n}\r\n.CPUserCont {\r\n    display: flex;\r\n    width: -webkit-max-content;\r\n    width: -moz-max-content;\r\n    width: max-content;\r\n    align-items: center;\r\n    justify-content: center;\r\n    transition: transform 0.4s;\r\n}\r\n.CPUserIndicator {\r\n    border-radius: 50%;\r\n    background-color: rgb(235, 154, 4);\r\n    margin:0 0.8rem;\r\n    height: 1.5vh;\r\n    width: 1.5vh;\r\n}\r\n.CPUserCtrl:hover .CPUserCont {\r\n    transform: translateY(-100%);\r\n}\r\n.CPUserCtrl a {\r\n    text-decoration: none;\r\n}", ""]);
 
 // exports
 
@@ -66785,10 +66804,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SideMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SideMenu */ "./resources/js/cmp/SideMenu.js");
 /* harmony import */ var _Backdrop__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Backdrop */ "./resources/js/cmp/Backdrop.js");
 /* harmony import */ var _Table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Table */ "./resources/js/cmp/Table.js");
-/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../css/ControlPanel.css */ "./resources/js/css/ControlPanel.css");
-/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/cmp/SearchBar.js");
+/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../css/ControlPanel.css */ "./resources/js/css/ControlPanel.css");
+/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_11__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66812,6 +66832,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -66898,22 +66919,30 @@ var ControlPanel = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Store__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        activeStore: this.state.activeStore,
+        addProduct: this.addProduct,
+        switchTable: this.switchTable
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "CPBarWrap"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "CPBar"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "CPBarStore"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Store__WEBPACK_IMPORTED_MODULE_2__["default"], {
         active: this.state.activeStore,
         setActiveStore: this.setActiveStore,
         storeSwitch: this.storeSwitch,
         storeSettingsSwitch: this.storeSettingsSwitch
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "CPBarSearch"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_9__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "CPAccount"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Settings__WEBPACK_IMPORTED_MODULE_3__["default"], {
         settingsSwitch: this.settingsSwitch
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_4__["default"], {
         user: this.state.user
-      }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        activeStore: this.state.activeStore,
-        addProduct: this.addProduct,
-        switchTable: this.switchTable
-      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table__WEBPACK_IMPORTED_MODULE_8__["default"], {
         table: this.state.table,
         activeStore: this.state.activeStore,
         toAdd: this.state.toAdd
@@ -66927,7 +66956,7 @@ var ControlPanel = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 if (document.getElementById('ControlPanel')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_10___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), document.getElementById('ControlPanel'));
+  react_dom__WEBPACK_IMPORTED_MODULE_11___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), document.getElementById('ControlPanel'));
 }
 
 /***/ }),
@@ -67272,6 +67301,35 @@ function ProductPanel(props) {
     },
     name: "Price",
     value: productData.price
+  }));
+}
+
+/***/ }),
+
+/***/ "./resources/js/cmp/SearchBar.js":
+/*!***************************************!*\
+  !*** ./resources/js/cmp/SearchBar.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchBar; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_SearchBar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/SearchBar.css */ "./resources/js/css/SearchBar.css");
+/* harmony import */ var _css_SearchBar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_SearchBar_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function SearchBar(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "SBContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "search"
+  }, "search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "search",
+    type: "text"
   }));
 }
 
@@ -68000,7 +68058,6 @@ function Table(props) {
   var indexProducts = function indexProducts() {
     var index = {};
     var level = null;
-    console.log(products, 'll');
     products.forEach(function (product, i) {
       level = index;
       var name = product.name.toLowerCase();
@@ -68017,10 +68074,8 @@ function Table(props) {
         }
 
         level = level[letter];
-        console.log(level);
       }
     });
-    console.log(index, 'xx');
     setSearchIndex(index);
   };
 
@@ -68432,6 +68487,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./Product.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Product.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/css/SearchBar.css":
+/*!****************************************!*\
+  !*** ./resources/js/css/SearchBar.css ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./SearchBar.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SearchBar.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

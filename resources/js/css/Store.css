@@ -1,8 +1,7 @@
 .CPStore {
-    width: fit-content;
     display: flex;
-    margin-left: 8%;
-    padding-top: 1rem;
+    justify-content: center;
+    margin: 0.5rem 0;
     font-weight: 600;
 }
 
@@ -15,7 +14,7 @@
     padding: 0 2rem;
     margin-left: 1rem;
     cursor: pointer;
-    background-color: rgba(64, 224, 208, 0.726);
+   
 }
 .CPStore img {
     height: 2.5vh;
@@ -28,7 +27,6 @@
 }
 .CPStoresList {
     position: absolute;
-    z-index: 10;
     top: 110%;
     left: 0;
     width: 25vw;

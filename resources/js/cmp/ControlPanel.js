@@ -7,6 +7,7 @@ import SettingsMenu from './SettingsMenu';
 import SideMenu from './SideMenu';
 import Backdrop from './Backdrop';
 import Table from './Table';
+import SearchBar from './SearchBar';
 import '../css/ControlPanel.css';
 import ReactDOM from 'react-dom';
 
@@ -20,6 +21,7 @@ import ReactDOM from 'react-dom';
         table: 'products',
         toAdd: null,
         settingsOpen: false,
+        searchFor: '',
     }
     componentDidMount() {
         window.axios.get(window.location.origin + '/user')
@@ -31,6 +33,9 @@ import ReactDOM from 'react-dom';
     }
     setActiveStore = active => this.setState({activeStore : active});
     switchTable = table => this.setState({table : table});
+    searchTable = value => this.setState({
+        searchFor: value
+    })
 
     settingsSwitch = () => this.setState({settingsOpen: !this.state.settingsOpen});
    
@@ -50,27 +55,36 @@ import ReactDOM from 'react-dom';
         return <div>
                    {this.state.user ? 
                     <div>
-                         <header>
-                            <Logo/>
-                            <Store active={this.state.activeStore} 
-                                setActiveStore ={this.setActiveStore}
-                                storeSwitch={this.storeSwitch}
-                                storeSettingsSwitch={this.storeSettingsSwitch}/>
-                            <div className="CPAccount">
-                                <Settings settingsSwitch={this.settingsSwitch}/>
-                                <User user={this.state.user} />
-                            </div>
-                        </header>
                         <aside>
+                            <Logo/>
                             <SideMenu 
                                 activeStore = {this.state.activeStore} 
                                 addProduct = {this.addProduct}
                                 switchTable = {this.switchTable}
                             />
                         </aside>
+                         <div className="CPBarWrap">
+                            <div className="CPBar">
+                                <div className="CPBarStore">
+                                    <Store active={this.state.activeStore} 
+                                        setActiveStore ={this.setActiveStore}
+                                        storeSwitch={this.storeSwitch}
+                                        storeSettingsSwitch={this.storeSettingsSwitch}/>
+                                    </div>
+                                <div className="CPBarSearch">
+                                    <SearchBar searchTable={this.searchTable} />
+                                </div>
+                                <div className="CPAccount">
+                                    <Settings settingsSwitch={this.settingsSwitch}/>
+                                    <User user={this.state.user} />
+                                </div>
+                            </div>
+                        </div>
+                      
                         <Table
                             table = {this.state.table}
                             activeStore = {this.state.activeStore}
+                            searchFor = {this.state.searchFor}
                             toAdd={this.state.toAdd}
                         />
                     </div>: null

@@ -1,0 +1,16 @@
+.SBContainer {
+    font-size: 2vh;
+}
+
+.SBContainer input {
+    width: 60%;
+    height: 4vh;
+    outline: none;
+    margin-left: 1rem;
+    background: rgba(128, 128, 128, 0.096);
+    border: 1px solid rgba(128, 128, 128, 0.705);
+    box-shadow: 2px 2px 5px gray;
+}
+.SBContainer input:focus {
+    background: rgba(128, 128, 128, 0.301);
+}
