@@ -6,10 +6,6 @@ import PanelSwitch from './PanelSwitch';
 
 export default function Product(props) {
 
-    let productActive = {
-        transform: ' translateX(100%)',
-        backgroundColor: 'rgb(4, 161, 4)'
-    }
     const toogleActive = () => {
         const url = window.location.origin + '/products' + `/${props.product.id}`;
         const data = {
@@ -37,7 +33,11 @@ export default function Product(props) {
         })
         .catch( err=> console.log(err));
     }
-    
+
+    let productActive = {
+        transform: ' translateX(100%)',
+        backgroundColor: 'rgb(4, 161, 4)'
+    }
    
     return <PanelSwitch panel={ProductPanel} panelProps={{...props}}>
                 <div  className="PDCont">

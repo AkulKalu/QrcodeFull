@@ -1,5 +1,6 @@
 .SBContainer {
     font-size: 2vh;
+    position: relative;
 }
 
 .SBContainer input {
@@ -13,4 +14,14 @@
 }
 .SBContainer input:focus {
     background: rgba(128, 128, 128, 0.301);
+}
+.SBFilters {
+    position: absolute;
+    z-index: 50;
+    top: 100%;
+    left: 0;
+    display: flex;
+}
+.SBFilters label {
+    display: flex;
 }

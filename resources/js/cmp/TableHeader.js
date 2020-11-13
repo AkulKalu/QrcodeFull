@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../css/TableHeader.css';
+import Checkbox from 'react-custom-checkbox';
 
 
 export default function TableHeader(props) {
@@ -35,11 +36,35 @@ export default function TableHeader(props) {
         props.sortProducts(sortFun);
     }
     return <div className="TBHCont">
-                <div onClick={()=> sortBy('id')} style={{width: '10%'}} className="TBHCell">Id</div>
+                <div 
+                    onClick={()=> sortBy('id')} 
+                    style={{width: '10%'}} 
+                    className="TBHCell">
+                        Id
+                      
+                    </div>
                 <div style={{width: '20%'}} className="TBHCell">Image</div>
-                <div onClick={()=> sortBy('name')} style={{width: '20%'}} className="TBHCell">Name</div>
-                <div onClick={()=> sortBy('manufacturer')} style={{width: '20%'}} className="TBHCell">Manufacturer</div>
-                <div onClick={()=> sortBy('price')} style={{width: '10%'}} className="TBHCell">Price</div>
+                <div 
+                    onClick={()=> sortBy('name')} 
+                    style={{width: '20%'}} 
+                    className="TBHCell">
+                    Name
+                  
+                </div>
+                <div 
+                    onClick={()=> sortBy('manufacturer')} 
+                    style={{width: '20%'}} 
+                    className="TBHCell">
+                    Manufacturer
+                    
+                </div>
+                <div 
+                    onClick={()=> sortBy('price')} 
+                    style={{width: '10%'}} 
+                    className="TBHCell">
+                    Price
+                   
+                </div>
                 <div onClick={()=> sortBy('active')} style={{width: '10%'}} className="TBHCell">Active</div>
                 <div style={{width: '10%'}} className="TBHCell">QrCode</div>
             </div>

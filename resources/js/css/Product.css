@@ -53,6 +53,6 @@
     width: 20px;
     border-radius: 50%;
     background-color:  rgba(57, 80, 57, 0.562);
-    
+    transition: all 0.4s;
 }
 
