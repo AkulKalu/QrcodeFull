@@ -1,7 +1,12 @@
-
 .TXIInput {
-    outline-color: orange;
-    height: 1.3rem;
-    text-indent: 0.3rem;
-    border: 1px solid grey;
+    width: 100%;
+    height: 4vh;
+    outline: none;
+    margin-left: 1rem;
+    background: rgba(128, 128, 128, 0.096);
+    border: 1px solid rgba(128, 128, 128, 0.705);
+    box-shadow: 2px 2px 5px gray;
+}
+.TXIInput:focus {
+    background: rgba(128, 128, 128, 0.301);
 }

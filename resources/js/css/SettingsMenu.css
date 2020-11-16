@@ -1,13 +1,10 @@
 .SettingsMenu {
     position: relative;
     height: fit-content;
-    width: 50vh;
-    background-color: rgb(243, 242, 240);
+    width: 70vh;
     border-radius: 5px;
     margin: 10vh auto;
     padding: 1rem;
-    border: 1px solid rgb(170, 166, 166);
-    box-shadow: 5px 5px 10px rgb(196, 194, 194);
 }
 .FormGroup {
     display: flex;
@@ -63,7 +60,7 @@
 
 
 .SettingsMenu img {
-    height: 3vh;
+    height: 4vh;
     max-width: 20%;
     margin: auto;
     padding-top: 1rem;

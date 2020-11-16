@@ -1,16 +1,14 @@
-import Axios from 'axios';
 import React from 'react';
+import {logout} from '../Functions/server';
 import '../css/User.css';
 
 export default function User(props) {
 
-    const logout = () => {
-        window.axios.post('http://laravel.test/logout')
+    const exit = () => {
+        logout()
         .then(res => {
-            console.log(res);
-            window.location.replace( 'http://laravel.test');
+            window.location.replace( window.location.origin);
         })
-        .catch(err => console.log(err));
     }
 
     return <div className="CPUserCtrl">
@@ -19,7 +17,7 @@ export default function User(props) {
             <div className="CPUserIndicator"></div>
         </div>
         <div className="CPUserCont">
-            <span onClick={logout}>SignOut</span>
+            <span onClick={exit}>SignOut</span>
         </div>
     </div>
 }

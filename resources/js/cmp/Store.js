@@ -3,12 +3,12 @@ import '../css/Store.css';
 import Gear from '../storage/gear.svg';
 import PanelSwitch from './PanelSwitch';
 import StoreMenu from './StoreMenu';
+import StoreSelect from './StoreSelect';
+import {getStores} from '../Functions/server';
 
 
 
 export default function Store(props) {
-
-    const [list, setlist] = useState( false);
     const [stores, setStores] = useState([]);
 
     const emptyStore = {
@@ -21,33 +21,25 @@ export default function Store(props) {
     }
 
     useEffect(() => {
-        window.axios.get(window.location.origin + '/stores')
-            .then(stores => {
-                props.setActiveStore(stores.data[0])
-   
-                setStores([emptyStore, ...stores.data]);
-            })
-            .catch( err => console.log(err));
+        getStores()
+        .then(stores => {
+            props.setActiveStore(stores[0])
+            setStores([emptyStore, ...stores]);
+        })
     }, []);
 
     const updateStores = (stores, active=null) => {
         if(active) props.setActiveStore(active);
         setStores([emptyStore, ...stores])
     }
-
-    const storeList = stores.map((store, i) => {
-            if(i > 0 && store.name !== props.active.name) {
-                return <div onClick={() => props.setActiveStore(store)}  className="CPStoresItem" key={`storeLI${i}`}>{store.name}</div>;
-            }
-        });
-  
     
     return <div className="CPStore">
                 <span>Store:</span>
-                <div onClick={() => setlist(!list)} className="CPStoreBtn">
-                    {props.active ? props.active.name : 'loading...'} 
-                    { list ?  <div className="CPStoresList">{storeList}</div> : null}
-                </div>
+                <PanelSwitch panel={StoreSelect} panelProps={{ stores: stores, active: props.active, setActiveStore: props.setActiveStore }} >
+                    <div className="CPStoreBtn">
+                        {props.active ? props.active.name : 'loading...'} 
+                    </div>
+                </PanelSwitch>
 
                 <PanelSwitch panel={StoreMenu} panelProps={{ stores: stores, updateStores: updateStores }}>
                     <img src={Gear}></img>

@@ -1,10 +1,13 @@
 .SBContainer {
     font-size: 2vh;
-    position: relative;
 }
-
-.SBContainer input {
+.SBWrap {
+    display: inline-block;
+    position: relative;
     width: 60%;
+}
+.SBContainer input {
+    width: 100%;
     height: 4vh;
     outline: none;
     margin-left: 1rem;
@@ -16,11 +19,27 @@
     background: rgba(128, 128, 128, 0.301);
 }
 .SBFilters {
+    width: 100%;
     position: absolute;
     z-index: 50;
     top: 100%;
-    left: 0;
+    left: 1rem;
     display: flex;
+}
+.SBFilter {
+   padding: 0 0.6rem;
+   cursor: pointer;
+   opacity: 0.7;
+   transition: all 0.3s;
+   font-size: 1.6vh;
+}
+.SBFilter:hover {
+   opacity: 1;
+ }
+.SBFilterActive {
+    color: gold;
+    opacity: 1;
+    text-shadow: 1px 1px 2px grey;
 }
 .SBFilters label {
     display: flex;

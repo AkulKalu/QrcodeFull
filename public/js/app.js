@@ -6339,7 +6339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margin-left: 15vw;\r\n    width: 85vw;\r\n}\r\n.CPBar {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.CPBarStore {\r\n    flex-basis: 45%;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.CPBarSearch {\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 45%;\r\n}\r\naside {\r\n    position: fixed;\r\n    display: inline-block;\r\n    background: linear-gradient(to right,  #c1b4dd, #e9e4f0);\r\n    height: 100vh;\r\n    width: 15vw;\r\n    border-right: 1px solid rgba(128, 128, 128, 0.507);\r\n    \r\n}\r\nbody {\r\n    background: linear-gradient(to left, #c1b4dd, #ebe8f0);\r\n}\r\n.CPAccount {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 10%;\r\n    align-items: center;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    top: 0;\r\n    background-color: rgba(143, 140, 140, 0.24);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}", ""]);
+exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margin-left: 15vw;\r\n    width: 85vw;\r\n}\r\n.CPBar {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.CPBarStore {\r\n    flex-basis: 45%;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.CPBarSearch {\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 45%;\r\n}\r\naside {\r\n    position: fixed;\r\n    display: inline-block;\r\n    background: linear-gradient(to right,  #c1b4dd, #e9e4f0);\r\n    height: 100vh;\r\n    width: 15vw;\r\n    border-right: 1px solid rgba(128, 128, 128, 0.507);\r\n    \r\n}\r\nbody {\r\n    background: linear-gradient(to left, #c1b4dd, #ebe8f0);\r\n}\r\n.CPAccount {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 10%;\r\n    align-items: center;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    z-index: 1000;\r\n    top: 0;\r\n    left: 0;\r\n    -webkit-backdrop-filter: blur(1px);\r\n            backdrop-filter: blur(1px);\r\n    background: linear-gradient(to left, #c1b4ddc5, #ebe8f0c5);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}", ""]);
 
 // exports
 
@@ -6396,7 +6396,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SBContainer {\r\n    font-size: 2vh;\r\n    position: relative;\r\n}\r\n\r\n.SBContainer input {\r\n    width: 60%;\r\n    height: 4vh;\r\n    outline: none;\r\n    margin-left: 1rem;\r\n    background: rgba(128, 128, 128, 0.096);\r\n    border: 1px solid rgba(128, 128, 128, 0.705);\r\n    box-shadow: 2px 2px 5px gray;\r\n}\r\n.SBContainer input:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}\r\n.SBFilters {\r\n    position: absolute;\r\n    z-index: 50;\r\n    top: 100%;\r\n    left: 0;\r\n    display: flex;\r\n}\r\n.SBFilters label {\r\n    display: flex;\r\n}", ""]);
+exports.push([module.i, ".SBContainer {\r\n    font-size: 2vh;\r\n}\r\n.SBWrap {\r\n    display: inline-block;\r\n    position: relative;\r\n    width: 60%;\r\n}\r\n.SBContainer input {\r\n    width: 100%;\r\n    height: 4vh;\r\n    outline: none;\r\n    margin-left: 1rem;\r\n    background: rgba(128, 128, 128, 0.096);\r\n    border: 1px solid rgba(128, 128, 128, 0.705);\r\n    box-shadow: 2px 2px 5px gray;\r\n}\r\n.SBContainer input:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}\r\n.SBFilters {\r\n    width: 100%;\r\n    position: absolute;\r\n    z-index: 50;\r\n    top: 100%;\r\n    left: 1rem;\r\n    display: flex;\r\n}\r\n.SBFilter {\r\n   padding: 0 0.6rem;\r\n   cursor: pointer;\r\n   opacity: 0.7;\r\n   transition: all 0.3s;\r\n   font-size: 1.6vh;\r\n}\r\n.SBFilter:hover {\r\n   opacity: 1;\r\n }\r\n.SBFilterActive {\r\n    color: gold;\r\n    opacity: 1;\r\n    text-shadow: 1px 1px 2px grey;\r\n}\r\n.SBFilters label {\r\n    display: flex;\r\n}", ""]);
 
 // exports
 
@@ -6453,7 +6453,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SettingsMenu {\r\n    position: relative;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    width: 50vh;\r\n    background-color: rgb(243, 242, 240);\r\n    border-radius: 5px;\r\n    margin: 10vh auto;\r\n    padding: 1rem;\r\n    border: 1px solid rgb(170, 166, 166);\r\n    box-shadow: 5px 5px 10px rgb(196, 194, 194);\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    outline-color: orange;\r\n}\r\n.SettingsBtn {\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n.SettingsBtnDisabled {\r\n    pointer-events: none;\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n    opacity: 0.5;\r\n}\r\n.SettingsBtn:hover {\r\n    border-color: gold;\r\n    color: gold;\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.2vh;\r\n    padding: 0.4rem 0;\r\n    font-weight: 600;\r\n}\r\n.SettingsMenu h1 {\r\n    position: absolute;\r\n    text-align: right;\r\n    right: 1rem;\r\n    top: 0;\r\n}\r\n\r\n\r\n.SettingsMenu img {\r\n    height: 3vh;\r\n    max-width: 20%;\r\n    margin: auto;\r\n    padding-top: 1rem;\r\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".SettingsMenu {\r\n    position: relative;\r\n    height: -webkit-fit-content;\r\n    height: -moz-fit-content;\r\n    height: fit-content;\r\n    width: 70vh;\r\n    border-radius: 5px;\r\n    margin: 10vh auto;\r\n    padding: 1rem;\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    outline-color: orange;\r\n}\r\n.SettingsBtn {\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n.SettingsBtnDisabled {\r\n    pointer-events: none;\r\n    width: 20%;\r\n    margin: auto;\r\n    outline: none;\r\n    height: 2rem!important;\r\n    border-radius: 5px;\r\n    background: rgb(100, 71, 71);\r\n    color: white;\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n    opacity: 0.5;\r\n}\r\n.SettingsBtn:hover {\r\n    border-color: gold;\r\n    color: gold;\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.2vh;\r\n    padding: 0.4rem 0;\r\n    font-weight: 600;\r\n}\r\n.SettingsMenu h1 {\r\n    position: absolute;\r\n    text-align: right;\r\n    right: 1rem;\r\n    top: 0;\r\n}\r\n\r\n\r\n.SettingsMenu img {\r\n    height: 4vh;\r\n    max-width: 20%;\r\n    margin: auto;\r\n    padding-top: 1rem;\r\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -6491,7 +6491,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPStore {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 0.5rem 0;\r\n    font-weight: 600;\r\n}\r\n\r\n.CPStoreBtn {\r\n    position: relative;\r\n    font-size: 3.5vh;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    text-align: center;\r\n    min-width: 10vw;\r\n    padding: 0 2rem;\r\n    margin-left: 1rem;\r\n    cursor: pointer;\r\n   \r\n}\r\n.CPStore img {\r\n    height: 2.5vh;\r\n    cursor: pointer;\r\n    margin-left: 1rem;\r\n    transition: transform 1s;\r\n}\r\n.CPStore img:hover {\r\n    transform: rotate(180deg);\r\n}\r\n.CPStoresList {\r\n    position: absolute;\r\n    top: 110%;\r\n    left: 0;\r\n    width: 25vw;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n.CPStoresItem {\r\n    background-color: rgba(53, 185, 97, 0.726);\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 2.5vh;\r\n    padding: 0 0.3rem;\r\n    margin-top: 0.5rem;\r\n    margin-left: 0.5rem;\r\n    flex: 1 1 50px;\r\n}\r\n", ""]);
+exports.push([module.i, ".CPStore {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 0.5rem 0;\r\n    font-weight: 600;\r\n}\r\n\r\n.CPStoreBtn {\r\n    position: relative;\r\n    font-size: 3.5vh;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    text-align: center;\r\n    min-width: 10vw;\r\n    padding: 0 2rem;\r\n    margin-left: 1rem;\r\n    cursor: pointer;\r\n   \r\n}\r\n.CPStore img {\r\n    height: 2.5vh;\r\n    cursor: pointer;\r\n    margin-left: 1rem;\r\n    transition: transform 1s;\r\n}\r\n.CPStore img:hover {\r\n    transform: rotate(180deg);\r\n}\r\n.CPStoresList {\r\n    width: 50vw;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    margin: 10vh auto;\r\n}\r\n.CPStoresItem {\r\n    background-color: rgb(231,174,15);\r\n    color: rgb(53,54,52);\r\n    box-shadow: 2px 2px 5px gray;\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 2.5vh;\r\n    padding: 0 0.3rem;\r\n    margin-top: 0.5rem;\r\n    margin-left: 0.5rem;\r\n    flex: 1 1 50px;\r\n    cursor: pointer;\r\n    transition: all 0.4s;\r\n}\r\n.CPStoresItem:hover {\r\n    background-color:rgb(53,54,52) ;\r\n    color: rgb(231,174,15);\r\n}\r\n", ""]);
 
 // exports
 
@@ -6529,7 +6529,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".TBHCont {\r\n    display: flex;\r\n    font-weight: 600;\r\n    color: rgb(214, 230, 214);\r\n    background: rgb(53, 54, 52);\r\n}\r\n.TBHCell{\r\n    display: flex;\r\n    position: relative;\r\n    align-items: center;\r\n    justify-content: center;\r\n    border: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-bottom: none;\r\n    height: 2rem; \r\n    cursor: pointer;\r\n    transition: all 0.5s;\r\n}\r\n.TBHCell:hover {\r\n    border-color:  rgb(231, 174, 15);\r\n    color: rgb(231, 174, 15);\r\n}\r\n\r\n.TBHFilter {\r\n    position: absolute;\r\n    display: flex;\r\n    align-items: center;\r\n    top: 0;\r\n    bottom: 0;\r\n    right: 5%;\r\n}", ""]);
+exports.push([module.i, ".TBHCont {\r\n    display: flex;\r\n    font-weight: 600;\r\n    color: rgb(214, 230, 214);\r\n    background: rgb(53, 54, 52);\r\n}\r\n.TBHCell{\r\n    display: flex;\r\n    position: relative;\r\n    align-items: center;\r\n    justify-content: center;\r\n    border: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-bottom: none;\r\n    height: 2rem; \r\n    cursor: pointer;\r\n    transition: all 0.5s;\r\n}\r\n.TBHCell:hover {\r\n    border-color:  rgb(231, 174, 15);\r\n    color: rgb(231, 174, 15);\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -6548,7 +6548,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\r\n.TXIInput {\r\n    outline-color: orange;\r\n    height: 1.3rem;\r\n    text-indent: 0.3rem;\r\n    border: 1px solid grey;\r\n}", ""]);
+exports.push([module.i, ".TXIInput {\r\n    width: 100%;\r\n    height: 4vh;\r\n    outline: none;\r\n    margin-left: 1rem;\r\n    background: rgba(128, 128, 128, 0.096);\r\n    border: 1px solid rgba(128, 128, 128, 0.705);\r\n    box-shadow: 2px 2px 5px gray;\r\n}\r\n.TXIInput:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}", ""]);
 
 // exports
 
@@ -66760,6 +66760,116 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/Functions/actions.js":
+/*!*******************************************!*\
+  !*** ./resources/js/Functions/actions.js ***!
+  \*******************************************/
+/*! exports provided: downloadFile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadFile", function() { return downloadFile; });
+function downloadFile(file, name, ext) {
+  var url = window.URL.createObjectURL(new Blob([file]));
+  var link = document.createElement('a');
+  link.href = url;
+  link.setAttribute('download', "".concat(name, ".").concat(ext));
+  link.click();
+}
+
+/***/ }),
+
+/***/ "./resources/js/Functions/server.js":
+/*!******************************************!*\
+  !*** ./resources/js/Functions/server.js ***!
+  \******************************************/
+/*! exports provided: authenticate, logout, getStores, createStore, editStore, deleteStore, getProducts, createProduct, editProduct, deleteProduct, toogleActive, generateQrCode */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authenticate", function() { return authenticate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStores", function() { return getStores; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editStore", function() { return editStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteStore", function() { return deleteStore; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProducts", function() { return getProducts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createProduct", function() { return createProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editProduct", function() { return editProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteProduct", function() { return deleteProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toogleActive", function() { return toogleActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateQrCode", function() { return generateQrCode; });
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function request(urlPath, method) {
+  var params = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  return window.axios[method](window.location.origin + urlPath, params).then(function (res) {
+    return res.data;
+  })["catch"](function (err) {
+    return console.log(err);
+  });
+}
+
+function authenticate() {
+  return request('/user', 'get');
+}
+function logout() {
+  return request('/logout', 'post');
+}
+function getStores() {
+  return request('/stores', 'get');
+}
+function createStore(storeData) {
+  return request('/stores', 'post', _objectSpread({}, storeData));
+}
+function editStore(storeId, storeData) {
+  return request('/stores' + "/".concat(storeId), 'post', _objectSpread({
+    _method: 'PATCH'
+  }, storeData));
+}
+function deleteStore(storeId) {
+  return request('/stores' + "/".concat(storeId), 'post', {
+    _method: 'DELETE'
+  });
+}
+function getProducts(store) {
+  return request('/products', 'get', {
+    params: {
+      storeId: store
+    }
+  });
+}
+function createProduct(productData) {
+  return request('/products', 'post', _objectSpread({}, productData));
+}
+function editProduct(productId, productData) {
+  return request('/products' + "/".concat(productId), 'post', _objectSpread({
+    _method: 'PATCH'
+  }, productData));
+}
+function deleteProduct(productId, storeId) {
+  return request('/products' + "/".concat(productId), 'post', {
+    _method: 'DELETE',
+    store_id: storeId
+  });
+}
+function toogleActive(productId, productInfo) {
+  return request('/products' + "/".concat(productId), 'post', _objectSpread({
+    _method: 'PATCH'
+  }, productInfo));
+}
+function generateQrCode(storeId, productId) {
+  return request('/qrcodes' + "/".concat(storeId) + "/".concat(productId), 'get');
+}
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -66942,10 +67052,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Backdrop__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Backdrop */ "./resources/js/cmp/Backdrop.js");
 /* harmony import */ var _Table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Table */ "./resources/js/cmp/Table.js");
 /* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/cmp/SearchBar.js");
-/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../css/ControlPanel.css */ "./resources/js/css/ControlPanel.css");
-/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../css/ControlPanel.css */ "./resources/js/css/ControlPanel.css");
+/* harmony import */ var _css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_css_ControlPanel_css__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_12__);
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -66957,6 +67068,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -66998,10 +67110,8 @@ function ControlPanel() {
       setFilter = _useState10[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    window.axios.get(window.location.origin + '/user').then(function (user) {
-      if (user.data) {
-        setUser(user.data);
-      }
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_10__["authenticate"])().then(function (user) {
+      if (user) setUser(user);
     });
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -67034,7 +67144,7 @@ function ControlPanel() {
 }
 
 if (document.getElementById('ControlPanel')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_11___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), document.getElementById('ControlPanel'));
+  react_dom__WEBPACK_IMPORTED_MODULE_12___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), document.getElementById('ControlPanel'));
 }
 
 /***/ }),
@@ -67075,9 +67185,15 @@ function PanelSwitch(props) {
       openPanel = _useState2[1];
 
   var panelSwitch = function panelSwitch(e) {
-    if (!e.target.getAttribute('data-escape')) {
-      openPanel(!panelOpen);
+    if (e) {
+      if (!e.target.getAttribute('data-escape')) {
+        openPanel(!panelOpen);
+      }
+
+      return;
     }
+
+    openPanel(!panelOpen);
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -67107,6 +67223,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _ProductPanel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductPanel */ "./resources/js/cmp/ProductPanel.js");
 /* harmony import */ var _PanelSwitch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PanelSwitch */ "./resources/js/cmp/PanelSwitch.js");
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _Functions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Functions/actions */ "./resources/js/Functions/actions.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -67118,32 +67236,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
 function Product(props) {
-  var toogleActive = function toogleActive() {
-    var url = window.location.origin + '/products' + "/".concat(props.product.id);
-    var data = {
-      _method: 'PATCH',
+  var setActiveStatus = function setActiveStatus() {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["toogleActive"])(props.product.id, {
       store_id: props.product.store_id,
       active: props.product.active ? 0 : 1
-    };
-    window.axios.post(url, data).then(function (res) {
-      props.editProduct(res.data, props.product.index);
-    })["catch"](function (err) {
-      return console.log(err);
+    }).then(function (status) {
+      props.updateProduct(status, props.product.index);
     });
   };
 
   var downloadQrCode = function downloadQrCode() {
-    var url = window.location.origin + '/qrcodes' + "/".concat(props.product.store_id) + "/".concat(props.product.id);
-    window.axios.get(url).then(function (res) {
-      var url = window.URL.createObjectURL(new Blob([res.data.qrCode]));
-      var link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', "".concat(props.product.name, ".svg")); //or any other extension
-
-      link.click();
-    })["catch"](function (err) {
-      return console.log(err);
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["generateQrCode"])(props.product.store_id, props.product.id).then(function (qrCode) {
+      return Object(_Functions_actions__WEBPACK_IMPORTED_MODULE_6__["downloadFile"])(qrCode, props.product.name, 'svg');
     });
   };
 
@@ -67192,7 +67299,7 @@ function Product(props) {
     className: "PDCell PDActive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "data-escape": true,
-    onClick: toogleActive,
+    onClick: setActiveStatus,
     className: "PDToggle"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "data-escape": true,
@@ -67228,6 +67335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TextInput */ "./resources/js/cmp/TextInput.js");
 /* harmony import */ var _BasicPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BasicPanel */ "./resources/js/cmp/BasicPanel.js");
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -67245,6 +67353,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -67269,58 +67378,43 @@ function ProductPanel(props) {
     setProductData(_objectSpread(_objectSpread({}, productData), {}, _defineProperty({}, key, value)));
   };
 
-  var createProduct = function createProduct() {
-    var url = window.location.origin + '/products';
-
+  var create = function create() {
     var data = _objectSpread({
       store_id: props.activeStore.id
     }, productData);
 
-    window.axios.post(url, data).then(function (res) {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["createProduct"])(data).then(function (product) {
       props.closePanel();
-      props.addProduct(res.data);
-    })["catch"](function (err) {
-      return console.log(err);
+      props.addProduct(product);
     });
   };
 
-  var editProduct = function editProduct() {
-    var url = window.location.origin + '/products' + "/".concat(props.product.id);
+  var edit = function edit() {
     var data = {
-      _method: 'PATCH',
       store_id: productData.store_id
     };
     Object.keys(emptyProduct).forEach(function (key) {
       return data[key] = productData[key];
     });
-    window.axios.post(url, data).then(function (res) {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["editProduct"])(props.product.id, data).then(function (product) {
       props.closePanel();
-      props.editProduct(res.data, productData.index);
-    })["catch"](function (err) {
-      return console.log(err);
+      props.updateProduct(product, productData.index);
     });
   };
 
-  var removeProduct = function removeProduct() {
-    var url = window.location.origin + '/products' + "/".concat(props.product.id);
-    var data = {
-      _method: 'DELETE',
-      store_id: productData.store_id
-    };
-    window.axios.post(url, data).then(function (res) {
+  var remove = function remove() {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteProduct"])(props.product.id, productData.store_id).then(function (status) {
       props.closePanel();
       props.removeProduct(productData.index);
-    })["catch"](function (err) {
-      return console.log(err);
     });
   };
 
   var panelButtons = [{
     name: props.create ? 'CREATE' : 'EDIT',
-    onClick: props.create ? createProduct : editProduct
+    onClick: props.create ? create : edit
   }, !props.create ? {
     name: 'REMOVE',
-    onClick: removeProduct
+    onClick: remove
   } : null, {
     name: 'CLOSE',
     onClick: props.closePanel
@@ -67393,10 +67487,18 @@ function ProductPanel(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SearchBar; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _css_SearchBar_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/SearchBar.css */ "./resources/js/css/SearchBar.css");
-/* harmony import */ var _css_SearchBar_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_SearchBar_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_SearchBar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/SearchBar.css */ "./resources/js/css/SearchBar.css");
+/* harmony import */ var _css_SearchBar_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_SearchBar_css__WEBPACK_IMPORTED_MODULE_2__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -67411,27 +67513,58 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function SearchBar(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
       searchVal = _useState2[0],
       setSearchVal = _useState2[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
+    id: false,
+    name: true,
+    manufacturee: true,
+    price: false
+  }),
+      _useState4 = _slicedToArray(_useState3, 2),
+      searchFilters = _useState4[0],
+      setSearchFilters = _useState4[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     props.setFilter(searchVal.length ? searchVal.toLowerCase() : null);
   }, [searchVal]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+
+  var filterActive = function filterActive(filter) {
+    setSearchFilters(_objectSpread(_objectSpread({}, searchFilters), {}, _defineProperty({}, filter, !searchFilters[filter])));
+  };
+
+  var filters = Object.keys(searchFilters).map(function (filter, i) {
+    var filterClass = searchFilters[filter] ? 'SBFilter SBFilterActive' : 'SBFilter';
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+      onClick: function onClick() {
+        return filterActive(filter);
+      },
+      className: filterClass,
+      key: "SBFilter".concat(i)
+    }, filter);
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "SBContainer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     htmlFor: "search"
-  }, "search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, "search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "SBWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    onBlur: function onBlur(e) {},
     onChange: function onChange(e) {
       return setSearchVal(e.target.value);
     },
     value: searchVal,
     name: "search",
     type: "text"
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "SBFilters"
+  }, filters)));
 }
 
 /***/ }),
@@ -67777,6 +67910,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_gear_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_storage_gear_svg__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _PanelSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PanelSwitch */ "./resources/js/cmp/PanelSwitch.js");
 /* harmony import */ var _StoreMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./StoreMenu */ "./resources/js/cmp/StoreMenu.js");
+/* harmony import */ var _StoreSelect__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./StoreSelect */ "./resources/js/cmp/StoreSelect.js");
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -67802,16 +67937,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Store(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      list = _useState2[0],
-      setlist = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      stores = _useState4[0],
-      setStores = _useState4[1];
+
+function Store(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      stores = _useState2[0],
+      setStores = _useState2[1];
 
   var emptyStore = {
     name: '',
@@ -67822,11 +67954,9 @@ function Store(props) {
     paypal_private_key: ''
   };
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    window.axios.get(window.location.origin + '/stores').then(function (stores) {
-      props.setActiveStore(stores.data[0]);
-      setStores([emptyStore].concat(_toConsumableArray(stores.data)));
-    })["catch"](function (err) {
-      return console.log(err);
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["getStores"])().then(function (stores) {
+      props.setActiveStore(stores[0]);
+      setStores([emptyStore].concat(_toConsumableArray(stores)));
     });
   }, []);
 
@@ -67836,27 +67966,18 @@ function Store(props) {
     setStores([emptyStore].concat(_toConsumableArray(stores)));
   };
 
-  var storeList = stores.map(function (store, i) {
-    if (i > 0 && store.name !== props.active.name) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        onClick: function onClick() {
-          return props.setActiveStore(store);
-        },
-        className: "CPStoresItem",
-        key: "storeLI".concat(i)
-      }, store.name);
-    }
-  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPStore"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Store:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: function onClick() {
-      return setlist(!list);
-    },
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Store:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    panel: _StoreSelect__WEBPACK_IMPORTED_MODULE_5__["default"],
+    panelProps: {
+      stores: stores,
+      active: props.active,
+      setActiveStore: props.setActiveStore
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPStoreBtn"
-  }, props.active ? props.active.name : 'loading...', list ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "CPStoresList"
-  }, storeList) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, props.active ? props.active.name : 'loading...')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
     panel: _StoreMenu__WEBPACK_IMPORTED_MODULE_4__["default"],
     panelProps: {
       stores: stores,
@@ -67888,6 +68009,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_StripeLogo_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_storage_StripeLogo_svg__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _storage_PayPal_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../storage/PayPal.svg */ "./resources/js/storage/PayPal.svg");
 /* harmony import */ var _storage_PayPal_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_storage_PayPal_svg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -67905,6 +68027,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -67935,50 +68058,36 @@ function StoreMenu(props) {
     if (changed) setChanged(false);
   };
 
-  var createStore = function createStore() {
-    var url = window.location.origin + '/stores'; //Clean object of ids
+  var create = function create() {
+    var data = {};
+    Object.keys(props.stores[0]).forEach(function (key) {
+      return data[key] = storeData[key];
+    }); //Clean object of ids
 
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["createStore"])(data).then(function (res) {
+      props.closePanel();
+      props.updateStores(res.stores, res.created);
+    });
+  };
+
+  var edit = function edit() {
     var data = {};
     Object.keys(props.stores[0]).forEach(function (key) {
       return data[key] = storeData[key];
     });
-    window.axios.post(url, data).then(function (res) {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["editStore"])(storeData.id, data).then(function (res) {
       props.closePanel();
-      props.updateStores(res.data.stores, res.data.created);
-    })["catch"](function (err) {
-      return console.log(err);
+      props.updateStores(res.stores, res.updated);
     });
   };
 
-  var editStore = function editStore() {
-    var url = window.location.origin + '/stores' + "/".concat(storeData.id);
-    var data = {
-      _method: 'PATCH'
-    };
-    Object.keys(props.stores[0]).forEach(function (key) {
-      return data[key] = storeData[key];
-    });
-    window.axios.post(url, data).then(function (res) {
-      props.closePanel();
-      props.updateStores(res.data.stores, res.data.updated);
-    })["catch"](function (err) {
-      return console.log(err);
-    });
-  };
-
-  var removeStore = function removeStore() {
+  var remove = function remove() {
     var confirmed = confirm('Deleting the store will also remove all its product. Are you sure?');
 
     if (confirmed) {
-      var url = window.location.origin + '/stores' + "/".concat(storeData.id);
-      var data = {
-        _method: 'DELETE'
-      };
-      window.axios.post(url, data).then(function (res) {
+      Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["deleteStore"])(storeData.id).then(function (stores) {
         props.closePanel();
-        props.updateStores(res.data, res.data[0]);
-      })["catch"](function (err) {
-        return console.log(err);
+        props.updateStores(stores, stores[0]);
       });
     }
   };
@@ -67993,10 +68102,10 @@ function StoreMenu(props) {
   });
   var panelButtons = [{
     name: storeData['id'] ? 'EDIT' : 'CREATE',
-    onClick: storeData['id'] ? editStore : createStore
+    onClick: storeData['id'] ? edit : create
   }, {
     name: "REMOVE",
-    onClick: removeStore,
+    onClick: remove,
     disabled: !storeData['id'],
     className: !storeData['id'] ? "SettingsBtnDisabled" : "SettingsBtn"
   }, {
@@ -68072,6 +68181,42 @@ function StoreMenu(props) {
 
 /***/ }),
 
+/***/ "./resources/js/cmp/StoreSelect.js":
+/*!*****************************************!*\
+  !*** ./resources/js/cmp/StoreSelect.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StoreSelect; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_Store_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/Store.css */ "./resources/js/css/Store.css");
+/* harmony import */ var _css_Store_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_Store_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function StoreSelect(props) {
+  var storeList = props.stores.map(function (store, i) {
+    if (i > 0 && store.name !== props.active.name) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        onClick: function onClick() {
+          props.closePanel();
+          props.setActiveStore(store);
+        },
+        className: "CPStoresItem",
+        key: "storeLI".concat(i)
+      }, store.name);
+    }
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "CPStoresList"
+  }, storeList);
+}
+
+/***/ }),
+
 /***/ "./resources/js/cmp/Table.js":
 /*!***********************************!*\
   !*** ./resources/js/cmp/Table.js ***!
@@ -68086,8 +68231,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Product */ "./resources/js/cmp/Product.js");
 /* harmony import */ var _TableHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableHeader */ "./resources/js/cmp/TableHeader.js");
-/* harmony import */ var _css_Table_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/Table.css */ "./resources/js/css/Table.css");
-/* harmony import */ var _css_Table_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_Table_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _css_Table_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/Table.css */ "./resources/js/css/Table.css");
+/* harmony import */ var _css_Table_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_css_Table_css__WEBPACK_IMPORTED_MODULE_4__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -68118,6 +68264,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Table(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -68126,15 +68273,8 @@ function Table(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (props.activeStore) {
-      var url = window.location.origin + '/products';
-      window.axios.get(url, {
-        params: {
-          storeId: props.activeStore.id
-        }
-      }).then(function (res) {
-        setProducts(res.data);
-      })["catch"](function (err) {
-        return console.log(err);
+      Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["getProducts"])(props.activeStore.id).then(function (prod) {
+        return setProducts(prod);
       });
     }
   }, [props.activeStore]);
@@ -68147,7 +68287,7 @@ function Table(props) {
     }
   }, [props.toAdd]);
 
-  var editProduct = function editProduct(toEdit, ind) {
+  var updateProduct = function updateProduct(toEdit, ind) {
     var updated = _toConsumableArray(products);
 
     updated[ind] = toEdit;
@@ -68208,7 +68348,7 @@ function Table(props) {
         key: "product".concat(i),
         product: product,
         removeProduct: removeProduct,
-        editProduct: editProduct
+        updateProduct: updateProduct
       });
     }
   });
@@ -68404,35 +68544,31 @@ function TextInput(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return User; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
 /* harmony import */ var _css_User_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/User.css */ "./resources/js/css/User.css");
 /* harmony import */ var _css_User_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_User_css__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 function User(props) {
-  var logout = function logout() {
-    window.axios.post('http://laravel.test/logout').then(function (res) {
-      console.log(res);
-      window.location.replace('http://laravel.test');
-    })["catch"](function (err) {
-      return console.log(err);
+  var exit = function exit() {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_1__["logout"])().then(function (res) {
+      window.location.replace(window.location.origin);
     });
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPUserCtrl"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPUserCont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.user.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.user.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPUserIndicator"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPUserCont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    onClick: logout
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    onClick: exit
   }, "SignOut")));
 }
 

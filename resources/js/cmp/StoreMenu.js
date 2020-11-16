@@ -4,6 +4,7 @@ import SelectList from './SelectList';
 import BasicPanel from './BasicPanel';
 import StripeLogo from '../storage/StripeLogo.svg';
 import PayPalLogo from '../storage/PayPal.svg';
+import {createStore, deleteStore , editStore} from '../Functions/server';
 
 export default function StoreMenu(props) {
         const [storeData, setStoreData] = useState({...props.stores[0]})
@@ -25,49 +26,34 @@ export default function StoreMenu(props) {
             if(changed) setChanged(false) ;
         }
 
-        const createStore = () => {
-            const url =  window.location.origin + '/stores';
-            //Clean object of ids
+        const create = () => {
+            const data = {}
+            Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);   //Clean object of ids
+            createStore(data)
+            .then( res => {
+                props.closePanel();
+                props.updateStores(res.stores, res.created);
+            })
+        }
+
+        const edit = () => {
             const data = {}
             Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);
-
-            window.axios.post(url, data)
+            editStore(storeData.id, data )
             .then( res => {
                 props.closePanel();
-                props.updateStores(res.data.stores, res.data.created);
+                props.updateStores(res.stores, res.updated);
             })
-            .catch( err => console.log(err));
-        }
-
-        const editStore = () => {
-            const url =  window.location.origin + '/stores' + `/${storeData.id}`;
-            const data = {
-                _method: 'PATCH',
-            }
-            Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);
-
-            window.axios.post(url, data)
-            .then( res => {
-                props.closePanel();
-                props.updateStores(res.data.stores, res.data.updated);
-            })
-            .catch( err => console.log(err));
         }
         
-        const removeStore = () => {
+        const remove = () => {
             const confirmed = confirm('Deleting the store will also remove all its product. Are you sure?');
-            
             if(confirmed) {
-                const url = window.location.origin + '/stores' + `/${storeData.id}`;
-                const data = {
-                    _method: 'DELETE'
-                }
-                window.axios.post(url, data)
-                .then( res =>{
+                deleteStore(storeData.id)
+                .then(stores =>{
                     props.closePanel();
-                    props.updateStores(res.data, res.data[0]);
+                    props.updateStores(stores, stores[0]);
                 })
-                .catch( err => console.log(err));
             }
         }
        
@@ -81,11 +67,11 @@ export default function StoreMenu(props) {
         let panelButtons = [
             {
                 name: storeData['id'] ? 'EDIT': 'CREATE' ,
-                onClick : storeData['id'] ? editStore  : createStore,
+                onClick : storeData['id'] ? edit  : create,
             },
             {
                 name: "REMOVE",
-                onClick : removeStore,
+                onClick : remove,
                 disabled: !storeData['id'],
                 className: !storeData['id'] ?"SettingsBtnDisabled": "SettingsBtn" 
             },

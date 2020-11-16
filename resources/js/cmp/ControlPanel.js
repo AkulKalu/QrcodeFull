@@ -8,6 +8,7 @@ import SideMenu from './SideMenu';
 import Backdrop from './Backdrop';
 import Table from './Table';
 import SearchBar from './SearchBar';
+import {authenticate} from '../Functions/server';
 import '../css/ControlPanel.css';
 import ReactDOM from 'react-dom';
 
@@ -22,12 +23,10 @@ import ReactDOM from 'react-dom';
      const [filter, setFilter] = useState(null);
 
     useEffect(()=> {
-        window.axios.get(window.location.origin + '/user')
+        authenticate()
         .then(user => {
-           if(user.data) {
-            setUser(user.data);
-           }
-        })
+            if(user) setUser(user);
+         })
     })
    
     return <div>

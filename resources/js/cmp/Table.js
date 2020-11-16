@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Product from './Product';
 import TableHeader from './TableHeader';
+import {getProducts} from '../Functions/server';
 
 import '../css/Table.css';
 
@@ -9,15 +10,9 @@ export default function Table(props) {
 
     useEffect( () => {
         if(props.activeStore) {
-            const url = window.location.origin + '/products';
-            window.axios.get(url, {params:{storeId: props.activeStore.id}})
-            .then( res =>{
-               setProducts(res.data);
-            })
-           
-            .catch( err=> console.log(err));
+            getProducts(props.activeStore.id)
+            .then( prod =>setProducts(prod))
         }
-       
     }, [props.activeStore])
 
     useEffect( () => {
@@ -29,7 +24,7 @@ export default function Table(props) {
     }, [props.toAdd])
 
    
-    const editProduct = (toEdit, ind) => {
+    const updateProduct = (toEdit, ind) => {
         let updated = [...products];
         updated[ind] = toEdit;
         setProducts(updated);
@@ -74,7 +69,7 @@ export default function Table(props) {
             product = applyFilter(product);
             if(product) {
                 product.index = i;
-                return <Product  key={`product${i}`} product={product} removeProduct={removeProduct}  editProduct={editProduct} />
+                return <Product  key={`product${i}`} product={product} removeProduct={removeProduct}  updateProduct={updateProduct} />
             }
         })
   
