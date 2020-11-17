@@ -2,7 +2,6 @@
     width: 100%;
     height: 10vh;
     display: flex;
-    /* background: linear-gradient(to left, #f7f8f8, #acbb78); */
     cursor: pointer;
     border-bottom: 1px solid rgba(128, 128, 128, 0.507);
     border-top: 1px solid rgba(128, 128, 128, 0.507);

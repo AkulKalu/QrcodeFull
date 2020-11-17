@@ -11,12 +11,14 @@ export default function BasicPanel(props) {
     })
 
     return  <div className="SettingsMenu">
-                <h1>{props.name}</h1>
-
-                {props.children}
-            
-                <div style={{margin:'2rem 0', flexDirection: "row"}} className="FormGroup">
-                   {buttons}
+                <div className="PanelLeft" >
+                    {props.children}
+                </div>
+                <div  className="PanelRight">
+                    <h1>{props.name}</h1>
+                    <div className="PanelButtons">
+                        {buttons}
+                    </div>  
                 </div>
             </div>
 }

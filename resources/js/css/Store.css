@@ -6,7 +6,7 @@
 }
 
 .CPStoreBtn {
-    position: relative;
+    /* position: relative; */
     font-size: 3.5vh;
     width: fit-content;
     text-align: center;

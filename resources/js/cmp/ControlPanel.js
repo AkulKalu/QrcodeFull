@@ -27,9 +27,9 @@ import ReactDOM from 'react-dom';
         .then(user => {
             if(user) setUser(user);
          })
-    })
-   
-    return <div>
+    },[])
+   console.log('co');
+    return <div >
                 {user ? 
                 <div>
                     <aside>

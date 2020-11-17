@@ -29,11 +29,14 @@ export default function StoreMenu(props) {
         const create = () => {
             const data = {}
             Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);   //Clean object of ids
+            console.log(data, 'sent');
             createStore(data)
             .then( res => {
-                props.closePanel();
-                props.updateStores(res.stores, res.created);
+                console.log(res);
+                // props.closePanel();
+                // props.updateStores(res.stores, res.created);
             })
+            .catch( res => console.log(res))
         }
 
         const edit = () => {
@@ -91,12 +94,14 @@ export default function StoreMenu(props) {
                     <TextInput  
                         onChange = {e => inputChange(e.target.value, 'name')} 
                         name="Name"
-                        value={storeData.name} 
+                        value={storeData.name}
+                        validate = 'name'
                     />
                     <TextInput  
                         onChange = {e => inputChange(e.target.value, 'website')} 
                         name="Website" 
                         value={storeData.website}
+                        validate = 'website'
                     />
 
                     <div style={{paddingTop:'1rem'}}>
@@ -107,11 +112,13 @@ export default function StoreMenu(props) {
                             onChange = {e => inputChange(e.target.value, 'stripe_public_key')}
                             name = "Public Key"
                             value={storeData.stripe_public_key} 
+                            validate = 'stripe_public_key'
                         />
                          <TextInput
                             onChange = {e => inputChange(e.target.value, 'stripe_private_key')}
                             name = "Private Key"
                             value={storeData.stripe_private_key} 
+                            validate = 'stripe_private_key'
                         />
                     </div>
                     <div style={{paddingTop:'1rem'}}>
@@ -122,11 +129,13 @@ export default function StoreMenu(props) {
                             onChange = {e => inputChange(e.target.value, 'paypal_client_id')}
                             name = "Client Id"
                             value={storeData.paypal_client_id} 
+                            validate = 'paypal_client_id'
                         />
                          <TextInput
                             onChange = {e => inputChange(e.target.value, 'paypal_private_key')}
                             name = "Private Key"
                             value={storeData.paypal_private_key} 
+                            validate = 'paypal_private_key'
                         />
                     </div>
                    

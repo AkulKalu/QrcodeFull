@@ -40,27 +40,28 @@ export default function Table(props) {
         setProducts(sorted);
     }
     const applyFilter = product => {
-        if(!props.filter) {
+        
+        if(!props.filter || !props.filter.applyTo) {
             return product
         }
-        const filters = ['name', 'manufacturer', 'price', 'id'];
-
+       
         const highlight = (colVal, match) => <span>
             <span style={{backgroundColor: 'gold'}}>{match}</span>
-            <span>{colVal.substr(props.filter.length)}</span>
+            <span>{colVal.substr(props.filter.search.length)}</span>
         </span>
 
-        for (let i = 0; i < filters.length; i++) {
-            const filter = filters[i];
-            const colValue = isNaN(product[filter]) ? product[filter]: product[filter].toString();
-            const match = colValue.substr(0, props.filter.length);
+        for (const key in props.filter.applyTo) {
+            if (props.filter.applyTo[key]) {
+                const colValue = isNaN(product[key]) ? product[key]: product[key].toString();
+                const match = colValue.substr(0, props.filter.search.length);
             
-            if(match.toLowerCase() === props.filter) {
-                let filtered = {...product};
-                filtered[filter] = highlight(colValue, match)
-                return filtered;
+                if(match.toLowerCase() === props.filter.search) {
+                    let filtered = {...product};
+                    filtered[key] = highlight(colValue, match)
+                    return filtered;
+                }
             }
-        }
+        }  
 
         return false
     }

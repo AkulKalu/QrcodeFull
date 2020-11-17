@@ -1,7 +1,7 @@
 function request(urlPath, method, params = null) {
     return window.axios[method](window.location.origin + urlPath, params)
            .then( res => res.data)
-           .catch( err=> console.log(err));
+           .catch( err=> err.response.data);
 }
 
 export function authenticate() {
