@@ -27,7 +27,7 @@ export default function Product(props) {
         transform: ' translateX(100%)',
         backgroundColor: 'rgb(4, 161, 4)'
     }
-   
+    console.log('product');
     return <PanelSwitch panel={ProductPanel} panelProps={{...props}}>
                 <div  className="PDCont">
                         <div style={{width: '10%'}} className="PDCell PDId">{props.product.id}</div>

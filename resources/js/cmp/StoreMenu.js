@@ -29,7 +29,6 @@ export default function StoreMenu(props) {
         const create = () => {
             const data = {}
             Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);   //Clean object of ids
-            console.log(data, 'sent');
             createStore(data)
             .then( res => {
                 console.log(res);

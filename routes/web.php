@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CPanelController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StoresController;
@@ -25,11 +26,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/qrcodes/{store}/{product}', [HomeController::class, 'generateQrCode'])->name('qrgen');
+Route::get('/qrcodes/{store}/{product}', [CPanelController::class, 'generateQrCode'])->name('qrgen');
 Route::get('/dd', [HomeController::class, 'dd'])->name('dd');
-Route::get('/user', function () {
-    return Auth::user();
-});
+Route::get('/user', [CPanelController::class, 'load']);
 Route::resources([
     'stores'=> StoresController::class,
     'products'=>ProductsController::class,

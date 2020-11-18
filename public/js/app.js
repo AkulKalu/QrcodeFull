@@ -6548,7 +6548,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".TXIInput {\r\n    width: 65%;\r\n    height: 4vh;\r\n    outline: none;\r\n    background: rgba(128, 128, 128, 0.096);\r\n    border: 1px solid rgba(128, 128, 128, 0.705);\r\n    box-shadow: 2px 2px 5px gray;\r\n}\r\n.TXIInput:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}", ""]);
+exports.push([module.i, ".TXIInput {\r\n    width: 65%;\r\n    height: 4vh;\r\n    outline: none;\r\n    background: rgba(128, 128, 128, 0.096);\r\n    border: 1px solid rgba(128, 128, 128, 0.705);\r\n    box-shadow: 2px 2px 5px gray;\r\n}\r\n.TXIInput:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}\r\n.ValidationMessage {\r\n    text-align: right;\r\n    width: 65%;\r\n    color: crimson;\r\n}", ""]);
 
 // exports
 
@@ -66812,7 +66812,7 @@ function request(urlPath, method) {
   return window.axios[method](window.location.origin + urlPath, params).then(function (res) {
     return res.data;
   })["catch"](function (err) {
-    return err.response.data;
+    return err.response;
   });
 }
 
@@ -67111,10 +67111,9 @@ function ControlPanel() {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(_Functions_server__WEBPACK_IMPORTED_MODULE_10__["authenticate"])().then(function (user) {
-      if (user) setUser(user);
+      setUser(user);
     });
   }, []);
-  console.log('co');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
     activeStore: activeStore,
     addProduct: addProduct,
@@ -67259,6 +67258,7 @@ function Product(props) {
     transform: ' translateX(100%)',
     backgroundColor: 'rgb(4, 161, 4)'
   };
+  console.log('product');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_4__["default"], {
     panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_3__["default"],
     panelProps: _objectSpread({}, props)
@@ -67384,9 +67384,8 @@ function ProductPanel(props) {
       store_id: props.activeStore.id
     }, productData);
 
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["createProduct"])(data).then(function (product) {
-      props.closePanel();
-      props.addProduct(product);
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["createProduct"])(data).then(function (product) {// props.closePanel();
+      // props.addProduct(product);
     });
   };
 
@@ -67431,7 +67430,8 @@ function ProductPanel(props) {
       return inputChange(e.target.value, 'name');
     },
     name: "Name",
-    value: productData.name
+    value: productData.name,
+    validate: "name"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     onChange: function onChange(e) {
       return inputChange(e.target.value, 'manufacturer');
@@ -67443,7 +67443,8 @@ function ProductPanel(props) {
       return inputChange(e.target.value, 'manufacturer_website');
     },
     name: "Manufacturer Website",
-    value: productData.manufacturer_website
+    value: productData.manufacturer_website,
+    validate: "manufacturer_website"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "FormGroup"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -67460,19 +67461,22 @@ function ProductPanel(props) {
       return inputChange(e.target.value, 'url');
     },
     name: "Product Link",
-    value: productData.url
+    value: productData.url,
+    validate: "url"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     onChange: function onChange(e) {
       return inputChange(e.target.value, 'image_url');
     },
     name: "Image Url",
-    value: productData.image_url
+    value: productData.image_url,
+    validate: "image_url"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     onChange: function onChange(e) {
       return inputChange(e.target.value, 'price');
     },
     name: "Price",
-    value: productData.price
+    value: productData.price,
+    validate: "price"
   }));
 }
 
@@ -67968,7 +67972,6 @@ function Store(props) {
     paypal_client_id: '',
     paypal_private_key: ''
   };
-  console.log('z');
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["getStores"])().then(function (stores) {
       props.setActiveStore(stores[0]);
@@ -68080,7 +68083,6 @@ function StoreMenu(props) {
       return data[key] = storeData[key];
     }); //Clean object of ids
 
-    console.log(data, 'sent');
     Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["createStore"])(data).then(function (res) {
       console.log(res); // props.closePanel();
       // props.updateStores(res.stores, res.created);
@@ -68311,6 +68313,7 @@ function Table(props) {
       setProducts(updated);
     }
   }, [props.toAdd]);
+  console.log('table');
 
   var updateProduct = function updateProduct(toEdit, ind) {
     var updated = _toConsumableArray(products);
@@ -68558,28 +68561,31 @@ function TextInput(props) {
       setValidationMessage = _useState2[1];
 
   var name = props.name.replace(' ', '');
-  console.log('x');
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (props.validate) {
+      var validationInterceptor = window.axios.interceptors.response.use(function (response) {
+        return response;
+      }, function (error) {
+        if (error.response.status === 422) {
+          var message = error.response.data.errors[props.validate];
 
-  if (props.validate) {
-    window.axios.interceptors.response.use(function (response) {
-      return response;
-    }, function (error) {
-      if (error.response.status === 422) {
-        var message = error.response.data.errors[props.validate];
-
-        if (message) {
-          console.log(props.validate);
-          setValidationMessage(message);
+          if (message) {
+            setValidationMessage(message);
+          } else {
+            setValidationMessage('');
+          }
         }
-      }
 
-      return Promise.reject(error);
-    });
-  }
-
+        return Promise.reject(error);
+      });
+      return function () {
+        axios.interceptors.request.eject(validationInterceptor);
+      };
+    }
+  }, []);
   var invalidInputStyle = {
     borderColor: 'crimson',
-    boxShadow: '0 0 4px crimson'
+    boxShadow: '0 0 5px crimson'
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: props.style,
@@ -68594,11 +68600,8 @@ function TextInput(props) {
     value: props.value,
     type: "text",
     name: name
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    style: {
-      display: "inline-block",
-      margin: "auto"
-    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "ValidationMessage"
   }, validationMessage));
 }
 

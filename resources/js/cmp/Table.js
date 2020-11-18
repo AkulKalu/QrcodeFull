@@ -22,7 +22,7 @@ export default function Table(props) {
             setProducts(updated);
         }
     }, [props.toAdd])
-
+    console.log('table');
    
     const updateProduct = (toEdit, ind) => {
         let updated = [...products];

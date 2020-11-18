@@ -1,7 +1,7 @@
 function request(urlPath, method, params = null) {
     return window.axios[method](window.location.origin + urlPath, params)
            .then( res => res.data)
-           .catch( err=> err.response.data);
+           .catch( err=> err.response);
 }
 
 export function authenticate() {
@@ -10,7 +10,6 @@ export function authenticate() {
 export function logout() {
     return request( '/logout', 'post');
 }
-
 
 export function getStores() {
     return request('/stores', 'get')

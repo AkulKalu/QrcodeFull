@@ -19,7 +19,7 @@ export default function Store(props) {
         paypal_client_id: '',
         paypal_private_key: '',
     }
-    console.log('z');
+  
     useEffect(() => {
         getStores()
         .then(stores => {

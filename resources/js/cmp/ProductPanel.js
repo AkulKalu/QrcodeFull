@@ -29,8 +29,8 @@ export default function ProductPanel(props)  {
         };
         createProduct(data)
         .then( product =>{
-            props.closePanel();
-            props.addProduct(product);
+            // props.closePanel();
+            // props.addProduct(product);
         })
     }
     const edit = () => {
@@ -70,7 +70,8 @@ export default function ProductPanel(props)  {
                     style={{marginTop: '15%'}}
                     onChange = {e => inputChange(e.target.value, 'name')}
                     name = "Name"
-                    value={productData.name}  
+                    value={productData.name} 
+                    validate = 'name'
                 />
                 <TextInput
                     onChange = {e => inputChange(e.target.value, 'manufacturer')}
@@ -81,6 +82,7 @@ export default function ProductPanel(props)  {
                     onChange = {e => inputChange(e.target.value, 'manufacturer_website')}
                     name = "Manufacturer Website"
                     value={productData.manufacturer_website}  
+                    validate = 'manufacturer_website'
                 />
                 <div className="FormGroup">
                     <label className="SettingsMenuLabel" htmlFor="description">Description</label>
@@ -93,16 +95,19 @@ export default function ProductPanel(props)  {
                     onChange = {e => inputChange(e.target.value, 'url')}
                     name = "Product Link"
                     value={productData.url}  
+                    validate = 'url'
                 />
                 <TextInput
                     onChange = {e => inputChange(e.target.value, 'image_url')}
                     name = "Image Url"
-                    value={productData.image_url}  
+                    value={productData.image_url} 
+                    validate = 'image_url'
                 />
                 <TextInput
                     onChange = {e => inputChange(e.target.value, 'price')}
                     name = "Price"
                     value={productData.price}  
+                    validate = 'price'
                 />          
         </BasicPanel>
       

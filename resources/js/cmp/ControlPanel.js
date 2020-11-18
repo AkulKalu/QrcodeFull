@@ -25,10 +25,10 @@ import ReactDOM from 'react-dom';
     useEffect(()=> {
         authenticate()
         .then(user => {
-            if(user) setUser(user);
+            setUser(user);
          })
     },[])
-   console.log('co');
+
     return <div >
                 {user ? 
                 <div>
