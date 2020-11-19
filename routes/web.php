@@ -27,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/qrcodes/{store}/{product}', [CPanelController::class, 'generateQrCode'])->name('qrgen');
-Route::get('/dd', [HomeController::class, 'dd'])->name('dd');
+Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive']);
 Route::get('/user', [CPanelController::class, 'load']);
 Route::resources([
     'stores'=> StoresController::class,

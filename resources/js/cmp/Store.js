@@ -22,9 +22,9 @@ export default function Store(props) {
   
     useEffect(() => {
         getStores()
-        .then(stores => {
-            props.setActiveStore(stores[0])
-            setStores([emptyStore, ...stores]);
+        .then(res => {
+            props.setActiveStore(res.data[0])
+            setStores([emptyStore, ...res.data]);
         })
     }, []);
 
@@ -41,8 +41,11 @@ export default function Store(props) {
                     </div>
                 </PanelSwitch>
 
-                <PanelSwitch panel={StoreMenu} panelProps={{ stores: stores, updateStores: updateStores }}>
-                    <img src={Gear}></img>
+                <PanelSwitch panel={StoreMenu} panelProps={{ store: emptyStore, updateStores: updateStores , buttons: ['create']}}>
+                   <span>new</span>
+                </PanelSwitch>
+                <PanelSwitch panel={StoreMenu} panelProps={{ store: props.active, updateStores: updateStores  , buttons: ['edit', 'remove']}}>
+                   <span>change</span>
                 </PanelSwitch>
                
           </div>

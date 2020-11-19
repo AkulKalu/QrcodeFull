@@ -11,7 +11,7 @@ export default function Table(props) {
     useEffect( () => {
         if(props.activeStore) {
             getProducts(props.activeStore.id)
-            .then( prod =>setProducts(prod))
+            .then( res =>setProducts(res.data))
         }
     }, [props.activeStore])
 
@@ -22,7 +22,7 @@ export default function Table(props) {
             setProducts(updated);
         }
     }, [props.toAdd])
-    console.log('table');
+  
    
     const updateProduct = (toEdit, ind) => {
         let updated = [...products];
@@ -73,8 +73,6 @@ export default function Table(props) {
                 return <Product  key={`product${i}`} product={product} removeProduct={removeProduct}  updateProduct={updateProduct} />
             }
         })
-  
-    
     
  
     return <div className="TBCont">

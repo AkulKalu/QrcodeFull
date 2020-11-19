@@ -45,7 +45,12 @@ class ProductsController extends Controller
         $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
         $product->update($request->all());
         return response()->json($product);
-        
+    }
+    public function toogleActive(Request $request, $id)
+    {
+        $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
+        $product->update($request->all());
+        return response()->json($product);
     }
 
     /**

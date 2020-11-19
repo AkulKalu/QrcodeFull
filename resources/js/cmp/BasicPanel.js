@@ -14,11 +14,14 @@ export default function BasicPanel(props) {
                 <div className="PanelLeft" >
                     {props.children}
                 </div>
-                <div  className="PanelRight">
-                    <h1>{props.name}</h1>
-                    <div className="PanelButtons">
-                        {buttons}
-                    </div>  
+                <div className="PanelRight">
+                    {props.image ?  <div className="PanelRightImg"><img style={{height:'15vh'}} alt="image" src={props.image}></img></div> : null }
+                    <div className="PanelRightM">
+                        <h1>{props.name}</h1>
+                        <div className="PanelButtons">
+                            {buttons}
+                        </div>  
+                    </div>
                 </div>
             </div>
 }

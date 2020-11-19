@@ -2,6 +2,7 @@
     width:100%;
     height: 100%;
     display: flex;
+   
 }
 .PanelLeft {
     flex-basis: 50%;
@@ -9,9 +10,19 @@
 .PanelRight {
     flex-basis: 50%;
 }
-.PanelButtons {
-    margin-top: 60%;
+.PanelRightM {
     display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.PanelRightImg img{
+    height: 10vh;
+    margin: auto;
+}
+.PanelButtons {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
 }
 .FormGroup {
     display: flex;

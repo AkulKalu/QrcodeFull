@@ -24,8 +24,8 @@ import ReactDOM from 'react-dom';
 
     useEffect(()=> {
         authenticate()
-        .then(user => {
-            setUser(user);
+        .then(res => {
+            setUser(res.data.user);
          })
     },[])
 

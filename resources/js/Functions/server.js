@@ -1,6 +1,6 @@
 function request(urlPath, method, params = null) {
     return window.axios[method](window.location.origin + urlPath, params)
-           .then( res => res.data)
+           .then( res => res)
            .catch( err=> err.response);
 }
 
@@ -58,8 +58,7 @@ export function deleteProduct(productId, storeId) {
     })
 }
 export function toogleActive(productId, productInfo) {
-    return request('/products'+ `/${productId}`, 'post', {
-        _method: 'PATCH',
+    return request('/products/activate'+ `/${productId}`, 'post', {
         ...productInfo
     })
 }

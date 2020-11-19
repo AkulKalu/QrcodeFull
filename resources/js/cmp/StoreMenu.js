@@ -7,7 +7,7 @@ import PayPalLogo from '../storage/PayPal.svg';
 import {createStore, deleteStore , editStore} from '../Functions/server';
 
 export default function StoreMenu(props) {
-        const [storeData, setStoreData] = useState({...props.stores[0]})
+        const [storeData, setStoreData] = useState({...props.store})
         const [changed, setChanged] = useState(false);
    
         const inputChange = (value, key) => {
@@ -19,32 +19,29 @@ export default function StoreMenu(props) {
             if(!changed) setChanged(true);
         }
 
-        const storeSwitch = e => {
-            const storeInd = parseInt(e.target.value);
-            const store = props.stores[storeInd];
-            setStoreData({...store});
-            if(changed) setChanged(false) ;
-        }
 
         const create = () => {
             const data = {}
-            Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);   //Clean object of ids
+            Object.keys(props.store).forEach( key => data[key]=storeData[key]);   //Clean object of ids
             createStore(data)
             .then( res => {
-                console.log(res);
-                // props.closePanel();
-                // props.updateStores(res.stores, res.created);
+                if(res.status === 200) {
+                    props.closePanel();
+                    props.updateStores(res.data.stores, res.data.created);
+                }        
             })
             .catch( res => console.log(res))
         }
 
         const edit = () => {
             const data = {}
-            Object.keys(props.stores[0]).forEach( key => data[key]=storeData[key]);
+            Object.keys(props.store).forEach( key => data[key]=storeData[key]);
             editStore(storeData.id, data )
             .then( res => {
-                props.closePanel();
-                props.updateStores(res.stores, res.updated);
+                if(res.status === 200) {
+                    props.closePanel();
+                    props.updateStores(res.data.stores, res.data.updated);
+                }
             })
         }
         
@@ -52,45 +49,35 @@ export default function StoreMenu(props) {
             const confirmed = confirm('Deleting the store will also remove all its product. Are you sure?');
             if(confirmed) {
                 deleteStore(storeData.id)
-                .then(stores =>{
-                    props.closePanel();
-                    props.updateStores(stores, stores[0]);
+                .then(res =>{
+                    if(res.status === 200) {
+                        props.closePanel();
+                        props.updateStores(res.data, res.data[0]);
+                    }
                 })
             }
         }
-       
-        const  stores = props.stores.map( (store, i) => {
-                if(i>0) {
-                    return <option  key={`storeOption${i}`} value={i}>{store.name}</option>
-                    }
-                }
-            );
-       
-        let panelButtons = [
-            {
-                name: storeData['id'] ? 'EDIT': 'CREATE' ,
-                onClick : storeData['id'] ? edit  : create,
+
+        let buttons = {
+            create: {
+                name: 'CREATE',
+                onClick: create
             },
-            {
+            edit: {
+                name: 'EDIT',
+                onClick: edit
+            },
+            remove: {
                 name: "REMOVE",
                 onClick : remove,
-                disabled: !storeData['id'],
-                className: !storeData['id'] ?"SettingsBtnDisabled": "SettingsBtn" 
-            },
-            {
-                name: 'CLOSE',
-                onClick : props.closePanel
-            },
-        ]
+            }
+        }
+
+        let panelButtons = props.buttons.map( btn => buttons[btn])
 
         return <BasicPanel name="Setup Store" buttons={panelButtons}>
-                    <SelectList 
-                        select = {storeSwitch}  
-                        storeMenu 
-                        GroupStyle={{paddingBottom: '1rem'}} 
-                        options={stores} 
-                    />
                     <TextInput  
+                        style={{marginTop: '8%'}}
                         onChange = {e => inputChange(e.target.value, 'name')} 
                         name="Name"
                         value={storeData.name}

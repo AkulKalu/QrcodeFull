@@ -19,7 +19,7 @@ export default function PanelSwitch(props) {
                 </div>
 
                 {panelOpen ? 
-                    <Backdrop>
+                    <Backdrop closePanel={panelSwitch}>
                         <props.panel closePanel={panelSwitch} {...props.panelProps} />
                     </Backdrop> : null}
             </Fragment>

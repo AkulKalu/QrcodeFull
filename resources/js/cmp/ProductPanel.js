@@ -28,9 +28,12 @@ export default function ProductPanel(props)  {
             ...productData
         };
         createProduct(data)
-        .then( product =>{
-            // props.closePanel();
-            // props.addProduct(product);
+        .then( res =>{
+            if(res.status === 200) {
+                console.log(res.data);
+                props.closePanel();
+                props.addProduct(res.data);
+            }
         })
     }
     const edit = () => {
@@ -39,16 +42,20 @@ export default function ProductPanel(props)  {
         };
         Object.keys(emptyProduct).forEach(key => data[key] = productData[key]);
         editProduct(props.product.id, data)
-        .then( product =>{
-            props.closePanel();
-            props.updateProduct(product, productData.index)
+        .then( res =>{
+            if(res.status === 200) {
+                props.closePanel();
+                props.updateProduct(res.data, productData.index)
+            }
         })
     }
     const remove = () => {
         deleteProduct(props.product.id, productData.store_id)
-        .then( status =>{
-            props.closePanel();
-            props.removeProduct( productData.index)
+        .then( res =>{
+            if(res.status === 200) {
+                props.closePanel();
+                props.removeProduct( productData.index)
+            }    
         })
     }
     const panelButtons = [
@@ -60,14 +67,10 @@ export default function ProductPanel(props)  {
             name: 'REMOVE',
             onClick: remove
         } : null,
-        {
-            name: 'CLOSE',
-            onClick : props.closePanel
-        },
     ]
-    return <BasicPanel name={props.create ? 'Create Product' : 'Edit Product'} buttons={panelButtons} >
+    return <BasicPanel name={props.create ? 'Create Product' : 'Edit Product'} image={productData.image_url} buttons={panelButtons} >
                 <TextInput
-                    style={{marginTop: '15%'}}
+                    style={{marginTop: '8%'}}
                     onChange = {e => inputChange(e.target.value, 'name')}
                     name = "Name"
                     value={productData.name} 
@@ -87,7 +90,7 @@ export default function ProductPanel(props)  {
                 <div className="FormGroup">
                     <label className="SettingsMenuLabel" htmlFor="description">Description</label>
                     <textarea  
-                    onChange = {e => inputChange(e.target.value, 'description')}
+                        onChange = {e => inputChange(e.target.value, 'description')}
                         name="Description"  value={productData.description}>
                     </textarea>
                 </div>

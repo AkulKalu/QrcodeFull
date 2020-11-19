@@ -6339,7 +6339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margin-left: 15vw;\r\n    width: 85vw;\r\n}\r\n.CPBar {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.CPBarStore {\r\n    flex-basis: 45%;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.CPBarSearch {\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 45%;\r\n}\r\naside {\r\n    position: fixed;\r\n    z-index: 800;\r\n    display: inline-block;\r\n    background: linear-gradient(to right,  #c1b4dd, #e9e4f0);\r\n    height: 100vh;\r\n    width: 15vw;\r\n    border-right: 1px solid rgba(128, 128, 128, 0.507);\r\n}\r\nbody {\r\n    background: linear-gradient(to left, #c1b4dd, #ebe8f0);\r\n}\r\n.CPAccount {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 10%;\r\n    align-items: center;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    z-index: 1000;\r\n    top: 0;\r\n    left: 0;\r\n    -webkit-backdrop-filter: blur(1px);\r\n            backdrop-filter: blur(1px);\r\n    background: linear-gradient(to left, #c1b4ddc5, #ebe8f0c5);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}", ""]);
+exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margin-left: 15vw;\r\n    width: 85vw;\r\n}\r\n.CPBar {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.CPBarStore {\r\n    flex-basis: 45%;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.CPBarSearch {\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 45%;\r\n}\r\naside {\r\n    position: fixed;\r\n    z-index: 800;\r\n    display: inline-block;\r\n    background: linear-gradient(to right,  #c1b4dd, #e9e4f0);\r\n    height: 100vh;\r\n    width: 15vw;\r\n    border-right: 1px solid rgba(128, 128, 128, 0.507);\r\n}\r\nbody {\r\n    background: linear-gradient(to left, #c1b4dd, #ebe8f0);\r\n}\r\n.CPAccount {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 10%;\r\n    align-items: center;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    z-index: 1000;\r\n    top: 0;\r\n    left: 0;\r\n    -webkit-backdrop-filter: blur(1px);\r\n            backdrop-filter: blur(1px);\r\n    background: linear-gradient(to left, #c1b4ddc5, #ebe8f0c5);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}\r\n.CloseBtn {\r\n    height: 6vh;\r\n    width: 6vh;\r\n    position: absolute;\r\n    z-index: 1001;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    top: 1.5rem;\r\n    right: 1.5rem;\r\n    color: rgb(53, 54, 52);\r\n    font-size: 6vh;\r\n    border-radius: 50%;\r\n    cursor: pointer;\r\n}\r\n.CloseBtn:hover {\r\n    color:  rgb(231, 174, 15);\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -6453,7 +6453,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SettingsMenu {\r\n    width:100%;\r\n    height: 100%;\r\n    display: flex;\r\n}\r\n.PanelLeft {\r\n    flex-basis: 50%;\r\n}\r\n.PanelRight {\r\n    flex-basis: 50%;\r\n}\r\n.PanelButtons {\r\n    margin-top: 60%;\r\n    display: flex;\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 15%;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    width: 65%;\r\n    outline: none;\r\n    background: rgba(128, 128, 128, 0.096);\r\n}\r\n.SettingsMenu textarea:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}\r\n.SettingsBtn {\r\n    width: 15%;\r\n    outline: none;\r\n    height: 2.5rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(53, 54, 52);\r\n    color: rgb(214, 230, 214);\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n\r\n.SettingsBtn:hover {\r\n    border-color:rgb(53,54,52);\r\n    color: rgb(53,54,52);\r\n    background: rgb(231,174,15);\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.6vh;\r\n    padding: 0.2rem 0;\r\n    font-weight: 700;\r\n}\r\n.SettingsMenu h1 {\r\n    text-align: center;\r\n    margin-top: 15%;\r\n    font-size: 6vh;\r\n    font-weight: 800;\r\n}\r\n\r\n.SettingsMenu img {\r\n    height: 4vh;\r\n    max-width: 20%;\r\n    margin: auto;\r\n    padding-top: 1rem;\r\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".SettingsMenu {\r\n    width:100%;\r\n    height: 100%;\r\n    display: flex;\r\n   \r\n}\r\n.PanelLeft {\r\n    flex-basis: 50%;\r\n}\r\n.PanelRight {\r\n    flex-basis: 50%;\r\n}\r\n.PanelRightM {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: auto;\r\n}\r\n.PanelRightImg img{\r\n    height: 10vh;\r\n    margin: auto;\r\n}\r\n.PanelButtons {\r\n    display: flex;\r\n    margin-top: 2rem;\r\n    justify-content: center;\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 15%;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    width: 65%;\r\n    outline: none;\r\n    background: rgba(128, 128, 128, 0.096);\r\n}\r\n.SettingsMenu textarea:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}\r\n.SettingsBtn {\r\n    width: 15%;\r\n    outline: none;\r\n    height: 2.5rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(53, 54, 52);\r\n    color: rgb(214, 230, 214);\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n\r\n.SettingsBtn:hover {\r\n    border-color:rgb(53,54,52);\r\n    color: rgb(53,54,52);\r\n    background: rgb(231,174,15);\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.6vh;\r\n    padding: 0.2rem 0;\r\n    font-weight: 700;\r\n}\r\n.SettingsMenu h1 {\r\n    text-align: center;\r\n    margin-top: 15%;\r\n    font-size: 6vh;\r\n    font-weight: 800;\r\n}\r\n\r\n.SettingsMenu img {\r\n    height: 4vh;\r\n    max-width: 20%;\r\n    margin: auto;\r\n    padding-top: 1rem;\r\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -66810,7 +66810,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function request(urlPath, method) {
   var params = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
   return window.axios[method](window.location.origin + urlPath, params).then(function (res) {
-    return res.data;
+    return res;
   })["catch"](function (err) {
     return err.response;
   });
@@ -66860,9 +66860,7 @@ function deleteProduct(productId, storeId) {
   });
 }
 function toogleActive(productId, productInfo) {
-  return request('/products' + "/".concat(productId), 'post', _objectSpread({
-    _method: 'PATCH'
-  }, productInfo));
+  return request('/products/activate' + "/".concat(productId), 'post', _objectSpread({}, productInfo));
 }
 function generateQrCode(storeId, productId) {
   return request('/qrcodes' + "/".concat(storeId) + "/".concat(productId), 'get');
@@ -66962,7 +66960,10 @@ function Backdrop(props) {
     id: "CPBackdrop",
     onClick: props.closeSwitch,
     className: "Backdrop"
-  }, props.children);
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "CloseBtn",
+    onClick: props.closePanel
+  }, "x"), props.children);
 }
 
 /***/ }),
@@ -67002,9 +67003,19 @@ function BasicPanel(props) {
     className: "PanelLeft"
   }, props.children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "PanelRight"
+  }, props.image ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PanelRightImg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    style: {
+      height: '15vh'
+    },
+    alt: "image",
+    src: props.image
+  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PanelRightM"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "PanelButtons"
-  }, buttons)));
+  }, buttons))));
 }
 
 /***/ }),
@@ -67110,8 +67121,8 @@ function ControlPanel() {
       setFilter = _useState10[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_10__["authenticate"])().then(function (user) {
-      setUser(user);
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_10__["authenticate"])().then(function (res) {
+      setUser(res.data.user);
     });
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_logo__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -67198,7 +67209,9 @@ function PanelSwitch(props) {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     onClick: panelSwitch
-  }, props.children), panelOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Backdrop__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(props.panel, _extends({
+  }, props.children), panelOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Backdrop__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    closePanel: panelSwitch
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(props.panel, _extends({
     closePanel: panelSwitch
   }, props.panelProps))) : null);
 }
@@ -67243,14 +67256,14 @@ function Product(props) {
     Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["toogleActive"])(props.product.id, {
       store_id: props.product.store_id,
       active: props.product.active ? 0 : 1
-    }).then(function (status) {
-      props.updateProduct(status, props.product.index);
+    }).then(function (res) {
+      props.updateProduct(res.data, props.product.index);
     });
   };
 
   var downloadQrCode = function downloadQrCode() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["generateQrCode"])(props.product.store_id, props.product.id).then(function (qrCode) {
-      return Object(_Functions_actions__WEBPACK_IMPORTED_MODULE_6__["downloadFile"])(qrCode, props.product.name, 'svg');
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["generateQrCode"])(props.product.store_id, props.product.id).then(function (res) {
+      return Object(_Functions_actions__WEBPACK_IMPORTED_MODULE_6__["downloadFile"])(res.data, props.product.name, 'svg');
     });
   };
 
@@ -67258,7 +67271,6 @@ function Product(props) {
     transform: ' translateX(100%)',
     backgroundColor: 'rgb(4, 161, 4)'
   };
-  console.log('product');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_4__["default"], {
     panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_3__["default"],
     panelProps: _objectSpread({}, props)
@@ -67384,8 +67396,12 @@ function ProductPanel(props) {
       store_id: props.activeStore.id
     }, productData);
 
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["createProduct"])(data).then(function (product) {// props.closePanel();
-      // props.addProduct(product);
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["createProduct"])(data).then(function (res) {
+      if (res.status === 200) {
+        console.log(res.data);
+        props.closePanel();
+        props.addProduct(res.data);
+      }
     });
   };
 
@@ -67396,16 +67412,20 @@ function ProductPanel(props) {
     Object.keys(emptyProduct).forEach(function (key) {
       return data[key] = productData[key];
     });
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["editProduct"])(props.product.id, data).then(function (product) {
-      props.closePanel();
-      props.updateProduct(product, productData.index);
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["editProduct"])(props.product.id, data).then(function (res) {
+      if (res.status === 200) {
+        props.closePanel();
+        props.updateProduct(res.data, productData.index);
+      }
     });
   };
 
   var remove = function remove() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteProduct"])(props.product.id, productData.store_id).then(function (status) {
-      props.closePanel();
-      props.removeProduct(productData.index);
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteProduct"])(props.product.id, productData.store_id).then(function (res) {
+      if (res.status === 200) {
+        props.closePanel();
+        props.removeProduct(productData.index);
+      }
     });
   };
 
@@ -67415,16 +67435,14 @@ function ProductPanel(props) {
   }, !props.create ? {
     name: 'REMOVE',
     onClick: remove
-  } : null, {
-    name: 'CLOSE',
-    onClick: props.closePanel
-  }];
+  } : null];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BasicPanel__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: props.create ? 'Create Product' : 'Edit Product',
+    image: productData.image_url,
     buttons: panelButtons
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: {
-      marginTop: '15%'
+      marginTop: '8%'
     },
     onChange: function onChange(e) {
       return inputChange(e.target.value, 'name');
@@ -67973,9 +67991,9 @@ function Store(props) {
     paypal_private_key: ''
   };
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["getStores"])().then(function (stores) {
-      props.setActiveStore(stores[0]);
-      setStores([emptyStore].concat(_toConsumableArray(stores)));
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["getStores"])().then(function (res) {
+      props.setActiveStore(res.data[0]);
+      setStores([emptyStore].concat(_toConsumableArray(res.data)));
     });
   }, []);
 
@@ -67999,12 +68017,18 @@ function Store(props) {
   }, props.active ? props.active.name : 'loading...')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
     panel: _StoreMenu__WEBPACK_IMPORTED_MODULE_4__["default"],
     panelProps: {
-      stores: stores,
-      updateStores: updateStores
+      store: emptyStore,
+      updateStores: updateStores,
+      buttons: ['create']
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: _storage_gear_svg__WEBPACK_IMPORTED_MODULE_2___default.a
-  })));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "new")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    panel: _StoreMenu__WEBPACK_IMPORTED_MODULE_4__["default"],
+    panelProps: {
+      store: props.active,
+      updateStores: updateStores,
+      buttons: ['edit', 'remove']
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "change")));
 }
 
 /***/ }),
@@ -68055,7 +68079,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function StoreMenu(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_objectSpread({}, props.stores[0])),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_objectSpread({}, props.store)),
       _useState2 = _slicedToArray(_useState, 2),
       storeData = _useState2[0],
       setStoreData = _useState2[1];
@@ -68070,22 +68094,17 @@ function StoreMenu(props) {
     if (!changed) setChanged(true);
   };
 
-  var storeSwitch = function storeSwitch(e) {
-    var storeInd = parseInt(e.target.value);
-    var store = props.stores[storeInd];
-    setStoreData(_objectSpread({}, store));
-    if (changed) setChanged(false);
-  };
-
   var create = function create() {
     var data = {};
-    Object.keys(props.stores[0]).forEach(function (key) {
+    Object.keys(props.store).forEach(function (key) {
       return data[key] = storeData[key];
     }); //Clean object of ids
 
     Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["createStore"])(data).then(function (res) {
-      console.log(res); // props.closePanel();
-      // props.updateStores(res.stores, res.created);
+      if (res.status === 200) {
+        props.closePanel();
+        props.updateStores(res.data.stores, res.data.created);
+      }
     })["catch"](function (res) {
       return console.log(res);
     });
@@ -68093,12 +68112,14 @@ function StoreMenu(props) {
 
   var edit = function edit() {
     var data = {};
-    Object.keys(props.stores[0]).forEach(function (key) {
+    Object.keys(props.store).forEach(function (key) {
       return data[key] = storeData[key];
     });
     Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["editStore"])(storeData.id, data).then(function (res) {
-      props.closePanel();
-      props.updateStores(res.stores, res.updated);
+      if (res.status === 200) {
+        props.closePanel();
+        props.updateStores(res.data.stores, res.data.updated);
+      }
     });
   };
 
@@ -68106,44 +68127,39 @@ function StoreMenu(props) {
     var confirmed = confirm('Deleting the store will also remove all its product. Are you sure?');
 
     if (confirmed) {
-      Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["deleteStore"])(storeData.id).then(function (stores) {
-        props.closePanel();
-        props.updateStores(stores, stores[0]);
+      Object(_Functions_server__WEBPACK_IMPORTED_MODULE_6__["deleteStore"])(storeData.id).then(function (res) {
+        if (res.status === 200) {
+          props.closePanel();
+          props.updateStores(res.data, res.data[0]);
+        }
       });
     }
   };
 
-  var stores = props.stores.map(function (store, i) {
-    if (i > 0) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-        key: "storeOption".concat(i),
-        value: i
-      }, store.name);
+  var buttons = {
+    create: {
+      name: 'CREATE',
+      onClick: create
+    },
+    edit: {
+      name: 'EDIT',
+      onClick: edit
+    },
+    remove: {
+      name: "REMOVE",
+      onClick: remove
     }
+  };
+  var panelButtons = props.buttons.map(function (btn) {
+    return buttons[btn];
   });
-  var panelButtons = [{
-    name: storeData['id'] ? 'EDIT' : 'CREATE',
-    onClick: storeData['id'] ? edit : create
-  }, {
-    name: "REMOVE",
-    onClick: remove,
-    disabled: !storeData['id'],
-    className: !storeData['id'] ? "SettingsBtnDisabled" : "SettingsBtn"
-  }, {
-    name: 'CLOSE',
-    onClick: props.closePanel
-  }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BasicPanel__WEBPACK_IMPORTED_MODULE_3__["default"], {
     name: "Setup Store",
     buttons: panelButtons
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SelectList__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    select: storeSwitch,
-    storeMenu: true,
-    GroupStyle: {
-      paddingBottom: '1rem'
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cmp_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    style: {
+      marginTop: '8%'
     },
-    options: stores
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cmp_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     onChange: function onChange(e) {
       return inputChange(e.target.value, 'name');
     },
@@ -68300,8 +68316,8 @@ function Table(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (props.activeStore) {
-      Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["getProducts"])(props.activeStore.id).then(function (prod) {
-        return setProducts(prod);
+      Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["getProducts"])(props.activeStore.id).then(function (res) {
+        return setProducts(res.data);
       });
     }
   }, [props.activeStore]);
@@ -68313,7 +68329,6 @@ function Table(props) {
       setProducts(updated);
     }
   }, [props.toAdd]);
-  console.log('table');
 
   var updateProduct = function updateProduct(toEdit, ind) {
     var updated = _toConsumableArray(products);

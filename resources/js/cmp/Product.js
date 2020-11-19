@@ -13,21 +13,21 @@ export default function Product(props) {
             store_id: props.product.store_id,
             active:  props.product.active ? 0 : 1
         }) 
-        .then( status =>{
-            props.updateProduct(status, props.product.index)
+        .then( res =>{
+            props.updateProduct(res.data, props.product.index)
         })
       
     }
     const downloadQrCode = () => {
         generateQrCode(props.product.store_id, props.product.id)
-        .then( qrCode =>downloadFile(qrCode, props.product.name, 'svg' ))
+        .then( res =>downloadFile(res.data, props.product.name, 'svg' ))
     }
 
     let productActive = {
         transform: ' translateX(100%)',
         backgroundColor: 'rgb(4, 161, 4)'
     }
-    console.log('product');
+    
     return <PanelSwitch panel={ProductPanel} panelProps={{...props}}>
                 <div  className="PDCont">
                         <div style={{width: '10%'}} className="PDCell PDId">{props.product.id}</div>
