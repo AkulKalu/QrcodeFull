@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CPanelController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductsController;
@@ -29,6 +30,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/qrcodes/{store}/{product}', [CPanelController::class, 'generateQrCode'])->name('qrgen');
 Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive']);
 Route::get('/user', [CPanelController::class, 'load']);
+Route::get('/{user}/{store}/{storeId}/{productId}', [CheckoutController::class, 'index']);
 Route::resources([
     'stores'=> StoresController::class,
     'products'=>ProductsController::class,
