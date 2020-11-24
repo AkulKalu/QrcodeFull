@@ -5,7 +5,8 @@ import {createProduct, editProduct, deleteProduct} from '../Functions/server';
 
 export default function ProductPanel(props)  {
     const emptyProduct = {
-        name: '',
+        category: '',
+        model: '',
         manufacturer: '',
         manufacturer_website: '',
         image_url:'',
@@ -71,10 +72,15 @@ export default function ProductPanel(props)  {
     return <BasicPanel name={props.create ? 'Create Product' : 'Edit Product'} image={productData.image_url} buttons={panelButtons} >
                 <TextInput
                     style={{marginTop: '8%'}}
-                    onChange = {e => inputChange(e.target.value, 'name')}
-                    name = "Name"
-                    value={productData.name} 
+                    onChange = {e => inputChange(e.target.value, 'category')}
+                    name = "Category"
+                    value={productData.category} 
                     validate = 'name'
+                />
+                 <TextInput
+                    onChange = {e => inputChange(e.target.value, 'model')}
+                    name = "Model"
+                    value={productData.model}  
                 />
                 <TextInput
                     onChange = {e => inputChange(e.target.value, 'manufacturer')}

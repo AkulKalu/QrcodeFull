@@ -18,10 +18,12 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('store_id');
             $table->string('manufacturer_website')->nullable();
             $table->string('manufacturer')->nullable();
-            $table->string('name');
+            $table->string('category');
+            $table->string('model');
             $table->string('image_url')->nullable();
             $table->string('url')->nullable();
             $table->text('description')->nullable();
+            $table->integer('stock')->default(1);
             $table->float('price', 10, 4);
             $table->tinyInteger('active')->default(1);
             $table->timestamps();

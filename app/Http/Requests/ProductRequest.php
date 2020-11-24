@@ -25,7 +25,8 @@ class ProductRequest extends FormRequest
     {
         return [
             'manufacturer_website'=> ['url'],
-            'name'=> ['required'],
+            'model'=> ['required'],
+            'category'=> ['required'],
             'image_url'=> ['url'],
             'url'=> ['url'],
             'price'=> ['required','numeric'],

@@ -67504,11 +67504,6 @@ function Product(props) {
     className: "PDCont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      width: '10%'
-    },
-    className: "PDCell PDId"
-  }, props.product.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
       width: '20%'
     },
     className: "PDCell PDImg"
@@ -67517,10 +67512,15 @@ function Product(props) {
     src: props.product.image_url
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
+      width: '10%'
+    },
+    className: "PDCell PDId"
+  }, props.product.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
       width: '20%'
     },
     className: "PDCell PDName"
-  }, props.product.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, props.product.model), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       width: '20%'
     },
@@ -67688,7 +67688,8 @@ function _arrayWithHoles(arr) {
 
 function ProductPanel(props) {
   var emptyProduct = {
-    name: '',
+    category: '',
+    model: '',
     manufacturer: '',
     manufacturer_website: '',
     image_url: '',
@@ -67760,11 +67761,17 @@ function ProductPanel(props) {
       marginTop: '8%'
     },
     onChange: function onChange(e) {
-      return inputChange(e.target.value, 'name');
+      return inputChange(e.target.value, 'category');
     },
-    name: "Name",
-    value: productData.name,
+    name: "Category",
+    value: productData.category,
     validate: "name"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    onChange: function onChange(e) {
+      return inputChange(e.target.value, 'model');
+    },
+    name: "Model",
+    value: productData.model
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     onChange: function onChange(e) {
       return inputChange(e.target.value, 'manufacturer');
@@ -69374,27 +69381,27 @@ function TableHeader(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TBHCont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: function onClick() {
-      return sortBy('id');
-    },
-    style: {
-      width: '10%'
-    },
-    className: "TBHCell"
-  }, "Id"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
       width: '20%'
     },
     className: "TBHCell"
   }, "Image"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     onClick: function onClick() {
-      return sortBy('name');
+      return sortBy('category');
+    },
+    style: {
+      width: '10%'
+    },
+    className: "TBHCell"
+  }, "Category"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return sortBy('model');
     },
     style: {
       width: '20%'
     },
     className: "TBHCell"
-  }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Model"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     onClick: function onClick() {
       return sortBy('manufacturer');
     },

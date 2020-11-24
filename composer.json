@@ -15,7 +15,10 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
-        "simplesoftwareio/simple-qrcode": "~4"
+        "league/omnipay": "^3.1",
+        "omnipay/paypal": "^3.0",
+        "simplesoftwareio/simple-qrcode": "~4",
+        "stripe/stripe-php": "^7.65"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

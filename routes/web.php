@@ -30,7 +30,13 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/qrcodes/{store}/{product}', [CPanelController::class, 'generateQrCode'])->name('qrgen');
 Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive']);
 Route::get('/user', [CPanelController::class, 'load']);
+
 Route::get('/{user}/{store}/{storeId}/{productId}', [CheckoutController::class, 'index']);
+Route::post('/checkout/charge/stripe/{productId}', [CheckoutController::class, 'chargeWithStripe']);
+Route::post('/checkout/charge/paypal', [CheckoutController::class, 'chargeWithPaypal']);
+Route::get('/checkout/success', [CheckoutController::class, 'success']);
+Route::get('/checkout/fail', [CheckoutController::class, 'fail']);
+
 Route::resources([
     'stores'=> StoresController::class,
     'products'=>ProductsController::class,

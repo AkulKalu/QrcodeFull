@@ -36,19 +36,18 @@ export default function TableHeader(props) {
         props.sortProducts(sortFun);
     }
     return <div className="TBHCont">
-                <div 
-                    onClick={()=> sortBy('id')} 
-                    style={{width: '10%'}} 
-                    className="TBHCell">
-                        Id
-                      
-                    </div>
                 <div style={{width: '20%'}} className="TBHCell">Image</div>
                 <div 
-                    onClick={()=> sortBy('name')} 
+                    onClick={()=> sortBy('category')} 
+                    style={{width: '10%'}} 
+                    className="TBHCell">
+                        Category
+                </div>
+                <div 
+                    onClick={()=> sortBy('model')} 
                     style={{width: '20%'}} 
                     className="TBHCell">
-                    Name
+                    Model
                   
                 </div>
                 <div 

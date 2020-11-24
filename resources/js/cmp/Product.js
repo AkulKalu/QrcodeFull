@@ -30,11 +30,11 @@ export default function Product(props) {
     
     return <PanelSwitch panel={ProductPanel} panelProps={{...props}}>
                 <div  className="PDCont">
-                        <div style={{width: '10%'}} className="PDCell PDId">{props.product.id}</div>
                         <div style={{width: '20%'}} className="PDCell PDImg">
                             <img alt="Product" src={props.product.image_url}></img>
                         </div>
-                        <div style={{width: '20%'}} className="PDCell PDName">{props.product.name}</div>
+                        <div style={{width: '10%'}} className="PDCell PDId">{props.product.category}</div>
+                        <div style={{width: '20%'}} className="PDCell PDName">{props.product.model}</div>
                         <div style={{width: '20%'}} className="PDCell PDManu">{props.product.manufacturer}</div>
                         <div style={{width: '10%'}} className="PDCell PDPrice">{props.product.price}</div>
                         <div data-escape style={{width: '10%'}} className="PDCell PDActive">
