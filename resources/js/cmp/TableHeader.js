@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../css/TableHeader.css';
-import Checkbox from 'react-custom-checkbox';
+
 
 
 export default function TableHeader(props) {

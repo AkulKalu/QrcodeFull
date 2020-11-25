@@ -15,10 +15,7 @@
     flex-direction: column;
     margin: auto;
 }
-.PanelRightImg img{
-    height: 10vh;
-    margin: auto;
-}
+
 .PanelButtons {
     display: flex;
     margin-top: 2rem;
@@ -69,11 +66,6 @@
     font-weight: 800;
 }
 
-.SettingsMenu img {
-    height: 4vh;
-    max-width: 20%;
-    margin: auto;
-    padding-top: 1rem;
-}
+
 
 

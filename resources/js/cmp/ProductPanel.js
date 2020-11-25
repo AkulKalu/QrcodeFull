@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import TextInput from './TextInput';
 import BasicPanel from './BasicPanel';
+import ProductPreview from './ProductPreview';
 import {createProduct, editProduct, deleteProduct} from '../Functions/server';
 
 export default function ProductPanel(props)  {
@@ -13,8 +14,15 @@ export default function ProductPanel(props)  {
         url:'',
         price: '',
         description:'',
+        active: 1
     }
     const [productData, setProductData] = useState(props.create ? {...emptyProduct} : {...props.product});
+    const [colorPallete, setcolorPallete] = useState({
+        image: 'white',
+        font: 'gold',
+        background: 'black',
+        buttons: 'gold',
+    });
 
     const inputChange = (value, key) => {
         setProductData({
@@ -69,7 +77,7 @@ export default function ProductPanel(props)  {
             onClick: remove
         } : null,
     ]
-    return <BasicPanel name={props.create ? 'Create Product' : 'Edit Product'} image={productData.image_url} buttons={panelButtons} >
+    return <BasicPanel preview={<ProductPreview colorPallete={colorPallete} product={productData}/>} buttons={panelButtons} >
                 <TextInput
                     style={{marginTop: '8%'}}
                     onChange = {e => inputChange(e.target.value, 'category')}

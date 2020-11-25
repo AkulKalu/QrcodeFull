@@ -13,6 +13,7 @@ export default function PanelSwitch(props) {
         }
         openPanel(!panelOpen);
     }
+    
     return <Fragment>
                 <div onClick={panelSwitch} >
                     {props.children}

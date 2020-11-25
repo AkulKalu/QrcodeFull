@@ -15,13 +15,15 @@ export default function BasicPanel(props) {
                     {props.children}
                 </div>
                 <div className="PanelRight">
-                    {props.image ?  <div className="PanelRightImg"><img style={{height:'15vh'}} alt="image" src={props.image}></img></div> : null }
-                    <div className="PanelRightM">
-                        <h1>{props.name}</h1>
-                        <div className="PanelButtons">
-                            {buttons}
-                        </div>  
-                    </div>
+                   {props.preview}
+                   
                 </div>
             </div>
 }
+
+{/* <div className="PanelRightM">
+<h1>{props.name}</h1>
+<div className="PanelButtons">
+    {buttons}
+</div>  
+</div> */}

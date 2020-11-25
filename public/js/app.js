@@ -6339,7 +6339,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margin-left: 15vw;\r\n    width: 85vw;\r\n}\r\n.CPBar {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.CPBarStore {\r\n    flex-basis: 45%;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.CPBarSearch {\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 45%;\r\n}\r\naside {\r\n    position: fixed;\r\n    z-index: 800;\r\n    display: inline-block;\r\n    background: linear-gradient(to right,  #c1b4dd, #e9e4f0);\r\n    height: 100vh;\r\n    width: 15vw;\r\n    border-right: 1px solid rgba(128, 128, 128, 0.507);\r\n}\r\nbody {\r\n    background: linear-gradient(to left, #c1b4dd, #ebe8f0);\r\n}\r\n.CPAccount {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 10%;\r\n    align-items: center;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    z-index: 1000;\r\n    top: 0;\r\n    left: 0;\r\n    -webkit-backdrop-filter: blur(1px);\r\n            backdrop-filter: blur(1px);\r\n    background: linear-gradient(to left, #c1b4ddc5, #ebe8f0c5);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}\r\n.CloseBtn {\r\n    height: 6vh;\r\n    width: 6vh;\r\n    position: absolute;\r\n    z-index: 1001;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    top: 1.5rem;\r\n    right: 1.5rem;\r\n    color: rgb(53, 54, 52);\r\n    font-size: 6vh;\r\n    border-radius: 50%;\r\n    cursor: pointer;\r\n}\r\n.CloseBtn:hover {\r\n    color:  rgb(231, 174, 15);\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margin-left: 15vw;\r\n    width: 85vw;\r\n}\r\n.CPBar {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n.CPBarStore {\r\n    flex-basis: 45%;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.CPBarSearch {\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 45%;\r\n}\r\naside {\r\n    position: fixed;\r\n    z-index: 100;\r\n    display: inline-block;\r\n    background: linear-gradient(to right,  #c1b4dd, #e9e4f0);\r\n    height: 100vh;\r\n    width: 15vw;\r\n    border-right: 1px solid rgba(128, 128, 128, 0.507);\r\n}\r\nbody {\r\n    background: linear-gradient(to left, #c1b4dd, #ebe8f0);\r\n}\r\n.CPAccount {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    flex-basis: 10%;\r\n    align-items: center;\r\n}\r\n.Backdrop {\r\n    position: absolute;\r\n    z-index: 200;\r\n    top: 0;\r\n    left: 0;\r\n    -webkit-backdrop-filter: blur(1px);\r\n            backdrop-filter: blur(1px);\r\n    background: linear-gradient(to left, #c1b4ddc5, #ebe8f0c5);\r\n    height: 100vh;\r\n    width: 100vw;\r\n}\r\n.CloseBtn {\r\n    height: 6vh;\r\n    width: 6vh;\r\n    position: absolute;\r\n    z-index: 1001;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    top: 1.5rem;\r\n    right: 1.5rem;\r\n    color: rgb(53, 54, 52);\r\n    font-size: 6vh;\r\n    border-radius: 50%;\r\n    cursor: pointer;\r\n}\r\n.CloseBtn:hover {\r\n    color:  rgb(231, 174, 15);\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -6378,6 +6378,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n    display: flex;\r\n    cursor: pointer;\r\n    border-bottom: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-top: 1px solid rgba(128, 128, 128, 0.507);\r\n    transition: background 0.5s;\r\n    background: rgba(128, 128, 128, 0.205);\r\n}\r\n.PDCont:hover {\r\n    background:  rgb(231, 174, 15)\r\n}\r\n\r\n.PDCell {\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center; \r\n}\r\n.PDQrCode img {\r\n    height: 70%;\r\n    border: 1px solid;\r\n    transition: 0.5s;\r\n}\r\n.PDQrCode img:hover {\r\n    filter: invert();\r\n}\r\n.PDImg img {\r\n    height: 85%;\r\n}\r\n\r\n\r\n.PDToggle {\r\n    width: 40px;\r\n    height: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    border: 1px solid  rgba(57, 80, 57, 0.562);\r\n    background-color: rgb(212, 212, 212);\r\n    opacity: 0.8;\r\n    transition: opacity 0.5s;\r\n    box-shadow: inset 0px 0px 8px grey;\r\n}\r\n.PDToggle:hover {\r\n    opacity: 1;\r\n}\r\n.PDToggleSW {\r\n    height:20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background-color:  rgba(57, 80, 57, 0.562);\r\n    transition: all 0.4s;\r\n}\r\n\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ProductPreview.css":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/ProductPreview.css ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n.PreviewContainer {\r\n    position: relative;\r\n    height: 65vh;\r\n    width: 35vh;\r\n    margin: auto;\r\n    background: rgb(19, 18, 18);\r\n    color: rgb(245, 210, 150);\r\n    border-radius: 10px;\r\n    margin-top: 5vh;\r\n}\r\n.PreviewImg img {\r\n    width: 100%;\r\n    max-height: 100%;\r\n    display: block;\r\n    margin:  auto;\r\n}\r\n.PreviewImg {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    overflow: hidden;\r\n    border-radius: 0 0 10% 10%;\r\n    background: white;\r\n    height: 45%;\r\n}\r\n\r\n.PreviewName {\r\n    display: inline-block;\r\n    font-size: 2vh;\r\n    font-weight: 100;\r\n    padding: 0.5rem 1rem;\r\n    margin-top: 1rem;\r\n}\r\n.PreviewBrand {\r\n    display: block;\r\n    padding:0 1.5rem;\r\n    font-weight: 800;\r\n    font-size: 4vh;\r\n}\r\n.PreviewModel {\r\n    display: inline-block;\r\n    padding: 1rem 1.5rem;\r\n    font-size: 2vh;\r\n}\r\n.PreviewPrice {\r\n    font-size: 4vh;\r\n    position: absolute;\r\n    right: 2rem;\r\n    margin-top: 2rem;\r\n}\r\n.Previewinfo {\r\n    padding: 2rem 5%;\r\n    text-align: justify;\r\n}\r\n\r\n.PreviewBtn {\r\n    background: rgb(245, 210, 150);\r\n    width: 20%;\r\n    color:  rgb(19, 18, 18);\r\n    font-size: 1.5vh;\r\n    text-align: center;\r\n    border-radius: 15px;\r\n    padding: 0.3rem 0;\r\n    margin: auto;\r\n    position: absolute;\r\n    bottom: 1rem;\r\n}\r\n.PreviewAbout {\r\n    left: 10%\r\n}\r\n.PreviewBuy {\r\n    right: 10%\r\n}\r\n.PreviewColors {\r\n    height: 100%;\r\n    width: 20%;\r\n    position: absolute;\r\n    top: 0;\r\n    left: -10%;\r\n    z-index: 1000;\r\n   \r\n}\r\n.ColorPickWrap {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n.ColorPickWrap:nth-of-type(1) {\r\n    height: 45%;\r\n}\r\n.ColorPickWrap:nth-of-type(2), .ColorPickWrap:nth-of-type(3) {\r\n    height: 20%;\r\n}\r\n.ColorPickWrap:nth-of-type(4) {\r\n    height: 15%;\r\n}\r\n\r\n.ColorPick {\r\n    height: 2vh;\r\n    width: 2vh;\r\n    border-radius: 5px;\r\n}\r\n.PreviewPayMenu {\r\n    background: paleturquoise;\r\n    height: 30%;\r\n    position: absolute;\r\n    bottom: -31%;\r\n    z-index: 20;\r\n    width: 100%;\r\n    border-radius: 10% 10% 0 0 ;\r\n    border-top: 1px solid rgb(245, 210, 150);\r\n    background: rgb(19, 18, 18);\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    transition: transform 0.2s ease-out, opacity 0.4s ease-out;\r\n    opacity: 0;\r\n}\r\n.PreviewBackdrop {\r\n    position: absolute;\r\n    display: none;\r\n    height: 100%;\r\n    width: 100%;\r\n    top: 0;\r\n    z-index: 10;\r\n}", ""]);
 
 // exports
 
@@ -6453,7 +6472,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".SettingsMenu {\r\n    width:100%;\r\n    height: 100%;\r\n    display: flex;\r\n   \r\n}\r\n.PanelLeft {\r\n    flex-basis: 50%;\r\n}\r\n.PanelRight {\r\n    flex-basis: 50%;\r\n}\r\n.PanelRightM {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: auto;\r\n}\r\n.PanelRightImg img{\r\n    height: 10vh;\r\n    margin: auto;\r\n}\r\n.PanelButtons {\r\n    display: flex;\r\n    margin-top: 2rem;\r\n    justify-content: center;\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 15%;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    width: 65%;\r\n    outline: none;\r\n    background: rgba(128, 128, 128, 0.096);\r\n}\r\n.SettingsMenu textarea:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}\r\n.SettingsBtn {\r\n    width: 15%;\r\n    outline: none;\r\n    height: 2.5rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(53, 54, 52);\r\n    color: rgb(214, 230, 214);\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n\r\n.SettingsBtn:hover {\r\n    border-color:rgb(53,54,52);\r\n    color: rgb(53,54,52);\r\n    background: rgb(231,174,15);\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.6vh;\r\n    padding: 0.2rem 0;\r\n    font-weight: 700;\r\n}\r\n.SettingsMenu h1 {\r\n    text-align: center;\r\n    margin-top: 15%;\r\n    font-size: 6vh;\r\n    font-weight: 800;\r\n}\r\n\r\n.SettingsMenu img {\r\n    height: 4vh;\r\n    max-width: 20%;\r\n    margin: auto;\r\n    padding-top: 1rem;\r\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, ".SettingsMenu {\r\n    width:100%;\r\n    height: 100%;\r\n    display: flex;\r\n   \r\n}\r\n.PanelLeft {\r\n    flex-basis: 50%;\r\n}\r\n.PanelRight {\r\n    flex-basis: 50%;\r\n}\r\n.PanelRightM {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: auto;\r\n}\r\n\r\n.PanelButtons {\r\n    display: flex;\r\n    margin-top: 2rem;\r\n    justify-content: center;\r\n}\r\n.FormGroup {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 15%;\r\n}\r\n.SettingsMenu textarea {\r\n    height: 15vh;\r\n    width: 65%;\r\n    outline: none;\r\n    background: rgba(128, 128, 128, 0.096);\r\n}\r\n.SettingsMenu textarea:focus {\r\n    background: rgba(128, 128, 128, 0.301);\r\n}\r\n.SettingsBtn {\r\n    width: 15%;\r\n    outline: none;\r\n    height: 2.5rem!important;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    background: rgb(53, 54, 52);\r\n    color: rgb(214, 230, 214);\r\n    font-weight: 700;\r\n    border-color: transparent;\r\n    transition: 0.6s;\r\n}\r\n\r\n.SettingsBtn:hover {\r\n    border-color:rgb(53,54,52);\r\n    color: rgb(53,54,52);\r\n    background: rgb(231,174,15);\r\n}\r\n\r\n.SettingsMenuLabel{\r\n    font-size: 1.6vh;\r\n    padding: 0.2rem 0;\r\n    font-weight: 700;\r\n}\r\n.SettingsMenu h1 {\r\n    text-align: center;\r\n    margin-top: 15%;\r\n    font-size: 6vh;\r\n    font-weight: 800;\r\n}\r\n\r\n\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -37775,143 +37794,6 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
-/***/ "./node_modules/react-custom-checkbox/dist/index.modern.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/react-custom-checkbox/dist/index.modern.js ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-var Checkbox = function Checkbox(props) {
-  var borderColor = props.borderColor,
-      borderRadius = props.borderRadius,
-      borderStyle = props.borderStyle,
-      borderWidth = props.borderWidth,
-      checkbox = props.checkbox,
-      className = props.className,
-      checked = props.checked,
-      containerClassName = props.containerClassName,
-      containerStyle = props.containerStyle,
-      label = props.label,
-      labelClassName = props.labelClassName,
-      labelStyle = props.labelStyle,
-      name = props.name,
-      onChange = props.onChange,
-      reference = props.reference,
-      right = props.right,
-      size = props.size,
-      style = props.style,
-      value = props.value,
-      icon = props.icon;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(checked),
-      check = _useState[0],
-      setCheck = _useState[1];
-
-  var toggle = function toggle(e) {
-    e.preventDefault();
-    setCheck(!check);
-    onChange && onChange(!check);
-  };
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    setCheck(checked);
-  }, [checked]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    style: _extends({}, containerStyle, {
-      display: "flex",
-      alignItems: "center"
-    }),
-    className: containerClassName,
-    onClick: toggle
-  }, right && label && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: labelClassName,
-    style: labelStyle
-  }, label) || null, checkbox || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: _extends({}, style, {
-      height: size,
-      width: size,
-      borderWidth: borderWidth,
-      borderColor: borderColor,
-      borderStyle: borderStyle,
-      borderRadius: borderRadius,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center"
-    }),
-    className: className
-  }, check && icon || null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    ref: reference,
-    type: "checkbox",
-    name: name,
-    checked: check,
-    value: value,
-    onChange: toggle,
-    hidden: true
-  }))), !right && label && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: labelClassName,
-    style: labelStyle
-  }, label) || null);
-};
-
-Checkbox.defaultProps = {
-  borderColor: "#D7C629",
-  borderStyle: "solid",
-  borderWidth: 2,
-  borderRadius: 5,
-  checked: false,
-  right: false,
-  name: "",
-  size: 18,
-  style: {},
-  className: "",
-  labelStyle: {
-    marginLeft: 5
-  },
-  labelClassName: "",
-  containerStyle: {},
-  containerClassName: "",
-  value: "",
-  onChange: null,
-  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      backgroundColor: "#D7C629",
-      borderRadius: 5,
-      padding: 5
-    }
-  })
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Checkbox);
-//# sourceMappingURL=index.modern.js.map
-
-
-/***/ }),
-
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -67062,19 +66944,15 @@ function BasicPanel(props) {
     className: "PanelLeft"
   }, props.children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "PanelRight"
-  }, props.image ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "PanelRightImg"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    style: {
-      height: '15vh'
-    },
-    alt: "image",
-    src: props.image
-  })) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "PanelRightM"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "PanelButtons"
-  }, buttons))));
+  }, props.preview));
+}
+{
+  /* <div className="PanelRightM">
+  <h1>{props.name}</h1>
+  <div className="PanelButtons">
+     {buttons}
+  </div>  
+  </div> */
 }
 
 /***/ }),
@@ -67574,7 +67452,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _TextInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TextInput */ "./resources/js/cmp/TextInput.js");
 /* harmony import */ var _BasicPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BasicPanel */ "./resources/js/cmp/BasicPanel.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _ProductPreview__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ProductPreview */ "./resources/js/cmp/ProductPreview.js");
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -67686,6 +67565,7 @@ function _arrayWithHoles(arr) {
 
 
 
+
 function ProductPanel(props) {
   var emptyProduct = {
     category: '',
@@ -67695,13 +67575,24 @@ function ProductPanel(props) {
     image_url: '',
     url: '',
     price: '',
-    description: ''
+    description: '',
+    active: 1
   };
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.create ? _objectSpread({}, emptyProduct) : _objectSpread({}, props.product)),
       _useState2 = _slicedToArray(_useState, 2),
       productData = _useState2[0],
       setProductData = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    image: 'white',
+    font: 'gold',
+    background: 'black',
+    buttons: 'gold'
+  }),
+      _useState4 = _slicedToArray(_useState3, 2),
+      colorPallete = _useState4[0],
+      setcolorPallete = _useState4[1];
 
   var inputChange = function inputChange(value, key) {
     setProductData(_objectSpread(_objectSpread({}, productData), {}, _defineProperty({}, key, value)));
@@ -67712,7 +67603,7 @@ function ProductPanel(props) {
       store_id: props.activeStore.id
     }, productData);
 
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["createProduct"])(data).then(function (res) {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["createProduct"])(data).then(function (res) {
       if (res.status === 200) {
         console.log(res.data);
         props.closePanel();
@@ -67728,7 +67619,7 @@ function ProductPanel(props) {
     Object.keys(emptyProduct).forEach(function (key) {
       return data[key] = productData[key];
     });
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["editProduct"])(props.product.id, data).then(function (res) {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["editProduct"])(props.product.id, data).then(function (res) {
       if (res.status === 200) {
         props.closePanel();
         props.updateProduct(res.data, productData.index);
@@ -67737,7 +67628,7 @@ function ProductPanel(props) {
   };
 
   var remove = function remove() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteProduct"])(props.product.id, productData.store_id).then(function (res) {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["deleteProduct"])(props.product.id, productData.store_id).then(function (res) {
       if (res.status === 200) {
         props.closePanel();
         props.removeProduct(productData.index);
@@ -67753,8 +67644,10 @@ function ProductPanel(props) {
     onClick: remove
   } : null];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BasicPanel__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: props.create ? 'Create Product' : 'Edit Product',
-    image: productData.image_url,
+    preview: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductPreview__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      colorPallete: colorPallete,
+      product: productData
+    }),
     buttons: panelButtons
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: {
@@ -67818,6 +67711,60 @@ function ProductPanel(props) {
     value: productData.price,
     validate: "price"
   }));
+}
+
+/***/ }),
+
+/***/ "./resources/js/cmp/ProductPreview.js":
+/*!********************************************!*\
+  !*** ./resources/js/cmp/ProductPreview.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductPreview; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_ProductPreview_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/ProductPreview.css */ "./resources/js/css/ProductPreview.css");
+/* harmony import */ var _css_ProductPreview_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_ProductPreview_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function ProductPreview(props) {
+  var colors = Object.keys(props.colorPallete).map(function (col, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: "colPick".concat(i),
+      className: "ColorPickWrap"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      style: {
+        background: props.colorPallete[col]
+      },
+      className: "ColorPick"
+    }));
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PreviewContainer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PreviewColors"
+  }, colors), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PreviewImg"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.product.image_url,
+    alt: "ProductImage"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "PreviewName"
+  }, props.product.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "PreviewBrand"
+  }, props.product.manufacturer), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "PreviewModel"
+  }, " ", props.product.model, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "PreviewPrice"
+  }, " $", props.product.price, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PreviewBtn PreviewAbout"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PreviewBtn PreviewBuy"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Buy")));
 }
 
 /***/ }),
@@ -69224,7 +69171,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_TableHeader_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/TableHeader.css */ "./resources/js/css/TableHeader.css");
 /* harmony import */ var _css_TableHeader_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_TableHeader_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_custom_checkbox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-custom-checkbox */ "./node_modules/react-custom-checkbox/dist/index.modern.js");
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -69331,7 +69277,6 @@ function _iterableToArrayLimit(arr, i) {
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
 }
-
 
 
 
@@ -69747,6 +69692,36 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./Product.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Product.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/css/ProductPreview.css":
+/*!*********************************************!*\
+  !*** ./resources/js/css/ProductPreview.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./ProductPreview.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ProductPreview.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

@@ -19,7 +19,7 @@
 }
 aside {
     position: fixed;
-    z-index: 800;
+    z-index: 100;
     display: inline-block;
     background: linear-gradient(to right,  #c1b4dd, #e9e4f0);
     height: 100vh;
@@ -38,7 +38,7 @@ body {
 }
 .Backdrop {
     position: absolute;
-    z-index: 1000;
+    z-index: 200;
     top: 0;
     left: 0;
     backdrop-filter: blur(1px);
