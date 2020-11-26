@@ -4,8 +4,6 @@
     height: 65vh;
     width: 35vh;
     margin: auto;
-    background: rgb(19, 18, 18);
-    color: rgb(245, 210, 150);
     border-radius: 10px;
     margin-top: 5vh;
 }
@@ -21,7 +19,6 @@
     align-items: center;
     overflow: hidden;
     border-radius: 0 0 10% 10%;
-    background: white;
     height: 45%;
 }
 
@@ -55,9 +52,7 @@
 }
 
 .PreviewBtn {
-    background: rgb(245, 210, 150);
     width: 20%;
-    color:  rgb(19, 18, 18);
     font-size: 1.5vh;
     text-align: center;
     border-radius: 15px;
@@ -77,29 +72,36 @@
     width: 20%;
     position: absolute;
     top: 0;
-    left: -10%;
-    z-index: 1000;
-   
+    left: -25%;
 }
 .ColorPickWrap {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .ColorPickWrap:nth-of-type(1) {
     height: 45%;
 }
 .ColorPickWrap:nth-of-type(2), .ColorPickWrap:nth-of-type(3) {
-    height: 20%;
+    height: 22.5%;
 }
 .ColorPickWrap:nth-of-type(4) {
-    height: 15%;
+    height: 10%;
 }
 
 .ColorPick {
     height: 2vh;
     width: 2vh;
     border-radius: 5px;
+    cursor: pointer;
+}
+.ColorPicker {
+   position: absolute;
+   left: 0;
+   top: 0;
+   transform: translateX(-110%);
+   
 }
 .PreviewPayMenu {
     background: paleturquoise;

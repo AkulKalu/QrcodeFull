@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import TextInput from './TextInput';
 import BasicPanel from './BasicPanel';
 import ProductPreview from './ProductPreview';
+import Currency from './Currency';
 import {createProduct, editProduct, deleteProduct} from '../Functions/server';
 
 export default function ProductPanel(props)  {
@@ -14,14 +15,43 @@ export default function ProductPanel(props)  {
         url:'',
         price: '',
         description:'',
-        active: 1
+        active: 1,
+        currency: '$'
     }
     const [productData, setProductData] = useState(props.create ? {...emptyProduct} : {...props.product});
     const [colorPallete, setcolorPallete] = useState({
-        image: 'white',
-        font: 'gold',
-        background: 'black',
-        buttons: 'gold',
+        image: {
+            rgbStr:'rgb(255, 255, 255, 1)',
+            rgb: {
+                r:255,
+                g:255,
+                b:255,
+                a:1,
+            }},
+        font: {
+            rgbStr:'rgb(196, 235, 108, 1)',
+            rgb: {
+                r:196,
+                g:235,
+                b:108,
+                a:1,
+            }},
+        background: {
+            rgbStr:'rgb(16, 17, 17, 1)',
+            rgb: {
+                r:16,
+                g:17,
+                b:17,
+                a:1,
+            }},
+        buttons: {
+            rgbStr:'rgb(196, 235, 108, 1)',
+            rgb: {
+                r:196,
+                g:235,
+                b:108,
+                a:1,
+            }},
     });
 
     const inputChange = (value, key) => {
@@ -77,7 +107,7 @@ export default function ProductPanel(props)  {
             onClick: remove
         } : null,
     ]
-    return <BasicPanel preview={<ProductPreview colorPallete={colorPallete} product={productData}/>} buttons={panelButtons} >
+    return <BasicPanel preview={<ProductPreview colorPallete={colorPallete} setColorPallete={setcolorPallete} product={productData}/>} buttons={panelButtons} >
                 <TextInput
                     style={{marginTop: '8%'}}
                     onChange = {e => inputChange(e.target.value, 'category')}
@@ -120,12 +150,15 @@ export default function ProductPanel(props)  {
                     value={productData.image_url} 
                     validate = 'image_url'
                 />
-                <TextInput
-                    onChange = {e => inputChange(e.target.value, 'price')}
-                    name = "Price"
-                    value={productData.price}  
-                    validate = 'price'
-                />          
+                    <TextInput
+                        style={{width: '50%'}}
+                        onChange = {e => inputChange(e.target.value, 'price')}
+                        name = "Price"
+                        value={productData.price}  
+                        validate = 'price'
+                    />
+                    <Currency current={productData.currency} onChange={inputChange}  />
+                     
         </BasicPanel>
       
 }

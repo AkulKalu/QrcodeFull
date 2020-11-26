@@ -1,0 +1,20 @@
+.Currency {
+    display: flex;
+}
+.CurrencyBtn {
+    display: inline-block;
+    font-size: 2vh;
+    color: rgb(53, 54, 52);
+    opacity: 0.6;
+    transition: opacity 0.4s;
+    padding: 0 0.3rem;
+    cursor: pointer;
+}
+
+.CurrencyBtn:hover {
+    opacity: 1;
+}
+
+.CurrencyActive {
+    opacity: 1;
+}

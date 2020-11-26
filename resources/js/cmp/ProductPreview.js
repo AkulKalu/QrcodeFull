@@ -1,17 +1,45 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { SketchPicker } from 'react-color';
 import '../css/ProductPreview.css';
 
 export default function ProductPreview(props) {
-    let colors = Object.keys(props.colorPallete).map( (col, i) => {
+    const [colorPicker, setColorPicker] = useState(false);
+
+    const activatePicker = ind => {
+        colorPicker === ind ? setColorPicker(false) : setColorPicker(ind);
+    }
+    const colorPalleteOnChange = (segment, col) =>{ 
+        const rgbString = color => `rgb(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+        props.setColorPallete({...props.colorPallete, [segment]: {rgbStr: rgbString(col.rgb), rgb:col.rgb}})
+    };
+    
+   
+    let colorPickers = Object.keys(props.colorPallete).map( (segment, i) => {
         return  <div  key={`colPick${i}`} className="ColorPickWrap">
-                    <div style={{background: props.colorPallete[col]}} className="ColorPick"></div>
+                    <div onClick={()=> activatePicker(i)} style={{background: props.colorPallete[segment].rgbStr}} className="ColorPick">
+                    </div>
+                    {colorPicker === i ? <div className="ColorPicker"><SketchPicker color={props.colorPallete[segment].rgb} onChangeComplete={ col => colorPalleteOnChange(segment, col) } /></div>  : null}
                 </div>
     } )
-    return <div className="PreviewContainer">
+
+    let styles = {
+        container: {
+            background: props.colorPallete.background.rgbStr,
+            color: props.colorPallete.font.rgbStr,
+        },
+        image: {
+            background: props.colorPallete.image.rgbStr,
+        },
+        button: {
+            background: props.colorPallete.buttons.rgbStr,
+            color: props.colorPallete.background.rgbStr,
+        }
+    }
+    return <div style={styles.container} className="PreviewContainer">
                 <div className="PreviewColors">
-                    {colors}
+                    {colorPickers}
                 </div>
-                <div className="PreviewImg" >
+                <div style={styles.image} className="PreviewImg" >
                     <img src={props.product.image_url} alt="ProductImage"></img>
                 </div>
                 <div>
@@ -20,11 +48,11 @@ export default function ProductPreview(props) {
                     <span className="PreviewModel"> {props.product.model} </span>
                     <span className="PreviewPrice"> ${props.product.price} </span>
                 </div>
-                <div className="PreviewBtn PreviewAbout">
-                    <span>About</span>
+                <div style={styles.button} className="PreviewBtn PreviewAbout">
+                   About
                 </div>
-                <div className="PreviewBtn PreviewBuy">
-                    <span>Buy</span>
+                <div style={styles.button} className="PreviewBtn PreviewBuy">
+                    Buy
                 </div>
         </div>
       
