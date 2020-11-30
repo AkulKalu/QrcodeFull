@@ -37319,6 +37319,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./checkoutTheme */ "./resources/js/checkoutTheme.js");
+
 var menu = document.getElementById('payMenu');
 var backdrop = document.getElementById('backdrop');
 
@@ -37335,6 +37337,7 @@ function closePayMenu() {
 }
 
 var stripe = Stripe(publicKey);
+console.log(publicKey);
 
 function chargeWithStripe() {
   window.axios.post("/checkout/charge/stripe/".concat(productId)).then(function (response) {
@@ -37351,12 +37354,25 @@ function chargeWithStripe() {
       alert(result.error.message);
     }
   })["catch"](function (error) {
-    console.error("Error:", error);
+    console.error("Error:", error.response);
   });
 }
 
 document.getElementById('chargeStripe').onclick = chargeWithStripe;
 document.getElementById('buyBtn').onclick = openPayMenu;
+
+/***/ }),
+
+/***/ "./resources/js/checkoutTheme.js":
+/*!***************************************!*\
+  !*** ./resources/js/checkoutTheme.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.body.style.background = theme.background.rgbStr;
+document.body.style.color = theme.font.rgbStr;
+document.getElementById('imgBg').style.background = theme.image.rgbStr;
 
 /***/ }),
 

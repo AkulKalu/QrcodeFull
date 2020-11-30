@@ -23,8 +23,10 @@ class CreateProductsTable extends Migration
             $table->string('image_url')->nullable();
             $table->string('url')->nullable();
             $table->text('description')->nullable();
+            $table->text('theme');
             $table->integer('stock')->default(1);
             $table->float('price', 10, 4);
+            $table->string('currency')->default('$');
             $table->tinyInteger('active')->default(1);
             $table->timestamps();
         });

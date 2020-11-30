@@ -19,12 +19,8 @@
 .CPStore img {
     height: 2.5vh;
     cursor: pointer;
-    margin-left: 1rem;
-    transition: transform 1s;
 }
-.CPStore img:hover {
-    transform: rotate(180deg);
-}
+
 .CPStoresList {
     width: 50vw;
     display: flex;

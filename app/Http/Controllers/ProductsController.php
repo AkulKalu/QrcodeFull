@@ -17,7 +17,15 @@ class ProductsController extends Controller
     public function index(Request $request)
     {   
         $store = Auth::user()->stores()->find($request->storeId);
-        return response()->json($store->products);
+        $responseData = [];
+
+        foreach ($store->products as $product) {
+            $productData = $product->toArray();
+            $productData['theme'] = unserialize($productData['theme']);
+            array_push($responseData, $productData);
+        }
+
+        return response()->json($responseData);
     }
 
     /**
@@ -28,8 +36,11 @@ class ProductsController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        $store = Auth::user()->stores()->find($request->store_id);
-        $createdProduct = $store->products()->create($request->all());
+        $store = Auth::user()->stores()->find( $request->store_id);
+        $productData = $request->all();
+        $productData = array_merge($productData, ['theme'=> serialize($request->theme)]);
+        $createdProduct = $store->products()->create($productData);
+        $createdProduct->theme = $request->theme;
         return response()->json($createdProduct);
     }
    
@@ -43,7 +54,10 @@ class ProductsController extends Controller
     public function update(ProductRequest $request, $id)
     {
         $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
-        $product->update($request->all());
+        $productData = $request->all();
+        $productData = array_merge($productData, ['theme'=> serialize($request->theme)]);
+        $product->update($productData);
+        $product->theme = $request->theme;
         return response()->json($product);
     }
     public function toogleActive(Request $request, $id)

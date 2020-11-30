@@ -16,14 +16,13 @@ export default function BasicPanel(props) {
                 </div>
                 <div className="PanelRight">
                    {props.preview}
-                   
+                   <div className="PanelRightM">
+                        <h1>{props.name}</h1>
+                        <div className="PanelButtons">
+                            {buttons}
+                        </div>  
+                    </div>
                 </div>
             </div>
 }
 
-{/* <div className="PanelRightM">
-<h1>{props.name}</h1>
-<div className="PanelButtons">
-    {buttons}
-</div>  
-</div> */}

@@ -13,13 +13,14 @@ export default function ProductPanel(props)  {
         manufacturer_website: '',
         image_url:'',
         url:'',
-        price: '',
+        price: 0,
         description:'',
         active: 1,
+        stock: 1,
         currency: '$'
     }
     const [productData, setProductData] = useState(props.create ? {...emptyProduct} : {...props.product});
-    const [colorPallete, setcolorPallete] = useState({
+    const [colorPallete, setcolorPallete] = useState(props.create ? {
         image: {
             rgbStr:'rgb(255, 255, 255, 1)',
             rgb: {
@@ -52,7 +53,7 @@ export default function ProductPanel(props)  {
                 b:108,
                 a:1,
             }},
-    });
+    }: props.product.theme);
 
     const inputChange = (value, key) => {
         setProductData({
@@ -64,12 +65,17 @@ export default function ProductPanel(props)  {
     const create = () => {
         const data = {
             store_id : props.activeStore.id,
-            ...productData
+            theme: colorPallete
         };
+        Object.keys(emptyProduct).forEach(key => {
+            if(productData[key] !== '') {
+                data[key] = productData[key]
+            }  
+        });
         createProduct(data)
+
         .then( res =>{
             if(res.status === 200) {
-                console.log(res.data);
                 props.closePanel();
                 props.addProduct(res.data);
             }
@@ -77,9 +83,12 @@ export default function ProductPanel(props)  {
     }
     const edit = () => {
         const data = {
-            store_id: productData.store_id
+            store_id: productData.store_id,
+            theme: colorPallete
         };
+
         Object.keys(emptyProduct).forEach(key => data[key] = productData[key]);
+
         editProduct(props.product.id, data)
         .then( res =>{
             if(res.status === 200) {
@@ -107,11 +116,13 @@ export default function ProductPanel(props)  {
             onClick: remove
         } : null,
     ]
+    console.log(props.categories.keys());
     return <BasicPanel preview={<ProductPreview colorPallete={colorPallete} setColorPallete={setcolorPallete} product={productData}/>} buttons={panelButtons} >
                 <TextInput
                     style={{marginTop: '8%'}}
                     onChange = {e => inputChange(e.target.value, 'category')}
                     name = "Category"
+                    dataList = {Array.from(props.categories.keys())}
                     value={productData.category} 
                     validate = 'name'
                 />
@@ -150,6 +161,7 @@ export default function ProductPanel(props)  {
                     value={productData.image_url} 
                     validate = 'image_url'
                 />
+                <div style={{display:'flex'}}>
                     <TextInput
                         style={{width: '50%'}}
                         onChange = {e => inputChange(e.target.value, 'price')}
@@ -158,7 +170,14 @@ export default function ProductPanel(props)  {
                         validate = 'price'
                     />
                     <Currency current={productData.currency} onChange={inputChange}  />
-                     
+                     <TextInput
+                        style={{width: '50%'}}
+                        onChange = {e => inputChange(e.target.value, 'stock')}
+                        name = "Stock"
+                        value={productData.stock}  
+                        validate = 'stock'
+                    />
+                </div>       
         </BasicPanel>
       
 }

@@ -27,9 +27,11 @@ class ProductRequest extends FormRequest
             'manufacturer_website'=> ['url'],
             'model'=> ['required'],
             'category'=> ['required'],
+            'theme'=> ['required'],
             'image_url'=> ['url'],
             'url'=> ['url'],
             'price'=> ['required','numeric'],
+            'stock'=> ['required','numeric'],
         ];
     }
 }

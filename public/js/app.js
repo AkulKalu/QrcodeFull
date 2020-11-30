@@ -6456,7 +6456,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".Currency {\r\n    display: flex;\r\n}\r\n.CurrencyBtn {\r\n    display: inline-block;\r\n    font-size: 2vh;\r\n    color: rgb(53, 54, 52);\r\n    opacity: 0.6;\r\n    transition: opacity 0.4s;\r\n    padding: 0 0.3rem;\r\n    cursor: pointer;\r\n}\r\n\r\n.CurrencyBtn:hover {\r\n    opacity: 1;\r\n}\r\n\r\n.CurrencyActive {\r\n    opacity: 1;\r\n}", ""]);
+exports.push([module.i, ".Currency {\r\n    display: flex;\r\n}\r\n.CurrencyBtn {\r\n    display: inline-block;\r\n    font-size: 2.2vh;\r\n    color: rgb(53, 54, 52);\r\n    opacity: 0.6;\r\n    transition: opacity 0.4s;\r\n    padding: 0 0.3rem;\r\n    cursor: pointer;\r\n}\r\n\r\n.CurrencyBtn:hover {\r\n    opacity: 1;\r\n}\r\n\r\n.CurrencyActive {\r\n    opacity: 1;\r\n}", ""]);
 
 // exports
 
@@ -6627,7 +6627,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".CPStore {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 0.5rem 0;\r\n    font-weight: 600;\r\n}\r\n\r\n.CPStoreBtn {\r\n    /* position: relative; */\r\n    font-size: 3.5vh;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    text-align: center;\r\n    min-width: 10vw;\r\n    padding: 0 2rem;\r\n    margin-left: 1rem;\r\n    cursor: pointer;\r\n   \r\n}\r\n.CPStore img {\r\n    height: 2.5vh;\r\n    cursor: pointer;\r\n    margin-left: 1rem;\r\n    transition: transform 1s;\r\n}\r\n.CPStore img:hover {\r\n    transform: rotate(180deg);\r\n}\r\n.CPStoresList {\r\n    width: 50vw;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    margin: 10vh auto;\r\n}\r\n.CPStoresItem {\r\n    background-color: rgb(231,174,15);\r\n    color: rgb(53,54,52);\r\n    box-shadow: 2px 2px 5px gray;\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 2.5vh;\r\n    padding: 0 0.3rem;\r\n    margin-top: 0.5rem;\r\n    margin-left: 0.5rem;\r\n    flex: 1 1 50px;\r\n    cursor: pointer;\r\n    transition: all 0.4s;\r\n}\r\n.CPStoresItem:hover {\r\n    background-color:rgb(53,54,52) ;\r\n    color: rgb(231,174,15);\r\n}\r\n", ""]);
+exports.push([module.i, ".CPStore {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin: 0.5rem 0;\r\n    font-weight: 600;\r\n}\r\n\r\n.CPStoreBtn {\r\n    /* position: relative; */\r\n    font-size: 3.5vh;\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    text-align: center;\r\n    min-width: 10vw;\r\n    padding: 0 2rem;\r\n    margin-left: 1rem;\r\n    cursor: pointer;\r\n   \r\n}\r\n.CPStore img {\r\n    height: 2.5vh;\r\n    cursor: pointer;\r\n}\r\n\r\n.CPStoresList {\r\n    width: 50vw;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    margin: 10vh auto;\r\n}\r\n.CPStoresItem {\r\n    background-color: rgb(231,174,15);\r\n    color: rgb(53,54,52);\r\n    box-shadow: 2px 2px 5px gray;\r\n    display: flex;\r\n    justify-content: center;\r\n    font-size: 2.5vh;\r\n    padding: 0 0.3rem;\r\n    margin-top: 0.5rem;\r\n    margin-left: 0.5rem;\r\n    flex: 1 1 50px;\r\n    cursor: pointer;\r\n    transition: all 0.4s;\r\n}\r\n.CPStoresItem:hover {\r\n    background-color:rgb(53,54,52) ;\r\n    color: rgb(231,174,15);\r\n}\r\n", ""]);
 
 // exports
 
@@ -88568,15 +88568,11 @@ function BasicPanel(props) {
     className: "PanelLeft"
   }, props.children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "PanelRight"
-  }, props.preview));
-}
-{
-  /* <div className="PanelRightM">
-  <h1>{props.name}</h1>
-  <div className="PanelButtons">
-     {buttons}
-  </div>  
-  </div> */
+  }, props.preview, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PanelRightM"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "PanelButtons"
+  }, buttons))));
 }
 
 /***/ }),
@@ -88801,7 +88797,6 @@ __webpack_require__.r(__webpack_exports__);
 
 function Currency(props) {
   var currency = ['$', '£', '€'].map(function (curr) {
-    console.log(props.current, props.current === curr);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: props.current === curr ? "CurrencyBtn CurrencyActive" : "CurrencyBtn",
       key: curr,
@@ -89234,9 +89229,10 @@ function ProductPanel(props) {
     manufacturer_website: '',
     image_url: '',
     url: '',
-    price: '',
+    price: 0,
     description: '',
     active: 1,
+    stock: 1,
     currency: '$'
   };
 
@@ -89245,7 +89241,7 @@ function ProductPanel(props) {
       productData = _useState2[0],
       setProductData = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.create ? {
     image: {
       rgbStr: 'rgb(255, 255, 255, 1)',
       rgb: {
@@ -89282,7 +89278,7 @@ function ProductPanel(props) {
         a: 1
       }
     }
-  }),
+  } : props.product.theme),
       _useState4 = _slicedToArray(_useState3, 2),
       colorPallete = _useState4[0],
       setcolorPallete = _useState4[1];
@@ -89292,13 +89288,17 @@ function ProductPanel(props) {
   };
 
   var create = function create() {
-    var data = _objectSpread({
-      store_id: props.activeStore.id
-    }, productData);
-
+    var data = {
+      store_id: props.activeStore.id,
+      theme: colorPallete
+    };
+    Object.keys(emptyProduct).forEach(function (key) {
+      if (productData[key] !== '') {
+        data[key] = productData[key];
+      }
+    });
     Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["createProduct"])(data).then(function (res) {
       if (res.status === 200) {
-        console.log(res.data);
         props.closePanel();
         props.addProduct(res.data);
       }
@@ -89307,7 +89307,8 @@ function ProductPanel(props) {
 
   var edit = function edit() {
     var data = {
-      store_id: productData.store_id
+      store_id: productData.store_id,
+      theme: colorPallete
     };
     Object.keys(emptyProduct).forEach(function (key) {
       return data[key] = productData[key];
@@ -89336,6 +89337,7 @@ function ProductPanel(props) {
     name: 'REMOVE',
     onClick: remove
   } : null];
+  console.log(props.categories.keys());
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BasicPanel__WEBPACK_IMPORTED_MODULE_2__["default"], {
     preview: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductPreview__WEBPACK_IMPORTED_MODULE_3__["default"], {
       colorPallete: colorPallete,
@@ -89351,6 +89353,7 @@ function ProductPanel(props) {
       return inputChange(e.target.value, 'category');
     },
     name: "Category",
+    dataList: Array.from(props.categories.keys()),
     value: productData.category,
     validate: "name"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -89397,7 +89400,11 @@ function ProductPanel(props) {
     name: "Image Url",
     value: productData.image_url,
     validate: "image_url"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      display: 'flex'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     style: {
       width: '50%'
     },
@@ -89410,7 +89417,17 @@ function ProductPanel(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Currency__WEBPACK_IMPORTED_MODULE_4__["default"], {
     current: productData.currency,
     onChange: inputChange
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    style: {
+      width: '50%'
+    },
+    onChange: function onChange(e) {
+      return inputChange(e.target.value, 'stock');
+    },
+    name: "Stock",
+    value: productData.stock,
+    validate: "stock"
+  })));
 }
 
 /***/ }),
@@ -90959,6 +90976,12 @@ function Table(props) {
     setProducts(sorted);
   };
 
+  var categoryList = function categoryList() {
+    return new Set(products.map(function (prod) {
+      return prod.category;
+    }));
+  };
+
   var applyFilter = function applyFilter(product) {
     if (!props.filter || !props.filter.applyTo) {
       return product;
@@ -90997,6 +91020,7 @@ function Table(props) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Product__WEBPACK_IMPORTED_MODULE_1__["default"], {
         key: "product".concat(i),
         product: product,
+        categories: categoryList(),
         removeProduct: removeProduct,
         updateProduct: updateProduct
       });
@@ -91343,6 +91367,12 @@ function TextInput(props) {
     borderColor: 'crimson',
     boxShadow: '0 0 5px crimson'
   };
+  var dataListOptions = props.dataList ? props.dataList.map(function (option, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      key: "".concat(props.name).concat(i, "opt"),
+      value: option
+    });
+  }) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: props.style,
     className: "FormGroup "
@@ -91352,13 +91382,16 @@ function TextInput(props) {
   }, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     style: validationMessage.length ? invalidInputStyle : null,
     className: "TXIInput",
+    list: "".concat(props.name, "List"),
     onChange: props.onChange,
     value: props.value,
     type: "text",
     name: name
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "ValidationMessage"
-  }, validationMessage));
+  }, validationMessage), dataListOptions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("datalist", {
+    id: "".concat(props.name, "List")
+  }, dataListOptions) : null);
 }
 
 /***/ }),

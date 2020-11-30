@@ -1,4 +1,5 @@
 require('./bootstrap');
+require('./checkoutTheme');
 
 let menu = document.getElementById('payMenu');
 let backdrop = document.getElementById('backdrop');
@@ -16,6 +17,7 @@ function closePayMenu() {
 
 let stripe = Stripe(publicKey);
 
+console.log(publicKey);
 function chargeWithStripe() {
     window.axios.post(`/checkout/charge/stripe/${productId}`)
     .then(response => {
@@ -33,7 +35,7 @@ function chargeWithStripe() {
       }
     })
     .catch(error => {
-      console.error("Error:", error);
+      console.error("Error:", error.response);
     });
 }
 

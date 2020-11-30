@@ -9,14 +9,14 @@
     <title>Product</title>
 </head>
 <body>
-    <div class="ProductImg" >
+    <div id="imgBg" class="ProductImg" >
         <img  src={{ $product->image_url}} alt="product">
     </div>
     <div>
-        <span class="ProductName">Toster</span>
-        <span class="ProductBrand">Rowenta</span>
-        <span class="ProductModel"> XR-100 </span>
-        <span class="ProductPrice"> ${{ $product->price}} </span>
+        <span class="ProductName">{{ $product->category}}</span>
+        <span class="ProductBrand">{{ $product->manufacturer}}</span>
+        <span class="ProductModel">{{ $product->model}} </span>
+        <span class="ProductPrice"> {{ $product->currency}}{{ $product->price}} </span>
     </div>
     <div class="Productinfo">
         <p>
@@ -36,8 +36,9 @@
     <div  id="backdrop" class="Backdrop"></div>
     <script>
         // Create an instance of the Stripe object with your publishable API key
-        let publicKey = "pk_test_51HYvFzDtXqe1Qv3C6HCSWP7DkhN2VFPiKCXoQB4XTkZgfpSig1MzCBPq2RpdT9baKhJd57ZNEWJhgdLBc0NGkWSR00of2845fP";
+        let publicKey = "{{$public_key}}";
         let productId = "{{$product->id}}";
+        let theme =@json($theme);
     </script>
 </body>
 </html>

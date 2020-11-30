@@ -39,6 +39,10 @@ export default function Table(props) {
         sorted.sort(sortFun);
         setProducts(sorted);
     }
+    const categoryList = () => {
+        return new Set(products.map( prod => prod.category));
+        
+    }
     const applyFilter = product => {
         
         if(!props.filter || !props.filter.applyTo) {
@@ -70,7 +74,7 @@ export default function Table(props) {
             product = applyFilter(product);
             if(product) {
                 product.index = i;
-                return <Product  key={`product${i}`} product={product} removeProduct={removeProduct}  updateProduct={updateProduct} />
+                return <Product  key={`product${i}`} product={product} categories={categoryList()} removeProduct={removeProduct}  updateProduct={updateProduct} />
             }
         })
     

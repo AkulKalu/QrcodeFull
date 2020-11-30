@@ -36,6 +36,7 @@ export default function TextInput(props) {
         borderColor : 'crimson',
         boxShadow: '0 0 5px crimson'
     }
+    let dataListOptions = props.dataList ? props.dataList.map(( option, i) => <option key={`${props.name}${i}opt`} value={option}/>) :null;
 
     return (
         <div style={props.style} className="FormGroup ">
@@ -43,12 +44,14 @@ export default function TextInput(props) {
                 <input 
                     style = {validationMessage.length ? invalidInputStyle : null }
                     className="TXIInput"
+                    list={`${props.name}List`}
                     onChange = {props.onChange}
                     value={props.value} 
                     type='text'
                     name={name}>
                 </input>
                 <p className="ValidationMessage">{validationMessage}</p>
+                {dataListOptions ? <datalist id={`${props.name}List`}>{dataListOptions}</datalist> : null}
          </div>)
    
 }

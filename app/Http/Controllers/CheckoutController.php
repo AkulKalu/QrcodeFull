@@ -13,25 +13,23 @@ use Stripe\Checkout\Session as StripeSession;
 class CheckoutController extends Controller
 {
     public function index($user, $store,$storeId, $productId) {
-     
-        $product = Store::find($storeId)->products()->find($productId);
-        return view('product', ['product'=> $product]);
+        $product = Product::find($productId);
+        return view('product', ['product'=> $product, 'theme'=> unserialize($product->theme), 'public_key'=> $product->store->stripe_public_key]);
     }
 
     public function chargeWithStripe($productId)
     {
         $product = Product::find($productId);
-
-        Stripe::setApiKey('sk_test_51HYvFzDtXqe1Qv3CNrtwR3SKkqAHAetQxiuAwYwHn0SkziWTX2yIPT7rgXfrojEbyGtVv6t6XAZqUv0l5tfKJM9e00Po8QFveX');
+        Stripe::setApiKey($product->store->stripe_private_key);
   
         $checkout_session = StripeSession::create([
             'payment_method_types' => ['card'],
             'line_items' => [[
               'price_data' => [
                 'currency' => 'usd',
-                'unit_amount' =>  $product->price,
+                'unit_amount' =>  $product->price * 100,
                 'product_data' => [
-                  'name' => $product->name,
+                  'name' => $product->model,
                   'images' => [$product->image_url],
                 ],
               ],
@@ -49,8 +47,8 @@ class CheckoutController extends Controller
     {
         $product = Product::find($request->productId);
         $payPal = Omnipay::create('PayPal_Rest');
-        $payPal->setClientId('AS-eqCp9M-RCJp9Vsk5s3hbPFsn14JxUKEO6O5qED-cS9fuus4B_cVtJTCqeSdL2w0M11j4YQ6zcKLTZ');
-        $payPal->setSecret('EJSPyDXcGJ_2hYiUaCm9B8eedPk_FMDDP46xcSJBY2CZ9k_M6ox4g0lhViTXLAn2Sm88dD0J0BbV6MO_');
+        $payPal->setClientId($product->store->paypal_client_id);
+        $payPal->setSecret($product->store->paypal_private_key);
         $payPal->setTestMode(true);
        
         try {
