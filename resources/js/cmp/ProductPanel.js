@@ -6,6 +6,7 @@ import Currency from './Currency';
 import {createProduct, editProduct, deleteProduct} from '../Functions/server';
 
 export default function ProductPanel(props)  {
+    console.log(props.categories);
     const emptyProduct = {
         category: '',
         model: '',
@@ -116,7 +117,7 @@ export default function ProductPanel(props)  {
             onClick: remove
         } : null,
     ]
-    console.log(props.categories.keys());
+   
     return <BasicPanel preview={<ProductPreview colorPallete={colorPallete} setColorPallete={setcolorPallete} product={productData}/>} buttons={panelButtons} >
                 <TextInput
                     style={{marginTop: '8%'}}

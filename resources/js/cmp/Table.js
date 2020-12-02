@@ -40,6 +40,7 @@ export default function Table(props) {
         setProducts(sorted);
     }
     const categoryList = () => {
+        console.log(products);
         return new Set(products.map( prod => prod.category));
         
     }

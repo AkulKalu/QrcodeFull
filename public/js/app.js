@@ -89222,6 +89222,7 @@ function _arrayWithHoles(arr) {
 
 
 function ProductPanel(props) {
+  console.log(props.categories);
   var emptyProduct = {
     category: '',
     model: '',
@@ -89337,7 +89338,6 @@ function ProductPanel(props) {
     name: 'REMOVE',
     onClick: remove
   } : null];
-  console.log(props.categories.keys());
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BasicPanel__WEBPACK_IMPORTED_MODULE_2__["default"], {
     preview: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductPreview__WEBPACK_IMPORTED_MODULE_3__["default"], {
       colorPallete: colorPallete,

@@ -3,8 +3,10 @@
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CPanelController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StoresController;
+use App\Http\Controllers\StripeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -32,9 +34,10 @@ Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive
 Route::get('/user', [CPanelController::class, 'load']);
 
 Route::get('/{user}/{store}/{storeId}/{productId}', [CheckoutController::class, 'index']);
-Route::post('/checkout/charge/stripe/{productId}', [CheckoutController::class, 'chargeWithStripe']);
-Route::post('/checkout/charge/paypal', [CheckoutController::class, 'chargeWithPaypal']);
-Route::get('/checkout/success', [CheckoutController::class, 'success']);
+Route::post('/checkout/charge/stripe/{productId}', [StripeController::class, 'charge']);
+Route::post('/checkout/charge/paypal', [PayPalController::class, 'charge']);
+Route::get('/checkout/success/stripe', [StripeController::class, 'success']);
+Route::get('/checkout/success/paypal', [PayPalController::class, 'success']);
 Route::get('/checkout/fail', [CheckoutController::class, 'fail']);
 
 Route::resources([
