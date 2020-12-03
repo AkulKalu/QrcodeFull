@@ -11,7 +11,7 @@ export default function TableHeader(props) {
         'price': true,
         'active': true,
     }
-   
+
     const [ascending , setAscending ] = useState({...sortDirectons});
 
     const sortBy = rule => {
@@ -35,16 +35,6 @@ export default function TableHeader(props) {
         
         props.sort(sortFun);
     }
-
-    let columns = props.columns.map( (col, i) => {
-        return  <div 
-                    key={`TBC${i}`}
-                    onClick={ col.sort ? ()=> sortBy(col.name) : null} 
-                    style={{width: col.width}} 
-                    className="TBHCell">
-                    {col.name}
-                </div>
-    } )
     return <div className="TBHCont">
                 <div style={{width: '20%'}} className="TBHCell">Image</div>
                 <div 

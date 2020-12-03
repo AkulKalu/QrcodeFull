@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Logo from './logo';
 import Store from './Store';
-import Settings from './Settings';
 import User from './User';
-import SettingsMenu from './SettingsMenu';
 import SideMenu from './SideMenu';
-import Backdrop from './Backdrop';
-import Table from './Table';
+import Products from './Products';
 import SearchBar from './SearchBar';
 import {authenticate} from '../Functions/server';
 import '../css/ControlPanel.css';
@@ -19,7 +16,7 @@ import ReactDOM from 'react-dom';
      const [user, setUser] = useState(null);
      const [activeStore, setActiveStore] = useState(null);
      const [table, switchTable] = useState(null);
-     const [productToAdd, addProduct] = useState(null);
+     const [newProduct, setNewProduct] = useState(false);
      const [filter, setFilter] = useState(null);
 
     useEffect(()=> {
@@ -36,7 +33,7 @@ import ReactDOM from 'react-dom';
                         <Logo/>
                         <SideMenu 
                             activeStore = {activeStore} 
-                            addProduct = {addProduct}
+                            setNewProduct = {setNewProduct}
                             switchTable = {switchTable}
                         />
                     </aside>
@@ -57,10 +54,9 @@ import ReactDOM from 'react-dom';
                             </div>
                     </div>
                     
-                    <Table
-                        table = {table}
+                    <Products
                         activeStore = {activeStore}
-                        toAdd={productToAdd}
+                        new={newProduct}
                         filter = {filter}
                     />
                 </div>: null

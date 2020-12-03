@@ -6,7 +6,7 @@ import Currency from './Currency';
 import {createProduct, editProduct, deleteProduct} from '../Functions/server';
 
 export default function ProductPanel(props)  {
-    console.log(props.categories);
+    
     const emptyProduct = {
         category: '',
         model: '',

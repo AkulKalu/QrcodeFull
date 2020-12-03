@@ -12,23 +12,20 @@ export default function SideMenu(props) {
         setActiveBtn(activeBtn.map( (val, i)=> i === ind ?  "SMbutton SMActive":  "SMbutton" ));
         props.switchTable(table);
     }
-   
+    
     return <div className="SMCont">
                 <Button 
                     name="Products"
                     onClick ={ () => buttonClick('products',0) } 
                     className={activeBtn[0]}
                 />
-
                 {activeBtn[0].includes('Active') ?
-                <PanelSwitch panel={ProductPanel} panelProps={{
-                    activeStore : props.activeStore,
-                    create: true,
-                    addProduct: props.addProduct
-                }}>
-                     <span  className="SMOption">new</span>
-                </PanelSwitch> : null }
-
+                     <span onClick={()=>{
+                         console.log('x');
+                        props.setNewProduct(true)
+                     } }  className="SMOption">new</span>
+                : null }
+               
                 <Button 
                     name="Transactions"
                     onClick ={ () => buttonClick('transactions',1) } 
@@ -37,3 +34,4 @@ export default function SideMenu(props) {
                 
             </div>
 }
+
