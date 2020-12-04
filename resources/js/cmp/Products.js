@@ -2,14 +2,14 @@ import React, {useEffect, useState, Fragment} from 'react';
 import Product from './Product';
 import ProductPanel from './ProductPanel';
 import PanelSwitch from './PanelSwitch';
-import ProductsHeader from './ProductsHeader';
+import TableHeader from './TableHeader';
+import Button from './Button';
 import Table from './Table';
 import {getProducts} from '../Functions/server';
 
 
 export default function Products(props) {
     const [products, setProducts] = useState([]);
-    let newProduct = null;
 
     useEffect( () => {
         if(props.activeStore) {
@@ -18,21 +18,7 @@ export default function Products(props) {
         }
     }, [props.activeStore])
 
-    useEffect( () => {
-        if(props.new) {
-            console.log('xxx');
-            newProduct =  <PanelSwitch 
-                panel={ProductPanel} 
-                panelProps={{
-                    activeStore : props.activeStore,
-                    create: true,
-                    addProduct: addProduct,
-                    categories: categoryList()
-            }}/> 
-        }
-    }, [props.new])
   
-   
     const updateProduct = (toEdit, ind) => {
         let updated = [...products];
         updated[ind] = toEdit;
@@ -57,24 +43,59 @@ export default function Products(props) {
         return new Set(products.map( prod => prod.category));
     }
    
+    let tableColumns = {
+        Image: {
+            width: '20%',
+        },
+        Category: {
+            width: '10%',
+            sort:true,
+        },
+        Model: {
+            width: '20%',
+            sort:true,
+        },
+        Manufacturer : {
+            width: '20%',
+            sort:true,
+        },
+        Price : {
+            width: '10%',
+            sort:true,
+        },
+        Active : {
+            width: '10%',
+            sort:true,
+        },
+        QrCode : {
+            width: '10%',
+        }
+    }
     
- console.log(newProduct);
-return <Fragment>
-            <Table 
-                header={<ProductsHeader sort={sortProducts} />} 
-                data={products}
-                row = {Product}
-                rowProps = {
-                    {
-                        categories: categoryList(),
-                        removeProduct: removeProduct,
-                        updateProduct: updateProduct
+    return <Fragment>
+                 <PanelSwitch 
+                    panel={ProductPanel} 
+                    panelProps={{
+                        activeStore : props.activeStore,
+                        create: true,
+                        addProduct: addProduct,
+                        categories: categoryList()
+                    }}>
+                    <Button name="new" className="ProductsAddBtn" />
+                </PanelSwitch>
+                <Table 
+                    header={<TableHeader columns={tableColumns} sort={sortProducts} />} 
+                    data={products}
+                    row = {Product}
+                    rowProps = {
+                        {
+                            categories: categoryList(),
+                            removeProduct: removeProduct,
+                            updateProduct: updateProduct
+                        }
                     }
-                }
-            />
-            {newProduct}
-           
-        </Fragment>
+                />
+            </Fragment>
 }
 
 

@@ -70,6 +70,7 @@ class PayPalController extends Controller
                 $transaction = $response->getData();
                 
                 Transaction::create([
+                    'user_id'=> $product->store->user_id,
                     'service'=> 'paypal',
                     'transaction_id'=> $transaction['id'],
                     'customer_id'=>   $transaction['payer']['payer_info']['payer_id'],

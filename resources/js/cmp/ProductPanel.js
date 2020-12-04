@@ -20,7 +20,8 @@ export default function ProductPanel(props)  {
         stock: 1,
         currency: '$'
     }
-    const [productData, setProductData] = useState(props.create ? {...emptyProduct} : {...props.product});
+    console.log(props.data);
+    const [productData, setProductData] = useState(props.create ? {...emptyProduct} : {...props.data});
     const [colorPallete, setcolorPallete] = useState(props.create ? {
         image: {
             rgbStr:'rgb(255, 255, 255, 1)',
@@ -54,7 +55,7 @@ export default function ProductPanel(props)  {
                 b:108,
                 a:1,
             }},
-    }: props.product.theme);
+    }: props.data.theme);
 
     const inputChange = (value, key) => {
         setProductData({
@@ -90,7 +91,7 @@ export default function ProductPanel(props)  {
 
         Object.keys(emptyProduct).forEach(key => data[key] = productData[key]);
 
-        editProduct(props.product.id, data)
+        editProduct(props.data.id, data)
         .then( res =>{
             if(res.status === 200) {
                 props.closePanel();
@@ -99,7 +100,7 @@ export default function ProductPanel(props)  {
         })
     }
     const remove = () => {
-        deleteProduct(props.product.id, productData.store_id)
+        deleteProduct(props.data.id, productData.store_id)
         .then( res =>{
             if(res.status === 200) {
                 props.closePanel();

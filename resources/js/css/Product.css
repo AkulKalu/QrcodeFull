@@ -18,15 +18,15 @@
     align-items: center;
     justify-content: center; 
 }
-.PDQrCode img {
+.PDQrImg {
     height: 70%;
     border: 1px solid;
     transition: 0.5s;
 }
-.PDQrCode img:hover {
+.PDQrImg:hover {
     filter: invert();
 }
-.PDImg img {
+.PDImg {
     height: 85%;
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../css/Table.css';
 
 export default function Table(props) {
@@ -35,7 +34,7 @@ export default function Table(props) {
             entry = applyFilter(entry);
             if(entry) {
                 entry.index = i;
-                return <props.row  key={`entryData${i}`} {...props.rowProps}  />
+                return <props.row  key={`entryData${i}`} data={entry} {...props.rowProps}  />
             }
         })
     

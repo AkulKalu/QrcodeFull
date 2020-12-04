@@ -57,6 +57,12 @@ export function deleteProduct(productId, storeId) {
       store_id : storeId
     })
 }
+
+
+export function getTransactions() {
+    return request('/transactions', 'get')
+}
+
 export function toogleActive(productId, productInfo) {
     return request('/products/activate'+ `/${productId}`, 'post', {
         ...productInfo

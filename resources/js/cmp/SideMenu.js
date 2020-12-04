@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import '../css/SideMenu.css';
-import PanelSwitch from './PanelSwitch';
-import ProductPanel from './ProductPanel';
 import Button from './Button';
 
 
@@ -16,22 +14,14 @@ export default function SideMenu(props) {
     return <div className="SMCont">
                 <Button 
                     name="Products"
-                    onClick ={ () => buttonClick('products',0) } 
+                    onClick ={ () => buttonClick(1,0) } 
                     className={activeBtn[0]}
-                />
-                {activeBtn[0].includes('Active') ?
-                     <span onClick={()=>{
-                         console.log('x');
-                        props.setNewProduct(true)
-                     } }  className="SMOption">new</span>
-                : null }
-               
+                />       
                 <Button 
                     name="Transactions"
-                    onClick ={ () => buttonClick('transactions',1) } 
+                    onClick ={ () => buttonClick(2,1) } 
                     className={activeBtn[1]}
-                />
-                
+                />  
             </div>
 }
 

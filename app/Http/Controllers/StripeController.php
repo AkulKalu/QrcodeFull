@@ -2,14 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-class StripeController extends Controller
-{
-    <?php
-
-namespace App\Http\Controllers;
-
 use App\Models\Product;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
@@ -17,7 +9,7 @@ use Stripe\Stripe;
 use Stripe\Checkout\Session as StripeSession;
 use Stripe\Customer;
 
-class CheckoutController extends Controller
+class StripeController extends Controller
 {   
     public function charge($productId)
     {
@@ -53,6 +45,7 @@ class CheckoutController extends Controller
         $customer = Customer::retrieve( $session->customer);
      
         Transaction::create([
+            'user_id'=> $product->store->user_id,
             'service'=> 'stripe',
             'transaction_id'=> $session->id,
             'customer_id'=>  $customer->id,

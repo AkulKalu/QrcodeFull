@@ -4,6 +4,7 @@ import Store from './Store';
 import User from './User';
 import SideMenu from './SideMenu';
 import Products from './Products';
+import Transactions from './Transactions';
 import SearchBar from './SearchBar';
 import {authenticate} from '../Functions/server';
 import '../css/ControlPanel.css';
@@ -15,8 +16,7 @@ import ReactDOM from 'react-dom';
  function ControlPanel() {
      const [user, setUser] = useState(null);
      const [activeStore, setActiveStore] = useState(null);
-     const [table, switchTable] = useState(null);
-     const [newProduct, setNewProduct] = useState(false);
+     const [table, switchTable] = useState(1);
      const [filter, setFilter] = useState(null);
 
     useEffect(()=> {
@@ -33,7 +33,6 @@ import ReactDOM from 'react-dom';
                         <Logo/>
                         <SideMenu 
                             activeStore = {activeStore} 
-                            setNewProduct = {setNewProduct}
                             switchTable = {switchTable}
                         />
                     </aside>
@@ -53,12 +52,15 @@ import ReactDOM from 'react-dom';
                                 </div>
                             </div>
                     </div>
-                    
-                    <Products
-                        activeStore = {activeStore}
-                        new={newProduct}
-                        filter = {filter}
-                    />
+                    <div className="CPTableCont">
+                        {table === 1 ?
+                            <Products
+                                activeStore = {activeStore}
+                                filter = {filter}
+                            />:
+                            <Transactions />
+                         }
+                    </div>
                 </div>: null
                 }
 

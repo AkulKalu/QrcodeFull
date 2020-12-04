@@ -45,5 +45,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Store::class);
     }
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
    
 }

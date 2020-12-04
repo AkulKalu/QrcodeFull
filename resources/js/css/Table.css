@@ -1,11 +1,3 @@
-.TBCont {
-    display: inline-block;
-    height:70vh;
-    width: 85vw;
-    margin-left: 15vw;
-    margin-top: 2vh;
-   
-}
 .TBTable {
     display: flex;
     flex-direction: column;
