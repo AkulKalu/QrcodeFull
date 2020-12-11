@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TransactionSuccesfull;
 use App\Models\Product;
 use App\Models\Transaction;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Omnipay\Omnipay;
 class PayPalController extends Controller
 {
@@ -68,8 +70,7 @@ class PayPalController extends Controller
             {
                 // The customer has successfully paid.
                 $transaction = $response->getData();
-                
-                Transaction::create([
+                $transaction = [
                     'user_id'=> $product->store->user_id,
                     'service'=> 'paypal',
                     'transaction_id'=> $transaction['id'],
@@ -78,8 +79,10 @@ class PayPalController extends Controller
                     'amount'=> $transaction['transactions'][0]['amount']['total'] ,
                     'currency'=>$transaction['transactions'][0]['amount']['currency'],
                     'status'=>$transaction['transactions'][0]['related_resources']['0']['sale']['state'],
-                ]);
-             
+                ];
+                
+                Transaction::create($transaction);
+                Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product));
                 return view('checkout.success');
             } else {
                 return $response->getMessage();

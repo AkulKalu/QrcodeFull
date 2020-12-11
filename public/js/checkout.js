@@ -37387,6 +37387,17 @@ document.getElementById('imgBg').style.background = theme.image.rgbStr;
 
 /***/ }),
 
+/***/ "./resources/sass/mail.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/mail.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/product.scss":
 /*!*************************************!*\
   !*** ./resources/sass/product.scss ***!
@@ -37399,15 +37410,16 @@ document.getElementById('imgBg').style.background = theme.image.rgbStr;
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************!*\
-  !*** multi ./resources/js/checkout.js ./resources/sass/app.scss ./resources/sass/product.scss ***!
-  \************************************************************************************************/
+/*!***************************************************************************************************************************!*\
+  !*** multi ./resources/js/checkout.js ./resources/sass/app.scss ./resources/sass/product.scss ./resources/sass/mail.scss ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\js\checkout.js */"./resources/js/checkout.js");
 __webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\product.scss */"./resources/sass/product.scss");
+__webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\product.scss */"./resources/sass/product.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\mail.scss */"./resources/sass/mail.scss");
 
 
 /***/ })

@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+    text-overflow: ellipsis;
 }
 .PDQrImg {
     height: 70%;

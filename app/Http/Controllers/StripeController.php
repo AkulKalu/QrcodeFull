@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TransactionSuccesfull;
 use App\Models\Product;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Stripe\Stripe;
 use Stripe\Checkout\Session as StripeSession;
 use Stripe\Customer;
@@ -18,6 +20,11 @@ class StripeController extends Controller
   
         $checkout_session = StripeSession::create([
             'payment_method_types' => ['card'],
+            'shipping_address_collection'=> [
+              'allowed_countries' => [
+                'US','CA'
+              ]
+            ],
             'line_items' => [[
               'price_data' => [
                 'currency' => 'usd',
@@ -43,17 +50,21 @@ class StripeController extends Controller
         Stripe::setApiKey( $product->store->stripe_private_key);
         $session = StripeSession::retrieve($request->query()['session_id']);
         $customer = Customer::retrieve( $session->customer);
-     
-        Transaction::create([
-            'user_id'=> $product->store->user_id,
-            'service'=> 'stripe',
-            'transaction_id'=> $session->id,
-            'customer_id'=>  $customer->id,
-            'customer_email'=>  $customer->email,
-            'amount'=> $session->amount_total / 100 ,
-            'currency'=> $session->currency,
-            'status'=>$session->payment_status,
-        ]);
+
+        $transaction = [
+          'user_id'=> $product->store->user_id,
+          'service'=> 'stripe',
+          'transaction_id'=> $session->id,
+          'customer_id'=>  $customer->id,
+          'customer_email'=>  $customer->email,
+          'amount'=> $session->amount_total / 100 ,
+          'currency'=> $session->currency,
+          'status'=>$session->payment_status,
+        ];
+
+        Transaction::create($transaction);
+        
+        Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product));
 
         return view('checkout.success');
     }

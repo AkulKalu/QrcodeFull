@@ -23,11 +23,11 @@ export default function Transactions(props) {
             sort:true,
         },
         Id: {
-            width: '30%',
+            width: '35%',
             sort:true,
         },
         Email: {
-            width: '20%',
+            width: '25%',
             sort:true,
         },
         Amount : {
@@ -35,11 +35,11 @@ export default function Transactions(props) {
             sort:true,
         },
         Currency : {
-            width: '15%',
+            width: '10%',
             sort:true,
         },
         Status : {
-            width: '15%',
+            width: '10%',
             sort:true,
         }
     }

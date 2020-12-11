@@ -6427,7 +6427,7 @@ module.exports = {
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ControlPanel.css":
 /*!***************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/ControlPanel.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/ControlPanel.css ***!
   \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6446,7 +6446,7 @@ exports.push([module.i, ".CPBarWrap {\r\n    display: inline-block;\r\n    margi
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Currency.css":
 /*!***********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/Currency.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/Currency.css ***!
   \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6465,7 +6465,7 @@ exports.push([module.i, ".Currency {\r\n    display: flex;\r\n}\r\n.CurrencyBtn 
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Logo.css":
 /*!*******************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/Logo.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/Logo.css ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6484,7 +6484,7 @@ exports.push([module.i, ".CPLogo {\r\n    width: -webkit-fit-content;\r\n    wid
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Product.css":
 /*!**********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/Product.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/Product.css ***!
   \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6494,7 +6494,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n    display: flex;\r\n    cursor: pointer;\r\n    border-bottom: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-top: 1px solid rgba(128, 128, 128, 0.507);\r\n    transition: background 0.5s;\r\n    background: rgba(128, 128, 128, 0.205);\r\n}\r\n.PDCont:hover {\r\n    background:  rgb(231, 174, 15)\r\n}\r\n\r\n.PDCell {\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center; \r\n}\r\n.PDQrImg {\r\n    height: 70%;\r\n    border: 1px solid;\r\n    transition: 0.5s;\r\n}\r\n.PDQrImg:hover {\r\n    filter: invert();\r\n}\r\n.PDImg {\r\n    height: 85%;\r\n}\r\n\r\n\r\n.PDToggle {\r\n    width: 40px;\r\n    height: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    border: 1px solid  rgba(57, 80, 57, 0.562);\r\n    background-color: rgb(212, 212, 212);\r\n    opacity: 0.8;\r\n    transition: opacity 0.5s;\r\n    box-shadow: inset 0px 0px 8px grey;\r\n}\r\n.PDToggle:hover {\r\n    opacity: 1;\r\n}\r\n.PDToggleSW {\r\n    height:20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background-color:  rgba(57, 80, 57, 0.562);\r\n    transition: all 0.4s;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n    display: flex;\r\n    cursor: pointer;\r\n    border-bottom: 1px solid rgba(128, 128, 128, 0.507);\r\n    border-top: 1px solid rgba(128, 128, 128, 0.507);\r\n    transition: background 0.5s;\r\n    background: rgba(128, 128, 128, 0.205);\r\n}\r\n.PDCont:hover {\r\n    background:  rgb(231, 174, 15)\r\n}\r\n\r\n.PDCell {\r\n    height: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center; \r\n    text-overflow: ellipsis;\r\n}\r\n.PDQrImg {\r\n    height: 70%;\r\n    border: 1px solid;\r\n    transition: 0.5s;\r\n}\r\n.PDQrImg:hover {\r\n    filter: invert();\r\n}\r\n.PDImg {\r\n    height: 85%;\r\n}\r\n\r\n\r\n.PDToggle {\r\n    width: 40px;\r\n    height: 20px;\r\n    display: flex;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border-radius: 10px;\r\n    border: 1px solid  rgba(57, 80, 57, 0.562);\r\n    background-color: rgb(212, 212, 212);\r\n    opacity: 0.8;\r\n    transition: opacity 0.5s;\r\n    box-shadow: inset 0px 0px 8px grey;\r\n}\r\n.PDToggle:hover {\r\n    opacity: 1;\r\n}\r\n.PDToggleSW {\r\n    height:20px;\r\n    width: 20px;\r\n    border-radius: 50%;\r\n    background-color:  rgba(57, 80, 57, 0.562);\r\n    transition: all 0.4s;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -6503,7 +6503,7 @@ exports.push([module.i, ".PDCont {\r\n    width: 100%;\r\n    height: 10vh;\r\n 
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ProductPreview.css":
 /*!*****************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/ProductPreview.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/ProductPreview.css ***!
   \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6522,7 +6522,7 @@ exports.push([module.i, "\r\n.PreviewContainer {\r\n    position: relative;\r\n 
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SearchBar.css":
 /*!************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/SearchBar.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/SearchBar.css ***!
   \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6541,7 +6541,7 @@ exports.push([module.i, ".SBContainer {\r\n    font-size: 2vh;\r\n}\r\n.SBWrap {
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SelectList.css":
 /*!*************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/SelectList.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/SelectList.css ***!
   \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6560,7 +6560,7 @@ exports.push([module.i, ".SLSelect{\r\n    width: -webkit-fit-content;\r\n    wi
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SettingsMenu.css":
 /*!***************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/SettingsMenu.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/SettingsMenu.css ***!
   \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6579,7 +6579,7 @@ exports.push([module.i, ".SettingsMenu {\r\n    width:100%;\r\n    height: 100%;
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SideMenu.css":
 /*!***********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/SideMenu.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/SideMenu.css ***!
   \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6598,7 +6598,7 @@ exports.push([module.i, ".SMCont {\r\n    display: inline-block;\r\n    width: 1
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Store.css":
 /*!********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/Store.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/Store.css ***!
   \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6617,7 +6617,7 @@ exports.push([module.i, ".CPStore {\r\n    display: flex;\r\n    justify-content
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Table.css":
 /*!********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/Table.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/Table.css ***!
   \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6636,7 +6636,7 @@ exports.push([module.i, ".TBTable {\r\n    display: flex;\r\n    flex-direction:
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/TableHeader.css":
 /*!**************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/TableHeader.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/TableHeader.css ***!
   \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6655,7 +6655,7 @@ exports.push([module.i, ".TBHCont {\r\n    display: flex;\r\n    font-weight: 60
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/TextInput.css":
 /*!************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/TextInput.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/TextInput.css ***!
   \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6674,7 +6674,7 @@ exports.push([module.i, ".TXIInput {\r\n    width: 65%;\r\n    height: 4vh;\r\n 
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/User.css":
 /*!*******************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/User.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/User.css ***!
   \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6693,7 +6693,7 @@ exports.push([module.i, ".CPUserCtrl {\r\n    font-size: 2vh;\r\n    font-weight
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/buttons.css":
 /*!**********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/postcss-loader/src??ref--8-2!./resources/js/css/buttons.css ***!
+  !*** ./node_modules/css-loader??ref--9-1!./node_modules/postcss-loader/src??ref--9-2!./resources/js/css/buttons.css ***!
   \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -91132,26 +91132,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Transaction(props) {
+  console.log(props.data);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "PDCont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      width: '20%'
+      width: '10%'
     },
     className: "PDCell"
-  }, props.data.image_url), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, props.data.service), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      width: '10%'
+      width: '35%'
     },
     className: "PDCell"
   }, props.data.transaction_id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      width: '20%'
+      width: '25%'
+    },
+    className: "PDCell"
+  }, props.data.customer_email), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      width: '10%'
     },
     className: "PDCell"
   }, props.data.amount), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: {
-      width: '20%'
+      width: '10%'
     },
     className: "PDCell"
   }, props.data.currency), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -91285,11 +91291,11 @@ function Transactions(props) {
       sort: true
     },
     Id: {
-      width: '30%',
+      width: '35%',
       sort: true
     },
     Email: {
-      width: '20%',
+      width: '25%',
       sort: true
     },
     Amount: {
@@ -91297,11 +91303,11 @@ function Transactions(props) {
       sort: true
     },
     Currency: {
-      width: '15%',
+      width: '10%',
       sort: true
     },
     Status: {
-      width: '15%',
+      width: '10%',
       sort: true
     }
   };
@@ -91441,7 +91447,7 @@ if (document.getElementById('example')) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./ControlPanel.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ControlPanel.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./ControlPanel.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ControlPanel.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91471,7 +91477,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./Currency.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Currency.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./Currency.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Currency.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91501,7 +91507,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./Logo.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Logo.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./Logo.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Logo.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91531,7 +91537,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./Product.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Product.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./Product.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Product.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91561,7 +91567,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./ProductPreview.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ProductPreview.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./ProductPreview.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/ProductPreview.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91591,7 +91597,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./SearchBar.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SearchBar.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./SearchBar.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SearchBar.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91621,7 +91627,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./SelectList.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SelectList.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./SelectList.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SelectList.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91651,7 +91657,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./SettingsMenu.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SettingsMenu.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./SettingsMenu.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SettingsMenu.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91681,7 +91687,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./SideMenu.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SideMenu.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./SideMenu.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/SideMenu.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91711,7 +91717,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./Store.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Store.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./Store.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Store.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91741,7 +91747,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./Table.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Table.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./Table.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/Table.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91771,7 +91777,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./TableHeader.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/TableHeader.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./TableHeader.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/TableHeader.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91801,7 +91807,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./TextInput.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/TextInput.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./TextInput.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/TextInput.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91831,7 +91837,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./User.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/User.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./User.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/User.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -91861,7 +91867,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/postcss-loader/src??ref--8-2!./buttons.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/buttons.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--9-1!../../../node_modules/postcss-loader/src??ref--9-2!./buttons.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/css/buttons.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

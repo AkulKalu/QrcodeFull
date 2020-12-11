@@ -10903,8 +10903,3 @@ a.text-dark:focus {
   }
 }
 
-button:active,
-button:focus {
-  outline: none;
-}
-

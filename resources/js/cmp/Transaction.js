@@ -5,18 +5,21 @@ import '../css/Product.css';
 
 
 export default function Transaction(props) {
-    
+    console.log(props.data);
     return  <div  className="PDCont">
-                <div style={{width: '20%'}} className="PDCell">
+                <div style={{width: '10%'}} className="PDCell">
                     {props.data.service}
                 </div>
-                <div style={{width: '10%'}} className="PDCell">
+                <div style={{width: '35%'}} className="PDCell">
                     {props.data.transaction_id}
                 </div>
-                <div style={{width: '20%'}} className="PDCell">
+                <div style={{width: '25%'}} className="PDCell">
+                    {props.data.customer_email}
+                </div>
+                <div style={{width: '10%'}} className="PDCell">
                     {props.data.amount}
                 </div>
-                <div style={{width: '20%'}} className="PDCell">
+                <div style={{width: '10%'}} className="PDCell">
                     {props.data.currency}
                 </div>
                 <div style={{width: '10%'}} className="PDCell">
