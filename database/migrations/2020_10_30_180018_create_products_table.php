@@ -28,6 +28,7 @@ class CreateProductsTable extends Migration
             $table->float('price', 10, 4);
             $table->string('currency')->default('$');
             $table->tinyInteger('active')->default(1);
+            $table->tinyInteger('shipps')->default(1);
             $table->timestamps();
         });
     }

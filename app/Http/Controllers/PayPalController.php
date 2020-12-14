@@ -59,7 +59,7 @@ class PayPalController extends Controller
             $product = Product::find($request->query()['product_id']);
             $this->gateway->setClientId($product->store->paypal_client_id);
             $this->gateway->setSecret($product->store->paypal_private_key);
-
+           
             $transaction = $this->gateway->completePurchase(array(
                 'payer_id'             => $request->input('PayerID'),
                 'transactionReference' => $request->input('paymentId'),
@@ -69,20 +69,29 @@ class PayPalController extends Controller
             if ($response->isSuccessful())
             {
                 // The customer has successfully paid.
-                $transaction = $response->getData();
+                $data = $response->getData();
+
                 $transaction = [
                     'user_id'=> $product->store->user_id,
                     'service'=> 'paypal',
-                    'transaction_id'=> $transaction['id'],
-                    'customer_id'=>   $transaction['payer']['payer_info']['payer_id'],
-                    'customer_email'=>  $transaction['payer']['payer_info']['email'],
-                    'amount'=> $transaction['transactions'][0]['amount']['total'] ,
-                    'currency'=>$transaction['transactions'][0]['amount']['currency'],
-                    'status'=>$transaction['transactions'][0]['related_resources']['0']['sale']['state'],
+                    'transaction_id'=> $data['id'],
+                    'customer_id'=>   $data['payer']['payer_info']['payer_id'],
+                    'customer_email'=>  $data['payer']['payer_info']['email'],
+                    'amount'=> $data['transactions'][0]['amount']['total'] ,
+                    'currency'=>$data['transactions'][0]['amount']['currency'],
+                    'status'=>$data['transactions'][0]['related_resources']['0']['sale']['state'],
                 ];
+               
+                $shipping =  $data['payer']['payer_info']['shipping_address'];
+                $shipping['name'] =  $shipping['recipient_name'];
+                unset($shipping['recipient_name']);
+                $shipping['country'] =  $shipping['country_code'];
+                unset($shipping['country_code']);
+
+                $transaction = Transaction::create( $transaction);
+                $transaction->shippment()->create($shipping);
                 
-                Transaction::create($transaction);
-                Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product));
+                Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product, $transaction->shippment));
                 return view('checkout.success');
             } else {
                 return $response->getMessage();

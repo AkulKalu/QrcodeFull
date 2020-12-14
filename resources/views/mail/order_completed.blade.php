@@ -14,7 +14,7 @@
             <h4>Order:</h4>
             <ul class="list">
                 <li class="data">
-                    <span class="li-itm-title">id:</span><span>{{$order['transaction_id']}}</span>
+                    <span class="li-itm-title">id:</span><span>{{$order->transaction_id}}</span>
                 </li>
                 <li class="data">
                     <span class="li-itm-title">product:</span><span>{{$product->category}} {{$product->model}}</span>
@@ -26,35 +26,45 @@
                     <span class="li-itm-title">quantaty:</span><span>1</span>
                 </li>
                 <li class="data">
-                    <span class="li-itm-title">service:</span><span>{{$order['service']}}</span>
+                    <span class="li-itm-title">service:</span><span>{{$order->service}}</span>
                 </li>
                 <li class="data">
-                    <span class="li-itm-title">shipping:</span><span>no</span>
+                    <span class="li-itm-title">shipping:</span><span>Yes</span>
                 </li>
             </ul>
-            <div class="amount"><span class="li-itm-title">TOTAL:</span>{{$order['amount']}}{{$product->currency}}</div>
+            <div class="amount"><span class="li-itm-title">TOTAL:</span>{{$order->amount}}{{$product->currency}}</div>
         </div>
+        @if ($shipping)
         <div class="info">
-            <h4>Shipping info:</h4>
+            <h4>Shipping address:</h4>
             <ul class="list">
                 <li class="data">
-                    <span class="li-itm-title">id:</span><span>asdj54664656</span>
+                    <span class="li-itm-title">name:</span><span>{{$shipping->name}}</span>
                 </li>
                 <li class="data">
-                    <span class="li-itm-title">product:</span><span>Toster-XR-400</span>
+                    <span class="li-itm-title">city:</span><span>{{$shipping->city}}</span>
                 </li>
                 <li class="data">
-                    <span class="li-itm-title">price:</span><span>400$</span>
+                    <span class="li-itm-title">country</span><span>{{$shipping->country}}</span>
+                </li>
+                @isset( $shipping->state )
+                <li class="data">
+                    <span class="li-itm-title">state:</span><span>{{$shipping->state}}</span>
+                </li>
+                @endisset
+                <li class="data">
+                    <span class="li-itm-title">ZIP Code</span><span>{{$shipping->postal_code}}</span>
                 </li>
                 <li class="data">
-                    <span class="li-itm-title">quantaty:</span><span>1</span>
+                    <span class="li-itm-title">address 1</span><span>{{$shipping->line1}}</span>
                 </li>
+                @isset( $shipping->line2 )
                 <li class="data">
-                    <span class="li-itm-title">service:</span><span>PayPal</span>
+                    <span class="li-itm-title">address 2</span><span>{{$shipping->line2}}</span>
                 </li>
-                <li class="data">
-                    <span class="li-itm-title">shipping:</span><span>no</span>
-                </li>
+                @endisset
+                
             </ul>
         </div>
+        @endif
 @endsection

@@ -61,10 +61,17 @@ class StripeController extends Controller
           'currency'=> $session->currency,
           'status'=>$session->payment_status,
         ];
+        $transaction = Transaction::create($transaction);
 
-        Transaction::create($transaction);
+        $shipping = null;
+
+        if( $session->shipping ) {
+          $shipping = json_decode(json_encode($session->shipping->address), true);
+          $shipping['name'] = $session->shipping->name;
+          $shipping =  $transaction->shippment()->create($shipping);
+        }
         
-        Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product));
+        Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product,  $shipping ));
 
         return view('checkout.success');
     }
