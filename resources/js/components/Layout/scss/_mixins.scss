@@ -1,0 +1,24 @@
+
+@mixin background($dir: left) {
+    background: linear-gradient(to #{$dir}, $bgGrad1, $bgGrad2);
+}
+
+@mixin flex($dir: row, $jcont: initial, $aitems: initial ) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jcont;
+    align-items: $aitems;
+}
+@mixin flex-c($dir: row ) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: center;
+    align-items: center;
+}
+@mixin position($pos: absolute, $t: 0, $l:0, $r:initial, $b: initial ) {
+    position: $pos;
+    top: $t;
+    left: $l;
+    right: $r;
+    bottom: $b;
+}

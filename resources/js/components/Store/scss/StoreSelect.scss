@@ -1,0 +1,69 @@
+@import '../../Layout/scss/variables';
+@import '../../Layout/scss/anim';
+@import '../../Layout/scss/mixins';
+
+.BackdropS {
+    @include position($b:0, $r:0);
+    @include flex($jcont: center);
+    z-index: 1;
+}
+.SelectPanel {
+    margin-top: 5%;
+    padding: 1vh;
+    height: 60%;
+    width: 60%;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgb(250, 251, 252);
+    background-color: rgba(236, 238, 243, 0.699);
+}
+.StoresList {
+    display: flex;
+    flex-wrap: wrap;
+    animation: slideIn-down 0.3s;
+    .StoreItem {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px gray;
+        font-size: 2.4vh;
+        min-width: 20%;
+        margin: 1vh 1vh;
+        cursor: pointer; 
+
+        .Btn {
+            height: 100%;
+            width: 100%;
+            transition: all 0.4s;
+            background: $theme2;
+            color: $theme1;
+            text-align: center;
+
+            &:hover {
+                background-color:$theme1 ;
+                color: $theme2;
+            }
+        }
+        .SelectBtn {
+            @extend .Btn;
+        }
+        .EditBtn {
+            @extend .Btn;
+            width: 20%;
+            position: absolute;
+            top: 0;
+            right: -100%;
+        }
+
+        &:hover .EditBtn {
+            right: 0;
+        }
+    } 
+}
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,0 @@
-.CPSettings img {
-    height: 3vh;
-    margin-right: 1.5rem;
-    cursor: pointer;
-    transition: transform 1s;
-}
-.CPSettings img:hover {
-    transform: rotate(180deg);
-}

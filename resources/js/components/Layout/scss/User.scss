@@ -1,0 +1,29 @@
+@import './mixins';
+@import './variables';
+
+.UserMenu {
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(128, 128, 128, 0.445), rgba(196, 188, 188, 0.055));
+    @include flex-c();
+    .Name {
+        width: 50%;
+        font-weight: 600;
+        font-size: 2vh;
+        color:  rgb(116, 126, 145);
+    }
+    .Exit {
+        height: 3vh;
+        width: 3vh;
+        cursor: pointer;
+        fill: rgb(116, 126, 145);
+        transition: fill 0.5s;
+        
+        &:hover {
+            fill: crimson;
+        }
+    }
+}
+
+
+

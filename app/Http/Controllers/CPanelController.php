@@ -10,7 +10,13 @@ class CPanelController extends Controller
 {
     public function load()
     {
-        return response()->json(['user'=>  Auth::user()]);
+        $user = Auth::user();
+        $stores = $user->stores;
+       
+        return response()->json([
+            'user'=> $user,
+            'stores'=> $stores
+        ]);
     }
 
     public function generateQrCode($store, $product)

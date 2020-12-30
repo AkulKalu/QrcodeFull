@@ -1,0 +1,114 @@
+@import '../../Layout/scss/variables';
+@import '../../Layout/scss/mixins';
+
+
+.Checkout {
+    height: 100%;
+}
+.Preview {
+    position: relative;
+    height: 60vh;
+    width:  30vh;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: 5px solid $theme1;
+
+    .Cam {
+        @include position();
+        width: 100%;
+        div {
+            background-color: $theme1;
+            height: 1.5vh;
+            width: 1.5vh;
+            margin: 0.5vh auto;
+            border-radius: 50%;
+        }
+    }
+
+    .Img {
+        @include flex-c();
+        overflow: hidden;
+        border-radius: 2% 2% 10% 10%;
+        height: 48%;
+        img {
+            width: 100%;
+            max-height: 100%;
+            display: block;
+            margin:  auto;
+        }
+    }
+
+    .InfoSmall {
+        display: block;
+        font-size: 2vh;
+        padding: 0 1.5vh;
+        margin-top: 1vh;
+    }
+    .InfoLarge {
+        display: block;
+        padding: 1vh 1.5vh;
+        font-weight: 800;
+        font-size: 4vh;
+    }
+    .InfoLarge:nth-of-type(4) {
+        text-align: right;
+        font-weight: 600;
+    }
+   
+    .Buttons {
+        .Btn {
+            width: 50%;
+            font-size: $fontN;
+            font-weight: 600;
+            text-align: center;
+            padding: 0.4vh 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .Buy {
+            margin-top: 2vh;
+            width: 80%;
+        }
+    }
+}
+
+.Colors {
+    height: 100%;
+    width: 20%;
+    @include position($r: -25%, $l: initial);
+
+    .ColorWrap {
+        @include flex-c();
+        position: relative;
+
+        .Color {
+            height: 2vh;
+            width: 2vh;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            box-shadow: 2px 2px 2px gray;
+            &:hover {
+                border-color: $higlight;
+            }
+        }
+
+        .ColorPicker {
+            @include position;
+            transform: translateX(80%);
+         }
+    }
+    $wrapH : (1 45%, 2 20%, 3 15%, 4 20%);
+    
+    @each $pos, $h in $wrapH {
+        .ColorWrap:nth-of-type(#{$pos}) {
+            height: $h;
+        }
+    }
+}
+
+
+
+
+
+
+

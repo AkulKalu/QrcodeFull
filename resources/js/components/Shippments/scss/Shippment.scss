@@ -1,0 +1,12 @@
+$columns : (1 15% ,2  11% , 3 11%, 4 11%, 5 11%, 6 15%, 7 15%, 8 11%);
+
+@each $col, $width in $columns {
+    .Cell:nth-of-type(#{$col}) {
+       width: $width ;
+    }
+}
+
+
+
+
+

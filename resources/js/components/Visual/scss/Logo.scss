@@ -1,0 +1,56 @@
+@import '../../Layout/scss/variables';
+@import '../../Layout/scss/mixins';
+@import '../../Layout/scss/anim';
+
+.Logo {
+    display: flex;
+    width: fit-content;
+
+    .LogoLoad {
+        @extend .Logo;
+        font-size: 3vh;
+        height: 15vh;
+    }
+    .LogoPanel {
+        @extend .Logo;
+        font-size: 2vh;
+        height: 8vh;
+        animation: slideIn-left 0.6s ease-out both;
+    }
+
+    .LogoImg {
+        height: 100%;
+        animation: fadeIn 1s ease-out both;
+    }
+
+    .LogoText{
+        position: relative;
+        @include flex($dir: column, $jcont: center,);
+        padding: 0 1.2vh;
+
+        span {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 0.8s ease-in both 2s;
+
+            &:nth-of-type(2) {
+                font-weight: 800;
+                text-indent: 1vh;
+                font-size: 2vh;
+            }
+        }
+    }
+
+    .LogoBar {
+        @include position();
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $theme2;
+        transform-origin: left;
+        animation: load 1.5s ease-out  both 1s;
+    }
+}
+
+
+

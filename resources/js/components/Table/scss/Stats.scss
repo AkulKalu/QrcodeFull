@@ -1,0 +1,35 @@
+@import '../../Layout/scss/variables';
+@import '../../Layout/scss/mixins';
+@import '../../Layout/scss/anim';
+
+.Stats{
+    width: 80%;
+    margin-top: 1vh;
+    @include flex(column); 
+
+    .StatCont {
+        width: 100%;
+        font-size: $fontN;
+        margin: 0.5vh 0;
+    
+        color: rgb(100, 103, 128);
+        filter: drop-shadow(0px 0px 10px rgb(245, 245, 247));
+      
+        .Stat {
+            display: flex;
+            padding:  1vh;
+            border-radius: 0 10px 10px 0;
+            background: linear-gradient(to right, rgba(128, 128, 128, 0.445), rgba(196, 188, 188, 0.055));
+        
+            .Value {
+                flex-basis: 50%;
+                @include flex-c();
+            }
+        } 
+         
+    }
+}
+
+
+
+

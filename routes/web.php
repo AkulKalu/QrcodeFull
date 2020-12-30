@@ -34,7 +34,6 @@ Route::get('/try', [HomeController::class, 'try']);
 Route::get('/qrcodes/{store}/{product}', [CPanelController::class, 'generateQrCode'])->name('qrgen');
 Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive']);
 Route::get('/user', [CPanelController::class, 'load']);
-
 Route::get('/shop/{store}/{productId}', [CheckoutController::class, 'index']);
 Route::post('/checkout/charge/stripe/{productId}', [StripeController::class, 'charge']);
 Route::post('/checkout/charge/paypal', [PayPalController::class, 'charge']);

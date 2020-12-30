@@ -1,10 +1,12 @@
 function request(urlPath, method, params = null) {
+    console.log(urlPath, method);
     return window.axios[method](window.location.origin + urlPath, params)
            .then( res => res)
            .catch( err=> err.response);
 }
 
 export function authenticate() {
+    console.log('x');
     return request( '/user', 'get');
 }
 export function logout() {

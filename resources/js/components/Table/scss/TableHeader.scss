@@ -1,0 +1,26 @@
+@import '../../Layout/scss/variables';
+@import '../../Layout/scss/mixins';
+
+.TableHeader {
+    display: flex;
+    font-weight: 600;
+    font-size: $fontN;
+    color: $fontLight;
+    background: $theme1;
+    flex-basis: 3%;
+
+    .Cell{
+        @include flex-c();
+        border: 1px solid $border1;
+        border-bottom: none;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+            border-color: $higlight;
+            color: $higlight;
+        }
+    }
+    
+}
+
+

@@ -1,0 +1,82 @@
+@import '../../Layout/scss/variables';
+@import '../../Layout/scss/mixins';
+@import '../../Layout/scss/anim'; 
+
+.TableWrap {
+    
+    @include flex(column);
+    height: 100%;
+    .Nav {
+        flex-basis: 5%;
+        @include flex($aitems: center);
+
+        .Controls {
+            flex-basis: 80%;
+            .Btn {
+                width: 25%;
+            }
+        }
+    }
+    .Table {
+        @include flex(column);
+        flex-basis: 92%;
+        animation: fadeIn 0.4s ease-out ;
+        .Row {
+            height: 10%;
+            display: flex;
+            border-bottom: 1px solid  rgba(92, 90, 90, 0.541);
+            background: rgba(128, 128, 128, 0.205);
+        
+            .Cell {
+                @include flex-c();
+                cursor: pointer;
+                border-left: 1px solid rgba(92, 90, 90, 0.541);
+
+                &:nth-of-type(1) {
+                    border-left: none;
+                }
+                .Text {
+                    padding: 0 0.5rem;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    transition: all 0.2s;
+                    &:hover {
+                        position: fixed;
+                        width: fit-content;
+                        overflow: visible;
+                        background-color: $theme1;
+                        color: $fontLight;
+                        padding: 0.5rem;
+                        font-size: 2vh;
+                    }
+                }
+            }
+            
+            &:hover {
+                background: rgba(128, 128, 128, 0.342);
+            }
+        }
+
+        .Message {
+            margin: 20% auto;
+            font-size: $fontXLL;
+            font-weight: 800;
+            opacity: 0.3;
+        }
+
+        .bd-l {
+            border-left: 1px solid rgba(43, 42, 42, 0.918);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

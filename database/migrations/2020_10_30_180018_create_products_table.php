@@ -16,7 +16,6 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('store_id');
-            $table->string('manufacturer_website')->nullable();
             $table->string('manufacturer')->nullable();
             $table->string('category');
             $table->string('model');
@@ -28,7 +27,7 @@ class CreateProductsTable extends Migration
             $table->float('price', 10, 4);
             $table->string('currency')->default('$');
             $table->tinyInteger('active')->default(1);
-            $table->tinyInteger('shipps')->default(1);
+            $table->tinyInteger('shipping')->default(1);
             $table->timestamps();
         });
     }

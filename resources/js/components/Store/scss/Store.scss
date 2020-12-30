@@ -1,0 +1,38 @@
+@import '../../Layout/scss/variables';
+
+.Store {
+    display: flex;
+    align-items: center;
+    margin-left:10%;
+    font-weight: 600;
+    width: 100%;
+    font-size: 2vh;
+
+    .StoreBtn {
+        background: $theme2;
+        color:  $theme1;
+        font-size: 3.5vh;
+        width: max-content;
+        text-align: center;
+        min-width: 20vw;
+        padding: 0.5vh 2vh;
+        border-radius: 5px;
+        margin-left: 1vh;
+        box-shadow: 2px 2px 5px $shadowS;
+        transition: all 0.4s;
+    
+        &:hover {
+            color: $theme2;
+            background: $theme1;
+            box-shadow: 4px 4px 5px $shadowS;
+        }
+    }
+}
+
+
+
+
+
+
+
+

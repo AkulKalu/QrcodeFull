@@ -1,0 +1,15 @@
+@import '../../Layout/scss/variables';
+
+.Textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    box-shadow: 2px 2px 5px $shadowL;
+    background: $bgField;
+
+    &:focus {
+        background: $bgFieldH;
+    }
+}
+
+
