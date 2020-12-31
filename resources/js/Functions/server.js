@@ -5,8 +5,7 @@ function request(urlPath, method, params = null) {
            .catch( err=> err.response);
 }
 
-export function authenticate() {
-    console.log('x');
+export function login() {
     return request( '/user', 'get');
 }
 export function logout() {

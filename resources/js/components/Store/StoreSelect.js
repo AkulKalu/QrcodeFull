@@ -9,12 +9,11 @@ export default function StoreSelect(props) {
     const display = () => {
         switch (mode.action) {
             case 'create':
-                return <StorePanel  updateStores= {props.updateStores} onClose={() => setMode({action: 'select'})} buttons ={['create']}/>
+                return <StorePanel  onClose={() => setMode({action: 'select'})} buttons ={['create']}/>
             case 'edit':
-                return <StorePanel updateStores= {props.updateStores} onClose={() => setMode({action: 'select'})} store={mode.object}  buttons={['edit', 'remove']} />
+                return <StorePanel  onClose={() => setMode({action: 'select'})} store={mode.object}  buttons={['edit', 'remove']} />
             default:
                 return <SelectPanel 
-                    stores = {props.stores}
                     setMode = {setMode}
                     closePanel = {props.closePanel}>
                   

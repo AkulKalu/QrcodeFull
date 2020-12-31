@@ -1,4 +1,4 @@
-import React, {useEffect, useState, Fragment} from 'react';
+import React, {useEffect, useState, Fragment, useContext} from 'react';
 import Logo from '../Visual/logo';
 import Store from '../Store/Store';
 import User from './User';
@@ -8,34 +8,25 @@ import Products from '../Products/Products';
 import Transactions from '../Transactions/Transactions';
 import Shippments from '../Shippments/Shippments';
 import SearchBar from './SearchBar';
-import {authenticate} from '../../Functions/server';
 import './scss/ControlPanel.scss';
 import ReactDOM from 'react-dom';
+import {store, StateProvider} from '../HOC/StateProvider';
+import {login} from '../../Functions/server'
+
 
 
 function ControlPanel() {
      const [loading, setLoading] = useState(false);
-     const [user, setUser] = useState(null);
-     const [stores, setStores] = useState([])
      const [activeStore, setActiveStore] = useState();
      const [table, setTable] = useState(1);
      const [filter, setFilter] = useState(null);
      
-     const storeManager = {
-        list : stores,
-        active : activeStore,
-        update : setStores,
-        switch : setActiveStore,
-     }
+     const {state, dispatch} = useContext(store);
+
     useEffect(()=> {
-        authenticate()
-        .then(res => {
-            console.log(res);
-            setUser(res.data.user);
-            setStores(res.data.stores);
-            setActiveStore(res.data.stores[0]);
-         })
+        dispatch.user.login()
     },[])
+
     let stats = {
         1 : {
             total: {
@@ -220,15 +211,15 @@ function ControlPanel() {
     
 
     return <Fragment  >
-                {loading ?  <LoadScreen panelLoaded={()=> setLoading(false)} user={user} /> : null }
-                {user ? 
+                {loading ?  <LoadScreen panelLoaded={()=> setLoading(false)} user={state.user} /> : null }
+                {state.user ? 
                 <div className="CPanel">
                     <aside>
                         <div className="Logo">
                             {!loading ? <Logo type="LogoPanel"/> : null }
                         </div>
                         <div className="User">
-                            <User user={user} />
+                            <User />
                         </div>
                         <div className="Menu">
                             <SideMenu 
@@ -242,9 +233,7 @@ function ControlPanel() {
                 
                         <div className="TopBar">
                             <div className="BarStore">
-                                <Store 
-                                    stores = {storeManager}
-                                />
+                                <Store active={state.stores.active} />
                             </div>
                             <div className="BarSearch">
                                 <SearchBar table={table} columns={tabelColumns[table]} setFilter={setFilter}  />
@@ -262,5 +251,5 @@ function ControlPanel() {
 }
 
 if (document.getElementById('ControlPanel')) {
-    ReactDOM.render(<ControlPanel />, document.getElementById('ControlPanel'));
+    ReactDOM.render(<StateProvider> <ControlPanel /> </StateProvider>, document.getElementById('ControlPanel'));
 }

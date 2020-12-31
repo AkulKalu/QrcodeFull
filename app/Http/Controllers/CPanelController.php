@@ -9,13 +9,12 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 class CPanelController extends Controller
 {
     public function load()
-    {
+    {   
         $user = Auth::user();
-        $stores = $user->stores;
+        
        
         return response()->json([
-            'user'=> $user,
-            'stores'=> $stores
+            'user'=> $user
         ]);
     }
 
