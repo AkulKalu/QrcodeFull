@@ -31,7 +31,7 @@ class StoresController extends Controller
     {
         $store = Auth::user()->stores()->create($request->all());
 
-         return response()->json(['created' => $store , 'stores' => $this->index()->original]);
+         return response()->json(['created' => $store ]);
     }
 
 

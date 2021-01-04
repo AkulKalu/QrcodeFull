@@ -53404,7 +53404,6 @@ function _defineProperty(obj, key, value) {
 
 function request(urlPath, method) {
   var params = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-  console.log(urlPath, method);
   return window.axios[method](window.location.origin + urlPath, params).then(function (res) {
     return res;
   })["catch"](function (err) {
@@ -53704,11 +53703,17 @@ function StateProvider(_ref) {
       storesDispatch = _useReducer4[1];
 
   var userActions = {
-    login: function login(user) {
-      return userDispatch(dispatcher('LOGIN', user));
+    login: function login() {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["login"]().then(function (res) {
+        console.log(res);
+        userDispatch(dispatcher('LOGIN', res.data.user));
+        storesDispatch(dispatcher('GET', res.data.stores));
+      });
     },
     logout: function logout() {
-      return userDispatch(dispatcher('LOGOUT'));
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["logout"]().then(function (res) {
+        userDispatch(dispatcher('LOGOUT'));
+      });
     }
   };
   var storesActions = {
@@ -53717,18 +53722,20 @@ function StateProvider(_ref) {
         storesDispatch(dispatcher('GET', res.data));
       });
     },
-    create: function create() {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["createStore"]().then(function (res) {
+    create: function create(newStore) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["createStore"](newStore).then(function (res) {
+        console.log(res);
         storesDispatch(dispatcher('CREATE', res.data));
+        return true;
       });
     },
-    edit: function edit() {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["editStore"]().then(function (res) {
+    edit: function edit(storeId) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["editStore"](storeId).then(function (res) {
         storesDispatch(dispatcher('EDIT', res.data));
       });
     },
-    "delete": function _delete() {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteStore"]().then(function (res) {
+    "delete": function _delete(storeId) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteStore"](storeId).then(function (res) {
         storesDispatch(dispatcher('DELETE', res.data));
       });
     },
@@ -53962,22 +53969,25 @@ function TextInput(props) {
 
   var name = props.name.replace(' ', '');
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (props.validate) {// const validationInterceptor =  window.axios.interceptors.response.use( response => {
-      //         return response;
-      //     },  error => {
-      //         if(error.response.status === 422) {
-      //             let message = error.response.data.errors[props.validate]
-      //             if(message) {
-      //                 setValidationMessage(message);
-      //             }else {
-      //                 setValidationMessage('');
-      //             }
-      //         }
-      //         return Promise.reject(error);
-      //     });
-      //   return () => {
-      //     axios.interceptors.request.eject(validationInterceptor);
-      //   }
+    if (props.validate) {
+      var validationInterceptor = window.axios.interceptors.response.use(function (response) {
+        return response;
+      }, function (error) {
+        if (error.response.status === 422) {
+          var message = error.response.data.errors[props.validate];
+
+          if (message) {
+            setValidationMessage(message);
+          } else {
+            setValidationMessage('');
+          }
+        }
+
+        return Promise.reject(error);
+      });
+      return function () {
+        axios.interceptors.request.eject(validationInterceptor);
+      };
     }
   }, []);
   var invalidInputStyle = {
@@ -54271,9 +54281,7 @@ function ControlPanel() {
       dispatch = _useContext.dispatch;
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_13__["login"])().then(function (res) {
-      return dispatch.user.login(res.data.user);
-    });
+    dispatch.user.login();
   }, []);
   var stats = {
     1: {
@@ -54480,7 +54488,9 @@ function ControlPanel() {
     className: "TopBar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarStore"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Store_Store__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Store_Store__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    active: state.stores.active
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarSearch"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_9__["default"], {
     table: table,
@@ -54823,10 +54833,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
-/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/User.scss */ "./resources/js/components/Layout/scss/User.scss");
-/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_User_scss__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/User.scss */ "./resources/js/components/Layout/scss/User.scss");
+/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_User_scss__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -54836,7 +54844,7 @@ function User(props) {
       dispatch = _useContext.dispatch;
 
   var exit = function exit() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_2__["logout"])().then(dispatch.user.logout());
+    dispatch.user.logout();
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -56640,22 +56648,24 @@ function SelectPanel(props) {
       state = _useContext.state,
       dispatch = _useContext.dispatch;
 
-  console.log(state);
-
   var switchStore = function switchStore() {
     var store = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-    var animation = {
+    animate({
       animation: 'fadeOut 0.2s forwards',
       onEnd: function onEnd() {
         props.closePanel();
         dispatch.stores["switch"](store);
       }
-    };
-    animate(animation);
+    });
   };
 
-  var backdropCtrl = function backdropCtrl(e) {
-    if (e.target.id === 'backdrop') props.closePanel();
+  var backdropClose = function backdropClose(e) {
+    if (e.target.id === 'backdrop') {
+      animate({
+        animation: 'fadeOut 0.2s forwards',
+        onEnd: props.closePanel
+      });
+    }
   };
 
   var storeList = state.stores.list.map(function (store, i) {
@@ -56678,7 +56688,7 @@ function SelectPanel(props) {
     }, "ED"));
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: backdropCtrl,
+    onClick: backdropClose,
     id: "backdrop",
     className: "BackdropS"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -56716,26 +56726,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../HOC/PanelSwitch */ "./resources/js/components/HOC/PanelSwitch.js");
 /* harmony import */ var _StoreSelect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./StoreSelect */ "./resources/js/components/Store/StoreSelect.js");
 /* harmony import */ var _InputElements_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../InputElements/Button */ "./resources/js/components/InputElements/Button.js");
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
-/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scss/Store.scss */ "./resources/js/components/Store/scss/Store.scss");
-/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_Store_scss__WEBPACK_IMPORTED_MODULE_5__);
-
+/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/Store.scss */ "./resources/js/components/Store/scss/Store.scss");
+/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_Store_scss__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
 
 function Store(props) {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__["store"]),
-      state = _useContext.state;
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Store"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Store:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_1__["default"], {
     panel: _StoreSelect__WEBPACK_IMPORTED_MODULE_2__["default"],
     element: _InputElements_Button__WEBPACK_IMPORTED_MODULE_3__["default"],
     elementProps: {
-      name: state.stores.active ? state.stores.active : '.....',
+      name: props.active ? props.active.name : '.....',
       className: "StoreBtn"
     }
   }));
@@ -56757,11 +56762,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../InputElements/TextInput */ "./resources/js/components/InputElements/TextInput.js");
 /* harmony import */ var _Shared_Panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Shared/Panel */ "./resources/js/components/Shared/Panel.js");
-/* harmony import */ var _storage_StripeLogo_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../storage/StripeLogo.svg */ "./resources/js/storage/StripeLogo.svg");
-/* harmony import */ var _storage_StripeLogo_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_storage_StripeLogo_svg__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _storage_PayPal_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../storage/PayPal.svg */ "./resources/js/storage/PayPal.svg");
-/* harmony import */ var _storage_PayPal_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_storage_PayPal_svg__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -56874,18 +56876,12 @@ function _arrayWithHoles(arr) {
 
 
 
-
 function StoreMenu(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.store ? props.store : {
-    name: '',
-    website: '',
-    email: '',
-    phone: '',
-    stripe_public_key: '',
-    stripe_private_key: '',
-    paypal_client_id: '',
-    paypal_private_key: ''
-  }),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__["store"]),
+      state = _useContext.state,
+      dispatch = _useContext.dispatch;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.store ? props.store : _objectSpread({}, state.stores["new"])),
       _useState2 = _slicedToArray(_useState, 2),
       storeData = _useState2[0],
       setStoreData = _useState2[1];
@@ -56901,31 +56897,20 @@ function StoreMenu(props) {
   };
 
   var create = function create() {
-    var data = {};
-    Object.keys(props.store).forEach(function (key) {
-      return data[key] = storeData[key];
-    }); //Clean object of ids
-
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["createStore"])(data).then(function (res) {
-      if (res.status === 200) {
-        props.closePanel();
-        props.updateStores(res.data.stores, res.data.created);
-      }
-    })["catch"](function (res) {
-      return console.log(res);
+    dispatch.stores.create(storeData).then(function (res) {
+      props.onClose();
+    })["catch"](function (err) {
+      return console.log(err);
     });
   };
 
   var edit = function edit() {
     var data = {};
-    Object.keys(props.store).forEach(function (key) {
+    Object.keys(state.stores["new"]).forEach(function (key) {
       return data[key] = storeData[key];
     });
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["editStore"])(storeData.id, data).then(function (res) {
-      if (res.status === 200) {
-        props.closePanel();
-        props.updateStores(res.data.stores, res.data.updated);
-      }
+    dispatch.stores.edit(storeData.id, data).then(function (res) {
+      props.onClose();
     });
   };
 
@@ -56933,11 +56918,8 @@ function StoreMenu(props) {
     var confirmed = window.confirm('Deleting the store will also remove all its product. Are you sure?');
 
     if (confirmed) {
-      Object(_Functions_server__WEBPACK_IMPORTED_MODULE_5__["deleteStore"])(storeData.id).then(function (res) {
-        if (res.status === 200) {
-          props.closePanel();
-          props.updateStores(res.data, res.data[0]);
-        }
+      dispatch.stores["delete"](storeData.id).then(function (res) {
+        props.onClose();
       });
     }
   };
@@ -57120,27 +57102,24 @@ function StoreSelect(props) {
       mode = _useState2[0],
       setMode = _useState2[1];
 
+  var closeStorePanel = function closeStorePanel() {
+    props.closePanel();
+    setMode({
+      action: 'select'
+    });
+  };
+
   var display = function display() {
     switch (mode.action) {
       case 'create':
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StorePanel__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          updateStores: props.updateStores,
-          onClose: function onClose() {
-            return setMode({
-              action: 'select'
-            });
-          },
+          onClose: closeStorePanel,
           buttons: ['create']
         });
 
       case 'edit':
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StorePanel__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          updateStores: props.updateStores,
-          onClose: function onClose() {
-            return setMode({
-              action: 'select'
-            });
-          },
+          onClose: closeStorePanel,
           store: mode.object,
           buttons: ['edit', 'remove']
         });
@@ -58369,17 +58348,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/storage/PayPal.svg":
-/*!*****************************************!*\
-  !*** ./resources/js/storage/PayPal.svg ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/PayPal.svg?d394222a0e3c3db0b8930e0c3aecf275";
-
-/***/ }),
-
 /***/ "./resources/js/storage/SQCLogo.svg":
 /*!******************************************!*\
   !*** ./resources/js/storage/SQCLogo.svg ***!
@@ -58388,17 +58356,6 @@ module.exports = "/images/PayPal.svg?d394222a0e3c3db0b8930e0c3aecf275";
 /***/ (function(module, exports) {
 
 module.exports = "/images/SQCLogo.svg?d80bcea3e1feda67bb55bb3739360a45";
-
-/***/ }),
-
-/***/ "./resources/js/storage/StripeLogo.svg":
-/*!*********************************************!*\
-  !*** ./resources/js/storage/StripeLogo.svg ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/StripeLogo.svg?e4590c1a8965385e21eac0f0bff9c585";
 
 /***/ }),
 
@@ -58470,8 +58427,9 @@ var reducer = function reducer(state, action) {
   switch (action.type) {
     case "GET":
       return {
-        active: action.payload[0],
-        list: action.payload
+        active: action.payload.list[0],
+        list: action.payload.list,
+        "new": action.payload["new"]
       };
 
     case "SWITCH":
@@ -58480,7 +58438,10 @@ var reducer = function reducer(state, action) {
       });
 
     case "CREATE":
-      return state;
+      return {
+        active: action.payload.created,
+        list: [action.payload.created, action.payload.list]
+      };
 
     case "EDIT":
       return state;

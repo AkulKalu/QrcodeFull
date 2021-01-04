@@ -16,7 +16,7 @@ export default function Store(props) {
                     element= {Button}
                     elementProps= {
                         {
-                            name: props.active ? props.active : '.....' ,
+                            name: props.active ? props.active.name : '.....' ,
                             className:"StoreBtn"
                         }
                     }>

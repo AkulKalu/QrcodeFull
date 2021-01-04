@@ -230,7 +230,6 @@ function ControlPanel() {
             
                     </aside>
                     <main>
-                
                         <div className="TopBar">
                             <div className="BarStore">
                                 <Store active={state.stores.active} />

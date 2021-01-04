@@ -1,5 +1,4 @@
 function request(urlPath, method, params = null) {
-    console.log(urlPath, method);
     return window.axios[method](window.location.origin + urlPath, params)
            .then( res => res)
            .catch( err=> err.response);

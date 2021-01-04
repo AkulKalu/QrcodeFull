@@ -8,8 +8,9 @@ const reducer = (state, action) => {
     switch (action.type) {
       case "GET":
             return {
-                active: action.payload[0],
-                list: action.payload
+                active: action.payload.list[0],
+                list: action.payload.list,
+                new: action.payload.new,
             }
         case "SWITCH":
             return {
@@ -18,8 +19,10 @@ const reducer = (state, action) => {
             }
        
       case "CREATE":
-       
-        return state;
+        return {
+          active: action.payload.created,
+          list: [action.payload.created, action.payload.list],
+        }
       case "EDIT":
     
         return state;

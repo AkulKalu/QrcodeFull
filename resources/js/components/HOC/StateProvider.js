@@ -18,10 +18,12 @@ function StateProvider({children}) {
 
     const userActions = {
         login: () => server.login().then(res => {
+            console.log(res);
             userDispatch(dispatcher('LOGIN', res.data.user))
+            storesDispatch(dispatcher('GET', res.data.stores))
         }),
         logout: () => server.logout().then(res => {
-            userDispatch(dispatcher('LOGOUT'))us
+            userDispatch(dispatcher('LOGOUT'))
         }),
     } 
 
@@ -29,13 +31,15 @@ function StateProvider({children}) {
         get: () => server.getStores().then(res => {
             storesDispatch(dispatcher('GET', res.data))
         }),
-        create: () => server.createStore().then(res => {
+        create: newStore => server.createStore(newStore).then(res => {
+            console.log(res);
             storesDispatch(dispatcher('CREATE', res.data))
+            return true;
         }),
-        edit: () => server.editStore().then(res => {
+        edit: storeId => server.editStore(storeId).then(res => {
             storesDispatch(dispatcher('EDIT', res.data))
         }),
-        delete: () => server.deleteStore().then(res => {
+        delete: storeId => server.deleteStore(storeId).then(res => {
             storesDispatch(dispatcher('DELETE', res.data))
         }),
         switch: store => storesDispatch(dispatcher('SWITCH', store)),

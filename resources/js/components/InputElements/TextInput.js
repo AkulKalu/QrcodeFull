@@ -1,34 +1,33 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './scss/TextInput.scss';
 
 export default function TextInput(props) {
-    const [validationMessage, setValidationMessage] = useState('')
     const name = props.name.replace(' ', '');
    
 
-    useEffect(()=> {
-        if(props.validate) {
-            // const validationInterceptor =  window.axios.interceptors.response.use( response => {
-            //         return response;
-            //     },  error => {
+    // useEffect(()=> {
+    //     if(props.validate) {
+    //         const validationInterceptor =  window.axios.interceptors.response.use( response => {
+    //                 return response;
+    //             },  error => {
 
-            //         if(error.response.status === 422) {
-            //             let message = error.response.data.errors[props.validate]
-            //             if(message) {
-            //                 setValidationMessage(message);
-            //             }else {
-            //                 setValidationMessage('');
-            //             }
+    //                 if(error.response.status === 422) {
+    //                     let message = error.response.data.errors[props.validate]
+    //                     if(message) {
+    //                         setValidationMessage(message);
+    //                     }else {
+    //                         setValidationMessage('');
+    //                     }
                         
-            //         }
-            //         return Promise.reject(error);
-            //     });
+    //                 }
+    //                 return Promise.reject(error);
+    //             });
 
-            //   return () => {
-            //     axios.interceptors.request.eject(validationInterceptor);
-            //   }
-        }
-    }, [])
+    //           return () => {
+    //             axios.interceptors.request.eject(validationInterceptor);
+    //           }
+    //     }
+    // }, [])
    
 
     
@@ -42,7 +41,7 @@ export default function TextInput(props) {
         <div className={props.wrap}>
             <label htmlFor={name}>{props.name}</label>
                 <input 
-                    style = {validationMessage.length ? invalidInputStyle : null }
+                    style = {props.error.length ? invalidInputStyle : null }
                     className="TextInput"
                     list={`${props.name}List`}
                     onChange = {props.onChange}
@@ -50,7 +49,7 @@ export default function TextInput(props) {
                     type='text'
                     name={name}>
                 </input>
-                <p className="ValidationMessage">{validationMessage}</p>
+                <p className="ValidationMessage">{props.error}</p>
                 {dataListOptions ? <datalist id={`${props.name}List`}>{dataListOptions}</datalist> : null}
          </div>)
    

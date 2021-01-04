@@ -26,6 +26,8 @@ class StoreRequest extends FormRequest
         return [
             'name'=> ['required'],
             'website'=>['url'],
+            'phone'=>['numeric'],
+            'email'=>['email'],
             'stripe_public_key'=>['required'],
             'stripe_private_key'=>['required'],
             'paypal_client_id'=>['required'],

@@ -1,67 +1,45 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useContext} from 'react';
 import TextInput from '../InputElements/TextInput';
 import Panel from '../Shared/Panel';
-import StripeLogo from '../../storage/StripeLogo.svg';
-import PayPalLogo from '../../storage/PayPal.svg';
 import {createStore, deleteStore , editStore} from '../../Functions/server';
+import {store} from '../HOC/StateProvider';
 
 export default function StoreMenu(props) {
-        const [storeData, setStoreData] = useState(props.store ? props.store : {
-            name: '',
-            website:'',
-            email: '',
-            phone: '',
-            stripe_public_key: '',
-            stripe_private_key: '',
-            paypal_client_id: '',
-            paypal_private_key: '',
-        })
-        const [changed, setChanged] = useState(false);
+        const {state, dispatch} = useContext(store)
+        const [storeData, setStoreData] = useState(props.store ? props.store : {...state.stores.new})
+        const [errors, setErrors] = useState({...state.stores.new})
+    
    
         const inputChange = (value, key) => {
             setStoreData({
                 ...storeData,
                 [key]: value,
             });
-
-            if(!changed) setChanged(true);
         }
 
 
         const create = () => {
-            const data = {}
-            Object.keys(props.store).forEach( key => data[key]=storeData[key]);   //Clean object of ids
-            createStore(data)
+            dispatch.stores.create(storeData)
             .then( res => {
-                if(res.status === 200) {
-                    props.closePanel();
-                    props.updateStores(res.data.stores, res.data.created);
-                }        
+                props.onClose();        
             })
-            .catch( res => console.log(res))
         }
 
         const edit = () => {
             const data = {}
-            Object.keys(props.store).forEach( key => data[key]=storeData[key]);
-            editStore(storeData.id, data )
+            Object.keys(state.stores.new).forEach( key => data[key]=storeData[key]);
+            dispatch.stores.edit(storeData.id, data )
             .then( res => {
-                if(res.status === 200) {
-                    props.closePanel();
-                    props.updateStores(res.data.stores, res.data.updated);
-                }
+                props.onClose();  
             })
         }
         
         const remove = () => {
             const confirmed = window.confirm('Deleting the store will also remove all its product. Are you sure?');
             if(confirmed) {
-                deleteStore(storeData.id)
+                dispatch.stores.delete(storeData.id)
                 .then(res =>{
-                    if(res.status === 200) {
-                        props.closePanel();
-                        props.updateStores(res.data, res.data[0]);
-                    }
+                    props.onClose();
                 })
             }
         }
@@ -95,14 +73,14 @@ export default function StoreMenu(props) {
                                 onChange = {e => inputChange(e.target.value, 'name')} 
                                 name="Name"
                                 value={storeData.name}
-                                validate = 'name'
+                                error = {errors.name}
                                 />
                             <TextInput 
                                 wrap = "Group-col" 
                                 onChange = {e => inputChange(e.target.value, 'website')} 
                                 name="Website" 
                                 value={storeData.website}
-                                validate = 'website'
+                                error = {errors.website}
                             />
                             <h3>Contact</h3>
                             <TextInput 
@@ -110,14 +88,14 @@ export default function StoreMenu(props) {
                                 onChange = {e => inputChange(e.target.value, 'email')} 
                                 name="Email"
                                 value={storeData.email}
-                                validate = 'name'
+                                error = {errors.email}
                                 />
                             <TextInput 
                                 wrap = "Group-col" 
                                 onChange = {e => inputChange(e.target.value, 'phone')} 
                                 name="Phone" 
                                 value={storeData.phone}
-                                validate = 'website'
+                                error = {errors.phone}
                             />
                         </Fragment>
                     }
@@ -129,14 +107,14 @@ export default function StoreMenu(props) {
                                     onChange = {e => inputChange(e.target.value, 'stripe_public_key')}
                                     name = "Public Key"
                                     value={storeData.stripe_public_key} 
-                                    validate = 'stripe_public_key'
+                                    error = {errors.stripe_public_key}
                                 />
                                 <TextInput
                                     wrap = "Group-col" 
                                     onChange = {e => inputChange(e.target.value, 'stripe_private_key')}
                                     name = "Private Key"
                                     value={storeData.stripe_private_key} 
-                                    validate = 'stripe_private_key'
+                                    error = {errors.stripe_private_key}
                                 />
                                 <h3>PayPal API</h3>
                                 <TextInput
@@ -144,14 +122,14 @@ export default function StoreMenu(props) {
                                     onChange = {e => inputChange(e.target.value, 'paypal_client_id')}
                                     name = "Client Id"
                                     value={storeData.paypal_client_id} 
-                                    validate = 'paypal_client_id'
+                                    error ={ errors.paypal_client_id}
                                 />
                                 <TextInput
                                     wrap = "Group-col" 
                                     onChange = {e => inputChange(e.target.value, 'paypal_private_key')}
                                     name = "Private Key"
                                     value={storeData.paypal_private_key} 
-                                    validate = 'paypal_private_key'
+                                    error = {errors.paypal_private_key}
                                 />
                         </Fragment>
                     } >
