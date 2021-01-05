@@ -1,4 +1,4 @@
-import {login, logout } from '../Functions/server'
+
 
 const initalState = null;
 
@@ -7,7 +7,7 @@ const reducer = (state, action) => {
     switch (action.type) {
       case "LOGIN":
         return {
-            ...action.payload
+            ...action.payload.user
         }
        
       case "LOGOUT":

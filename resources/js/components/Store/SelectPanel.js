@@ -23,9 +23,11 @@ export default function SelectPanel(props) {
             });
         }
     }
+  
     const storeList = state.stores.list.map((store, i) => {
+        store.idx = i;
         return <div  key={`storeLI${i}`} className="StoreItem"> 
-                        <div className="SelectBtn" onClick={() => close(store)}  
+                        <div className="SelectBtn" onClick={() => switchStore(store)}  
                         >{store.name}</div>
                         <div onClick={() =>props.setMode({action:'edit', object:store})} className="EditBtn">ED</div>
                    </div>;

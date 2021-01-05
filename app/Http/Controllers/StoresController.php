@@ -47,7 +47,7 @@ class StoresController extends Controller
         $store = Auth::user()->stores()->find($id);
         $status = $store->update($request->all());
         if($status) {
-            return response()->json(['updated' => $store, 'stores'=> $this->index()->original]);
+            return response()->json(['updated' => $store]);
         }
     }
 
@@ -62,7 +62,7 @@ class StoresController extends Controller
        
         $status = Auth::user()->stores()->find($id)->delete();
         if( $status ) {
-            return response()->json($this->index()->original);
+            return response()->json(['deleted'=> $id, 'cs'=> $status]);
         }
         
     }

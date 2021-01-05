@@ -11,13 +11,9 @@ import SearchBar from './SearchBar';
 import './scss/ControlPanel.scss';
 import ReactDOM from 'react-dom';
 import {store, StateProvider} from '../HOC/StateProvider';
-import {login} from '../../Functions/server'
-
-
 
 function ControlPanel() {
      const [loading, setLoading] = useState(false);
-     const [activeStore, setActiveStore] = useState();
      const [table, setTable] = useState(1);
      const [filter, setFilter] = useState(null);
      
@@ -202,7 +198,6 @@ function ControlPanel() {
                         />
             default:
                 return <Products
-                            activeStore = {activeStore}
                             filter = {filter}
                             tabelColumns = {tabelColumns[1]}
                        />

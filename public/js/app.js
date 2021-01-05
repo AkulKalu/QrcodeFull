@@ -53681,12 +53681,17 @@ function _arrayWithHoles(arr) {
 
 var store = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
 
-var dispatcher = function dispatcher(type) {
-  var payload = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  return {
-    type: type,
-    payload: payload
-  };
+var dispatcher = function dispatcher(dispatch, type) {
+  var payload = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+  if (!payload || payload && payload.status === 200) {
+    dispatch({
+      type: type,
+      payload: payload.data
+    });
+  }
+
+  return payload.status === 200;
 };
 
 function StateProvider(_ref) {
@@ -53705,42 +53710,44 @@ function StateProvider(_ref) {
   var userActions = {
     login: function login() {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["login"]().then(function (res) {
-        console.log(res);
-        userDispatch(dispatcher('LOGIN', res.data.user));
-        storesDispatch(dispatcher('GET', res.data.stores));
+        dispatcher(userDispatch, 'LOGIN', res);
+        return dispatcher(storesDispatch, 'GET', res);
       });
     },
     logout: function logout() {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["logout"]().then(function (res) {
-        userDispatch(dispatcher('LOGOUT'));
+        return dispatcher(userDispatch, 'LOGOUT');
       });
     }
   };
   var storesActions = {
     get: function get() {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["getStores"]().then(function (res) {
-        storesDispatch(dispatcher('GET', res.data));
+        return dispatcher(storesDispatch, 'GET', res);
       });
     },
     create: function create(newStore) {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["createStore"](newStore).then(function (res) {
-        console.log(res);
-        storesDispatch(dispatcher('CREATE', res.data));
-        return true;
+        return dispatcher(storesDispatch, 'CREATE', res);
       });
     },
-    edit: function edit(storeId) {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["editStore"](storeId).then(function (res) {
-        storesDispatch(dispatcher('EDIT', res.data));
+    edit: function edit(storeId, data, idx) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["editStore"](storeId, data).then(function (res) {
+        res.data['idx'] = idx;
+        return dispatcher(storesDispatch, 'EDIT', res);
       });
     },
-    "delete": function _delete(storeId) {
+    "delete": function _delete(storeId, idx) {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteStore"](storeId).then(function (res) {
-        storesDispatch(dispatcher('DELETE', res.data));
+        res.data['idx'] = idx;
+        return dispatcher(storesDispatch, 'DELETE', res);
       });
     },
     "switch": function _switch(store) {
-      return storesDispatch(dispatcher('SWITCH', store));
+      return storesDispatch({
+        type: 'SWITCH',
+        payload: store
+      });
     }
   };
   var globalState = {
@@ -53759,6 +53766,125 @@ function StateProvider(_ref) {
 }
 
 
+
+/***/ }),
+
+/***/ "./resources/js/components/HOC/WithValidator.js":
+/*!******************************************************!*\
+  !*** ./resources/js/components/HOC/WithValidator.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return WithValidator; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+
+function WithValidator(Cmp) {
+  return function ValidatedComponent(props) {
+    var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({}),
+        _useState2 = _slicedToArray(_useState, 2),
+        errors = _useState2[0],
+        setErrors = _useState2[1];
+
+    Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+      var validationInterceptor = window.axios.interceptors.response.use(function (response) {
+        setErrors({});
+        return response;
+      }, function (error) {
+        if (error.response.status === 422) {
+          setErrors(error.response.data.errors);
+        }
+
+        return Promise.reject(error);
+      });
+      return function () {
+        axios.interceptors.request.eject(validationInterceptor);
+      };
+    }, []);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Cmp, _extends({
+      errors: errors
+    }, props));
+  };
+}
 
 /***/ }),
 
@@ -53901,95 +54027,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _scss_TextInput_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/TextInput.scss */ "./resources/js/components/InputElements/scss/TextInput.scss");
 /* harmony import */ var _scss_TextInput_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_TextInput_scss__WEBPACK_IMPORTED_MODULE_1__);
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
 
 
 function TextInput(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
-      _useState2 = _slicedToArray(_useState, 2),
-      validationMessage = _useState2[0],
-      setValidationMessage = _useState2[1];
-
   var name = props.name.replace(' ', '');
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (props.validate) {
-      var validationInterceptor = window.axios.interceptors.response.use(function (response) {
-        return response;
-      }, function (error) {
-        if (error.response.status === 422) {
-          var message = error.response.data.errors[props.validate];
-
-          if (message) {
-            setValidationMessage(message);
-          } else {
-            setValidationMessage('');
-          }
-        }
-
-        return Promise.reject(error);
-      });
-      return function () {
-        axios.interceptors.request.eject(validationInterceptor);
-      };
-    }
-  }, []);
   var invalidInputStyle = {
     borderColor: 'crimson',
     boxShadow: '0 0 5px crimson'
@@ -54005,16 +54046,16 @@ function TextInput(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: name
   }, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    style: validationMessage.length ? invalidInputStyle : null,
+    style: props.error ? invalidInputStyle : null,
     className: "TextInput",
     list: "".concat(props.name, "List"),
     onChange: props.onChange,
     value: props.value,
     type: "text",
     name: name
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }), props.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "ValidationMessage"
-  }, validationMessage), dataListOptions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("datalist", {
+  }, props.error[0]) : null, dataListOptions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("datalist", {
     id: "".concat(props.name, "List")
   }, dataListOptions) : null);
 }
@@ -56669,13 +56710,14 @@ function SelectPanel(props) {
   };
 
   var storeList = state.stores.list.map(function (store, i) {
+    store.idx = i;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: "storeLI".concat(i),
       className: "StoreItem"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "SelectBtn",
       onClick: function onClick() {
-        return close(store);
+        return switchStore(store);
       }
     }, store.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       onClick: function onClick() {
@@ -56762,8 +56804,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../InputElements/TextInput */ "./resources/js/components/InputElements/TextInput.js");
 /* harmony import */ var _Shared_Panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Shared/Panel */ "./resources/js/components/Shared/Panel.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -56875,9 +56916,8 @@ function _arrayWithHoles(arr) {
 
 
 
-
 function StoreMenu(props) {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__["store"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_3__["store"]),
       state = _useContext.state,
       dispatch = _useContext.dispatch;
 
@@ -56886,21 +56926,19 @@ function StoreMenu(props) {
       storeData = _useState2[0],
       setStoreData = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      changed = _useState4[0],
-      setChanged = _useState4[1];
-
   var inputChange = function inputChange(value, key) {
     setStoreData(_objectSpread(_objectSpread({}, storeData), {}, _defineProperty({}, key, value)));
-    if (!changed) setChanged(true);
+  };
+
+  var close = function close(statusOk) {
+    if (statusOk) {
+      props.onClose();
+    }
   };
 
   var create = function create() {
     dispatch.stores.create(storeData).then(function (res) {
-      props.onClose();
-    })["catch"](function (err) {
-      return console.log(err);
+      close(res);
     });
   };
 
@@ -56909,8 +56947,8 @@ function StoreMenu(props) {
     Object.keys(state.stores["new"]).forEach(function (key) {
       return data[key] = storeData[key];
     });
-    dispatch.stores.edit(storeData.id, data).then(function (res) {
-      props.onClose();
+    dispatch.stores.edit(storeData.id, data, storeData.idx).then(function (res) {
+      close(res);
     });
   };
 
@@ -56918,8 +56956,8 @@ function StoreMenu(props) {
     var confirmed = window.confirm('Deleting the store will also remove all its product. Are you sure?');
 
     if (confirmed) {
-      dispatch.stores["delete"](storeData.id).then(function (res) {
-        props.onClose();
+      dispatch.stores["delete"](storeData.id, storeData.idx).then(function (res) {
+        close(res);
       });
     }
   };
@@ -56952,7 +56990,7 @@ function StoreMenu(props) {
       },
       name: "Name",
       value: storeData.name,
-      validate: "name"
+      error: props.errors['name']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
       onChange: function onChange(e) {
@@ -56960,7 +56998,7 @@ function StoreMenu(props) {
       },
       name: "Website",
       value: storeData.website,
-      validate: "website"
+      error: props.errors['website']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
       onChange: function onChange(e) {
@@ -56968,7 +57006,7 @@ function StoreMenu(props) {
       },
       name: "Email",
       value: storeData.email,
-      validate: "name"
+      error: props.errors['email']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
       onChange: function onChange(e) {
@@ -56976,7 +57014,7 @@ function StoreMenu(props) {
       },
       name: "Phone",
       value: storeData.phone,
-      validate: "website"
+      error: props.errors['phone']
     })),
     right: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Stripe API"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
@@ -56985,7 +57023,7 @@ function StoreMenu(props) {
       },
       name: "Public Key",
       value: storeData.stripe_public_key,
-      validate: "stripe_public_key"
+      error: props.errors['stripe_public_key']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
       onChange: function onChange(e) {
@@ -56993,7 +57031,7 @@ function StoreMenu(props) {
       },
       name: "Private Key",
       value: storeData.stripe_private_key,
-      validate: "stripe_private_key"
+      error: props.errors['stripe_private_key']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "PayPal API"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
       onChange: function onChange(e) {
@@ -57001,7 +57039,7 @@ function StoreMenu(props) {
       },
       name: "Client Id",
       value: storeData.paypal_client_id,
-      validate: "paypal_client_id"
+      error: props.errors['paypal_client_id']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
       onChange: function onChange(e) {
@@ -57009,7 +57047,7 @@ function StoreMenu(props) {
       },
       name: "Private Key",
       value: storeData.paypal_private_key,
-      validate: "paypal_private_key"
+      error: props.errors['paypal_private_key']
     }))
   });
 }
@@ -57030,8 +57068,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _StorePanel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./StorePanel */ "./resources/js/components/Store/StorePanel.js");
 /* harmony import */ var _SelectPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SelectPanel */ "./resources/js/components/Store/SelectPanel.js");
-/* harmony import */ var _scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/StoreSelect.scss */ "./resources/js/components/Store/scss/StoreSelect.scss");
-/* harmony import */ var _scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
+/* harmony import */ var _scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/StoreSelect.scss */ "./resources/js/components/Store/scss/StoreSelect.scss");
+/* harmony import */ var _scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_4__);
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -57094,6 +57133,8 @@ function _arrayWithHoles(arr) {
 
 
 
+
+var Panel = Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_3__["default"])(_StorePanel__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function StoreSelect(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     action: 'select'
@@ -57102,24 +57143,25 @@ function StoreSelect(props) {
       mode = _useState2[0],
       setMode = _useState2[1];
 
-  var closeStorePanel = function closeStorePanel() {
-    props.closePanel();
-    setMode({
-      action: 'select'
-    });
-  };
-
   var display = function display() {
     switch (mode.action) {
       case 'create':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StorePanel__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          onClose: closeStorePanel,
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Panel, {
+          onClose: function onClose() {
+            return setMode({
+              action: 'select'
+            });
+          },
           buttons: ['create']
         });
 
       case 'edit':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_StorePanel__WEBPACK_IMPORTED_MODULE_1__["default"], {
-          onClose: closeStorePanel,
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Panel, {
+          onClose: function onClose() {
+            return setMode({
+              action: 'select'
+            });
+          },
           store: mode.object,
           buttons: ['edit', 'remove']
         });
@@ -58369,6 +58411,42 @@ module.exports = "/images/SQCLogo.svg?d80bcea3e1feda67bb55bb3739360a45";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stores", function() { return stores; });
+/* harmony import */ var _components_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+}
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -58418,6 +58496,7 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
+
 var initalState = {
   active: undefined,
   list: []
@@ -58427,9 +58506,9 @@ var reducer = function reducer(state, action) {
   switch (action.type) {
     case "GET":
       return {
-        active: action.payload.list[0],
-        list: action.payload.list,
-        "new": action.payload["new"]
+        active: action.payload.stores.list[0],
+        list: action.payload.stores.list,
+        "new": action.payload.stores["new"]
       };
 
     case "SWITCH":
@@ -58438,16 +58517,28 @@ var reducer = function reducer(state, action) {
       });
 
     case "CREATE":
-      return {
+      return _objectSpread(_objectSpread({}, state), {}, {
         active: action.payload.created,
-        list: [action.payload.created, action.payload.list]
-      };
+        list: [action.payload.created].concat(_toConsumableArray(state.list))
+      });
 
     case "EDIT":
-      return state;
+      var editedList = _toConsumableArray(state.list);
+
+      editedList[action.payload.idx] = action.payload.updated;
+      return _objectSpread(_objectSpread({}, state), {}, {
+        list: editedList
+      });
 
     case "DELETE":
-      return state;
+      var deletedList = _toConsumableArray(state.list);
+
+      deletedList.splice(action.payload.idx, 1);
+      var active = action.payload.deleted == state.active.id ? deletedList[0] : state.active;
+      return _objectSpread(_objectSpread({}, state), {}, {
+        active: active,
+        list: deletedList
+      });
 
     default:
       return state;
@@ -58471,7 +58562,6 @@ var stores = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "user", function() { return user; });
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Functions/server */ "./resources/js/Functions/server.js");
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -58521,13 +58611,12 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
-
 var initalState = null;
 
 var reducer = function reducer(state, action) {
   switch (action.type) {
     case "LOGIN":
-      return _objectSpread({}, action.payload);
+      return _objectSpread({}, action.payload.user);
 
     case "LOGOUT":
       window.location.replace(window.location.origin);

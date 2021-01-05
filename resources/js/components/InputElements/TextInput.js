@@ -3,33 +3,6 @@ import './scss/TextInput.scss';
 
 export default function TextInput(props) {
     const name = props.name.replace(' ', '');
-   
-
-    // useEffect(()=> {
-    //     if(props.validate) {
-    //         const validationInterceptor =  window.axios.interceptors.response.use( response => {
-    //                 return response;
-    //             },  error => {
-
-    //                 if(error.response.status === 422) {
-    //                     let message = error.response.data.errors[props.validate]
-    //                     if(message) {
-    //                         setValidationMessage(message);
-    //                     }else {
-    //                         setValidationMessage('');
-    //                     }
-                        
-    //                 }
-    //                 return Promise.reject(error);
-    //             });
-
-    //           return () => {
-    //             axios.interceptors.request.eject(validationInterceptor);
-    //           }
-    //     }
-    // }, [])
-   
-
     
     let invalidInputStyle = {
         borderColor : 'crimson',
@@ -41,7 +14,7 @@ export default function TextInput(props) {
         <div className={props.wrap}>
             <label htmlFor={name}>{props.name}</label>
                 <input 
-                    style = {props.error.length ? invalidInputStyle : null }
+                    style = {props.error ? invalidInputStyle : null }
                     className="TextInput"
                     list={`${props.name}List`}
                     onChange = {props.onChange}
@@ -49,7 +22,7 @@ export default function TextInput(props) {
                     type='text'
                     name={name}>
                 </input>
-                <p className="ValidationMessage">{props.error}</p>
+                {props.error ? <p className="ValidationMessage">{props.error[0]}</p> : null}
                 {dataListOptions ? <datalist id={`${props.name}List`}>{dataListOptions}</datalist> : null}
          </div>)
    

@@ -1,15 +1,18 @@
-import React, {Children, createContext, useReducer} from 'react';
+import React, {createContext, useReducer} from 'react';
 import {user} from '../../store/user';
 import {stores} from '../../store/stores';
 import * as server from '../../Functions/server';
 
 const store = createContext();
 
-const dispatcher = (type, payload=null) => {
-    return {
-        type: type,
-        payload: payload
+const dispatcher = (dispatch, type, payload=null) => {
+    if(!payload || (payload && payload.status === 200)) {
+        dispatch({
+            type: type,
+            payload: payload.data
+        })
     }
+    return payload.status === 200;
 }
 
 function StateProvider({children}) {
@@ -18,32 +21,32 @@ function StateProvider({children}) {
 
     const userActions = {
         login: () => server.login().then(res => {
-            console.log(res);
-            userDispatch(dispatcher('LOGIN', res.data.user))
-            storesDispatch(dispatcher('GET', res.data.stores))
+            dispatcher( userDispatch, 'LOGIN', res)
+            return dispatcher(storesDispatch, 'GET', res)
         }),
         logout: () => server.logout().then(res => {
-            userDispatch(dispatcher('LOGOUT'))
+            return dispatcher(  userDispatch, 'LOGOUT')
         }),
     } 
 
     const storesActions = {
         get: () => server.getStores().then(res => {
-            storesDispatch(dispatcher('GET', res.data))
+            return dispatcher(storesDispatch, 'GET', res)
         }),
         create: newStore => server.createStore(newStore).then(res => {
-            console.log(res);
-            storesDispatch(dispatcher('CREATE', res.data))
-            return true;
+            return dispatcher(storesDispatch, 'CREATE', res)
         }),
-        edit: storeId => server.editStore(storeId).then(res => {
-            storesDispatch(dispatcher('EDIT', res.data))
+        edit: (storeId, data, idx) => server.editStore(storeId, data).then(res => {
+            res.data['idx'] = idx;
+            return dispatcher(storesDispatch, 'EDIT', res)
         }),
-        delete: storeId => server.deleteStore(storeId).then(res => {
-            storesDispatch(dispatcher('DELETE', res.data))
+        delete: (storeId, idx) => server.deleteStore(storeId).then(res => {
+            res.data['idx'] = idx;
+            return dispatcher(storesDispatch, 'DELETE', res)
         }),
-        switch: store => storesDispatch(dispatcher('SWITCH', store)),
+        switch: store => storesDispatch({type:'SWITCH', payload: store})
     }
+
     const globalState =  {
         state: {
             user : userState,
@@ -54,6 +57,7 @@ function StateProvider({children}) {
             stores: storesActions,
         }
     }
+
     return <store.Provider value={globalState}>
         {children}
     </store.Provider>
