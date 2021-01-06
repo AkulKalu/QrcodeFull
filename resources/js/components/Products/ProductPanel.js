@@ -1,30 +1,15 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useContext} from 'react';
 import TextInput from '../InputElements/TextInput';
 import TextArea from '../InputElements/TextArea';
 import Panel from '../Shared/Panel';
 import ProductPreview from './ProductPreview';
 import Currency from '../InputElements/Currency';
 import Toggle from '../Shared/Toggle';
-import {createProduct, editProduct, deleteProduct} from '../../Functions/server';
+import {store} from '../HOC/StateProvider';
 
 export default function ProductPanel(props)  {
-    
-    const emptyProduct = {
-        category: '',
-        model: '',
-        manufacturer: '',
-        manufacturer_website: '',
-        image_url:'',
-        url:'',
-        price: 0,
-        description:'',
-        active: true,
-        shipping: true,
-        stock: 1,
-        currency: '$'
-    }
-
-    const [productData, setProductData] = useState(props.data ?   {...props.data} : emptyProduct);
+    const {state, dispatch} = useContext(store);
+    const [productData, setProductData] = useState(props.data ?   {...props.data} : {...state.products.new});
     const [colorPallete, setcolorPallete] = useState(props.data ?  props.data.theme : {
         image: {
             rgbStr:'rgb(255, 255, 255, 1)',
@@ -66,55 +51,48 @@ export default function ProductPanel(props)  {
             [key]:value
         })
     }
+    const close = res => {
+        if(res) {
+            props.closePanel();
+        }
+    }
 
     const create = () => {
         const data = {
-            store_id : props.activeStore.id,
+            store_id : state.stores.active.id,
+            ...productData,
             theme: colorPallete
         };
-        Object.keys(emptyProduct).forEach(key => {
-            if(productData[key] !== '') {
-                data[key] = productData[key]
-            }  
-        });
-        createProduct(data)
-
+        
+        dispatch.products.create(data)
         .then( res =>{
-            if(res.status === 200) {
-                props.closePanel();
-                props.addProduct(res.data);
-            }
+           close(res);
         })
     }
+
     const edit = () => {
         const data = {
             store_id: productData.store_id,
             theme: colorPallete
         };
 
-        Object.keys(emptyProduct).forEach(key => data[key] = productData[key]);
+        Object.keys(state.products.new).forEach(key => data[key] = productData[key]);
 
-        editProduct(props.data.id, data)
+        dispatch.products.edit(productData.id, data, productData.idx)
         .then( res =>{
-            if(res.status === 200) {
-                props.closePanel();
-                props.updateProduct(res.data, productData.index)
-            }
+            close(res);
         })
     }
     const remove = () => {
-        deleteProduct(props.data.id, productData.store_id)
+        dispatch.products.delete(productData.id, productData.store_id, productData.idx)
         .then( res =>{
-            if(res.status === 200) {
-                props.closePanel();
-                props.removeProduct( productData.index)
-            }    
+            close(res);    
         })
     }
     const panelButtons = {
         add: { 
             name : 'ADD' ,
-            onClick:   edit,
+            onClick:   create,
         },
         edit: { 
             name : 'EDIT',
@@ -147,7 +125,7 @@ export default function ProductPanel(props)  {
                                             name = "Category"
                                             dataList = {Array.from(props.categories.keys())}
                                             value={productData.category} 
-                                            validate = 'name'
+                                            error = {props.errors['category']}
                                         />
                             </div>
                             <div className = "Group-half jus-end ">
@@ -155,7 +133,7 @@ export default function ProductPanel(props)  {
                                         wrap = "Group-col"
                                         onChange = {e => inputChange(e.target.value, 'model')}
                                         name = "Model"
-                                        value={productData.model}  
+                                        value={productData.model}
                                     />
                             </div>
                         </div>
@@ -167,7 +145,7 @@ export default function ProductPanel(props)  {
                                     onChange = {e => inputChange(e.target.value, 'price')}
                                     name = "Price"
                                     value={productData.price}  
-                                    validate = 'price'
+                                    error = {props.errors['price']}
                                 />
                                 <Currency current={productData.currency} onChange={inputChange}  />
                             </div>
@@ -177,7 +155,7 @@ export default function ProductPanel(props)  {
                                     onChange = {e => inputChange(e.target.value, 'stock')}
                                     name = "Stock"
                                     value={productData.stock}  
-                                    validate = 'stock'
+                                    error = {props.errors['stock']}
                                 />
                             </div>
                             </div> 
@@ -185,14 +163,14 @@ export default function ProductPanel(props)  {
                                 <div className = "Group-half">
                                     <div className="Group-col">
                                         <label>Active</label>
-                                        <Toggle on={productData.active} onToggle= {() => inputChange(!productData.active, 'active')} />
+                                        <Toggle on={productData.active} onToggle= {() => inputChange(Number(!productData.shipping), 'active')} />
                                     </div>
                                     
                                 </div>
                                 <div className = "Group-half jus-end ">
                                     <div className="Group-col">
                                             <label>Shipps</label>
-                                            <Toggle on={productData.shipping} onToggle= {() => inputChange(!productData.shipping, 'shipping')}/>
+                                            <Toggle on={productData.shipping} onToggle= {() => inputChange(Number(!productData.shipping), 'shipping')}/>
                                     </div>
                                 </div>
                             </div>  
@@ -216,14 +194,14 @@ export default function ProductPanel(props)  {
                                 onChange = {e => inputChange(e.target.value, 'url')}
                                 name = "Product Link"
                                 value={productData.url}  
-                                validate = 'url'
+                                error = {props.errors['url']}
                             />
                             <TextInput
                                 wrap = "Group-col"
                                 onChange = {e => inputChange(e.target.value, 'image_url')}
                                 name = "Image Url"
                                 value={productData.image_url} 
-                                validate = 'image_url'
+                                error = {props.errors['image_url']}
                             />  
                             </Fragment>
                         }

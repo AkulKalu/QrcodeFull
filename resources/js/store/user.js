@@ -7,7 +7,9 @@ const reducer = (state, action) => {
     switch (action.type) {
       case "LOGIN":
         return {
-            ...action.payload.user
+            info: action.payload.user, 
+            transactions: action.payload.transactions, 
+            shippments: action.payload.shippments, 
         }
        
       case "LOGOUT":

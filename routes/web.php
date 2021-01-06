@@ -30,7 +30,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/try', [HomeController::class, 'try']);
+Route::get('/try', [CPanelController::class, 'load']);
 
 Route::get('/qrcodes/{store}/{product}', [CPanelController::class, 'generateQrCode'])->name('qrgen');
 Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive']);

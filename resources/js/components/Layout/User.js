@@ -10,7 +10,7 @@ export default function User(props) {
     }
     
     return <div className="UserMenu">
-        <div className="Name">{state.user.name}</div>
+        <div className="Name">{state.user.info.name}</div>
         <svg
             className="Exit"
             onClick={exit}

@@ -12,8 +12,6 @@ export default function Panel(props) {
         });
     }
 
-    
-
     const buttons = props.buttons.map( (btn, i) => {
             return <Button key={`${props.name}Btn${i}`} className="PanelBtn" {...btn}  />
     })

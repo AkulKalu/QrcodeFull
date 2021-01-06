@@ -12,6 +12,14 @@ class CPanelController extends Controller
     {   
         $user = Auth::user();
         $stores = $user->stores()->latest()->get();
+        $products = [];
+        if(count($stores)) {
+            $products = $stores->first()->products()->get();
+        }
+
+        $transactions = $user->transactions()->latest()->get();
+        $shippments = $user->shippments()->latest()->get();
+
         $storeTemplate = [
             'name' => '',
             'website' =>'',
@@ -23,11 +31,27 @@ class CPanelController extends Controller
             'paypal_private_key' => '',
         ];
 
+        $productTemplate = [
+            'category'=> '',
+            'model'=> '',
+            'manufacturer'=> '',
+            'image_url'=>'',
+            'url'=>'',
+            'price'=> 0,
+            'description'=>'',
+            'active'=> true,
+            'shipping'=> true,
+            'stock'=> 1,
+            'currency'=> '$'
+        ];
+
        
         return response()->json([
             'user'=> $user,
             'stores' => ['list' => $stores, 'new' =>  $storeTemplate],
-
+            'products' => ['list' => $products, 'new' =>  $productTemplate],
+            'transactions' => ['list' => $transactions],
+            'shippments' => ['list' => $shippments],
         ]);
     }
 

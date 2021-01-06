@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,7 +24,7 @@ class ProductsController extends Controller
             array_push($responseData, $productData);
         }
 
-        return response()->json($responseData);
+        return response()->json(['products' => ['list'=> $responseData ]]);
     }
 
     /**
@@ -41,7 +40,7 @@ class ProductsController extends Controller
         $productData = array_merge($productData, ['theme'=> serialize($request->theme)]);
         $createdProduct = $store->products()->create($productData);
         $createdProduct->theme = $request->theme;
-        return response()->json($createdProduct);
+        return response()->json(['created'=> $createdProduct]);
     }
    
     /**
@@ -58,13 +57,7 @@ class ProductsController extends Controller
         $productData = array_merge($productData, ['theme'=> serialize($request->theme)]);
         $product->update($productData);
         $product->theme = $request->theme;
-        return response()->json($product);
-    }
-    public function toogleActive(Request $request, $id)
-    {
-        $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
-        $product->update($request->all());
-        return response()->json($product);
+        return response()->json(['updated'=>$product]);
     }
 
     /**
@@ -77,6 +70,6 @@ class ProductsController extends Controller
     {
         $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
         $product->delete();
-        return response()->json(['deleted' => true]);
+        return response()->json(['deleted'=> $id]);
     }
 }

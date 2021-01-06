@@ -24,7 +24,6 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'manufacturer_website'=> ['url'],
             'model'=> ['required'],
             'category'=> ['required'],
             'theme'=> ['required'],

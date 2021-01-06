@@ -62,7 +62,7 @@ class StoresController extends Controller
        
         $status = Auth::user()->stores()->find($id)->delete();
         if( $status ) {
-            return response()->json(['deleted'=> $id, 'cs'=> $status]);
+            return response()->json(['deleted'=> $id]);
         }
         
     }

@@ -1,6 +1,5 @@
 
 const initalState = {
-    active: undefined,
     list: []
 };
 
@@ -9,20 +8,13 @@ const reducer = (state, action) => {
     switch (action.type) {
       case "GET":
             return {
-                active: action.payload.stores.list[0],
-                list: action.payload.stores.list,
-                new: action.payload.stores.new,
-            }
-        case "SWITCH":
-            return {
-                ...state,
-                active: action.payload,
+               ...state,
+               ...action.payload.products
             }
        
         case "CREATE":
           return {
             ...state,
-            active: action.payload.created,
             list: [action.payload.created, ...state.list],
           }
         case "EDIT":
@@ -35,10 +27,8 @@ const reducer = (state, action) => {
       case "DELETE":
           let deletedList = [...state.list];
           deletedList.splice(action.payload.idx, 1);
-          let active = action.payload.deleted == state.active.id ? deletedList[0] : state.active;
           return {
             ...state,
-            active: active,
             list: deletedList,
           }
       default:
@@ -47,7 +37,7 @@ const reducer = (state, action) => {
   };
 
 
-  export const stores = {
+  export const products = {
       state : initalState,
       reducer : reducer
   }

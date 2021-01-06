@@ -53583,7 +53583,7 @@ function _arrayWithHoles(arr) {
 
 
 function PanelSwitch(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.on ? true : false),
       _useState2 = _slicedToArray(_useState, 2),
       panelOpen = _useState2[0],
       openPanel = _useState2[1];
@@ -53616,7 +53616,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _store_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../store/user */ "./resources/js/store/user.js");
 /* harmony import */ var _store_stores__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/stores */ "./resources/js/store/stores.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _store_products__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/products */ "./resources/js/store/products.js");
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -53679,6 +53680,7 @@ function _arrayWithHoles(arr) {
 
 
 
+
 var store = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["createContext"])();
 
 var dispatcher = function dispatcher(dispatch, type) {
@@ -53687,7 +53689,7 @@ var dispatcher = function dispatcher(dispatch, type) {
   if (!payload || payload && payload.status === 200) {
     dispatch({
       type: type,
-      payload: payload.data
+      payload: payload ? payload.data : null
     });
   }
 
@@ -53707,57 +53709,221 @@ function StateProvider(_ref) {
       storesState = _useReducer4[0],
       storesDispatch = _useReducer4[1];
 
+  var _useReducer5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(_store_products__WEBPACK_IMPORTED_MODULE_3__["products"].reducer, _store_products__WEBPACK_IMPORTED_MODULE_3__["products"].state),
+      _useReducer6 = _slicedToArray(_useReducer5, 2),
+      productsState = _useReducer6[0],
+      productsDispatch = _useReducer6[1];
+
   var userActions = {
     login: function login() {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["login"]().then(function (res) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["login"]().then(function (res) {
+        console.log(res);
         dispatcher(userDispatch, 'LOGIN', res);
-        return dispatcher(storesDispatch, 'GET', res);
+        dispatcher(storesDispatch, 'GET', res);
+        return dispatcher(productsDispatch, 'GET', res);
       });
     },
     logout: function logout() {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["logout"]().then(function (res) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["logout"]().then(function (res) {
         return dispatcher(userDispatch, 'LOGOUT');
       });
     }
   };
   var storesActions = {
     get: function get() {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["getStores"]().then(function (res) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["getStores"]().then(function (res) {
         return dispatcher(storesDispatch, 'GET', res);
       });
     },
     create: function create(newStore) {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["createStore"](newStore).then(function (res) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["createStore"](newStore).then(function (res) {
+        productsDispatch({
+          type: 'get',
+          payload: {
+            products: {
+              list: []
+            }
+          }
+        });
         return dispatcher(storesDispatch, 'CREATE', res);
       });
     },
     edit: function edit(storeId, data, idx) {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["editStore"](storeId, data).then(function (res) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["editStore"](storeId, data).then(function (res) {
         res.data['idx'] = idx;
         return dispatcher(storesDispatch, 'EDIT', res);
       });
     },
     "delete": function _delete(storeId, idx) {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_3__["deleteStore"](storeId).then(function (res) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["deleteStore"](storeId).then(function (res) {
         res.data['idx'] = idx;
         return dispatcher(storesDispatch, 'DELETE', res);
       });
     },
     "switch": function _switch(store) {
-      return storesDispatch({
+      storesDispatch({
         type: 'SWITCH',
         payload: store
       });
+      _Functions_server__WEBPACK_IMPORTED_MODULE_4__["getProducts"](store.id).then(function (res) {
+        return dispatcher(productsDispatch, 'GET', res);
+      });
+    }
+  };
+  var productActions = {
+    create: function create(newProduct) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["createProduct"](newProduct).then(function (res) {
+        return dispatcher(productsDispatch, 'CREATE', res);
+      });
+    },
+    edit: function edit(prodId, data, idx) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["editProduct"](prodId, data).then(function (res) {
+        res.data['idx'] = idx;
+        return dispatcher(productsDispatch, 'EDIT', res);
+      });
+    },
+    toggle: function toggle(prodId, data, idx) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["editProduct"](prodId, data).then(function (res) {
+        res.data['idx'] = idx;
+        return dispatcher(productsDispatch, 'EDIT', res);
+      });
+    },
+    "delete": function _delete(prodId, storeId, idx) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["deleteProduct"](prodId, storeId).then(function (res) {
+        console.log(res);
+        res.data['idx'] = idx;
+        return dispatcher(productsDispatch, 'DELETE', res);
+      });
+    }
+  };
+  var tabelColumns = {
+    1: {
+      Image: {
+        dataKey: 'image_url'
+      },
+      Category: {
+        sort: true,
+        dataKey: 'category',
+        search: false
+      },
+      Model: {
+        sort: true,
+        dataKey: 'model',
+        search: true
+      },
+      Manufacturer: {
+        sort: true,
+        dataKey: 'manufacturer',
+        search: true
+      },
+      Price: {
+        sort: true,
+        dataKey: 'price',
+        search: false
+      },
+      Stock: {
+        sort: true,
+        dataKey: 'stock',
+        search: true
+      },
+      Active: {
+        sort: true,
+        dataKey: 'active'
+      },
+      QrCode: {}
+    },
+    2: {
+      Date: {
+        sort: true,
+        dataKey: 'created_at'
+      },
+      Service: {
+        sort: true,
+        dataKey: 'service',
+        search: false
+      },
+      Id: {
+        sort: true,
+        dataKey: 'transaction_id',
+        search: false
+      },
+      'Customer id': {
+        sort: true,
+        dataKey: 'transaction_id',
+        search: false
+      },
+      'Customer email': {
+        sort: true,
+        dataKey: 'customer_email',
+        search: true
+      },
+      Amount: {
+        sort: true,
+        dataKey: 'amount',
+        search: true
+      },
+      Currency: {
+        sort: true,
+        dataKey: 'currency',
+        search: false
+      },
+      Status: {
+        sort: true,
+        dataKey: 'status'
+      }
+    },
+    3: {
+      Name: {
+        sort: true,
+        dataKey: 'name',
+        search: true
+      },
+      City: {
+        sort: true,
+        dataKey: 'city',
+        search: false
+      },
+      Country: {
+        sort: true,
+        dataKey: 'country',
+        search: false
+      },
+      State: {
+        sort: true,
+        dataKey: 'state',
+        search: false
+      },
+      ZIP: {
+        sort: true,
+        dataKey: 'postal_code',
+        search: true
+      },
+      Address: {
+        sort: true,
+        dataKey: 'line1',
+        search: false
+      },
+      'Address 2': {
+        sort: true,
+        dataKey: 'line2',
+        search: false
+      },
+      Shipped: {
+        dataKey: 'shipped'
+      }
     }
   };
   var globalState = {
     state: {
+      tabelColumns: tabelColumns,
       user: userState,
-      stores: storesState
+      stores: storesState,
+      products: productsState
     },
     dispatch: {
       user: userActions,
-      stores: storesActions
+      stores: storesActions,
+      products: productActions
     }
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(store.Provider, {
@@ -54207,7 +54373,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -54295,27 +54460,21 @@ function _arrayWithHoles(arr) {
 
 
 
-
 function ControlPanel() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
       loading = _useState2[0],
       setLoading = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(1),
       _useState4 = _slicedToArray(_useState3, 2),
-      activeStore = _useState4[0],
-      setActiveStore = _useState4[1];
+      table = _useState4[0],
+      setTable = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(1),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
       _useState6 = _slicedToArray(_useState5, 2),
-      table = _useState6[0],
-      setTable = _useState6[1];
-
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
-      _useState8 = _slicedToArray(_useState7, 2),
-      filter = _useState8[0],
-      setFilter = _useState8[1];
+      filter = _useState6[0],
+      setFilter = _useState6[1];
 
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_12__["store"]),
       state = _useContext.state,
@@ -54361,123 +54520,6 @@ function ControlPanel() {
       }
     }
   };
-  var tabelColumns = {
-    1: {
-      Image: {
-        dataKey: 'image_url'
-      },
-      Category: {
-        sort: true,
-        dataKey: 'category',
-        search: false
-      },
-      Model: {
-        sort: true,
-        dataKey: 'model',
-        search: true
-      },
-      Manufacturer: {
-        sort: true,
-        dataKey: 'manufacturer',
-        search: true
-      },
-      Price: {
-        sort: true,
-        dataKey: 'price',
-        search: false
-      },
-      Stock: {
-        sort: true,
-        dataKey: 'stock',
-        search: true
-      },
-      Active: {
-        sort: true,
-        dataKey: 'active'
-      },
-      QrCode: {}
-    },
-    2: {
-      Date: {
-        sort: true,
-        dataKey: 'created_at'
-      },
-      Service: {
-        sort: true,
-        dataKey: 'service',
-        search: false
-      },
-      Id: {
-        sort: true,
-        dataKey: 'transaction_id',
-        search: false
-      },
-      'Customer id': {
-        sort: true,
-        dataKey: 'transaction_id',
-        search: false
-      },
-      'Customer email': {
-        sort: true,
-        dataKey: 'customer_email',
-        search: true
-      },
-      Amount: {
-        sort: true,
-        dataKey: 'amount',
-        search: true
-      },
-      Currency: {
-        sort: true,
-        dataKey: 'currency',
-        search: false
-      },
-      Status: {
-        sort: true,
-        dataKey: 'status'
-      }
-    },
-    3: {
-      Name: {
-        sort: true,
-        dataKey: 'name',
-        search: true
-      },
-      City: {
-        sort: true,
-        dataKey: 'city',
-        search: false
-      },
-      Country: {
-        sort: true,
-        dataKey: 'country',
-        search: false
-      },
-      State: {
-        sort: true,
-        dataKey: 'state',
-        search: false
-      },
-      ZIP: {
-        sort: true,
-        dataKey: 'postal_code',
-        search: true
-      },
-      Address: {
-        sort: true,
-        dataKey: 'line1',
-        search: false
-      },
-      'Address 2': {
-        sort: true,
-        dataKey: 'line2',
-        search: false
-      },
-      Shipped: {
-        dataKey: 'shipped'
-      }
-    }
-  };
 
   var switchTable = function switchTable(table) {
     setFilter(null);
@@ -54489,20 +54531,22 @@ function ControlPanel() {
       case 2:
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Transactions_Transactions__WEBPACK_IMPORTED_MODULE_7__["default"], {
           filter: filter,
-          tabelColumns: tabelColumns[2]
+          list: state.user.transactions.list,
+          tabelColumns: state.tabelColumns[2]
         });
 
       case 3:
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shippments_Shippments__WEBPACK_IMPORTED_MODULE_8__["default"], {
           filter: filter,
-          tabelColumns: tabelColumns[3]
+          list: state.user.shippments.list,
+          tabelColumns: state.tabelColumns[3]
         });
 
       default:
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Products_Products__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          activeStore: activeStore,
           filter: filter,
-          tabelColumns: tabelColumns[1]
+          list: state.products.list,
+          tabelColumns: state.tabelColumns[1]
         });
     }
   };
@@ -54530,12 +54574,12 @@ function ControlPanel() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarStore"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Store_Store__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    active: state.stores.active
+    stores: state.stores
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarSearch"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_9__["default"], {
     table: table,
-    columns: tabelColumns[table],
+    columns: state.tabelColumns[table],
     setFilter: setFilter
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableCont"
@@ -54892,7 +54936,7 @@ function User(props) {
     className: "UserMenu"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Name"
-  }, state.user.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+  }, state.user.info.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     className: "Exit",
     onClick: exit,
     viewBox: "0 0 512.00533 512",
@@ -55045,6 +55089,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
 /* harmony import */ var _Functions_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Functions/actions */ "./resources/js/Functions/actions.js");
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -55069,18 +55114,22 @@ function _extends() {
 
 
 
+
 function Product(props) {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_6__["store"]),
+      dispatch = _useContext.dispatch;
+
   var setActiveStatus = function setActiveStatus() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["toogleActive"])(props.data.id, {
+    dispatch.products.toogle(props.data.id, {
       store_id: props.data.store_id,
       active: props.data.active ? 0 : 1
-    }).then(function (res) {
-      props.updateProduct(res.data, props.data.index);
     });
   };
 
-  var downloadQrCode = function downloadQrCode() {// generateQrCode(props.data.store_id, props.data.id)
-    // .then( res =>downloadFile(res.data, props.data.name, 'svg' ))
+  var downloadQrCode = function downloadQrCode() {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["generateQrCode"])(props.data.store_id, props.data.id).then(function (res) {
+      return Object(_Functions_actions__WEBPACK_IMPORTED_MODULE_5__["downloadFile"])(res.data, props.data.name, 'svg');
+    });
   };
 
   var columns = Object.keys(props.columns).map(function (key, i) {
@@ -55157,7 +55206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ProductPreview__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProductPreview */ "./resources/js/components/Products/ProductPreview.js");
 /* harmony import */ var _InputElements_Currency__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../InputElements/Currency */ "./resources/js/components/InputElements/Currency.js");
 /* harmony import */ var _Shared_Toggle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Shared/Toggle */ "./resources/js/components/Shared/Toggle.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -55274,22 +55323,11 @@ function _arrayWithHoles(arr) {
 
 
 function ProductPanel(props) {
-  var emptyProduct = {
-    category: '',
-    model: '',
-    manufacturer: '',
-    manufacturer_website: '',
-    image_url: '',
-    url: '',
-    price: 0,
-    description: '',
-    active: true,
-    shipping: true,
-    stock: 1,
-    currency: '$'
-  };
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_7__["store"]),
+      state = _useContext.state,
+      dispatch = _useContext.dispatch;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.data ? _objectSpread({}, props.data) : emptyProduct),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.data ? _objectSpread({}, props.data) : _objectSpread({}, state.products["new"])),
       _useState2 = _slicedToArray(_useState, 2),
       productData = _useState2[0],
       setProductData = _useState2[1];
@@ -55340,21 +55378,21 @@ function ProductPanel(props) {
     setProductData(_objectSpread(_objectSpread({}, productData), {}, _defineProperty({}, key, value)));
   };
 
+  var close = function close(res) {
+    if (res) {
+      props.closePanel();
+    }
+  };
+
   var create = function create() {
-    var data = {
-      store_id: props.activeStore.id,
+    var data = _objectSpread(_objectSpread({
+      store_id: state.stores.active.id
+    }, productData), {}, {
       theme: colorPallete
-    };
-    Object.keys(emptyProduct).forEach(function (key) {
-      if (productData[key] !== '') {
-        data[key] = productData[key];
-      }
     });
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_7__["createProduct"])(data).then(function (res) {
-      if (res.status === 200) {
-        props.closePanel();
-        props.addProduct(res.data);
-      }
+
+    dispatch.products.create(data).then(function (res) {
+      close(res);
     });
   };
 
@@ -55363,30 +55401,24 @@ function ProductPanel(props) {
       store_id: productData.store_id,
       theme: colorPallete
     };
-    Object.keys(emptyProduct).forEach(function (key) {
+    Object.keys(state.products["new"]).forEach(function (key) {
       return data[key] = productData[key];
     });
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_7__["editProduct"])(props.data.id, data).then(function (res) {
-      if (res.status === 200) {
-        props.closePanel();
-        props.updateProduct(res.data, productData.index);
-      }
+    dispatch.products.edit(productData.id, data, productData.idx).then(function (res) {
+      close(res);
     });
   };
 
   var remove = function remove() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_7__["deleteProduct"])(props.data.id, productData.store_id).then(function (res) {
-      if (res.status === 200) {
-        props.closePanel();
-        props.removeProduct(productData.index);
-      }
+    dispatch.products["delete"](productData.id, productData.store_id, productData.idx).then(function (res) {
+      close(res);
     });
   };
 
   var panelButtons = {
     add: {
       name: 'ADD',
-      onClick: edit
+      onClick: create
     },
     edit: {
       name: 'EDIT',
@@ -55420,7 +55452,7 @@ function ProductPanel(props) {
       name: "Category",
       dataList: Array.from(props.categories.keys()),
       value: productData.category,
-      validate: "name"
+      error: props.errors['category']
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Group-half jus-end "
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -55441,7 +55473,7 @@ function ProductPanel(props) {
       },
       name: "Price",
       value: productData.price,
-      validate: "price"
+      error: props.errors['price']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_Currency__WEBPACK_IMPORTED_MODULE_5__["default"], {
       current: productData.currency,
       onChange: inputChange
@@ -55454,7 +55486,7 @@ function ProductPanel(props) {
       },
       name: "Stock",
       value: productData.stock,
-      validate: "stock"
+      error: props.errors['stock']
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Group-row"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -55464,7 +55496,7 @@ function ProductPanel(props) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Active"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Toggle__WEBPACK_IMPORTED_MODULE_6__["default"], {
       on: productData.active,
       onToggle: function onToggle() {
-        return inputChange(!productData.active, 'active');
+        return inputChange(Number(!productData.shipping), 'active');
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Group-half jus-end "
@@ -55473,7 +55505,7 @@ function ProductPanel(props) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Shipps"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Toggle__WEBPACK_IMPORTED_MODULE_6__["default"], {
       on: productData.shipping,
       onToggle: function onToggle() {
-        return inputChange(!productData.shipping, 'shipping');
+        return inputChange(Number(!productData.shipping), 'shipping');
       }
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Additional"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
@@ -55496,7 +55528,7 @@ function ProductPanel(props) {
       },
       name: "Product Link",
       value: productData.url,
-      validate: "url"
+      error: props.errors['url']
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
       wrap: "Group-col",
       onChange: function onChange(e) {
@@ -55504,7 +55536,7 @@ function ProductPanel(props) {
       },
       name: "Image Url",
       value: productData.image_url,
-      validate: "image_url"
+      error: props.errors['image_url']
     }))
   });
 }
@@ -55744,46 +55776,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/PanelSwitch */ "./resources/js/components/HOC/PanelSwitch.js");
 /* harmony import */ var _InputElements_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../InputElements/Button */ "./resources/js/components/InputElements/Button.js");
 /* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
+/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
 function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -55826,93 +55819,8 @@ function _arrayLikeToArray(arr, len) {
 
 
 
+var ProductPanel = Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_6__["default"])(_ProductPanel__WEBPACK_IMPORTED_MODULE_2__["default"]);
 function Products(props) {
-  var pp = _toConsumableArray(Array(40).keys()).map(function (p) {
-    return {
-      category: 'Tostersssssssssssssssssssssssssssssssssssssssssssss',
-      model: 'zz-100',
-      manufacturer: 'Rowenta',
-      manufacturer_website: '',
-      image_url: 'https://api.spektar.rs/storage/products/toster-philips-hd-2637-8788.jpg',
-      url: '',
-      price: 600,
-      description: '',
-      active: 1,
-      stock: 1,
-      currency: '$',
-      theme: {
-        image: {
-          rgbStr: 'rgb(255, 255, 255, 1)',
-          rgb: {
-            r: 255,
-            g: 255,
-            b: 255,
-            a: 1
-          }
-        },
-        font: {
-          rgbStr: 'rgb(196, 235, 108, 1)',
-          rgb: {
-            r: 196,
-            g: 235,
-            b: 108,
-            a: 1
-          }
-        },
-        background: {
-          rgbStr: 'rgb(16, 17, 17, 1)',
-          rgb: {
-            r: 16,
-            g: 17,
-            b: 17,
-            a: 1
-          }
-        },
-        buttons: {
-          rgbStr: 'rgb(196, 235, 108, 1)',
-          rgb: {
-            r: 196,
-            g: 235,
-            b: 108,
-            a: 1
-          }
-        }
-      }
-    };
-  });
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(pp),
-      _useState2 = _slicedToArray(_useState, 2),
-      products = _useState2[0],
-      setProducts = _useState2[1]; // useEffect( () => {
-  //     if(props.activeStore) {
-  //         getProducts(props.activeStore.id)
-  //         .then( res =>setProducts(res.data))
-  //     }
-  // }, [props.activeStore])
-
-
-  var updateProduct = function updateProduct(toEdit, ind) {
-    var updated = _toConsumableArray(products);
-
-    updated[ind] = toEdit;
-    setProducts(updated);
-  };
-
-  var addProduct = function addProduct(toAdd) {
-    var updated = _toConsumableArray(products);
-
-    updated.unshift(toAdd);
-    setProducts(updated);
-  };
-
-  var removeProduct = function removeProduct(ind) {
-    var updated = _toConsumableArray(products);
-
-    updated.splice(ind, 1);
-    setProducts(updated);
-  };
-
   var sortProducts = function sortProducts(sortFun) {
     var sorted = _toConsumableArray(products);
 
@@ -55921,7 +55829,7 @@ function Products(props) {
   };
 
   var categoryList = function categoryList() {
-    return new Set(products.map(function (prod) {
+    return new Set(props.list.map(function (prod) {
       return prod.category;
     }));
   };
@@ -55929,25 +55837,22 @@ function Products(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_5__["default"], {
     message: "Add Products",
     columns: props.tabelColumns,
-    data: products,
+    data: props.list,
     sort: sortProducts,
     filter: props.filter,
     row: _Product__WEBPACK_IMPORTED_MODULE_1__["default"],
     rowProps: {
       columns: props.tabelColumns
     },
-    panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_2__["default"],
+    panel: ProductPanel,
     panelProps: {
       categories: categoryList(),
-      removeProduct: removeProduct,
-      updateProduct: updateProduct,
       buttons: ['edit', 'remove']
     },
     controls: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_2__["default"],
+      panel: ProductPanel,
       panelProps: {
-        activeStore: props.activeStore,
-        addProduct: addProduct,
+        create: true,
         categories: categoryList(),
         buttons: ['add']
       },
@@ -56452,30 +56357,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
-/* harmony import */ var _Shippment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Shippment */ "./resources/js/components/Shippments/Shippment.js");
+/* harmony import */ var _Shippment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Shippment */ "./resources/js/components/Shippments/Shippment.js");
 function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _unsupportedIterableToArray(o, minLen) {
@@ -56485,6 +56373,14 @@ function _unsupportedIterableToArray(o, minLen) {
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _arrayLikeToArray(arr, len) {
@@ -56497,57 +56393,10 @@ function _arrayLikeToArray(arr, len) {
   return arr2;
 }
 
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
 
 
-
-
- // import './css/Store.css';
 
 function Shippments(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([{
-    name: 'Jogn Doe',
-    city: 'San Hose',
-    country: 'US',
-    state: 'LA',
-    postal_code: '31230',
-    line1: 'Main Street',
-    shipped: 1,
-    updated_at: '13-07-1990'
-  }]),
-      _useState2 = _slicedToArray(_useState, 2),
-      shippments = _useState2[0],
-      setShippments = _useState2[1];
-
   var sortShippments = function sortShippments(sortFun) {
     var sorted = _toConsumableArray(shippments);
 
@@ -56560,8 +56409,8 @@ function Shippments(props) {
     sort: sortShippments,
     columns: props.tabelColumns,
     filter: props.filter,
-    data: shippments,
-    row: _Shippment__WEBPACK_IMPORTED_MODULE_3__["default"],
+    data: props.list,
+    row: _Shippment__WEBPACK_IMPORTED_MODULE_2__["default"],
     rowProps: {
       columns: props.tabelColumns
     }
@@ -56776,13 +56625,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Store(props) {
+  var _props$stores = props.stores,
+      list = _props$stores.list,
+      active = _props$stores.active;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Store"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Store:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    on: !Boolean(list.length),
     panel: _StoreSelect__WEBPACK_IMPORTED_MODULE_2__["default"],
     element: _InputElements_Button__WEBPACK_IMPORTED_MODULE_3__["default"],
     elementProps: {
-      name: props.active ? props.active.name : '.....',
+      name: active ? active.name : '.....',
       className: "StoreBtn"
     }
   }));
@@ -57642,7 +57495,7 @@ function Table(props) {
     entry = applyFilter(entry);
 
     if (entry) {
-      entry.index = i;
+      entry.idx = i;
       return props.panel ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
         key: "TableEntry".concat(i),
         panel: props.panel,
@@ -58030,29 +57883,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
 /* harmony import */ var _Transaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Transaction */ "./resources/js/components/Transactions/Transaction.js");
-/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
 function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 function _unsupportedIterableToArray(o, minLen) {
@@ -58062,6 +57898,14 @@ function _unsupportedIterableToArray(o, minLen) {
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function _arrayLikeToArray(arr, len) {
@@ -58074,61 +57918,10 @@ function _arrayLikeToArray(arr, len) {
   return arr2;
 }
 
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
 
 
-
-
- // import '../css/TextInput.css';
 
 function Transactions(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([{
-    service: 'paypal',
-    transaction_id: '151a6d51a6d1as',
-    customer_id: 'asdasdad',
-    customer_email: 'asdasd@.gabu.com',
-    amount: '500',
-    currency: 'USD',
-    status: 'completed',
-    created_at: '2020-12-14 15:55:22'
-  }]),
-      _useState2 = _slicedToArray(_useState, 2),
-      transactions = _useState2[0],
-      setTransactions = _useState2[1]; // useEffect( () => {
-  //     getTransactions()
-  //     .then( res => setTransactions(res.data))
-  // }, [])
-
-
   var sortTransactions = function sortTransactions(sortFun) {
     var sorted = _toConsumableArray(transactions);
 
@@ -58141,7 +57934,7 @@ function Transactions(props) {
     sort: sortTransactions,
     columns: props.tabelColumns,
     filter: props.filter,
-    data: transactions,
+    data: props.list,
     row: _Transaction__WEBPACK_IMPORTED_MODULE_2__["default"],
     rowProps: {
       columns: props.tabelColumns
@@ -58401,17 +58194,16 @@ module.exports = "/images/SQCLogo.svg?d80bcea3e1feda67bb55bb3739360a45";
 
 /***/ }),
 
-/***/ "./resources/js/store/stores.js":
-/*!**************************************!*\
-  !*** ./resources/js/store/stores.js ***!
-  \**************************************/
-/*! exports provided: stores */
+/***/ "./resources/js/store/products.js":
+/*!****************************************!*\
+  !*** ./resources/js/store/products.js ***!
+  \****************************************/
+/*! exports provided: products */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stores", function() { return stores; });
-/* harmony import */ var _components_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "products", function() { return products; });
 function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -58496,6 +58288,141 @@ function _defineProperty(obj, key, value) {
   return obj;
 }
 
+var initalState = {
+  list: []
+};
+
+var reducer = function reducer(state, action) {
+  switch (action.type) {
+    case "GET":
+      return _objectSpread(_objectSpread({}, state), action.payload.products);
+
+    case "CREATE":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        list: [action.payload.created].concat(_toConsumableArray(state.list))
+      });
+
+    case "EDIT":
+      var editedList = _toConsumableArray(state.list);
+
+      editedList[action.payload.idx] = action.payload.updated;
+      return _objectSpread(_objectSpread({}, state), {}, {
+        list: editedList
+      });
+
+    case "DELETE":
+      var deletedList = _toConsumableArray(state.list);
+
+      deletedList.splice(action.payload.idx, 1);
+      return _objectSpread(_objectSpread({}, state), {}, {
+        list: deletedList
+      });
+
+    default:
+      return state;
+  }
+};
+
+var products = {
+  state: initalState,
+  reducer: reducer
+};
+
+/***/ }),
+
+/***/ "./resources/js/store/stores.js":
+/*!**************************************!*\
+  !*** ./resources/js/store/stores.js ***!
+  \**************************************/
+/*! exports provided: stores */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stores", function() { return stores; });
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+}
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
 
 var initalState = {
   active: undefined,
@@ -58562,61 +58489,16 @@ var stores = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "user", function() { return user; });
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
 var initalState = null;
 
 var reducer = function reducer(state, action) {
   switch (action.type) {
     case "LOGIN":
-      return _objectSpread({}, action.payload.user);
+      return {
+        info: action.payload.user,
+        transactions: action.payload.transactions,
+        shippments: action.payload.shippments
+      };
 
     case "LOGOUT":
       window.location.replace(window.location.origin);

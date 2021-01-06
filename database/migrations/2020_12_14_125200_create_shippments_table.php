@@ -16,6 +16,7 @@ class CreateShippmentsTable extends Migration
         Schema::create('shippments', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('transaction_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('name')->nullable();
             $table->string('city')->nullable();
             $table->string('country')->nullable();

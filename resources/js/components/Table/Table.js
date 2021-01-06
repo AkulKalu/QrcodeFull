@@ -41,7 +41,7 @@ export default function Table(props) {
     let tableData = props.data.slice(slice.start, slice.end).map((entry, i) => {
             entry = applyFilter(entry);
             if(entry) {
-                entry.index = i;
+                entry.idx = i;
                 return props.panel ?  <PanelSwitch  
                             key={`TableEntry${i}`}
                             panel = {props.panel} 

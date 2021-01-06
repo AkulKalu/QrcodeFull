@@ -1,25 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './scss/Product.scss';
 import Toggle from '../Shared/Toggle'
 import QrCodeImg from '../../storage/SQCLogo.svg';
-import {toogleActive, generateQrCode} from '../../Functions/server';
+import {generateQrCode} from '../../Functions/server';
 import {downloadFile} from '../../Functions/actions';
+import {store} from '../HOC/StateProvider';
 
 export default function Product(props) {
+    const {dispatch} = useContext(store);
 
     const setActiveStatus = () => {
-        toogleActive(props.data.id, {
+        dispatch.products.toogle(props.data.id, {
             store_id: props.data.store_id,
             active:  props.data.active ? 0 : 1
-        }) 
-        .then( res =>{
-            props.updateProduct(res.data, props.data.index)
-        })
-      
+        }); 
     }
     const downloadQrCode = () => {
-        // generateQrCode(props.data.store_id, props.data.id)
-        // .then( res =>downloadFile(res.data, props.data.name, 'svg' ))
+        generateQrCode(props.data.store_id, props.data.id)
+        .then( res =>downloadFile(res.data, props.data.name, 'svg' ))
     }
  
     

@@ -8,15 +8,17 @@ import './scss/Store.scss';
 
 
 export default function Store(props) {
-    
+    const {list, active} = props.stores;
+
     return <div className="Store">
                 <span>Store:</span>
                 <PanelSwitch 
+                    on = {!Boolean(list.length)}
                     panel={StoreSelect} 
                     element= {Button}
                     elementProps= {
                         {
-                            name: props.active ? props.active.name : '.....' ,
+                            name: active ? active.name : '.....' ,
                             className:"StoreBtn"
                         }
                     }>
