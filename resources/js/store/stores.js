@@ -1,7 +1,7 @@
 
 const initalState = {
     active: undefined,
-    list: []
+    list: null
 };
 
 const reducer = (state, action) => {

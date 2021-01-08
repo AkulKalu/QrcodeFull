@@ -4,9 +4,10 @@ import Panel from './ProductPanel';
 import PanelSwitch from '../HOC/PanelSwitch';
 import Button from '../InputElements/Button';
 import Table from '../Table/Table'; 
+import AsSwitch from '../HOC/AsSwitch'; 
 import WithValidator from '../HOC/WithValidator'; 
 
-let ProductPanel = WithValidator(Panel);
+let ProductSwitch = AsSwitch(WithValidator(Panel), Product);
 
 export default function Products(props) {
     
@@ -15,10 +16,7 @@ export default function Products(props) {
         sorted.sort(sortFun);
         setProducts(sorted);
     }
-    const categoryList = () => {
-        return new Set(props.list.map( prod => prod.category));
-    }
-   
+  
    
     
     return <Fragment>
@@ -27,26 +25,24 @@ export default function Products(props) {
                     columns = {props.tabelColumns}
                     data={props.list}
                     sort = {sortProducts}
-                    filter={props.filter}
-                    row = {Product}
-                    rowProps = {
-                        {
-                            columns: props.tabelColumns,
+                    row = {ProductSwitch}
+                    rowProps= {{
+                        button: {
+                            columns: props.tabelColumns 
+                        },
+                        view : { },
+                        atOpen : {
+                            animate: 'fadeIn 0.3s forwards'
+                        },
+                        atClose : {
+                            animate: 'slide-out-right 0.5s forwards',
                         }
-                    }
-                    panel={ProductPanel}
-                    panelProps = {
-                        {
-                            categories: categoryList(),
-                            buttons : ['edit', 'remove']
-                        }
-                    }
+                    }}
+                   
                     controls = { <PanelSwitch 
-                        panel={ProductPanel} 
+                        panel={Panel} 
                         panelProps={{
                             create: true,
-                            categories: categoryList(),
-                            buttons : ['add']
                         }}
                         element= {Button}
                         elementProps = {{

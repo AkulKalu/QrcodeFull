@@ -12,9 +12,8 @@
     padding: 1vh;
     height: 60%;
     width: 60%;
-    backdrop-filter: blur(5px);
     box-shadow: 0 0 20px rgb(250, 251, 252);
-    background-color: rgba(236, 238, 243, 0.699);
+    background-color: rgba(236, 238, 243, 0.938);
 }
 .StoresList {
     display: flex;
@@ -24,7 +23,7 @@
         position: relative;
         overflow: hidden;
         box-shadow: 2px 2px 5px gray;
-        font-size: 2.4vh;
+        font-size: 2.3vh;
         min-width: 20%;
         margin: 1vh 1vh;
         cursor: pointer; 

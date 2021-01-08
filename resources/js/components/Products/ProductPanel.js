@@ -89,9 +89,9 @@ export default function ProductPanel(props)  {
             close(res);    
         })
     }
-    const panelButtons = {
-        add: { 
-            name : 'ADD' ,
+    const buttons = {
+        create: { 
+            name : 'CREATE' ,
             onClick:   create,
         },
         edit: { 
@@ -102,12 +102,18 @@ export default function ProductPanel(props)  {
             name: 'REMOVE',
             onClick: remove
         },
+        close: {
+            name: 'CLOSE',
+            onClick: props.closePanel
+        }
     };
-    
+
+    let editButtons = ['edit', 'remove', 'close'].map( btn => buttons[btn]);
+    let createButtons = ['create', 'close'].map( btn => buttons[btn]);
+    console.log(typeof props.data.theme, colorPallete);
     return <Panel 
                 name = {props.create ? "CREATE PRODUCT" : "EDIT PRODUCT"}
-                buttons={props.buttons.map( btn => panelButtons[btn])}
-                onClose = {props.closePanel} 
+                buttons={props.create ? createButtons : editButtons}
                 right={
                     <ProductPreview 
                         colorPallete={colorPallete} 
@@ -123,7 +129,7 @@ export default function ProductPanel(props)  {
                                             wrap = "Group-col"
                                             onChange = {e => inputChange(e.target.value, 'category')}
                                             name = "Category"
-                                            dataList = {Array.from(props.categories.keys())}
+                                            dataList = {state.products.categories}
                                             value={productData.category} 
                                             error = {props.errors['category']}
                                         />

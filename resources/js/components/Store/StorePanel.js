@@ -14,9 +14,9 @@ export default function StoreMenu(props) {
             });
         }
       
-        const close = statusOk => {
+        const close = (statusOk) => {
             if(statusOk) {
-                props.onClose();
+                props.close();
             }
         }
 
@@ -60,14 +60,19 @@ export default function StoreMenu(props) {
                 name: "REMOVE",
                 onClick : remove,
             },
+            close: {
+                name : "CLOSE",
+                onClick : props.close
+            }
         }
 
-        let panelButtons = props.buttons.map( btn => buttons[btn])
+        let editButtons = ['edit', 'remove', 'close'].map( btn => buttons[btn]);
+        let createButtons = ['create', 'close'].map( btn => buttons[btn]);
 
         return <Panel 
                     name = {props.store ? 'EDIT STORE' : 'CREATE STORE'} 
-                    buttons={panelButtons}
-                    onClose = {props.onClose}
+                    buttons={props.create ? createButtons : editButtons}
+                    switchAction = {props.switchAction}
                     left = {
                         <Fragment>
                             <h3>Store</h3>

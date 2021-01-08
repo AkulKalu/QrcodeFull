@@ -1,26 +1,22 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import './scss/StoreSelect.scss';
 import {store} from '../HOC/StateProvider';
+import StorePanel from './StorePanel';
+import AsSwitch from '../HOC/AsSwitch';
+import WithValidator from '../HOC/WithValidator';
+
+let PanelSwitch = AsSwitch(WithValidator(StorePanel));
 
 export default function SelectPanel(props) {
-    const [animation, animate] = useState({animation: 'fadeIn 0.1s forwards', onEnd: null});
     const {state, dispatch} = useContext(store);
- 
+
     const switchStore = (store = false) => {
-       animate({
-            animation: 'fadeOut 0.2s forwards', 
-            onEnd:  () => { 
-                props.closePanel();
-                dispatch.stores.switch(store)
-            } 
-        });
+        dispatch.stores.switch(store);
+        props.close()
     }
     const backdropClose = e => {
         if(e.target.id === 'backdrop') {
-            animate({
-                animation: 'fadeOut 0.2s forwards', 
-                onEnd: props.closePanel
-            });
+            props.close()
         }
     }
   
@@ -29,26 +25,50 @@ export default function SelectPanel(props) {
         return <div  key={`storeLI${i}`} className="StoreItem"> 
                         <div className="SelectBtn" onClick={() => switchStore(store)}  
                         >{store.name}</div>
-                        <div onClick={() =>props.setMode({action:'edit', object:store})} className="EditBtn">ED</div>
+                        <PanelSwitch
+                            button={{
+                                name : 'ED',
+                                className:"EditBtn",
+                            }}
+                            view = {{
+                                store : store
+                            }}
+                            atOpen = {{
+                                animate: 'fadeIn 0.3s forwards'
+                            }}
+                            atClose = {{
+                                animate: 'slide-out-right 0.5s forwards',
+                            }}
+                        />
                    </div>;
         
     });
     return <div 
                 onClick={backdropClose} 
                 id="backdrop" 
-                className="BackdropS">
+                className="BackdropS"
+                >
                 <div 
-                    style={animation} 
-                    onAnimationEnd={animation.onEnd} 
+                    {...props.switchAction}
                     className="SelectPanel">
                     <div  className="StoresList">
                         {storeList}
                         <div className="StoreItem">
-                            <div 
-                                className="SelectBtn" 
-                                onClick={() => props.setMode({action: 'create'})} >
-                                    +
-                            </div>
+                             <PanelSwitch
+                                button={{
+                                    name : '+',
+                                    className:"SelectBtn",
+                                }}
+                                view = {{
+                                    create : true
+                                }}
+                                atOpen = {{
+                                    animate: 'fadeIn 0.3s forwards'
+                                }}
+                                atClose = {{
+                                    animate: 'slide-out-right 0.5s forwards',
+                                }}
+                        />
                         </div>
                     </div>
                 </div>

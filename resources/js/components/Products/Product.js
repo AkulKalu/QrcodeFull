@@ -20,7 +20,7 @@ export default function Product(props) {
         .then( res =>downloadFile(res.data, props.data.name, 'svg' ))
     }
  
-    
+    console.log(props);
     let columns = Object.keys(props.columns).map((key, i) => {
         let col = props.columns[key];
         const cell = (cont, props) => {

@@ -1,10 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import './scss/Search.scss';
+import {store} from '../HOC/StateProvider';
+
 
 
 export default function SearchBar(props) {
     const [searchVal, setSearchVal] = useState('');
     const [searchFilters, setSearchFilters] = useState({});
+    const {dispatch} = useContext(store)
 
     useEffect( () => {
         setSearchVal('');
@@ -16,21 +19,15 @@ export default function SearchBar(props) {
                 filters[col] = colData.search
             }
         });
-        console.log(filters);
         setSearchFilters(filters);
         
     }, [props.table]);
 
     useEffect( () => {
-        props.setFilter(searchVal.length ? {search: searchVal.toLowerCase(), applyTo: searchFilters} : null);
-    }, [searchVal]);
+        let filtersOn = Object.keys(searchFilters).reduce((acc, cur) => acc + Number(searchFilters[cur]), 0);
+        dispatch.search({value: searchVal.toLowerCase(), filters: filtersOn ? searchFilters : null} );
+    }, [searchVal, searchFilters]);
 
-    useEffect( () => {
-        if(searchVal.length) {
-            let filtersOn = Object.keys(searchFilters).reduce((acc, cur) => acc + Number(searchFilters[cur]), 0);
-            props.setFilter({search: searchVal.toLowerCase(), applyTo: filtersOn ? searchFilters : null});
-        }
-    }, [searchFilters]);
 
     const filterActive = filter => {
         setSearchFilters({
@@ -47,7 +44,6 @@ export default function SearchBar(props) {
                 <label htmlFor="search">search</label>
                 <div className="Bar">
                     <input onBlur={e=> {
-                      
                     }} onChange={e => setSearchVal(e.target.value)} value={searchVal} name="search" type="text" ></input>
                     <div className="Filters">
                        {filters}

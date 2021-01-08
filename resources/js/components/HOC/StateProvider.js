@@ -1,4 +1,4 @@
-import React, {createContext, useReducer} from 'react';
+import React, {createContext, useReducer, useState} from 'react';
 import {user} from '../../store/user';
 import {stores} from '../../store/stores';
 import {products} from '../../store/products';
@@ -20,10 +20,10 @@ function StateProvider({children}) {
     const [userState, userDispatch] = useReducer(user.reducer, user.state);
     const [storesState, storesDispatch] = useReducer(stores.reducer, stores.state);
     const [productsState, productsDispatch] = useReducer(products.reducer, products.state);
+    const [search, setSearch] = useState({value: '', filters: null});
 
     const userActions = {
         login: () => server.login().then(res => {
-            console.log(res);
             dispatcher( userDispatch, 'LOGIN', res)
             dispatcher( storesDispatch, 'GET', res)
             return dispatcher(productsDispatch, 'GET', res)
@@ -69,7 +69,6 @@ function StateProvider({children}) {
             return dispatcher(productsDispatch, 'EDIT', res)
         }),
         delete: (prodId, storeId, idx) => server.deleteProduct(prodId, storeId).then(res => {
-            console.log(res);
             res.data['idx'] = idx;
             return dispatcher(productsDispatch, 'DELETE', res)
         }),
@@ -193,6 +192,7 @@ function StateProvider({children}) {
     }}
     const globalState =  {
         state: {
+            search: search,
             tabelColumns: tabelColumns,
             user : userState,
             stores: storesState,
@@ -201,7 +201,8 @@ function StateProvider({children}) {
         dispatch: {
             user : userActions,
             stores: storesActions,
-            products: productActions
+            products: productActions,
+            search: setSearch,
         }
     }
 

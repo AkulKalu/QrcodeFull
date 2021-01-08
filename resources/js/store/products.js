@@ -1,32 +1,35 @@
+import { type } from "jquery";
 
 const initalState = {
     list: []
 };
 
 const reducer = (state, action) => {
-    
-    switch (action.type) {
+    const {type, payload } = action;
+    console.log(payload);
+    switch (type) {
       case "GET":
             return {
                ...state,
-               ...action.payload.products
+               ...payload.products,
+               categories : payload.products.list.map( prod => prod.category)
             }
        
         case "CREATE":
           return {
             ...state,
-            list: [action.payload.created, ...state.list],
+            list: [payload.created, ...state.list],
           }
         case "EDIT":
           let editedList = [...state.list];
-          editedList[action.payload.idx] = action.payload.updated;
+          editedList[payload.idx] = payload.updated;
           return {
             ...state,
             list: editedList,
           }
       case "DELETE":
           let deletedList = [...state.list];
-          deletedList.splice(action.payload.idx, 1);
+          deletedList.splice(payload.idx, 1);
           return {
             ...state,
             list: deletedList,
