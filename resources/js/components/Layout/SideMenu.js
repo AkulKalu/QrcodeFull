@@ -5,20 +5,20 @@ import Stats from '../Table/Stats';
 
 
 
-export default function SideMenu(props) {
+export default function SideMenu({stats, switchTable}) {
     const [activeBtn, setActiveBtn] = useState(["SMbutton SMActive", "SMbutton", "SMbutton"]);
  
     const buttonClick = (table,ind) => {
         setActiveBtn(activeBtn.map( (val, i)=> i === ind ?  "SMbutton SMActive":  "SMbutton" ));
-        props.switchTable(table);
+        switchTable(table);
     }
     let btns = ['Products', 'Transactions', 'Shippments'].map( (name, i) => {
-        let btn = <Button key={`SmBtn${i}`} className={activeBtn[i]} name={name} onClick={ () => buttonClick(i+1, i) }  />
+        let btn = <Button key={`SmBtn${i}`} className={activeBtn[i]} name={name} onClick={ () => buttonClick(name, i) }  />
        
-        return props.stats[i+1] ? 
+        return stats[i+1] ? 
         <Fragment key={`SmBtn${i}`}>
             {btn}
-            <div className="StatsDisplay" ><Stats show={props.stats[i + 1]}/></div>   
+            <div className="StatsDisplay" ><Stats show={stats[i + 1]}/></div>   
         </Fragment> : btn
     } )
     return <div >

@@ -7,6 +7,7 @@ import SideMenu from './SideMenu';
 import Products from '../Products/Products';
 import Transactions from '../Transactions/Transactions';
 import Shippments from '../Shippments/Shippments';
+import Table from '../Table/Table';
 import SearchBar from './SearchBar';
 import './scss/ControlPanel.scss';
 import ReactDOM from 'react-dom';
@@ -14,87 +15,44 @@ import {store, StateProvider} from '../HOC/StateProvider';
 
 function ControlPanel() {
      const [loading, setLoading] = useState(false);
-     const [table, setTable] = useState(1);
-     const [filter, setFilter] = useState(null);
-     
+     const [table, setTable] = useState('Products');
      const {state, dispatch} = useContext(store);
 
     useEffect(()=> {
         dispatch.user.login()
     },[])
 
-    let stats = {
-        1 : {
-            total: {
-                value: 10,
-            },
-            active: {
-                value: 1,
-            },
-            categories: {
-                value: 1,
-            }
+    
+    
+    const tables = {
+        Transactions : {
+            Component: Transactions,
+            list: state.user.transactions.list,
+            columns: state.tabelColumns.Transactions,
+            stats: state.user.transactions.stats
         },
-        2 : {
-            today: {
-                value: 1,
-                color: 'green',
-            },
-            income: {
-                value: '10$',
-                color: 'green',
-            },
-            total: {
-                value: 1,
-                color: 'green',
-            }
+        Products: {
+            Component: Products,
+            list: state.products.list,
+            columns: state.tabelColumns.Products,
+            stats: state.products.stats
         },
-        3 : {
-            pending: {
-                value: 5,
-                color: 'green'
-            } ,
-            sent: {
-                value: 5,
-                color: 'green'
-            }
-            
-        }
+        Shippments: {
+            Component: Shippments,
+            list: state.user.shippments.list,
+            columns: state.tabelColumns.Shippments,
+            stats: state.user.shippments.stats
+        },
     }
-   
    
     const switchTable = table => {
-        setFilter(null);
+        dispatch.search({value:'', filters: null});
         setTable(table);
     }
-
-    const displayTable = () => {
-        switch (table) {
-            case 2:
-                return <Transactions
-                            filter = {filter}
-                            list = {state.user.transactions.list}
-                            tabelColumns = {state.tabelColumns[2]}
-                       />
-            case 3:
-                return <Shippments
-                            filter = {filter}
-                            list = {state.user.shippments.list}
-                            tabelColumns = {state.tabelColumns[3]}
-                        />
-            default:
-                return <Products
-                            filter = {filter}
-                            list = {state.products.list}
-                            tabelColumns = {state.tabelColumns[1]}
-                       />
-        }
-    }
-    
-
+ 
     return <Fragment  >
                 {loading ?  <LoadScreen panelLoaded={()=> setLoading(false)} user={state.user} /> : null }
-                {state.user ? 
+                {state.user.info ? 
                 <div className="CPanel">
                     <aside>
                         <div className="Logo">
@@ -106,7 +64,7 @@ function ControlPanel() {
                         <div className="Menu">
                             <SideMenu 
                                 switchTable = {switchTable}
-                                stats = {{[table] : stats[table]}}
+                                stats = {{[table] : tables[table].stats}}
                             />
                         </div>
             
@@ -117,12 +75,12 @@ function ControlPanel() {
                                 <Store stores={state.stores} />
                             </div>
                             <div className="BarSearch">
-                                <SearchBar table={table} columns={state.tabelColumns[table]} setFilter={setFilter}  />
+                                <SearchBar table={table} columns={state.tabelColumns[table]} search={dispatch.search} />
                             </div>
                         </div>
                       
                         <div className="TableCont">
-                            {displayTable()}
+                            <Table display={tables[table]} search={state.search} />
                         </div>
                     </main>
                 </div>: null

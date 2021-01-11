@@ -24,9 +24,9 @@ function StateProvider({children}) {
 
     const userActions = {
         login: () => server.login().then(res => {
-            dispatcher( userDispatch, 'LOGIN', res)
-            dispatcher( storesDispatch, 'GET', res)
-            return dispatcher(productsDispatch, 'GET', res)
+            dispatcher(storesDispatch, 'GET', res)
+            dispatcher(productsDispatch, 'GET', res)
+            return dispatcher( userDispatch, 'LOGIN', res)
         }),
         logout: () => server.logout().then(res => {
             return dispatcher(  userDispatch, 'LOGOUT')
@@ -74,43 +74,43 @@ function StateProvider({children}) {
         }),
     }
     let tabelColumns = {
-        1: {
-            Image: {
-                dataKey: 'image_url'
-            },
-            Category: {
-                sort:true,
-                dataKey: 'category',
-                search : false
-            },
-            Model: {
-                sort:true,
-                dataKey: 'model',
-                search : true,
-            },
-            Manufacturer : {
-                sort:true,
-                dataKey: 'manufacturer',
-                search : true,
-            },
-            Price : {
-                sort:true,
-                dataKey: 'price',
-                search : false
-            },
-            Stock : {
-                sort: true,
-                dataKey: 'stock',
-                search : true,
-            },
-            Active : {
-                sort:true,
-                dataKey: 'active'
-            },
-            QrCode : {
-            }
+        Products: {
+                Image: {
+                    dataKey: 'image_url'
+                },
+                Category: {
+                    sort:true,
+                    dataKey: 'category',
+                    search : false
+                },
+                Model: {
+                    sort:true,
+                    dataKey: 'model',
+                    search : true,
+                },
+                Manufacturer : {
+                    sort:true,
+                    dataKey: 'manufacturer',
+                    search : true,
+                },
+                Price : {
+                    sort:true,
+                    dataKey: 'price',
+                    search : false
+                },
+                Stock : {
+                    sort: true,
+                    dataKey: 'stock',
+                    search : true,
+                },
+                Active : {
+                    sort:true,
+                    dataKey: 'active'
+                },
+                QrCode : {
+                }
         }, 
-        2 : {
+        Transactions : {
             Date : {
                 sort:true,
                 dataKey: 'created_at'
@@ -150,7 +150,7 @@ function StateProvider({children}) {
                 dataKey: 'status'
             }
         },
-        3 : {
+        Shippments : {
             Name: {
                 sort:true,
                 dataKey: 'name',

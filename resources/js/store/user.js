@@ -1,6 +1,14 @@
 
 
-const initalState = null;
+const initalState = {
+  info: null,
+  transactions: {
+    list : []
+  },
+  shippments: {
+    list: []
+  }
+}
 
 const reducer = (state, action) => {
    

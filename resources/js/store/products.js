@@ -1,5 +1,3 @@
-import { type } from "jquery";
-
 const initalState = {
     list: []
 };

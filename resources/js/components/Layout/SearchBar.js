@@ -1,31 +1,27 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import './scss/Search.scss';
-import {store} from '../HOC/StateProvider';
 
-
-
-export default function SearchBar(props) {
+export default function SearchBar({columns, table, search }) {
     const [searchVal, setSearchVal] = useState('');
     const [searchFilters, setSearchFilters] = useState({});
-    const {dispatch} = useContext(store)
-
+    
     useEffect( () => {
-        setSearchVal('');
         let filters = {};
-
-        Object.keys(props.columns).forEach( col => {
-            let colData = props.columns[col]
+        Object.keys(columns).forEach( col => {
+            let colData = columns[col]
             if( 'search' in colData) {
                 filters[col] = colData.search
             }
         });
+
+        setSearchVal('');
         setSearchFilters(filters);
         
-    }, [props.table]);
+    }, [table]);
 
     useEffect( () => {
         let filtersOn = Object.keys(searchFilters).reduce((acc, cur) => acc + Number(searchFilters[cur]), 0);
-        dispatch.search({value: searchVal.toLowerCase(), filters: filtersOn ? searchFilters : null} );
+        search({value: searchVal.toLowerCase(), filters: filtersOn ? searchFilters : null} );
     }, [searchVal, searchFilters]);
 
 

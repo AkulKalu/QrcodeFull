@@ -1,33 +1,37 @@
 import React, {Fragment} from 'react';
-import Table from '../Table/Table';
 import Shippment from './Shippment';
+import AsSwitch from '../HOC/AsSwitch'; 
 
+let Row = AsSwitch(Shippment);
 
-
-
-
-export default function Shippments(props) {
+export default function Shippments({columns, list, slice, applyFilter}) {
    
-
-    const sortShippments = sortFun => {
-        let sorted = [...shippments];
-        sorted.sort(sortFun);
-        setShippments(sorted);
-    }
+    let rows = list.slice(slice.start, slice.end).map((entry, i) => {
+        entry = applyFilter(entry);
+        if(entry) {
+            entry.idx = i;
+            return <Row 
+                        key={`row${i}`}
+                        button = {{
+                            columns : columns,
+                            data : entry
+                        }}
+                        view = {{
+                            data: entry
+                        }}
+                        atOpen = {{
+                            animate: 'fadeIn 0.3s forwards'
+                        }}
+                        atClose = {{
+                            animate: 'slide-out-right 0.5s forwards',
+                        }}
+                    />
+        }
+    })
   
 
     return <Fragment>
-            <Table 
-                message = "No Shipments"
-                sort = {sortShippments}
-                columns = {props.tabelColumns}
-                filter= {props.filter}
-                data= {props.list}
-                row = {Shippment}
-                rowProps = {{
-                    columns: props.tabelColumns,
-                }}
-            />
+            {rows.length ? rows : <span className="Message">No Shippments</span>}
     </Fragment>
 }
 

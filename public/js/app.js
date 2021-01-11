@@ -64501,114 +64501,6 @@ function AsSwitch(ViewCmp) {
 
 /***/ }),
 
-/***/ "./resources/js/components/HOC/PanelSwitch.js":
-/*!****************************************************!*\
-  !*** ./resources/js/components/HOC/PanelSwitch.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PanelSwitch; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-
-function PanelSwitch(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      panelOpen = _useState2[0],
-      openPanel = _useState2[1];
-
-  var panelSwitch = function panelSwitch() {
-    openPanel(!panelOpen);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(props.element, _extends({}, props.elementProps, {
-    onClick: panelSwitch
-  })), panelOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(props.panel, _extends({
-    closePanel: panelSwitch
-  }, props.panelProps)) : null);
-}
-
-/***/ }),
-
 /***/ "./resources/js/components/HOC/StateProvider.js":
 /*!******************************************************!*\
   !*** ./resources/js/components/HOC/StateProvider.js ***!
@@ -64733,9 +64625,9 @@ function StateProvider(_ref) {
   var userActions = {
     login: function login() {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["login"]().then(function (res) {
-        dispatcher(userDispatch, 'LOGIN', res);
         dispatcher(storesDispatch, 'GET', res);
-        return dispatcher(productsDispatch, 'GET', res);
+        dispatcher(productsDispatch, 'GET', res);
+        return dispatcher(userDispatch, 'LOGIN', res);
       });
     },
     logout: function logout() {
@@ -64811,7 +64703,7 @@ function StateProvider(_ref) {
     }
   };
   var tabelColumns = {
-    1: {
+    Products: {
       Image: {
         dataKey: 'image_url'
       },
@@ -64846,7 +64738,7 @@ function StateProvider(_ref) {
       },
       QrCode: {}
     },
-    2: {
+    Transactions: {
       Date: {
         sort: true,
         dataKey: 'created_at'
@@ -64886,7 +64778,7 @@ function StateProvider(_ref) {
         dataKey: 'status'
       }
     },
-    3: {
+    Shippments: {
       Name: {
         sort: true,
         dataKey: 'name',
@@ -65383,12 +65275,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Products_Products__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Products/Products */ "./resources/js/components/Products/Products.js");
 /* harmony import */ var _Transactions_Transactions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Transactions/Transactions */ "./resources/js/components/Transactions/Transactions.js");
 /* harmony import */ var _Shippments_Shippments__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shippments/Shippments */ "./resources/js/components/Shippments/Shippments.js");
-/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/components/Layout/SearchBar.js");
-/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./scss/ControlPanel.scss */ "./resources/js/components/Layout/scss/ControlPanel.scss");
-/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
+/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/components/Layout/SearchBar.js");
+/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./scss/ControlPanel.scss */ "./resources/js/components/Layout/scss/ControlPanel.scss");
+/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -65476,95 +65369,52 @@ function _arrayWithHoles(arr) {
 
 
 
+
 function ControlPanel() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
       loading = _useState2[0],
       setLoading = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(1),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('Products'),
       _useState4 = _slicedToArray(_useState3, 2),
       table = _useState4[0],
       setTable = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
-      _useState6 = _slicedToArray(_useState5, 2),
-      filter = _useState6[0],
-      setFilter = _useState6[1];
-
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_12__["store"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_13__["store"]),
       state = _useContext.state,
       dispatch = _useContext.dispatch;
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     dispatch.user.login();
   }, []);
-  var stats = {
-    1: {
-      total: {
-        value: 10
-      },
-      active: {
-        value: 1
-      },
-      categories: {
-        value: 1
-      }
+  var tables = {
+    Transactions: {
+      Component: _Transactions_Transactions__WEBPACK_IMPORTED_MODULE_7__["default"],
+      list: state.user.transactions.list,
+      columns: state.tabelColumns.Transactions,
+      stats: state.user.transactions.stats
     },
-    2: {
-      today: {
-        value: 1,
-        color: 'green'
-      },
-      income: {
-        value: '10$',
-        color: 'green'
-      },
-      total: {
-        value: 1,
-        color: 'green'
-      }
+    Products: {
+      Component: _Products_Products__WEBPACK_IMPORTED_MODULE_6__["default"],
+      list: state.products.list,
+      columns: state.tabelColumns.Products,
+      stats: state.products.stats
     },
-    3: {
-      pending: {
-        value: 5,
-        color: 'green'
-      },
-      sent: {
-        value: 5,
-        color: 'green'
-      }
+    Shippments: {
+      Component: _Shippments_Shippments__WEBPACK_IMPORTED_MODULE_8__["default"],
+      list: state.user.shippments.list,
+      columns: state.tabelColumns.Shippments,
+      stats: state.user.shippments.stats
     }
   };
 
   var switchTable = function switchTable(table) {
-    setFilter(null);
+    dispatch.search({
+      value: '',
+      filters: null
+    });
     setTable(table);
-  };
-
-  var displayTable = function displayTable() {
-    switch (table) {
-      case 2:
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Transactions_Transactions__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          filter: filter,
-          list: state.user.transactions.list,
-          tabelColumns: state.tabelColumns[2]
-        });
-
-      case 3:
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shippments_Shippments__WEBPACK_IMPORTED_MODULE_8__["default"], {
-          filter: filter,
-          list: state.user.shippments.list,
-          tabelColumns: state.tabelColumns[3]
-        });
-
-      default:
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Products_Products__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          filter: filter,
-          list: state.products.list,
-          tabelColumns: state.tabelColumns[1]
-        });
-    }
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_LoadScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -65572,7 +65422,7 @@ function ControlPanel() {
       return setLoading(false);
     },
     user: state.user
-  }) : null, state.user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }) : null, state.user.info ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPanel"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Logo"
@@ -65584,7 +65434,7 @@ function ControlPanel() {
     className: "Menu"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
     switchTable: switchTable,
-    stats: _defineProperty({}, table, stats[table])
+    stats: _defineProperty({}, table, tables[table].stats)
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TopBar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -65593,17 +65443,20 @@ function ControlPanel() {
     stores: state.stores
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarSearch"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_10__["default"], {
     table: table,
     columns: state.tabelColumns[table],
-    setFilter: setFilter
+    search: dispatch.search
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableCont"
-  }, displayTable()))) : null);
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    display: tables[table],
+    search: state.search
+  })))) : null);
 }
 
 if (document.getElementById('ControlPanel')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_11___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_12__["StateProvider"], null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), " "), document.getElementById('ControlPanel'));
+  react_dom__WEBPACK_IMPORTED_MODULE_12___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_13__["StateProvider"], null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), " "), document.getElementById('ControlPanel'));
 }
 
 /***/ }),
@@ -65622,7 +65475,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _scss_Search_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Search.scss */ "./resources/js/components/Layout/scss/Search.scss");
 /* harmony import */ var _scss_Search_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Search_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -65732,8 +65584,11 @@ function _arrayWithHoles(arr) {
 
 
 
+function SearchBar(_ref) {
+  var columns = _ref.columns,
+      table = _ref.table,
+      search = _ref.search;
 
-function SearchBar(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
       searchVal = _useState2[0],
@@ -65744,26 +65599,23 @@ function SearchBar(props) {
       searchFilters = _useState4[0],
       setSearchFilters = _useState4[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_2__["store"]),
-      dispatch = _useContext.dispatch;
-
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    setSearchVal('');
     var filters = {};
-    Object.keys(props.columns).forEach(function (col) {
-      var colData = props.columns[col];
+    Object.keys(columns).forEach(function (col) {
+      var colData = columns[col];
 
       if ('search' in colData) {
         filters[col] = colData.search;
       }
     });
+    setSearchVal('');
     setSearchFilters(filters);
-  }, [props.table]);
+  }, [table]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var filtersOn = Object.keys(searchFilters).reduce(function (acc, cur) {
       return acc + Number(searchFilters[cur]);
     }, 0);
-    dispatch.search({
+    search({
       value: searchVal.toLowerCase(),
       filters: filtersOn ? searchFilters : null
     });
@@ -65901,7 +65753,7 @@ function SideMenu(props) {
       className: activeBtn[i],
       name: name,
       onClick: function onClick() {
-        return buttonClick(i + 1, i);
+        return buttonClick(name, i);
       }
     });
     return props.stats[i + 1] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
@@ -66144,7 +65996,6 @@ function Product(props) {
     });
   };
 
-  console.log(props);
   var columns = Object.keys(props.columns).map(function (key, i) {
     var col = props.columns[key];
 
@@ -66810,93 +66661,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Product__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Product */ "./resources/js/components/Products/Product.js");
 /* harmony import */ var _ProductPanel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ProductPanel */ "./resources/js/components/Products/ProductPanel.js");
-/* harmony import */ var _HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/PanelSwitch */ "./resources/js/components/HOC/PanelSwitch.js");
-/* harmony import */ var _InputElements_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../InputElements/Button */ "./resources/js/components/InputElements/Button.js");
-/* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
-/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
-/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
+/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
+/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
 
 
 
 
 
+var ProductSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_4__["default"])(_ProductPanel__WEBPACK_IMPORTED_MODULE_2__["default"]), _Product__WEBPACK_IMPORTED_MODULE_1__["default"]);
+function Products(_ref) {
+  var columns = _ref.columns,
+      list = _ref.list,
+      slice = _ref.slice,
+      applyFilter = _ref.applyFilter;
+  var rows = list.slice(slice.start, slice.end).map(function (entry, i) {
+    entry = applyFilter(entry);
 
-
-
-
-var ProductSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_7__["default"])(_ProductPanel__WEBPACK_IMPORTED_MODULE_2__["default"]), _Product__WEBPACK_IMPORTED_MODULE_1__["default"]);
-function Products(props) {
-  var sortProducts = function sortProducts(sortFun) {
-    var sorted = _toConsumableArray(products);
-
-    sorted.sort(sortFun);
-    setProducts(sorted);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    message: "Add Products",
-    columns: props.tabelColumns,
-    data: props.list,
-    sort: sortProducts,
-    row: ProductSwitch,
-    rowProps: {
-      button: {
-        columns: props.tabelColumns
-      },
-      view: {},
-      atOpen: {
-        animate: 'fadeIn 0.3s forwards'
-      },
-      atClose: {
-        animate: 'slide-out-right 0.5s forwards'
-      }
-    },
-    controls: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      panel: _ProductPanel__WEBPACK_IMPORTED_MODULE_2__["default"],
-      panelProps: {
-        create: true
-      },
-      element: _InputElements_Button__WEBPACK_IMPORTED_MODULE_4__["default"],
-      elementProps: {
-        name: 'Add Product',
-        className: 'ProductsAddBtn'
-      }
-    })
-  }));
+    if (entry) {
+      entry.idx = i;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ProductSwitch, {
+        key: "row".concat(i),
+        button: {
+          columns: columns,
+          data: entry
+        },
+        view: {
+          data: entry
+        },
+        atOpen: {
+          animate: 'fadeIn 0.3s forwards'
+        },
+        atClose: {
+          animate: 'slide-out-right 0.5s forwards'
+        }
+      });
+    }
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, rows.length ? rows : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "Message"
+  }, "Create Products"));
 }
 
 /***/ }),
@@ -67180,65 +66983,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Shippments; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
-/* harmony import */ var _Shippment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Shippment */ "./resources/js/components/Shippments/Shippment.js");
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
+/* harmony import */ var _Shippment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Shippment */ "./resources/js/components/Shippments/Shippment.js");
+/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
 
 
 
+var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__["default"])(_Shippment__WEBPACK_IMPORTED_MODULE_1__["default"]);
+function Shippments(_ref) {
+  var columns = _ref.columns,
+      list = _ref.list,
+      slice = _ref.slice,
+      applyFilter = _ref.applyFilter;
+  var rows = list.slice(slice.start, slice.end).map(function (entry, i) {
+    entry = applyFilter(entry);
 
-function Shippments(props) {
-  var sortShippments = function sortShippments(sortFun) {
-    var sorted = _toConsumableArray(shippments);
-
-    sorted.sort(sortFun);
-    setShippments(sorted);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    message: "No Shipments",
-    sort: sortShippments,
-    columns: props.tabelColumns,
-    filter: props.filter,
-    data: props.list,
-    row: _Shippment__WEBPACK_IMPORTED_MODULE_2__["default"],
-    rowProps: {
-      columns: props.tabelColumns
+    if (entry) {
+      entry.idx = i;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Row, {
+        key: "row".concat(i),
+        button: {
+          columns: columns,
+          data: entry
+        },
+        view: {
+          data: entry
+        },
+        atOpen: {
+          animate: 'fadeIn 0.3s forwards'
+        },
+        atClose: {
+          animate: 'slide-out-right 0.5s forwards'
+        }
+      });
     }
-  }));
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, rows.length ? rows : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "Message"
+  }, "No Shippments"));
 }
 
 /***/ }),
@@ -67989,26 +67770,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Table_Navigator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Table/Navigator */ "./resources/js/components/Table/Navigator.js");
 /* harmony import */ var _Table_TableHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Table/TableHeader */ "./resources/js/components/Table/TableHeader.js");
-/* harmony import */ var _HOC_PanelSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/PanelSwitch */ "./resources/js/components/HOC/PanelSwitch.js");
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
-/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scss/Table.scss */ "./resources/js/components/Table/scss/Table.scss");
-/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_scss_Table_scss__WEBPACK_IMPORTED_MODULE_5__);
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
+/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/Table.scss */ "./resources/js/components/Table/scss/Table.scss");
+/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_Table_scss__WEBPACK_IMPORTED_MODULE_3__);
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+}
 
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
 
-    return target;
-  };
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
 
-  return _extends.apply(this, arguments);
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 
 function ownKeys(object, enumerableOnly) {
@@ -68122,9 +67899,10 @@ function _arrayWithHoles(arr) {
 
 
 
+function Table(_ref) {
+  var display = _ref.display,
+      search = _ref.search;
 
-
-function Table(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     start: 0,
     end: 10
@@ -68133,13 +67911,23 @@ function Table(props) {
       slice = _useState2[0],
       setSlice = _useState2[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_4__["store"]),
-      state = _useContext.state;
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    fun: function fun(list) {
+      return list;
+    }
+  }),
+      _useState4 = _slicedToArray(_useState3, 2),
+      sort = _useState4[0],
+      setSort = _useState4[1];
+
+  var _display = display,
+      list = _display.list,
+      columns = _display.columns,
+      Component = _display.Component;
 
   var applyFilter = function applyFilter(entryData) {
-    var _state$search = state.search,
-        value = _state$search.value,
-        filters = _state$search.filters;
+    var value = search.value,
+        filters = search.filters;
 
     if (!value.length || !filters) {
       return entryData;
@@ -68155,7 +67943,7 @@ function Table(props) {
 
     for (var col in filters) {
       if (filters[col]) {
-        var dataKey = props.columns[col].dataKey;
+        var dataKey = columns[col].dataKey;
         var colValue = isNaN(entryData[dataKey]) ? entryData[dataKey] : entryData[dataKey].toString();
         var match = colValue.substr(0, value.length);
 
@@ -68171,40 +67959,27 @@ function Table(props) {
     return false;
   };
 
-  var tableData = props.data.slice(slice.start, slice.end).map(function (entry, i) {
-    entry = applyFilter(entry);
-
-    if (entry) {
-      entry.idx = i;
-      props.rowProps.view['data'] = entry;
-      props.rowProps.button['data'] = entry;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(props.row, _extends({
-        key: "TableEntry".concat(i)
-      }, props.rowProps, {
-        data: entry
-      }));
-    }
+  display = _objectSpread(_objectSpread({}, display), {}, {
+    list: _toConsumableArray(list).sort(sort.fun),
+    applyFilter: applyFilter,
+    slice: slice
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Nav"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Navigator__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    dataLength: props.data.length,
+    dataLength: list.length,
     position: slice,
     navigate: setSlice
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Controls"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "Btn"
-  }, props.controls))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_TableHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    columns: props.columns,
-    sort: props.sort
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_TableHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    columns: columns,
+    setSort: setSort
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Table"
-  }, tableData.length ? tableData : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "Message"
-  }, props.message)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, display)));
 }
 
 /***/ }),
@@ -68332,8 +68107,10 @@ function _arrayWithHoles(arr) {
 
 
 
-function TableHeader(props) {
-  var columnNames = Object.keys(props.columns);
+function TableHeader(_ref) {
+  var columns = _ref.columns,
+      setSort = _ref.setSort;
+  var columnNames = Object.keys(columns);
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(Object.fromEntries(columnNames.map(function (name) {
     return [name.toLowerCase(), true];
@@ -68364,11 +68141,13 @@ function TableHeader(props) {
     }
 
     setAscending(_objectSpread(_objectSpread({}, ascending), {}, _defineProperty({}, rule, !ascending[rule])));
-    props.sort(sortFun);
+    setSort({
+      fun: sortFun
+    });
   };
 
-  var columns = columnNames.map(function (name, i) {
-    var column = props.columns[name];
+  var columnHeads = columnNames.map(function (name, i) {
+    var column = columns[name];
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: "TBC".concat(i),
       onClick: column.sort ? function () {
@@ -68382,7 +68161,7 @@ function TableHeader(props) {
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableHeader"
-  }, columns);
+  }, columnHeads);
 }
 
 /***/ }),
@@ -68553,65 +68332,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Transactions; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
-/* harmony import */ var _Transaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Transaction */ "./resources/js/components/Transactions/Transaction.js");
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
+/* harmony import */ var _Transaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Transaction */ "./resources/js/components/Transactions/Transaction.js");
+/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
 
 
 
+var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__["default"])(_Transaction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+function Transactions(_ref) {
+  var columns = _ref.columns,
+      list = _ref.list,
+      slice = _ref.slice,
+      applyFilter = _ref.applyFilter;
+  var rows = list.slice(slice.start, slice.end).map(function (entry, i) {
+    entry = applyFilter(entry);
 
-function Transactions(props) {
-  var sortTransactions = function sortTransactions(sortFun) {
-    var sorted = _toConsumableArray(transactions);
-
-    sorted.sort(sortFun);
-    setTransactions(sorted);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    message: "No Transactions",
-    sort: sortTransactions,
-    columns: props.tabelColumns,
-    filter: props.filter,
-    data: props.list,
-    row: _Transaction__WEBPACK_IMPORTED_MODULE_2__["default"],
-    rowProps: {
-      columns: props.tabelColumns
+    if (entry) {
+      entry.idx = i;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Row, {
+        key: "row".concat(i),
+        button: {
+          columns: columns,
+          data: entry
+        },
+        view: {
+          data: entry
+        },
+        atOpen: {
+          animate: 'fadeIn 0.3s forwards'
+        },
+        atClose: {
+          animate: 'slide-out-right 0.5s forwards'
+        }
+      });
     }
-  }));
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, rows.length ? rows : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "Message"
+  }, "No Transactions"));
 }
 
 /***/ }),
@@ -69172,7 +68929,15 @@ var stores = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "user", function() { return user; });
-var initalState = null;
+var initalState = {
+  info: null,
+  transactions: {
+    list: []
+  },
+  shippments: {
+    list: []
+  }
+};
 
 var reducer = function reducer(state, action) {
   switch (action.type) {

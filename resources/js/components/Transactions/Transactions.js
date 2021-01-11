@@ -1,32 +1,39 @@
 import React, {Fragment} from 'react';
-import Table from '../Table/Table';
 import Transaction from './Transaction';
+import AsSwitch from '../HOC/AsSwitch'; 
+
+let Row = AsSwitch(Transaction);
 
 
-export default function Transactions(props) {
+export default function Transactions({columns, list, slice, applyFilter}) {
    
-  
-    const sortTransactions = sortFun => {
-        let sorted = [...transactions];
-        sorted.sort(sortFun);
-        setTransactions(sorted);
-    }
+    let rows = list.slice(slice.start, slice.end).map((entry, i) => {
+        entry = applyFilter(entry);
+        if(entry) {
+            entry.idx = i;
+            return <Row 
+                        key={`row${i}`}
+                        button = {{
+                            columns : columns,
+                            data : entry
+                        }}
+                        view = {{
+                            data: entry
+                        }}
+                        atOpen = {{
+                            animate: 'fadeIn 0.3s forwards'
+                        }}
+                        atClose = {{
+                            animate: 'slide-out-right 0.5s forwards',
+                        }}
+                    />
+        }
+    })
+    
    
  
     return <Fragment>
-                <Table 
-                    message = 'No Transactions'
-                    sort = {sortTransactions}
-                    columns={props.tabelColumns}
-                    filter= {props.filter}
-                    data={props.list}
-                    row = {Transaction}
-                    rowProps = {{
-                        columns: props.tabelColumns,
-                    }}
-                    
-                    
-                />
+               {rows.length ? rows : <span className="Message">No Transactions</span>}
             </Fragment> 
    
 }

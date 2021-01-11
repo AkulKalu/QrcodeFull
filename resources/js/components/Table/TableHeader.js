@@ -1,11 +1,11 @@
-import React, {useState, Fragment} from 'react';
+import React, {useState} from 'react';
 import './scss/TableHeader.scss';
 
 
 
-export default function TableHeader(props) {
+export default function TableHeader({columns, setSort}) {
 
-    let columnNames = Object.keys(props.columns);
+    let columnNames = Object.keys(columns);
     const [ascending , setAscending ] = useState(Object.fromEntries(columnNames.map( name => [name.toLowerCase(), true])));
 
     const sortBy = rule => {
@@ -27,11 +27,12 @@ export default function TableHeader(props) {
         } 
     
         setAscending({...ascending, [rule] : !ascending[rule] });
-        props.sort(sortFun);
+       
+        setSort({fun:sortFun});
     }
 
-    let columns = columnNames.map( (name, i) => {
-        let column = props.columns[name];
+    let columnHeads = columnNames.map( (name, i) => {
+        let column = columns[name];
         return  <div 
                     key={`TBC${i}`}
                     onClick={ column.sort ? ()=> sortBy(name.toLowerCase()) : null} 
@@ -41,7 +42,7 @@ export default function TableHeader(props) {
                 </div>
     } )
     return <div className="TableHeader">
-                {columns}
+                {columnHeads}
             </div>
 }
 
