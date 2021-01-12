@@ -5,6 +5,7 @@ import AsSwitch from '../HOC/AsSwitch';
 import WithValidator from '../HOC/WithValidator'; 
 
 let ProductSwitch = AsSwitch(WithValidator(Panel), Product);
+let AddProductSwitch = AsSwitch(WithValidator(Panel));
 
 export default function Products({columns, list, slice, applyFilter}) {
       let rows = list.slice(slice.start, slice.end).map((entry, i) => {
@@ -34,6 +35,28 @@ export default function Products({columns, list, slice, applyFilter}) {
     return <Fragment>
                {rows.length ? rows : <span className="Message">Create Products</span>}
             </Fragment>
+}
+
+
+
+
+export function AddProduct() {
+
+    return <AddProductSwitch 
+                button = {{
+                    name: 'add product',
+                    className: 'AddProduct',
+                }}
+                view = {{
+                    add:true
+                }}
+                atOpen = {{
+                    animate: 'fadeIn 0.3s forwards'
+                }}
+                atClose = {{
+                    animate: 'slide-out-right 0.5s forwards',
+                }}
+        />
 }
 
 

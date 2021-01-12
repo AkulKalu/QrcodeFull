@@ -40,7 +40,8 @@ class CPanelController extends Controller
                     'active'=> true,
                     'shipping'=> true,
                     'stock'=> 1,
-                    'currency'=> '$'
+                    'currency'=> '$',
+                    'theme' => 'image|rgb(255, 255, 255, 1)&font|rgb(196, 235, 108, 1)&background|rgb(16, 17, 17, 1)&buttons|rgb(196, 235, 108, 1)'
                 ],
                 'stats'=> [
                     'total'=> 0,

@@ -2,49 +2,15 @@ import React, {Fragment, useState, useContext} from 'react';
 import TextInput from '../InputElements/TextInput';
 import TextArea from '../InputElements/TextArea';
 import Panel from '../Shared/Panel';
-import ProductPreview from './ProductPreview';
+import ProductPreview, { themeCoder } from './ProductPreview';
 import Currency from '../InputElements/Currency';
 import Toggle from '../Shared/Toggle';
 import {store} from '../HOC/StateProvider';
 
-export default function ProductPanel(props)  {
+export default function ProductPanel({add, data, errors, close : closePanel, switchAction})  {
     const {state, dispatch} = useContext(store);
-    const [productData, setProductData] = useState(props.data ?   {...props.data} : {...state.products.new});
-    const [colorPallete, setcolorPallete] = useState(props.data ?  props.data.theme : {
-        image: {
-            rgbStr:'rgb(255, 255, 255, 1)',
-            rgb: {
-                r:255,
-                g:255,
-                b:255,
-                a:1,
-            }},
-        font: {
-            rgbStr:'rgb(196, 235, 108, 1)',
-            rgb: {
-                r:196,
-                g:235,
-                b:108,
-                a:1,
-            }},
-        background: {
-            rgbStr:'rgb(16, 17, 17, 1)',
-            rgb: {
-                r:16,
-                g:17,
-                b:17,
-                a:1,
-            }},
-        buttons: {
-            rgbStr:'rgb(196, 235, 108, 1)',
-            rgb: {
-                r:196,
-                g:235,
-                b:108,
-                a:1,
-            }},
-    });
-
+    const [productData, setProductData] = useState( add ? {...state.products.new} :  {...data} );
+    const [colorPallete, setcolorPallete] = useState( add ? theme.fromCode(state.products.new.theme)  :  data.theme);
     const inputChange = (value, key) => {
         setProductData({
             ...productData,
@@ -53,7 +19,7 @@ export default function ProductPanel(props)  {
     }
     const close = res => {
         if(res) {
-            props.closePanel();
+            closePanel();
         }
     }
 
@@ -61,7 +27,7 @@ export default function ProductPanel(props)  {
         const data = {
             store_id : state.stores.active.id,
             ...productData,
-            theme: colorPallete
+            theme: themeCoder.encode(colorPallete)
         };
         
         dispatch.products.create(data)
@@ -73,10 +39,10 @@ export default function ProductPanel(props)  {
     const edit = () => {
         const data = {
             store_id: productData.store_id,
-            theme: colorPallete
+            theme: themeCoder.encode(colorPallete)
         };
 
-        Object.keys(state.products.new).forEach(key => data[key] = productData[key]);
+        Object.keys(state.products.add).forEach(key => data[key] = productData[key]);
 
         dispatch.products.edit(productData.id, data, productData.idx)
         .then( res =>{
@@ -104,16 +70,17 @@ export default function ProductPanel(props)  {
         },
         close: {
             name: 'CLOSE',
-            onClick: props.closePanel
+            onClick: closePanel
         }
     };
 
     let editButtons = ['edit', 'remove', 'close'].map( btn => buttons[btn]);
     let createButtons = ['create', 'close'].map( btn => buttons[btn]);
-    console.log(typeof props.data.theme, colorPallete);
+    
     return <Panel 
-                name = {props.create ? "CREATE PRODUCT" : "EDIT PRODUCT"}
-                buttons={props.create ? createButtons : editButtons}
+                name = {add ? "CREATE PRODUCT" : "EDIT PRODUCT"}
+                buttons={add ? createButtons : editButtons}
+                switchAction = {switchAction}
                 right={
                     <ProductPreview 
                         colorPallete={colorPallete} 
@@ -131,7 +98,7 @@ export default function ProductPanel(props)  {
                                             name = "Category"
                                             dataList = {state.products.categories}
                                             value={productData.category} 
-                                            error = {props.errors['category']}
+                                            error = {errors['category']}
                                         />
                             </div>
                             <div className = "Group-half jus-end ">
@@ -151,7 +118,7 @@ export default function ProductPanel(props)  {
                                     onChange = {e => inputChange(e.target.value, 'price')}
                                     name = "Price"
                                     value={productData.price}  
-                                    error = {props.errors['price']}
+                                    error = {errors['price']}
                                 />
                                 <Currency current={productData.currency} onChange={inputChange}  />
                             </div>
@@ -161,7 +128,7 @@ export default function ProductPanel(props)  {
                                     onChange = {e => inputChange(e.target.value, 'stock')}
                                     name = "Stock"
                                     value={productData.stock}  
-                                    error = {props.errors['stock']}
+                                    error = {errors['stock']}
                                 />
                             </div>
                             </div> 
@@ -200,14 +167,14 @@ export default function ProductPanel(props)  {
                                 onChange = {e => inputChange(e.target.value, 'url')}
                                 name = "Product Link"
                                 value={productData.url}  
-                                error = {props.errors['url']}
+                                error = {errors['url']}
                             />
                             <TextInput
                                 wrap = "Group-col"
                                 onChange = {e => inputChange(e.target.value, 'image_url')}
                                 name = "Image Url"
                                 value={productData.image_url} 
-                                error = {props.errors['image_url']}
+                                error = {errors['image_url']}
                             />  
                             </Fragment>
                         }

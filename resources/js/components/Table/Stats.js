@@ -1,12 +1,11 @@
-import React, {useState, Fragment} from 'react';
+import React from 'react';
 import Stat from './Stat';
 import './scss/Stats.scss';
 
-export default function Stats(props) {
+export default function Stats({show}) {
 
-    let stats = Object.keys(props.show).map( (stat, i) => {
-        let data = props.show[stat]
-        return <Stat   key={`stat${i}`} title={stat} value={data.value} />
+    let stats = Object.keys(show).map( (stat, i) => {
+        return <Stat  key={`stat${i}`} title={stat} value={show[stat]} />
     } )
     return <div className="Stats">
         {stats}

@@ -9,7 +9,7 @@ export default function Table({display, search}) {
         end: 10
     })
     const [sort, setSort] = useState({fun: list => list});
-    const {list, columns, Component} = display
+    const {list, columns, Component, controls} = display
 
     const applyFilter = entryData => {
         const {value, filters} = search
@@ -23,7 +23,6 @@ export default function Table({display, search}) {
         </span>
        
         for (const col in filters) {
-           
             if(filters[col]) {
                 let dataKey = columns[col].dataKey;
                 const colValue = isNaN(entryData[dataKey]) ? entryData[dataKey]: entryData[dataKey].toString();
@@ -47,12 +46,14 @@ export default function Table({display, search}) {
         applyFilter : applyFilter,
         slice: slice
     }
+    
+    let controllButtons = controls.map((Ctrl, i) => <Ctrl key={`ctrl${i}`} />)
 
     return <div className="TableWrap">
                 <div className="Nav">
                     <Navigator dataLength = {list.length} position={slice} navigate={setSlice} />
                     <div className="Controls">
-                       {/* <div className="Btn">{props.controls}</div> */}
+                       {controllButtons}
                     </div>
                 </div>
                 <TableHeader columns={columns}  setSort={setSort} />

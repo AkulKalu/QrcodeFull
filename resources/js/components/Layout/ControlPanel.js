@@ -4,7 +4,7 @@ import Store from '../Store/Store';
 import User from './User';
 import LoadScreen from '../Visual/LoadScreen';
 import SideMenu from './SideMenu';
-import Products from '../Products/Products';
+import Products, {AddProduct} from '../Products/Products';
 import Transactions from '../Transactions/Transactions';
 import Shippments from '../Shippments/Shippments';
 import Table from '../Table/Table';
@@ -29,13 +29,15 @@ function ControlPanel() {
             Component: Transactions,
             list: state.user.transactions.list,
             columns: state.tabelColumns.Transactions,
-            stats: state.user.transactions.stats
+            stats: state.user.transactions.stats,
+            
         },
         Products: {
             Component: Products,
             list: state.products.list,
             columns: state.tabelColumns.Products,
-            stats: state.products.stats
+            stats: state.products.stats,
+            controls: [AddProduct]
         },
         Shippments: {
             Component: Shippments,

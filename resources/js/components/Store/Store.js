@@ -22,7 +22,7 @@ export default function Store(props) {
                         }
                     }
                     atOpen = {{
-                        animate: 'fadeIn 0.1s forwards'
+                        animate: 'fadeIn 0.2s forwards'
                     }}
                     atClose = {{
                         animate: 'fadeOut 0.2s forwards',

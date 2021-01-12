@@ -14,11 +14,10 @@ export default function SideMenu({stats, switchTable}) {
     }
     let btns = ['Products', 'Transactions', 'Shippments'].map( (name, i) => {
         let btn = <Button key={`SmBtn${i}`} className={activeBtn[i]} name={name} onClick={ () => buttonClick(name, i) }  />
-       
-        return stats[i+1] ? 
+        return stats[name] ? 
         <Fragment key={`SmBtn${i}`}>
             {btn}
-            <div className="StatsDisplay" ><Stats show={stats[i + 1]}/></div>   
+            <div className="StatsDisplay" ><Stats show={stats[name]}/></div>   
         </Fragment> : btn
     } )
     return <div >

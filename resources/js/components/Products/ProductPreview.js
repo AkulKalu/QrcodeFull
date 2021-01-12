@@ -2,37 +2,38 @@ import React, {useState} from 'react';
 import { SketchPicker } from 'react-color';
 import './scss/ProductPreview.scss';
 
-export default function ProductPreview(props) {
-    const [colorPicker, setColorPicker] = useState(false);
 
+
+export default function ProductPreview({ colorPallete, setColorPallete, product }) {
+    const [colorPicker, setColorPicker] = useState(false);
     const activatePicker = ind => {
         colorPicker === ind ? setColorPicker(false) : setColorPicker(ind);
     }
+
     const colorPalleteOnChange = (segment, col) =>{ 
-        const rgbString = color => `rgb(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
-        props.setColorPallete({...props.colorPallete, [segment]: {rgbStr: rgbString(col.rgb), rgb:col.rgb}})
+        setColorPallete({...colorPallete, [segment]: {rgbStr: themeCoder.rgbString(col.rgb), rgb:col.rgb}})
     };
     
    
-    let colorPickers = Object.keys(props.colorPallete).map( (segment, i) => {
+    let colorPickers = Object.keys(colorPallete).map( (segment, i) => {
         return  <div  key={`colPick${i}`} className="ColorWrap">
-                    <div onClick={()=> activatePicker(i)} style={{background: props.colorPallete[segment].rgbStr}} className="Color">
+                    <div onClick={()=> activatePicker(i)} style={{background: colorPallete[segment].rgbStr}} className="Color">
                     </div>
-                    {colorPicker === i ? <div className="ColorPicker"><SketchPicker color={props.colorPallete[segment].rgb} onChangeComplete={ col => colorPalleteOnChange(segment, col) } /></div>  : null}
+                    {colorPicker === i ? <div className="ColorPicker"><SketchPicker color={colorPallete[segment].rgb} onChangeComplete={ col => colorPalleteOnChange(segment, col) } /></div>  : null}
                 </div>
     } )
 
     let styles = {
         container: {
-            background: props.colorPallete.background.rgbStr,
-            color: props.colorPallete.font.rgbStr,
+            background: colorPallete.background.rgbStr,
+            color: colorPallete.font.rgbStr,
         },
         image: {
-            background: props.colorPallete.image.rgbStr,
+            background: colorPallete.image.rgbStr,
         },
         button: {
-            background: props.colorPallete.buttons.rgbStr,
-            color: props.colorPallete.background.rgbStr,
+            background: colorPallete.buttons.rgbStr,
+            color: colorPallete.background.rgbStr,
         }
     }
 
@@ -46,16 +47,16 @@ export default function ProductPreview(props) {
                         {colorPickers}
                     </div>
                     <div style={styles.image} className="Img" >
-                        {props.product.image_url.length ?  
-                        <img src={props.product.image_url} alt="ProductImage"></img> : 
+                        {product.image_url.length ?  
+                        <img src={product.image_url} alt="ProductImage"></img> : 
                         <div>IMAGE</div>
                         }
                     </div>
                     <div>
-                        <span className="InfoSmall">{props.product.category}</span>
-                        <span className="InfoLarge">{props.product.manufacturer}</span>
-                        <span className="InfoSmall"> {props.product.model} </span>
-                        <span className="InfoLarge"> ${props.product.price} </span>
+                        <span className="InfoSmall">{product.category}</span>
+                        <span className="InfoLarge">{product.manufacturer}</span>
+                        <span className="InfoSmall"> {product.model} </span>
+                        <span className="InfoLarge"> ${product.price} </span>
                     </div>
                     <div className="Buttons">
                         <div style={styles.button} className="Btn PreviewAbout">
@@ -66,6 +67,33 @@ export default function ProductPreview(props) {
                         </div>
                     </div>
             </div>
-        </div>
-      
+        </div> 
 }
+export const themeCoder = {
+    fromCode : ( code ) => {
+        let theme = code.split('&').map( (segment, i) => {
+            let [key, rgbStr] = segment.split('|')
+            let [r, g, b, a] = [...rgbStr.matchAll('[0-9\.]{1,}')].map( val => Number(val[0]));
+
+            return [key, {
+                    rgbStr: rgbStr,
+                    rgb: {
+                        r:r,
+                        g:g,
+                        b:b,
+                        a:a,
+                    }
+                }]
+        } )
+        return Object.fromEntries(theme)
+    },
+    encode :  theme => {
+        return Object.keys(theme).map(key => {
+            return `${key}|${theme[key].rgbStr}`
+        }).join('&')
+    },
+    rgbString : ({r, g, b, a,}) => `rgb(${r}, ${g}, ${b}, ${a})`,
+}
+
+
+
