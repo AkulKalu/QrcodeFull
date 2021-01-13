@@ -1,8 +1,9 @@
 import React, {Fragment} from 'react';
 import Shippment from './Shippment';
+import View from './ShippmentView';
 import AsSwitch from '../HOC/AsSwitch'; 
 
-let Row = AsSwitch(Shippment);
+let Row = AsSwitch(View, Shippment);
 
 export default function Shippments({columns, list, slice, applyFilter}) {
    

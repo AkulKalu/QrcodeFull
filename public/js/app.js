@@ -53292,26 +53292,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./resources/js/Functions/actions.js":
-/*!*******************************************!*\
-  !*** ./resources/js/Functions/actions.js ***!
-  \*******************************************/
-/*! exports provided: downloadFile */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "downloadFile", function() { return downloadFile; });
-function downloadFile(file, name, ext) {
-  var url = window.URL.createObjectURL(new Blob([file]));
-  var link = document.createElement('a');
-  link.href = url;
-  link.setAttribute('download', "".concat(name, ".").concat(ext));
-  link.click();
-}
-
-/***/ }),
-
 /***/ "./resources/js/Functions/server.js":
 /*!******************************************!*\
   !*** ./resources/js/Functions/server.js ***!
@@ -53580,7 +53560,8 @@ function AsSwitch(ViewCmp) {
       if (props.on) open();
     }, [props.on]);
 
-    var open = function open() {
+    var open = function open(e) {
+      if (e.target.getAttribute('data-escape')) return;
       toogleSwitch(true);
       animate({
         style: {
@@ -54507,22 +54488,24 @@ function ControlPanel() {
   var tables = {
     Transactions: {
       Component: _Transactions_Transactions__WEBPACK_IMPORTED_MODULE_7__["default"],
-      list: state.user.transactions.list,
+      data: state.user.transactions,
       columns: state.tabelColumns.Transactions,
-      stats: state.user.transactions.stats
+      stats: state.user.transactions.stats,
+      controls: []
     },
     Products: {
       Component: _Products_Products__WEBPACK_IMPORTED_MODULE_6__["default"],
-      list: state.products.list,
+      data: state.products,
       columns: state.tabelColumns.Products,
       stats: state.products.stats,
       controls: [_Products_Products__WEBPACK_IMPORTED_MODULE_6__["AddProduct"]]
     },
     Shippments: {
       Component: _Shippments_Shippments__WEBPACK_IMPORTED_MODULE_8__["default"],
-      list: state.user.shippments.list,
+      data: state.user.shippments,
       columns: state.tabelColumns.Shippments,
-      stats: state.user.shippments.stats
+      stats: state.user.shippments.stats,
+      controls: []
     }
   };
 
@@ -55072,8 +55055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../storage/SQCLogo.svg */ "./resources/js/storage/SQCLogo.svg");
 /* harmony import */ var _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
-/* harmony import */ var _Functions_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Functions/actions */ "./resources/js/Functions/actions.js");
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -55098,26 +55080,38 @@ function _extends() {
 
 
 
+function Product(_ref) {
+  var data = _ref.data,
+      columns = _ref.columns,
+      onClick = _ref.onClick,
+      style = _ref.style;
 
-function Product(props) {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_6__["store"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_5__["store"]),
       dispatch = _useContext.dispatch;
 
   var setActiveStatus = function setActiveStatus() {
-    dispatch.products.toogle(props.data.id, {
-      store_id: props.data.store_id,
-      active: props.data.active ? 0 : 1
+    dispatch.products.toogle(data.id, {
+      store_id: data.store_id,
+      active: data.active ? 0 : 1
     });
   };
 
   var downloadQrCode = function downloadQrCode() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["generateQrCode"])(props.data.store_id, props.data.id).then(function (res) {
-      return Object(_Functions_actions__WEBPACK_IMPORTED_MODULE_5__["downloadFile"])(res.data, props.data.name, 'svg');
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["generateQrCode"])(data.store_id, data.id).then(function (res) {
+      downloadFile(res.data.qrCode, "".concat(data.manufacturer, "-").concat(data.model), 'svg');
     });
   };
 
-  var columns = Object.keys(props.columns).map(function (key, i) {
-    var col = props.columns[key];
+  function downloadFile(file, name, ext) {
+    var url = window.URL.createObjectURL(new Blob([file]));
+    var link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', "".concat(name, ".").concat(ext));
+    link.click();
+  }
+
+  var columnFields = Object.keys(columns).map(function (key, i) {
+    var col = columns[key];
 
     var cell = function cell(cont, props) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({
@@ -55131,13 +55125,13 @@ function Product(props) {
         return cell( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "PDImg",
           alt: "Product",
-          src: props.data[col.dataKey]
+          src: data[col.dataKey]
         }));
 
       case 'Active':
         return cell( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Toggle__WEBPACK_IMPORTED_MODULE_2__["default"], {
           onToggle: setActiveStatus,
-          on: props.data.active
+          on: data.active
         }), {
           'data-escape': true
         });
@@ -55156,18 +55150,19 @@ function Product(props) {
       case 'Price':
         return cell( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "Text"
-        }, "".concat(props.data[col.dataKey]).concat(props.data['currency'])));
+        }, "".concat(data[col.dataKey]).concat(data['currency'])));
 
       default:
         return cell( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "Text"
-        }, props.data[col.dataKey]));
+        }, data[col.dataKey]));
     }
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: props.onClick,
+    style: style,
+    onClick: onClick,
     className: "Row"
-  }, columns);
+  }, columnFields);
 }
 
 /***/ }),
@@ -55322,7 +55317,7 @@ function ProductPanel(_ref) {
       productData = _useState2[0],
       setProductData = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(add ? _ProductPreview__WEBPACK_IMPORTED_MODULE_4__["theme"].fromCode('image|rgb(255, 255, 255, 1)&font|rgb(196, 235, 108, 1)&background|rgb(16, 17, 17, 1)&buttons|rgb(196, 235, 108, 1)') : data.theme),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].fromCode(add ? state.products["new"].theme : data.theme)),
       _useState4 = _slicedToArray(_useState3, 2),
       colorPallete = _useState4[0],
       setcolorPallete = _useState4[1];
@@ -55338,26 +55333,26 @@ function ProductPanel(_ref) {
   };
 
   var create = function create() {
-    var data = _objectSpread(_objectSpread({
+    var payload = _objectSpread(_objectSpread({
       store_id: state.stores.active.id
     }, productData), {}, {
-      theme: colorPallete
+      theme: _ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].encode(colorPallete)
     });
 
-    dispatch.products.create(data).then(function (res) {
+    dispatch.products.create(payload).then(function (res) {
       close(res);
     });
   };
 
   var edit = function edit() {
-    var data = {
-      store_id: productData.store_id,
-      theme: colorPallete
+    var payload = {
+      store_id: productData.store_id
     };
-    Object.keys(state.products.add).forEach(function (key) {
-      return data[key] = productData[key];
+    Object.keys(state.products["new"]).forEach(function (key) {
+      return payload[key] = productData[key];
     });
-    dispatch.products.edit(productData.id, data, productData.idx).then(function (res) {
+    payload.theme = _ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].encode(colorPallete);
+    dispatch.products.edit(productData.id, payload, productData.idx).then(function (res) {
       close(res);
     });
   };
@@ -55457,7 +55452,7 @@ function ProductPanel(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Active"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Toggle__WEBPACK_IMPORTED_MODULE_6__["default"], {
       on: productData.active,
       onToggle: function onToggle() {
-        return inputChange(Number(!productData.shipping), 'active');
+        return inputChange(Number(!productData.active), 'active');
       }
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Group-half jus-end "
@@ -55508,13 +55503,13 @@ function ProductPanel(_ref) {
 /*!************************************************************!*\
   !*** ./resources/js/components/Products/ProductPreview.js ***!
   \************************************************************/
-/*! exports provided: default, theme */
+/*! exports provided: default, themeCoder */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductPreview; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "theme", function() { return theme; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "themeCoder", function() { return themeCoder; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-color */ "./node_modules/react-color/es/index.js");
@@ -55661,9 +55656,8 @@ function ProductPreview(_ref) {
   };
 
   var colorPalleteOnChange = function colorPalleteOnChange(segment, col) {
-    console.log(col);
     setColorPallete(_objectSpread(_objectSpread({}, colorPallete), {}, _defineProperty({}, segment, {
-      rgbStr: theme.rgbString(col.rgb),
+      rgbStr: themeCoder.rgbString(col.rgb),
       rgb: col.rgb
     })));
   };
@@ -55735,7 +55729,7 @@ function ProductPreview(_ref) {
     className: "Btn Buy"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Buy")))));
 }
-var theme = {
+var themeCoder = {
   fromCode: function fromCode(code) {
     var theme = code.split('&').map(function (segment, i) {
       var _segment$split = segment.split('|'),
@@ -55808,7 +55802,21 @@ function Products(_ref) {
   var columns = _ref.columns,
       list = _ref.list,
       slice = _ref.slice,
-      applyFilter = _ref.applyFilter;
+      applyFilter = _ref.applyFilter,
+      _ref$data = _ref.data,
+      _ref$data$updated = _ref$data.updated,
+      updated = _ref$data$updated === void 0 ? null : _ref$data$updated,
+      _ref$data$created = _ref$data.created,
+      created = _ref$data$created === void 0 ? null : _ref$data$created;
+
+  var markRow = function markRow(product) {
+    var markup = {};
+    if (updated && updated.id === product.id) markup.backgroundColor = 'yellow';
+    if (created && created.id === product.id) markup.backgroundColor = 'green';
+    if (!Number(product.active)) markup.opacity = '0.6';
+    return markup;
+  };
+
   var rows = list.slice(slice.start, slice.end).map(function (entry, i) {
     entry = applyFilter(entry);
 
@@ -55818,7 +55826,8 @@ function Products(_ref) {
         key: "row".concat(i),
         button: {
           columns: columns,
-          data: entry
+          data: entry,
+          style: markRow(entry)
         },
         view: {
           data: entry
@@ -56092,18 +56101,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Shippment(props) {
-  var columns = Object.keys(props.columns).map(function (key, i) {
-    var col = props.columns[key];
+function Shippment(_ref) {
+  var columns = _ref.columns,
+      data = _ref.data,
+      onClick = _ref.onClick;
+  var columnFields = Object.keys(columns).map(function (key, i) {
+    var col = columns[key];
     var cellContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Text"
-    }, props.data[col.dataKey]);
+    }, data[col.dataKey]);
 
     if (col.dataKey === 'shipped') {
-      if (props.data[col.dataKey]) {
+      if (data[col.dataKey]) {
         cellContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "Text"
-        }, props.data.updated_at);
+        }, data.updated_at);
       } else {
         cellContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Toggle__WEBPACK_IMPORTED_MODULE_1__["default"], {
           on: false
@@ -56117,8 +56129,31 @@ function Shippment(props) {
     }, cellContent);
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: onClick,
     className: "Row"
-  }, columns);
+  }, columnFields);
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/Shippments/ShippmentView.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Shippments/ShippmentView.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Shippment; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_Shippment_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Shippment.scss */ "./resources/js/components/Shippments/scss/Shippment.scss");
+/* harmony import */ var _scss_Shippment_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Shippment_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function Shippment(props) {
+  return null;
 }
 
 /***/ }),
@@ -56136,11 +56171,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Shippment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Shippment */ "./resources/js/components/Shippments/Shippment.js");
-/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
+/* harmony import */ var _ShippmentView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShippmentView */ "./resources/js/components/Shippments/ShippmentView.js");
+/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
 
 
 
-var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__["default"])(_Shippment__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__["default"])(_ShippmentView__WEBPACK_IMPORTED_MODULE_2__["default"], _Shippment__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function Shippments(_ref) {
   var columns = _ref.columns,
       list = _ref.list,
@@ -57113,7 +57150,7 @@ function Table(_ref) {
   };
 
   display = _objectSpread(_objectSpread({}, display), {}, {
-    list: _toConsumableArray(list).sort(sort.fun),
+    list: _toConsumableArray(display.data.list).sort(sort.fun),
     applyFilter: applyFilter,
     slice: slice
   });
@@ -57127,7 +57164,7 @@ function Table(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Nav"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Navigator__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    dataLength: list.length,
+    dataLength: display.data.list.length,
     position: slice,
     navigate: setSlice
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -57460,20 +57497,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1__);
 
 
-function Transaction(props) {
-  var columns = Object.keys(props.columns).map(function (key, i) {
-    var col = props.columns[key];
+function Transaction(_ref) {
+  var columns = _ref.columns,
+      data = _ref.data,
+      onClick = _ref.onClick;
+  var columnFields = Object.keys(columns).map(function (key, i) {
+    var col = columns[key];
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: "row".concat(i),
       className: "Cell"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Text"
-    }, props.data[col.dataKey]));
+    }, data[col.dataKey]));
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: props.onClick,
+    onClick: onClick,
     className: "Row"
-  }, columns);
+  }, columnFields);
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/Transactions/TransactionView.js":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/Transactions/TransactionView.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Transaction; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Transaction.scss */ "./resources/js/components/Transactions/scss/Transaction.scss");
+/* harmony import */ var _scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function Transaction(props) {
+  return null;
 }
 
 /***/ }),
@@ -57491,11 +57553,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Transaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Transaction */ "./resources/js/components/Transactions/Transaction.js");
-/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
+/* harmony import */ var _TransactionView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TransactionView */ "./resources/js/components/Transactions/TransactionView.js");
+/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
 
 
 
-var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__["default"])(_Transaction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__["default"])(_TransactionView__WEBPACK_IMPORTED_MODULE_2__["default"], _Transaction__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function Transactions(_ref) {
   var columns = _ref.columns,
       list = _ref.list,
@@ -57882,26 +57946,22 @@ var initalState = {
 var reducer = function reducer(state, action) {
   var type = action.type,
       payload = action.payload;
-  console.log(payload);
 
   switch (type) {
     case "GET":
-      return _objectSpread(_objectSpread(_objectSpread({}, state), payload.products), {}, {
-        categories: payload.products.list.map(function (prod) {
-          return prod.category;
-        })
-      });
+      return _objectSpread(_objectSpread({}, state), payload.products);
 
     case "CREATE":
-      return _objectSpread(_objectSpread({}, state), {}, {
+      return _objectSpread(_objectSpread(_objectSpread({}, state), payload), {}, {
         list: [payload.created].concat(_toConsumableArray(state.list))
       });
 
     case "EDIT":
       var editedList = _toConsumableArray(state.list);
 
+      console.log(payload.updated);
       editedList[payload.idx] = payload.updated;
-      return _objectSpread(_objectSpread({}, state), {}, {
+      return _objectSpread(_objectSpread(_objectSpread({}, state), payload), {}, {
         list: editedList
       });
 
@@ -57909,7 +57969,7 @@ var reducer = function reducer(state, action) {
       var deletedList = _toConsumableArray(state.list);
 
       deletedList.splice(payload.idx, 1);
-      return _objectSpread(_objectSpread({}, state), {}, {
+      return _objectSpread(_objectSpread(_objectSpread({}, state), payload), {}, {
         list: deletedList
       });
 

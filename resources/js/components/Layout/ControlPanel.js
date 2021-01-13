@@ -27,23 +27,25 @@ function ControlPanel() {
     const tables = {
         Transactions : {
             Component: Transactions,
-            list: state.user.transactions.list,
+            data: state.user.transactions,
             columns: state.tabelColumns.Transactions,
             stats: state.user.transactions.stats,
+            controls: []
             
         },
         Products: {
             Component: Products,
-            list: state.products.list,
+            data: state.products,
             columns: state.tabelColumns.Products,
             stats: state.products.stats,
             controls: [AddProduct]
         },
         Shippments: {
             Component: Shippments,
-            list: state.user.shippments.list,
+            data: state.user.shippments,
             columns: state.tabelColumns.Shippments,
-            stats: state.user.shippments.stats
+            stats: state.user.shippments.stats,
+            controls: []
         },
     }
    

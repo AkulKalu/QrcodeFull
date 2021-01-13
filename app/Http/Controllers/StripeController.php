@@ -53,6 +53,7 @@ class StripeController extends Controller
 
         $transaction = [
           'user_id'=> $product->store->user_id,
+          'product_id'=> $product->id,
           'service'=> 'stripe',
           'transaction_id'=> $session->id,
           'customer_id'=>  $customer->id,
@@ -66,7 +67,10 @@ class StripeController extends Controller
         $shipping = null;
 
         if( $session->shipping ) {
+          
           $shipping = json_decode(json_encode($session->shipping->address), true);
+          $shipping['user_id'] = $product->store->user_id;
+          $shipping['product_id'] = $product->id;
           $shipping['name'] = $session->shipping->name;
           $shipping =  $transaction->shippment()->create($shipping);
         }

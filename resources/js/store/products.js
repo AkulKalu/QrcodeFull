@@ -2,27 +2,30 @@ const initalState = {
     list: []
 };
 
+
+
 const reducer = (state, action) => {
     const {type, payload } = action;
-    console.log(payload);
     switch (type) {
       case "GET":
             return {
                ...state,
                ...payload.products,
-               categories : payload.products.list.map( prod => prod.category)
             }
        
         case "CREATE":
           return {
             ...state,
+            ...payload,
             list: [payload.created, ...state.list],
           }
         case "EDIT":
           let editedList = [...state.list];
+          console.log( payload.updated);
           editedList[payload.idx] = payload.updated;
           return {
             ...state,
+            ...payload,
             list: editedList,
           }
       case "DELETE":
@@ -30,6 +33,7 @@ const reducer = (state, action) => {
           deletedList.splice(payload.idx, 1);
           return {
             ...state,
+            ...payload,
             list: deletedList,
           }
       default:

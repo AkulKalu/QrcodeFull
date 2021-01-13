@@ -3,26 +3,35 @@ import './scss/Product.scss';
 import Toggle from '../Shared/Toggle'
 import QrCodeImg from '../../storage/SQCLogo.svg';
 import {generateQrCode} from '../../Functions/server';
-import {downloadFile} from '../../Functions/actions';
 import {store} from '../HOC/StateProvider';
 
-export default function Product(props) {
+export default function Product({ data, columns, onClick, style }) {
     const {dispatch} = useContext(store);
 
     const setActiveStatus = () => {
-        dispatch.products.toogle(props.data.id, {
-            store_id: props.data.store_id,
-            active:  props.data.active ? 0 : 1
+        dispatch.products.toogle(data.id, {
+            store_id: data.store_id,
+            active:  data.active ? 0 : 1
         }); 
     }
     const downloadQrCode = () => {
-        generateQrCode(props.data.store_id, props.data.id)
-        .then( res =>downloadFile(res.data, props.data.name, 'svg' ))
+        generateQrCode(data.store_id, data.id)
+        .then( res =>{
+            downloadFile( res.data.qrCode, `${data.manufacturer}-${data.model}`, 'svg' )
+        })
+    }
+
+    function downloadFile(file, name, ext) {
+        const url = window.URL.createObjectURL(new Blob([file]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', `${name}.${ext}`); 
+        link.click();
     }
  
     
-    let columns = Object.keys(props.columns).map((key, i) => {
-        let col = props.columns[key];
+    let columnFields = Object.keys(columns).map((key, i) => {
+        let col = columns[key];
         const cell = (cont, props) => {
             return <div 
                     key={`row${i}`} 
@@ -38,14 +47,14 @@ export default function Product(props) {
                             <img 
                                 className="PDImg" 
                                 alt="Product" 
-                                src={props.data[col.dataKey]}> 
+                                src={data[col.dataKey]}> 
                             </img>
                         )  
             case 'Active':
                 return  cell(
                     <Toggle
                     onToggle = {setActiveStatus}
-                    on = {props.data.active}
+                    on = {data.active}
                     />, {'data-escape':true}
                 )
              case 'QrCode':
@@ -61,20 +70,20 @@ export default function Product(props) {
             case 'Price':
                 return cell(
                     <div className="Text">
-                      {`${props.data[col.dataKey]}${props.data['currency']}`}
+                      {`${data[col.dataKey]}${data['currency']}`}
                     </div>
                 )  
             default:
                 return cell(
                     <div className="Text">
-                      {props.data[col.dataKey]}
+                      {data[col.dataKey]}
                     </div>
                 ) 
         }
         
     })
     
-    return  <div onClick={props.onClick}  className="Row">
-                    {columns}
+    return  <div style={style} onClick={onClick}  className="Row">
+                    {columnFields}
             </div>
 }

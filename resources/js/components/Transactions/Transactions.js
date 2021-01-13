@@ -1,12 +1,13 @@
 import React, {Fragment} from 'react';
 import Transaction from './Transaction';
+import TransactionView from './TransactionView';
 import AsSwitch from '../HOC/AsSwitch'; 
 
-let Row = AsSwitch(Transaction);
+let Row = AsSwitch(TransactionView, Transaction);
 
 
 export default function Transactions({columns, list, slice, applyFilter}) {
-   
+  
     let rows = list.slice(slice.start, slice.end).map((entry, i) => {
         entry = applyFilter(entry);
         if(entry) {

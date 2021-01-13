@@ -1,4 +1,4 @@
-document.body.style.background = theme.background.rgbStr;
-document.body.style.color = theme.font.rgbStr;
-document.getElementById('imgBg').style.background = theme.image.rgbStr;
+document.body.style.background = theme.background;
+document.body.style.color = theme.font;
+document.getElementById('imgBg').style.background = theme.image;
 

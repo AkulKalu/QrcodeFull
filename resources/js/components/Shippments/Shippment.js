@@ -5,15 +5,15 @@ import './scss/Shippment.scss';
 
 
 
-export default function Shippment(props) {
+export default function Shippment({columns, data, onClick}) {
     
-    let columns = Object.keys(props.columns).map((key, i) => {
-        let col = props.columns[key];
-        let cellContent = <div className="Text">{props.data[col.dataKey]}</div> ;
+    let columnFields = Object.keys(columns).map((key, i) => {
+        let col = columns[key];
+        let cellContent = <div className="Text">{data[col.dataKey]}</div> ;
       
         if(col.dataKey === 'shipped') {
-            if(props.data[col.dataKey]) {
-                cellContent = <div className="Text">{props.data.updated_at}</div> ;
+            if(data[col.dataKey]) {
+                cellContent = <div className="Text">{data.updated_at}</div> ;
             }else {
                 cellContent = <Toggle on={false} />
             }
@@ -22,7 +22,7 @@ export default function Shippment(props) {
 
     })
     
-    return   <div  className="Row">
-                {columns}
+    return   <div onClick={onClick}  className="Row">
+                {columnFields}
             </div>
 }

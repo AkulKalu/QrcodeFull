@@ -17,7 +17,6 @@ function closePayMenu() {
 
 let stripe = Stripe(publicKey);
 
-console.log(publicKey);
 function chargeWithStripe() {
     window.axios.post(`/checkout/charge/stripe/${productId}`)
     .then(response => {

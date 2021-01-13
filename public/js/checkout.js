@@ -19393,7 +19393,6 @@ function closePayMenu() {
 }
 
 var stripe = Stripe(publicKey);
-console.log(publicKey);
 
 function chargeWithStripe() {
   window.axios.post("/checkout/charge/stripe/".concat(productId)).then(function (response) {
@@ -19426,9 +19425,9 @@ document.getElementById('buyBtn').onclick = openPayMenu;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-document.body.style.background = theme.background.rgbStr;
-document.body.style.color = theme.font.rgbStr;
-document.getElementById('imgBg').style.background = theme.image.rgbStr;
+document.body.style.background = theme.background;
+document.body.style.color = theme.font;
+document.getElementById('imgBg').style.background = theme.image;
 
 /***/ }),
 

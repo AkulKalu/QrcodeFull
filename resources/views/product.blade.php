@@ -38,7 +38,7 @@
         // Create an instance of the Stripe object with your publishable API key
         let publicKey = "{{$public_key}}";
         let productId = "{{$product->id}}";
-        let theme =@json($theme);
+        let theme = @json($theme);
     </script>
 </body>
 </html>

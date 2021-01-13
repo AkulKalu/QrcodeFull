@@ -16,7 +16,13 @@ class ProductsController extends Controller
     public function index(Request $request)
     {   
         $store = Auth::user()->stores()->find($request->storeId);
-        return response()->json(['products' => ['list'=> $store->products()->get()]]);
+        return response()->json([
+            'products' => [
+                'list'=> $store->products()->latest()->get(),
+                'stats' => $this->getProductsStats($store),
+                'categories'=> $this->getProductCategories($store),
+                ]
+            ]);
     }
 
     /**
@@ -29,7 +35,11 @@ class ProductsController extends Controller
     {
         $store = Auth::user()->stores()->find( $request->store_id);
         $createdProduct = $store->products()->create($request->all());
-        return response()->json(['created'=> $createdProduct]);
+        return response()->json([
+            'created'=> $createdProduct,
+            'stats' => $this->getProductsStats($store),
+            'categories'=> $this->getProductCategories($store),
+            ]);
     }
    
     /**
@@ -41,9 +51,14 @@ class ProductsController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
-        $product = Auth::user()->stores()->find($request->store_id)->products()->find($id);
+        $store = Auth::user()->stores()->find( $request->store_id);
+        $product = $store->products()->find($id);
         $product->update($request->all());
-        return response()->json(['updated'=>$product]);
+        return response()->json([
+            'updated'=>$product,
+            'stats' => $this->getProductsStats($store),
+            'categories'=> $this->getProductCategories($store),
+            ]);
     }
 
     /**
@@ -54,8 +69,13 @@ class ProductsController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        $product =Auth::user()->stores()->find($request->store_id)->products()->find($id);
+        $store = Auth::user()->stores()->find($request->store_id);
+        $product = $store->products()->find($id);
         $product->delete();
-        return response()->json(['deleted'=> $id]);
+        return response()->json([
+            'deleted'=> $id,
+            'stats' => $this->getProductsStats($store),
+            'categories'=> $this->getProductCategories($store),
+            ]);
     }
 }

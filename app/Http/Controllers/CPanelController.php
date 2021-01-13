@@ -47,7 +47,8 @@ class CPanelController extends Controller
                     'total'=> 0,
                     'active'=> 0,
                     'categories'=>0.
-                ]
+                ],
+                'categories' => []
             ],
             'transactions' => [
                 'list' => [],
@@ -65,43 +66,23 @@ class CPanelController extends Controller
                 ]
             ],
         ];
+       
+        if($user->stores()->count()) {
+            $response['stores']['list'] = $user->stores()->latest()->get();
+            $store = $user->stores()->first(); 
 
-        $stores = $user->stores();
-        if($stores->count()) {
-            $products = $stores->first()->products(); 
-            $total = $products->count();
-            
-            if($total) {
-                $response['products']['stats'] = [
-                    'total'=>  $total,
-                    'active'=> $products->where('active', '=', '1')->count(),
-                    'categories'=>$products->distinct()->count('category')
-                ];
-                $response['products']['list'] = $products->all()->latest()->get();
+            if($store->products()->count()) {
+                $response['products']['list'] =$store->products()->latest()->get();
+                $response['products']['stats'] = $this->getProductsStats($store);
+                $response['products']['categories'] = $this->getProductCategories($store);
 
-                $transactions = $user->transactions();
-                $total = $transactions->count();
-
-                if($total) {
-                    $response['transactions']['stats'] = [
-                        'total'=>  $total,
-                        'today'=> $transactions->whereDate('created_at', Carbon::today())->count(),
-                        'this month'=>  $transactions->whereMonth('created_at', Carbon::today()->format('m'))->count(),
-                    ];
-                    $response['transactions']['list'] = $transactions->latest()->get();
-
-                    $shippments = $user->shippments();
-                    $response['shippments']['stats'] = [
-                        'pending'=>  $shippments->where('shipped', '=', '0')->count(),
-                        'sent'=>  $shippments->where('shipped', '=', '1')->count(),
-                    ];
-                    $response['shippments']['list'] = $shippments->latest()->get();
+                if($user->transactions()->count()) {
+                    $response['transactions']['list'] = $user->transactions()->latest()->get();
+                    $response['transactions']['stats'] = $this->getTransactionsStats($user);
+                    $response['shippments']['list'] = $user->shippments()->latest()->get();
+                    $response['shippments']['stats'] = $this->getShippmentsStats($user);
                 }
             }
-          
-            $response['stores']['list'] = $stores->latest()->get();
-           
-          
         }
         
         return response()->json($response);

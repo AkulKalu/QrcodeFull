@@ -10,7 +10,8 @@ import {store} from '../HOC/StateProvider';
 export default function ProductPanel({add, data, errors, close : closePanel, switchAction})  {
     const {state, dispatch} = useContext(store);
     const [productData, setProductData] = useState( add ? {...state.products.new} :  {...data} );
-    const [colorPallete, setcolorPallete] = useState( add ? theme.fromCode(state.products.new.theme)  :  data.theme);
+    const [colorPallete, setcolorPallete] = useState(themeCoder.fromCode(add ? state.products.new.theme:  data.theme));
+    
     const inputChange = (value, key) => {
         setProductData({
             ...productData,
@@ -24,27 +25,27 @@ export default function ProductPanel({add, data, errors, close : closePanel, swi
     }
 
     const create = () => {
-        const data = {
+        const payload = {
             store_id : state.stores.active.id,
             ...productData,
             theme: themeCoder.encode(colorPallete)
         };
         
-        dispatch.products.create(data)
+        dispatch.products.create(payload)
         .then( res =>{
            close(res);
         })
     }
 
     const edit = () => {
-        const data = {
+     
+        const payload = {
             store_id: productData.store_id,
-            theme: themeCoder.encode(colorPallete)
         };
+        Object.keys(state.products.new).forEach(key => payload[key] = productData[key]);
+        payload.theme = themeCoder.encode(colorPallete);
 
-        Object.keys(state.products.add).forEach(key => data[key] = productData[key]);
-
-        dispatch.products.edit(productData.id, data, productData.idx)
+        dispatch.products.edit(productData.id, payload, productData.idx)
         .then( res =>{
             close(res);
         })
@@ -136,7 +137,7 @@ export default function ProductPanel({add, data, errors, close : closePanel, swi
                                 <div className = "Group-half">
                                     <div className="Group-col">
                                         <label>Active</label>
-                                        <Toggle on={productData.active} onToggle= {() => inputChange(Number(!productData.shipping), 'active')} />
+                                        <Toggle on={productData.active} onToggle= {() => inputChange(Number(!productData.active), 'active')} />
                                     </div>
                                     
                                 </div>

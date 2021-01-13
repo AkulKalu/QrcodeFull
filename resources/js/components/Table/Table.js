@@ -42,7 +42,7 @@ export default function Table({display, search}) {
 
     display = {
         ...display,
-        list: [...list].sort(sort.fun),
+        list: [...display.data.list].sort(sort.fun),
         applyFilter : applyFilter,
         slice: slice
     }
@@ -51,7 +51,7 @@ export default function Table({display, search}) {
 
     return <div className="TableWrap">
                 <div className="Nav">
-                    <Navigator dataLength = {list.length} position={slice} navigate={setSlice} />
+                    <Navigator dataLength = {display.data.list.length} position={slice} navigate={setSlice} />
                     <div className="Controls">
                        {controllButtons}
                     </div>
