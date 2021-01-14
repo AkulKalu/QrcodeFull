@@ -2085,7 +2085,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "input {\n  outline: none;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #a0c7e7);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #a0c7e7);\n  flex-basis: 15%;\n  border-right: 1px solid rgba(128, 128, 128, 0.795);\n}\n.CPanel aside .Logo {\n  height: 10vh;\n  margin: 2vh auto;\n}\n.CPanel aside .Menu {\n  margin-top: 12vh;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  flex-basis: 85%;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
+exports.push([module.i, "input {\n  outline: none;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #a0c7e7);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #a0c7e7);\n  width: 15vw;\n  border-right: 1px solid rgba(128, 128, 128, 0.795);\n}\n.CPanel aside .Logo {\n  height: 10vh;\n  margin: 2vh auto;\n}\n.CPanel aside .Menu {\n  margin-top: 12vh;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
 
 // exports
 
@@ -2180,7 +2180,45 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 10% 10%;\n  height: 48%;\n}\n.Preview .Img img {\n  width: 100%;\n  max-height: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .InfoSmall {\n  display: block;\n  font-size: 2vh;\n  padding: 0 1.5vh;\n  margin-top: 1vh;\n}\n.Preview .InfoLarge {\n  display: block;\n  padding: 1vh 1.5vh;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.Preview .InfoLarge:nth-of-type(4) {\n  text-align: right;\n  font-weight: 600;\n}\n.Preview .Buttons .Btn {\n  width: 50%;\n  font-size: 1.6vh;\n  font-weight: 600;\n  text-align: center;\n  padding: 0.4vh 0;\n  border-radius: 0 5px 5px 0;\n}\n.Preview .Buttons .Buy {\n  margin-top: 2vh;\n  width: 80%;\n}\n\n.Colors {\n  height: 100%;\n  width: 20%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: gold;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
+exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 10% 10%;\n  height: 48%;\n}\n.Preview .Img img {\n  width: 100%;\n  max-height: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .InfoSmall {\n  display: block;\n  font-size: 2vh;\n  padding: 0 1.5vh;\n  margin-top: 1vh;\n}\n.Preview .InfoLarge {\n  display: block;\n  padding: 1vh 1.5vh;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.Preview .InfoLarge:nth-of-type(4) {\n  text-align: right;\n  font-weight: 600;\n}\n.Preview .Buttons .Btn {\n  width: 50%;\n  font-size: 1.6vh;\n  font-weight: 600;\n  text-align: center;\n  padding: 0.4vh 0;\n  border-radius: 0 5px 5px 0;\n}\n.Preview .Buttons .Buy {\n  margin-top: 2vh;\n  width: 80%;\n}\n\n.Colors {\n  height: 100%;\n  width: 20%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .ThemeSegment {\n  display: flex;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: gold;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Products/scss/ProductView.scss":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Products/scss/ProductView.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.ProductView {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 70%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.ProductView .Content {\n  -webkit-animation: fadeIn 0.5s ease-in both;\n          animation: fadeIn 0.5s ease-in both;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  color: #535353;\n}\n.ProductView .Content .Left {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 50%;\n}\n.ProductView .Content .Left img {\n  height: 50%;\n}\n.ProductView .Content .Right {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.ProductView .Content .Right .StoreName {\n  color: #e7ae0f;\n  text-shadow: 2px 2px 3px #414040;\n  flex-basis: 20%;\n  text-align: center;\n}\n.ProductView .Content .Right .StoreName h1 {\n  font-size: 6vh;\n}\n.ProductView .Content .Right .Product {\n  flex-basis: 50%;\n  padding-left: 15%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n}\n.ProductView .Content .Right .Product h1 {\n  text-indent: 5%;\n  font-size: 5vh;\n}\n.ProductView .Content .Right .Info {\n  flex-basis: 30%;\n  padding-left: 10%;\n  text-align: right;\n}\n.ProductView .Content .Right .Info h1 {\n  font-size: 5vh;\n  padding-right: 15%;\n}\n.ProductView .Content .Right .Info h2 {\n  text-align: left;\n  text-indent: 10%;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Shared/scss/Backdrop.scss":
+/*!************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Shared/scss/Backdrop.scss ***!
+  \************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Backdrop {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: initial;\n  z-index: 1;\n}", ""]);
 
 // exports
 
@@ -2244,6 +2282,25 @@ exports.push([module.i, ".Cell:nth-of-type(1) {\n  width: 15%;\n}\n\n.Cell:nth-o
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Store/scss/SelectPanel.scss":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Store/scss/SelectPanel.scss ***!
+  \**************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.SelectPanel {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 60%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n}\n\n.StoresList {\n  display: flex;\n  flex-wrap: wrap;\n  -webkit-animation: slideIn-down 0.3s;\n          animation: slideIn-down 0.3s;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  box-shadow: 2px 2px 5px gray;\n  font-size: 2.3vh;\n  min-width: 20%;\n  margin: 1vh 1vh;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n  transition: all 0.4s;\n  background: #e7ae0f;\n  color: #353634;\n  text-align: center;\n}\n.StoresList .StoreItem .Btn:hover, .StoresList .StoreItem .EditBtn:hover, .StoresList .StoreItem .SelectBtn:hover {\n  background-color: #353634;\n  color: #e7ae0f;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  position: absolute;\n  top: 0;\n  right: -100%;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Store/scss/Store.scss":
 /*!********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Store/scss/Store.scss ***!
@@ -2257,25 +2314,6 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 // module
 exports.push([module.i, ".Store {\n  display: flex;\n  align-items: center;\n  margin-left: 10%;\n  font-weight: 600;\n  width: 100%;\n  font-size: 2vh;\n}\n.Store .StoreBtn {\n  background: #e7ae0f;\n  color: #353634;\n  font-size: 3.5vh;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  text-align: center;\n  min-width: 20vw;\n  padding: 0.5vh 2vh;\n  border-radius: 5px;\n  margin-left: 1vh;\n  box-shadow: 2px 2px 5px #353634;\n  transition: all 0.4s;\n}\n.Store .StoreBtn:hover {\n  color: #e7ae0f;\n  background: #353634;\n  box-shadow: 4px 4px 5px #353634;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Store/scss/StoreSelect.scss":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Store/scss/StoreSelect.scss ***!
-  \**************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.BackdropS {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: initial;\n  z-index: 1;\n}\n\n.SelectPanel {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 60%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n}\n\n.StoresList {\n  display: flex;\n  flex-wrap: wrap;\n  -webkit-animation: slideIn-down 0.3s;\n          animation: slideIn-down 0.3s;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  box-shadow: 2px 2px 5px gray;\n  font-size: 2.3vh;\n  min-width: 20%;\n  margin: 1vh 1vh;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n  transition: all 0.4s;\n  background: #e7ae0f;\n  color: #353634;\n  text-align: center;\n}\n.StoresList .StoreItem .Btn:hover, .StoresList .StoreItem .EditBtn:hover, .StoresList .StoreItem .SelectBtn:hover {\n  background-color: #353634;\n  color: #e7ae0f;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  position: absolute;\n  top: 0;\n  right: -100%;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
 
 // exports
 
@@ -2332,7 +2370,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.TableWrap {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.TableWrap .Nav {\n  flex-basis: 5%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.TableWrap .Nav .Controls {\n  flex-basis: 80%;\n}\n.TableWrap .Nav .Controls .Btn {\n  width: 25%;\n}\n.TableWrap .Table {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  flex-basis: 92%;\n  -webkit-animation: fadeIn 0.4s ease-out;\n          animation: fadeIn 0.4s ease-out;\n}\n.TableWrap .Table .Row {\n  height: 10%;\n  display: flex;\n  border-bottom: 1px solid rgba(92, 90, 90, 0.541);\n  background: rgba(128, 128, 128, 0.205);\n}\n.TableWrap .Table .Row .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  border-left: 1px solid rgba(92, 90, 90, 0.541);\n}\n.TableWrap .Table .Row .Cell:nth-of-type(1) {\n  border-left: none;\n}\n.TableWrap .Table .Row .Cell .Text {\n  padding: 0 0.5rem;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  transition: all 0.2s;\n}\n.TableWrap .Table .Row .Cell .Text:hover {\n  position: fixed;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  overflow: visible;\n  background-color: #353634;\n  color: #d6e6d6;\n  padding: 0.5rem;\n  font-size: 2vh;\n}\n.TableWrap .Table .Row:hover {\n  background: rgba(128, 128, 128, 0.342);\n}\n.TableWrap .Table .Message {\n  margin: 20% auto;\n  font-size: 8vh;\n  font-weight: 800;\n  opacity: 0.3;\n}\n.TableWrap .Table .bd-l {\n  border-left: 1px solid rgba(43, 42, 42, 0.918);\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.TableWrap {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.TableWrap .Nav {\n  flex-basis: 5%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.TableWrap .Nav .Controls {\n  flex-basis: 80%;\n}\n.TableWrap .Nav .Controls .Btn {\n  width: 25%;\n}\n.TableWrap .Table {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  flex-basis: 92%;\n  -webkit-animation: fadeIn 0.4s ease-out;\n          animation: fadeIn 0.4s ease-out;\n}\n.TableWrap .Table .Row {\n  height: 10%;\n  display: flex;\n  border-bottom: 1px solid rgba(92, 90, 90, 0.541);\n  background: rgba(128, 128, 128, 0.205);\n}\n.TableWrap .Table .Row .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n  border-left: 1px solid rgba(92, 90, 90, 0.541);\n}\n.TableWrap .Table .Row .Cell:nth-of-type(1) {\n  border-left: none;\n}\n.TableWrap .Table .Row .Cell .Text {\n  padding: 0 0.5rem;\n  position: absolute;\n  width: 90%;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n}\n.TableWrap .Table .Row .Cell .Text:hover {\n  z-index: 100;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  overflow: visible;\n  background-color: #353634;\n  color: #d6e6d6;\n  padding: 0.5rem;\n  font-size: 2vh;\n}\n.TableWrap .Table .Row:hover {\n  background: rgba(128, 128, 128, 0.342);\n}\n.TableWrap .Table .Message {\n  margin: 20% auto;\n  font-size: 8vh;\n  font-weight: 800;\n  opacity: 0.3;\n}\n.TableWrap .Table .bd-l {\n  border-left: 1px solid rgba(43, 42, 42, 0.918);\n}", ""]);
 
 // exports
 
@@ -2390,6 +2428,25 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 // module
 exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.LoadScreen {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  height: 100vh;\n  width: 100vw;\n  z-index: 1;\n  background: linear-gradient(to right, #d7e4f0, #a0c7e7);\n}\n.LoadScreen .LogoWrap {\n  margin: auto;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-top: 10%;\n}\n.LoadScreen .LoadMessage {\n  text-align: center;\n  margin-top: 20%;\n  font-size: 4vh;\n  font-weight: 700;\n  -webkit-animation: fadeIn ease-out 0.8s both;\n          animation: fadeIn ease-out 0.8s both;\n}\n.LoadScreen .LoadMessage p {\n  margin: 0;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Visual/scss/Loader.scss":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Visual/scss/Loader.scss ***!
+  \**********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Loader {\n  margin: auto;\n  background: none;\n  display: block;\n  shape-rendering: auto;\n  width: 6vh;\n  height: 6vh;\n}", ""]);
 
 // exports
 
@@ -53296,22 +53353,21 @@ module.exports = function(module) {
 /*!******************************************!*\
   !*** ./resources/js/Functions/server.js ***!
   \******************************************/
-/*! exports provided: login, logout, getStores, createStore, editStore, deleteStore, getProducts, createProduct, editProduct, deleteProduct, getTransactions, toogleActive, generateQrCode */
+/*! exports provided: login, logout, createStore, editStore, deleteStore, getProducts, showProduct, createProduct, editProduct, deleteProduct, toogleActive, generateQrCode */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStores", function() { return getStores; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editStore", function() { return editStore; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteStore", function() { return deleteStore; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProducts", function() { return getProducts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showProduct", function() { return showProduct; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createProduct", function() { return createProduct; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "editProduct", function() { return editProduct; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteProduct", function() { return deleteProduct; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTransactions", function() { return getTransactions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toogleActive", function() { return toogleActive; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "generateQrCode", function() { return generateQrCode; });
 function ownKeys(object, enumerableOnly) {
@@ -53378,9 +53434,6 @@ function login() {
 function logout() {
   return request('/logout', 'post');
 }
-function getStores() {
-  return request('/stores', 'get');
-}
 function createStore(storeData) {
   return request('/stores', 'post', _objectSpread({}, storeData));
 }
@@ -53401,6 +53454,9 @@ function getProducts(store) {
     }
   });
 }
+function showProduct(prodId) {
+  return request('/products' + "/".concat(prodId), 'get');
+}
 function createProduct(productData) {
   return request('/products', 'post', _objectSpread({}, productData));
 }
@@ -53414,9 +53470,6 @@ function deleteProduct(productId, storeId) {
     _method: 'DELETE',
     store_id: storeId
   });
-}
-function getTransactions() {
-  return request('/transactions', 'get');
 }
 function toogleActive(productId, productInfo) {
   return request('/products/activate' + "/".concat(productId), 'post', _objectSpread({}, productInfo));
@@ -53561,7 +53614,7 @@ function AsSwitch(ViewCmp) {
     }, [props.on]);
 
     var open = function open(e) {
-      if (e.target.getAttribute('data-escape')) return;
+      if (e && e.target.getAttribute('data-escape')) return;
       toogleSwitch(true);
       animate({
         style: {
@@ -53734,11 +53787,6 @@ function StateProvider(_ref) {
     }
   };
   var storesActions = {
-    get: function get() {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["getStores"]().then(function (res) {
-        return dispatcher(storesDispatch, 'GET', res);
-      });
-    },
     create: function create(newStore) {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["createStore"](newStore).then(function (res) {
         productsDispatch({
@@ -55674,7 +55722,7 @@ function ProductPreview(_ref) {
         background: colorPallete[segment].rgbStr
       },
       className: "Color"
-    }), colorPicker === i ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, segment), colorPicker === i ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "ColorPicker"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_color__WEBPACK_IMPORTED_MODULE_1__["SketchPicker"], {
       color: colorPallete[segment].rgb,
@@ -55771,6 +55819,197 @@ var themeCoder = {
     return "rgb(".concat(r, ", ").concat(g, ", ").concat(b, ", ").concat(a, ")");
   }
 };
+
+/***/ }),
+
+/***/ "./resources/js/components/Products/ProductView.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Products/ProductView.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProductView; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_ProductView_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/ProductView.scss */ "./resources/js/components/Products/scss/ProductView.scss");
+/* harmony import */ var _scss_ProductView_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_ProductView_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Shared_Backdrop__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Shared/Backdrop */ "./resources/js/components/Shared/Backdrop.js");
+/* harmony import */ var _Visual_Loader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Visual/Loader */ "./resources/js/components/Visual/Loader.js");
+/* harmony import */ var _Functions_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Functions/server */ "./resources/js/Functions/server.js");
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+
+
+
+
+
+function ProductView(_ref) {
+  var data = _ref.data,
+      close = _ref.close,
+      switchAction = _ref.switchAction;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      product = _useState2[0],
+      setProduct = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["showProduct"])(data.product_id).then(function (_ref2) {
+      var _ref2$data = _ref2.data,
+          product = _ref2$data.product,
+          store = _ref2$data.store;
+      setProduct(_objectSpread(_objectSpread({}, product[0]), {}, {
+        store: store[0]
+      }));
+    });
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Backdrop__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    close: close
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({}, switchAction, {
+    className: "ProductView"
+  }), !product ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_Loader__WEBPACK_IMPORTED_MODULE_3__["default"], null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Left"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    alt: "img",
+    src: product.image_url
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Right"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "StoreName"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, product.store.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Product"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, product.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, product.manufacturer), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, product.model)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, product.price + product.currency), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "In stock  -  ", product.stock))))));
+}
 
 /***/ }),
 
@@ -55925,6 +56164,71 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/Products/scss/ProductView.scss":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/Products/scss/ProductView.scss ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./ProductView.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Products/scss/ProductView.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Shared/Backdrop.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/Shared/Backdrop.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return View; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_Backdrop_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Backdrop.scss */ "./resources/js/components/Shared/scss/Backdrop.scss");
+/* harmony import */ var _scss_Backdrop_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Backdrop_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function View(_ref) {
+  var close = _ref.close,
+      children = _ref.children;
+
+  var backdropClose = function backdropClose(e) {
+    if (e.target.id === 'backdrop') {
+      close();
+    }
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: backdropClose,
+    id: "backdrop",
+    className: "Backdrop"
+  }, children);
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/Shared/Panel.js":
 /*!*************************************************!*\
   !*** ./resources/js/components/Shared/Panel.js ***!
@@ -56020,6 +56324,36 @@ function Toggle(props) {
     className: "Switch"
   }));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/Shared/scss/Backdrop.scss":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/Shared/scss/Backdrop.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./Backdrop.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Shared/scss/Backdrop.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -56136,28 +56470,6 @@ function Shippment(_ref) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Shippments/ShippmentView.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/Shippments/ShippmentView.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Shippment; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_Shippment_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Shippment.scss */ "./resources/js/components/Shippments/scss/Shippment.scss");
-/* harmony import */ var _scss_Shippment_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Shippment_scss__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function Shippment(props) {
-  return null;
-}
-
-/***/ }),
-
 /***/ "./resources/js/components/Shippments/Shippments.js":
 /*!**********************************************************!*\
   !*** ./resources/js/components/Shippments/Shippments.js ***!
@@ -56171,13 +56483,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Shippment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Shippment */ "./resources/js/components/Shippments/Shippment.js");
-/* harmony import */ var _ShippmentView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShippmentView */ "./resources/js/components/Shippments/ShippmentView.js");
+/* harmony import */ var _Products_ProductView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Products/ProductView */ "./resources/js/components/Products/ProductView.js");
 /* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
 
 
 
 
-var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__["default"])(_ShippmentView__WEBPACK_IMPORTED_MODULE_2__["default"], _Shippment__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__["default"])(_Products_ProductView__WEBPACK_IMPORTED_MODULE_2__["default"], _Shippment__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function Shippments(_ref) {
   var columns = _ref.columns,
       list = _ref.list,
@@ -56255,12 +56567,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SelectPanel; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/StoreSelect.scss */ "./resources/js/components/Store/scss/StoreSelect.scss");
-/* harmony import */ var _scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_StoreSelect_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _scss_SelectPanel_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/SelectPanel.scss */ "./resources/js/components/Store/scss/SelectPanel.scss");
+/* harmony import */ var _scss_SelectPanel_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_SelectPanel_scss__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 /* harmony import */ var _StorePanel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./StorePanel */ "./resources/js/components/Store/StorePanel.js");
-/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
-/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
+/* harmony import */ var _Shared_Backdrop__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Shared/Backdrop */ "./resources/js/components/Shared/Backdrop.js");
+/* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
+/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -56285,7 +56598,8 @@ function _extends() {
 
 
 
-var PanelSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_4__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_5__["default"])(_StorePanel__WEBPACK_IMPORTED_MODULE_3__["default"]));
+
+var PanelSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_6__["default"])(_StorePanel__WEBPACK_IMPORTED_MODULE_3__["default"]));
 function SelectPanel(props) {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_2__["store"]),
       state = _useContext.state,
@@ -56295,12 +56609,6 @@ function SelectPanel(props) {
     var store = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
     dispatch.stores["switch"](store);
     props.close();
-  };
-
-  var backdropClose = function backdropClose(e) {
-    if (e.target.id === 'backdrop') {
-      props.close();
-    }
   };
 
   var storeList = state.stores.list.map(function (store, i) {
@@ -56329,10 +56637,8 @@ function SelectPanel(props) {
       }
     }));
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: backdropClose,
-    id: "backdrop",
-    className: "BackdropS"
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Backdrop__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    close: props.close
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({}, props.switchAction, {
     className: "SelectPanel"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -56673,15 +56979,15 @@ function StoreMenu(props) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Store/scss/Store.scss":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/Store/scss/Store.scss ***!
-  \*******************************************************/
+/***/ "./resources/js/components/Store/scss/SelectPanel.scss":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/Store/scss/SelectPanel.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./Store.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Store/scss/Store.scss");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./SelectPanel.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Store/scss/SelectPanel.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -56703,15 +57009,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./resources/js/components/Store/scss/StoreSelect.scss":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/Store/scss/StoreSelect.scss ***!
-  \*************************************************************/
+/***/ "./resources/js/components/Store/scss/Store.scss":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Store/scss/Store.scss ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./StoreSelect.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Store/scss/StoreSelect.scss");
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./Store.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Store/scss/Store.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -57503,39 +57809,19 @@ function Transaction(_ref) {
       onClick = _ref.onClick;
   var columnFields = Object.keys(columns).map(function (key, i) {
     var col = columns[key];
+    var value = data[col.dataKey];
+    if (key === 'Date') value = new Date(value).toDateString();
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: "row".concat(i),
       className: "Cell"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Text"
-    }, data[col.dataKey]));
+    }, value));
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     onClick: onClick,
     className: "Row"
   }, columnFields);
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/Transactions/TransactionView.js":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/Transactions/TransactionView.js ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Transaction; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Transaction.scss */ "./resources/js/components/Transactions/scss/Transaction.scss");
-/* harmony import */ var _scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Transaction_scss__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function Transaction(props) {
-  return null;
 }
 
 /***/ }),
@@ -57553,13 +57839,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Transaction__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Transaction */ "./resources/js/components/Transactions/Transaction.js");
-/* harmony import */ var _TransactionView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TransactionView */ "./resources/js/components/Transactions/TransactionView.js");
+/* harmony import */ var _Products_ProductView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Products/ProductView */ "./resources/js/components/Products/ProductView.js");
 /* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
 
 
 
 
-var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__["default"])(_TransactionView__WEBPACK_IMPORTED_MODULE_2__["default"], _Transaction__WEBPACK_IMPORTED_MODULE_1__["default"]);
+var Row = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_3__["default"])(_Products_ProductView__WEBPACK_IMPORTED_MODULE_2__["default"], _Transaction__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function Transactions(_ref) {
   var columns = _ref.columns,
       list = _ref.list,
@@ -57737,6 +58023,98 @@ function LoadScreen(props) {
 
 /***/ }),
 
+/***/ "./resources/js/components/Visual/Loader.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/Visual/Loader.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Loader; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_Loader_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Loader.scss */ "./resources/js/components/Visual/scss/Loader.scss");
+/* harmony import */ var _scss_Loader_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_Loader_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function Loader(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    className: "Loader",
+    viewBox: "0 0 100 100",
+    preserveAspectRatio: "xMidYMid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    transform: "translate(26.666666666666668,26.666666666666668)"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    x: "-20",
+    y: "-20",
+    width: "40",
+    height: "40",
+    fill: "#5bb0e1"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("animateTransform", {
+    attributeName: "transform",
+    type: "scale",
+    repeatCount: "indefinite",
+    dur: "1s",
+    keyTimes: "0;1",
+    values: "1.1;1",
+    begin: "-0.3s"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    transform: "translate(73.33333333333333,26.666666666666668)"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    x: "-20",
+    y: "-20",
+    width: "40",
+    height: "40",
+    fill: "#1d7eb7"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("animateTransform", {
+    attributeName: "transform",
+    type: "scale",
+    repeatCount: "indefinite",
+    dur: "1s",
+    keyTimes: "0;1",
+    values: "1.1;1",
+    begin: "-0.2s"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    transform: "translate(26.666666666666668,73.33333333333333)"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    x: "-20",
+    y: "-20",
+    width: "40",
+    height: "40",
+    fill: "#4ebad5"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("animateTransform", {
+    attributeName: "transform",
+    type: "scale",
+    repeatCount: "indefinite",
+    dur: "1s",
+    keyTimes: "0;1",
+    values: "1.1;1",
+    begin: "0s"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    transform: "translate(73.33333333333333,73.33333333333333)"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    x: "-20",
+    y: "-20",
+    width: "40",
+    height: "40",
+    fill: "#7cb0c4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("animateTransform", {
+    attributeName: "transform",
+    type: "scale",
+    repeatCount: "indefinite",
+    dur: "1s",
+    keyTimes: "0;1",
+    values: "1.1;1",
+    begin: "-0.1s"
+  }))));
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/Visual/logo.js":
 /*!************************************************!*\
   !*** ./resources/js/components/Visual/logo.js ***!
@@ -57783,6 +58161,36 @@ function Logo(props) {
 
 
 var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./LoadScreen.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Visual/scss/LoadScreen.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/Visual/scss/Loader.scss":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/Visual/scss/Loader.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./Loader.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Visual/scss/Loader.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductRequest;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,6 +23,16 @@ class ProductsController extends Controller
                 'stats' => $this->getProductsStats($store),
                 'categories'=> $this->getProductCategories($store),
                 ]
+            ]);
+    }
+
+    public function show(Request $request, $id)
+    {   
+        $product = Product::find($id);
+        
+        return response()->json([
+            'store' => $product->store()->get(),
+            'product' =>$product->get(),
             ]);
     }
 

@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import Shippment from './Shippment';
-import View from './ShippmentView';
+import View from '../Products/ProductView';
 import AsSwitch from '../HOC/AsSwitch'; 
 
 let Row = AsSwitch(View, Shippment);

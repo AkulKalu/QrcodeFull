@@ -11,9 +11,7 @@ export function logout() {
     return request( '/logout', 'post');
 }
 
-export function getStores() {
-    return request('/stores', 'get')
-}
+
 export function createStore(storeData) {
     return request('/stores', 'post', {
       ...storeData
@@ -40,6 +38,10 @@ export function getProducts(store) {
         }
     })
 }
+export function showProduct(prodId) {
+    return request('/products' + `/${prodId}` , 'get')
+}
+
 export function createProduct(productData) {
     return request('/products', 'post', {
       ...productData
@@ -58,10 +60,6 @@ export function deleteProduct(productId, storeId) {
     })
 }
 
-
-export function getTransactions() {
-    return request('/transactions', 'get')
-}
 
 export function toogleActive(productId, productInfo) {
     return request('/products/activate'+ `/${productId}`, 'post', {

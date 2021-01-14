@@ -18,7 +18,9 @@ export default function ProductPreview({ colorPallete, setColorPallete, product 
     let colorPickers = Object.keys(colorPallete).map( (segment, i) => {
         return  <div  key={`colPick${i}`} className="ColorWrap">
                     <div onClick={()=> activatePicker(i)} style={{background: colorPallete[segment].rgbStr}} className="Color">
+                        {segment}
                     </div>
+                   
                     {colorPicker === i ? <div className="ColorPicker"><SketchPicker color={colorPallete[segment].rgb} onChangeComplete={ col => colorPalleteOnChange(segment, col) } /></div>  : null}
                 </div>
     } )

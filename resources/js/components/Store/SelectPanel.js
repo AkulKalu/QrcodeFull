@@ -1,7 +1,8 @@
 import React, {useContext} from 'react';
-import './scss/StoreSelect.scss';
+import './scss/SelectPanel.scss';
 import {store} from '../HOC/StateProvider';
 import StorePanel from './StorePanel';
+import Backdrop from '../Shared/Backdrop';
 import AsSwitch from '../HOC/AsSwitch';
 import WithValidator from '../HOC/WithValidator';
 
@@ -13,11 +14,6 @@ export default function SelectPanel(props) {
     const switchStore = (store = false) => {
         dispatch.stores.switch(store);
         props.close()
-    }
-    const backdropClose = e => {
-        if(e.target.id === 'backdrop') {
-            props.close()
-        }
     }
   
     const storeList = state.stores.list.map((store, i) => {
@@ -43,18 +39,12 @@ export default function SelectPanel(props) {
                    </div>;
         
     });
-    return <div 
-                onClick={backdropClose} 
-                id="backdrop" 
-                className="BackdropS"
-                >
-                <div 
-                    {...props.switchAction}
-                    className="SelectPanel">
+    return <Backdrop close={props.close} >
+                <div {...props.switchAction} className="SelectPanel">
                     <div  className="StoresList">
                         {storeList}
                         <div className="StoreItem">
-                             <PanelSwitch
+                            <PanelSwitch
                                 button={{
                                     name : '+',
                                     className:"SelectBtn",
@@ -72,6 +62,7 @@ export default function SelectPanel(props) {
                         </div>
                     </div>
                 </div>
-            </div>;
+                   
+            </Backdrop> 
     }
 

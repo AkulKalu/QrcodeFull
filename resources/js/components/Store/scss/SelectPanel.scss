@@ -2,11 +2,6 @@
 @import '../../Layout/scss/anim';
 @import '../../Layout/scss/mixins';
 
-.BackdropS {
-    @include position($b:0, $r:0);
-    @include flex($jcont: center);
-    z-index: 1;
-}
 .SelectPanel {
     margin-top: 5%;
     padding: 1vh;

@@ -14,7 +14,7 @@ input {
 
     aside {
         @include background(right);
-        flex-basis: $aside;
+        width: 15vw ;
         border-right: 1px solid $border1;
 
         .Logo {
@@ -31,8 +31,7 @@ input {
     }
     main {
         @include flex(column);
-        flex-basis: 85%;
-
+        width: 85vw ;
         .TopBar {
             @include flex($aitems : center);
             flex-basis: 10%;

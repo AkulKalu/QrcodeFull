@@ -1,14 +1,7 @@
-@import '../../Layout/scss/variables';
 @import '../../Layout/scss/mixins';
-@import '../../Layout/scss/anim';
 
 .Backdrop {
-    @include position;
-    position: fixed;
-    overflow-y: scroll;
+    @include position($b:0, $r:0);
+    @include flex($jcont: center);
     z-index: 1;
-    background: linear-gradient(to left, $bgGrad1, $bgGrad2);
-    height: 100vh;
-    width: 100vw;
 }
-

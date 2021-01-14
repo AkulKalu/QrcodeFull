@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
 import Transaction from './Transaction';
-import TransactionView from './TransactionView';
+import View from '../Products/ProductView';
 import AsSwitch from '../HOC/AsSwitch'; 
 
-let Row = AsSwitch(TransactionView, Transaction);
+let Row = AsSwitch(View, Transaction);
 
 
 export default function Transactions({columns, list, slice, applyFilter}) {

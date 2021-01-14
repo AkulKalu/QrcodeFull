@@ -34,9 +34,6 @@ function StateProvider({children}) {
     } 
 
     const storesActions = {
-        get: () => server.getStores().then(res => {
-            return dispatcher(storesDispatch, 'GET', res)
-        }),
         create: newStore => server.createStore(newStore).then(res => {
                    productsDispatch({type: 'get', payload : {products: {list: []}}})
             return dispatcher(storesDispatch, 'CREATE', res)

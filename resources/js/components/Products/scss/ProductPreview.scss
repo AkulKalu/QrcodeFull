@@ -79,7 +79,10 @@
     .ColorWrap {
         @include flex-c();
         position: relative;
-
+        .ThemeSegment {
+            display: flex;
+        }
+       
         .Color {
             height: 2vh;
             width: 2vh;

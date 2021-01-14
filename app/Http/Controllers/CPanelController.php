@@ -73,6 +73,7 @@ class CPanelController extends Controller
 
             if($store->products()->count()) {
                 $response['products']['list'] =$store->products()->latest()->get();
+               
                 $response['products']['stats'] = $this->getProductsStats($store);
                 $response['products']['categories'] = $this->getProductCategories($store);
 
@@ -84,7 +85,7 @@ class CPanelController extends Controller
                 }
             }
         }
-        
+    
         return response()->json($response);
     }
 

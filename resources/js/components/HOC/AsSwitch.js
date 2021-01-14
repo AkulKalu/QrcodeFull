@@ -12,7 +12,7 @@ export default function AsSwitch(ViewCmp, SwitchCmp=null) {
         }, [props.on])
         
         const open = (e) => {
-            if(e.target.getAttribute('data-escape')) return
+            if(e && e.target.getAttribute('data-escape')) return
             toogleSwitch(true);
             animate({
                 style: {
