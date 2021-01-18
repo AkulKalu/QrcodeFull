@@ -31,6 +31,10 @@ function StateProvider({children}) {
         logout: () => server.logout().then(res => {
             return dispatcher(  userDispatch, 'LOGOUT')
         }),
+
+        setShippingStatus: id => server.shippmentSent(id).then( res => {
+            return dispatcher( userDispatch, 'SHIPPMENT_SENT', res)
+        })
     } 
 
     const storesActions = {
@@ -39,8 +43,8 @@ function StateProvider({children}) {
             return dispatcher(storesDispatch, 'CREATE', res)
         }),
         edit: (storeId, data, idx) => server.editStore(storeId, data).then(res => {
-            res.data['idx'] = idx;
-            return dispatcher(storesDispatch, 'EDIT', res)
+            console.log(res);
+            
         }),
         delete: (storeId, idx) => server.deleteStore(storeId).then(res => {
             res.data['idx'] = idx;
@@ -61,10 +65,7 @@ function StateProvider({children}) {
             res.data['idx'] = idx;
             return dispatcher(productsDispatch, 'EDIT', res)
         }),
-        toggle: (prodId, data, idx) => server.editProduct(prodId, data).then(res => {
-            res.data['idx'] = idx;
-            return dispatcher(productsDispatch, 'EDIT', res)
-        }),
+      
         delete: (prodId, storeId, idx) => server.deleteProduct(prodId, storeId).then(res => {
             res.data['idx'] = idx;
             return dispatcher(productsDispatch, 'DELETE', res)

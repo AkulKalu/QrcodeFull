@@ -2,11 +2,14 @@ import React, {useContext} from 'react';
 import './scss/SelectPanel.scss';
 import {store} from '../HOC/StateProvider';
 import StorePanel from './StorePanel';
+import EditBtn from './EditBtn';
 import Backdrop from '../Shared/Backdrop';
 import AsSwitch from '../HOC/AsSwitch';
 import WithValidator from '../HOC/WithValidator';
 
-let PanelSwitch = AsSwitch(WithValidator(StorePanel));
+
+let EditPanelSwitch = AsSwitch(WithValidator(StorePanel), EditBtn);
+let CreatePanelSwitch = AsSwitch(WithValidator(StorePanel));
 
 export default function SelectPanel(props) {
     const {state, dispatch} = useContext(store);
@@ -21,11 +24,7 @@ export default function SelectPanel(props) {
         return <div  key={`storeLI${i}`} className="StoreItem"> 
                         <div className="SelectBtn" onClick={() => switchStore(store)}  
                         >{store.name}</div>
-                        <PanelSwitch
-                            button={{
-                                name : 'ED',
-                                className:"EditBtn",
-                            }}
+                        <EditPanelSwitch
                             view = {{
                                 store : store
                             }}
@@ -44,10 +43,10 @@ export default function SelectPanel(props) {
                     <div  className="StoresList">
                         {storeList}
                         <div className="StoreItem">
-                            <PanelSwitch
+                            <CreatePanelSwitch
                                 button={{
                                     name : '+',
-                                    className:"SelectBtn",
+                                    className: "SelectBtn",
                                 }}
                                 view = {{
                                     create : true
@@ -61,8 +60,7 @@ export default function SelectPanel(props) {
                         />
                         </div>
                     </div>
-                </div>
-                   
+                </div>  
             </Backdrop> 
     }
 

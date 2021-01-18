@@ -59,7 +59,7 @@ function ControlPanel() {
                 {state.user.info ? 
                 <div className="CPanel">
                     <aside>
-                        <div className="Logo">
+                        <div className="LogoWrap">
                             {!loading ? <Logo type="LogoPanel"/> : null }
                         </div>
                         <div className="User">

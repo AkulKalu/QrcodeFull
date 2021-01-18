@@ -1,0 +1,9 @@
+.Mail {
+    fill:#ef295c;
+    height: 40%;
+    transition:  fill 0.3s;
+    cursor: pointer;
+    &:hover {
+        fill: #6bc311;
+    }
+}

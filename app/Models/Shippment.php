@@ -9,4 +9,9 @@ class Shippment extends Model
 {
     protected  $guarded = [];
     use HasFactory;
+
+    public function Product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

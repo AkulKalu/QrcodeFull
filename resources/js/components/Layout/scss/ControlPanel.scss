@@ -17,14 +17,12 @@ input {
         width: 15vw ;
         border-right: 1px solid $border1;
 
-        .Logo {
-            height: 10vh;
-            margin: 2vh auto;
+        .LogoWrap {
+            height: 8vh;
+            width: 60%;
+            margin: 1vh auto;
         }
         
-        .Menu {
-            margin-top: 12vh;
-        }
         .User {
             height: 8%
         }

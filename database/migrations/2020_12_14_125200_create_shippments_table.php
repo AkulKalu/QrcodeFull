@@ -18,12 +18,13 @@ class CreateShippmentsTable extends Migration
             $table->unsignedBigInteger('transaction_id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('product_id');
-            $table->string('name')->nullable();
-            $table->string('city')->nullable();
-            $table->string('country')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('city');
+            $table->string('country');
             $table->string('state')->nullable();
-            $table->string('postal_code')->nullable();
-            $table->string('line1')->nullable();
+            $table->string('postal_code');
+            $table->string('line1');
             $table->string('line2')->nullable();
             $table->tinyInteger('shipped')->default(0);
             $table->timestamps();

@@ -5,6 +5,7 @@ use App\Http\Controllers\CPanelController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PayPalController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ShippmentsController;
 use App\Http\Controllers\StoresController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\TransactionsController;
@@ -35,6 +36,9 @@ Route::get('/try', [CPanelController::class, 'load']);
 Route::get('/qrcodes/{store}/{product}', [CPanelController::class, 'generateQrCode'])->name('qrgen');
 Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive']);
 Route::get('/user', [CPanelController::class, 'load']);
+
+Route::patch('/shippments/send/{id}', [ShippmentsController::class, 'markAsSent']);
+
 Route::get('/shop/{store}/{productId}', [CheckoutController::class, 'index']);
 Route::post('/checkout/charge/stripe/{productId}', [StripeController::class, 'charge']);
 Route::post('/checkout/charge/paypal', [PayPalController::class, 'charge']);

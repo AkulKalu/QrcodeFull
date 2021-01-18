@@ -60,10 +60,9 @@ export function deleteProduct(productId, storeId) {
     })
 }
 
-
-export function toogleActive(productId, productInfo) {
-    return request('/products/activate'+ `/${productId}`, 'post', {
-        ...productInfo
+export function shippmentSent(shippmentId) {
+    return request('/shippments/send'+ `/${shippmentId}`, 'post', {
+      _method: 'PATCH',
     })
 }
 

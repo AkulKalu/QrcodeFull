@@ -8,7 +8,7 @@ let Row = AsSwitch(View, Transaction);
 
 export default function Transactions({columns, list, slice, applyFilter}) {
   
-    let rows = list.slice(slice.start, slice.end).map((entry, i) => {
+    let rows = list.map((entry, i) => {
         entry = applyFilter(entry);
         if(entry) {
             entry.idx = i;
@@ -34,7 +34,7 @@ export default function Transactions({columns, list, slice, applyFilter}) {
    
  
     return <Fragment>
-               {rows.length ? rows : <span className="Message">No Transactions</span>}
+               {rows.length ? rows.slice(slice.start, slice.end) : <span className="Message">No Transactions</span>}
             </Fragment> 
    
 }

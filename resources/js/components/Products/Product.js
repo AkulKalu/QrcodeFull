@@ -6,13 +6,21 @@ import {generateQrCode} from '../../Functions/server';
 import {store} from '../HOC/StateProvider';
 
 export default function Product({ data, columns, onClick, style }) {
-    const {dispatch} = useContext(store);
+    const {state, dispatch} = useContext(store);
 
     const setActiveStatus = () => {
-        dispatch.products.toogle(data.id, {
+        let productData = {};
+        Object.keys(state.products.new).forEach(
+            key => {
+                productData[key] = data[key]
+            }
+        );
+       
+        dispatch.products.edit(data.id, {
+            ...productData,
             store_id: data.store_id,
             active:  data.active ? 0 : 1
-        }); 
+        }, data.idx); 
     }
     const downloadQrCode = () => {
         generateQrCode(data.store_id, data.id)

@@ -17,7 +17,7 @@ export default function Products({columns, list, slice, applyFilter, data : {upd
           return markup;
       }
 
-      let rows = list.slice(slice.start, slice.end).map((entry, i) => {
+      let rows = list.map((entry, i) => {
             entry = applyFilter(entry);
             if(entry) { 
                 entry.idx = i;
@@ -43,7 +43,7 @@ export default function Products({columns, list, slice, applyFilter, data : {upd
   
     
     return <Fragment>
-               {rows.length ? rows : <span className="Message">Create Products</span>}
+               {rows.length ? rows.slice(slice.start, slice.end) : <span className="Message">Create Products</span>}
             </Fragment>
 }
 

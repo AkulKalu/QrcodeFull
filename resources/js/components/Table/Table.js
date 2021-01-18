@@ -6,7 +6,7 @@ import './scss/Table.scss';
 export default function Table({display, search}) {
     const [slice, setSlice] = useState({
         start: 0,
-        end: 10
+        end: display.data.list.length
     })
     const [sort, setSort] = useState({fun: list => list});
     const {list, columns, Component, controls} = display

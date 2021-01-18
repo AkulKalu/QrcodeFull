@@ -1,12 +1,14 @@
 import React from 'react';
-import Toggle from '../Shared/Toggle';
+
+import Mail from './Mail';
 import './scss/Shippment.scss';
 
 
 
 
 export default function Shippment({columns, data, onClick}) {
-    
+  
+
     let columnFields = Object.keys(columns).map((key, i) => {
         let col = columns[key];
         let cellContent = <div className="Text">{data[col.dataKey]}</div> ;
@@ -15,7 +17,7 @@ export default function Shippment({columns, data, onClick}) {
             if(data[col.dataKey]) {
                 cellContent = <div className="Text">{data.updated_at}</div> ;
             }else {
-                cellContent = <Toggle on={false} />
+                return  <div data-escape style={{cursor: 'unset'}} key={`row${i}`} className="Cell"><Mail shippmentId = {data.id} /></div>
             }
         }
         return  <div key={`row${i}`} className="Cell">{cellContent}</div>

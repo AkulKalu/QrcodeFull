@@ -3,30 +3,37 @@
 @import '../../Layout/scss/anim';
 
 .Logo {
-    display: flex;
-    width: fit-content;
+    height: 100%;
+    width: 100%;
+    @include flex-c();
 
     .LogoLoad {
         @extend .Logo;
         font-size: 3vh;
-        height: 15vh;
     }
     .LogoPanel {
         @extend .Logo;
         font-size: 2vh;
-        height: 8vh;
         animation: slideIn-left 0.6s ease-out both;
+        // span {
+
+        //     &:nth-of-type(2) {
+             
+        //     }
+        // }
+
     }
 
-    .LogoImg {
-        height: 100%;
+    img {
         animation: fadeIn 1s ease-out both;
+        height: 100%;
     }
 
     .LogoText{
         position: relative;
+        height: 100%;
         @include flex($dir: column, $jcont: center,);
-        padding: 0 1.2vh;
+        padding: 0 8%;
 
         span {
             position: relative;
@@ -35,8 +42,6 @@
 
             &:nth-of-type(2) {
                 font-weight: 800;
-                text-indent: 1vh;
-                font-size: 2vh;
             }
         }
     }

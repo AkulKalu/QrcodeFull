@@ -11,18 +11,21 @@ const initalState = {
 }
 
 const reducer = (state, action) => {
-   
-    switch (action.type) {
+   let {type, payload} = action;
+    switch (type) {
       case "LOGIN":
         return {
-            info: action.payload.user, 
-            transactions: action.payload.transactions, 
-            shippments: action.payload.shippments, 
+            info: payload.user, 
+            transactions: payload.transactions, 
+            shippments: payload.shippments, 
         }
-       
+        
       case "LOGOUT":
         window.location.replace( window.location.origin);
         return null;
+      case "SHIPPMENT_SENT":
+        console.log(payload);
+        return state;
       default:
         return state;
     }
