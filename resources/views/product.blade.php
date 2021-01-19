@@ -9,36 +9,60 @@
     <title>Product</title>
 </head>
 <body>
-    <div id="imgBg" class="ProductImg" >
-        <img  src={{ $product->image_url}} alt="product">
+    <div id="imgBg" class="Img" >
+        <img  src={{ $product->image_url}} alt="ProductImage">
     </div>
-    <div>
-        <span class="ProductName">{{ $product->category}}</span>
-        <span class="ProductBrand">{{ $product->manufacturer}}</span>
-        <span class="ProductModel">{{ $product->model}} </span>
-        <span class="ProductPrice"> {{ $product->currency}}{{ $product->price}} </span>
+    <main>
+        <div class="Info">
+            <span class="InfoSmall">{{ $product->category}}</span>
+            <span class="InfoLarge">{{ $product->manufacturer}}</span>
+            <span class="InfoSmall">{{ $product->model}} </span>
+            <span class="InfoLarge"> {{ $product->currency}}{{ $product->price}} </span>    
+        </div>
+        <div class="Buttons">
+            <div id="aboutBtn" class="Btn About">
+                <span>About</span>
+            </div>
+            <div id="buyBtn" class="Btn Buy">
+                <span>Buy</span>
+            </div>
+        </div>
+    </main>
+    <div id="description"  class="Window  Description" >
+        {{ $product->description}}
     </div>
-    <div class="Productinfo">
-        <p>
-        </p>
-    </div>
-    <div id="buyBtn" class="ProductBuy">
-        <span>Buy</span>
-    </div>
-        <div id="payMenu" class="PayMenu">
+    <div id="buyMenu"  class="Window BuyMenu" >
+        <div class="Quantaty">
+            <h2>Quantaty</h2>
+            <div id='counter' class="Counter">
+                <div id="qL" class="Left"></div>
+                <div id="qTotal" class="Count" >1</div>
+                <div id="qR" class="Right"></div>
+            </div>
+        </div>
+        <h2>Delivery</h2>
+        <div id="delivery" class="Delivery">
+            <span id="yes">Yes</span>
+            <span style="opacity: 0.6;" id="no">No</span>
+        </div>
+        <h2>Payment</h2>
+        <div class="Payment">
             <form action="{{ url('/checkout/charge/paypal') }}" method="post">
                 <input type="hidden" name="productId" value={{$product->id}} />
                 {{ csrf_field() }}
-                <input type="submit" name="submit" value="PayPal">
+                <input class="Method" type="submit" name="submit" value="PayPal">
             </form>
-            <span id="chargeStripe">STRIPE</span>
+            <input id="stripe" class="Method" type="button" value="Stripe">
         </div>
-    <div  id="backdrop" class="Backdrop"></div>
+    </div>
     <script>
         // Create an instance of the Stripe object with your publishable API key
         let publicKey = "{{$public_key}}";
         let productId = "{{$product->id}}";
+        let stock = "{{$product->stock}}";
         let theme = @json($theme);
     </script>
+</body>
+ 
 </body>
 </html>

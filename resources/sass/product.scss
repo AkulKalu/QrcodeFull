@@ -1,86 +1,152 @@
+@import '../js/components/Layout/scss/mixins';
+
+:root {
+    --bg :  rgb(211, 209, 198);
+    --font : rgb(100, 68, 13);
+    --imgBg : #f0ffff;
+    --btnBg : rgb(60, 68, 52);
+}
 body {
-    background: rgb(19, 18, 18);
+    background: var(--bg);
     margin: 0 0;
-    color: rgb(245, 210, 150);
+    height: 100vh;
+    width: 100vw;
+    color: var(--font);
     overflow: hidden;
-}
-
-.ProductImg img {
-    width: 100%;
-    max-height: 100%;
-    display: block;
-    margin:  auto;
-}
-.ProductImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 0 0 10% 10%;
-    height: 45%;
-}
-
-.ProductName {
-    display: inline-block;
-    font-size: 3.5vh;
-    font-weight: 100;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-}
-.ProductBrand {
-    display: block;
-    padding:0 1.5rem;
-    font-weight: 800;
-    font-size: 6vh;
-}
-.ProductModel {
-    display: inline-block;
-    padding: 1rem 1.5rem;
-    font-size: 3vh;
-}
-.ProductPrice {
-    font-size: 6vh;
-    position: absolute;
-    right: 2rem;
-    margin-top: 2rem;
-}
-.Productinfo {
-    padding: 2rem 5%;
-    text-align: justify;
-}
-.ProductBuy {
-    background: rgb(245, 210, 150);
-    width: 80%;
-    color:  rgb(19, 18, 18);
-    font-size: 2vh;
-    font-weight: 800;
-    text-align: center;
-    border-radius: 15px;
-    padding: 0.6rem 0;
-    margin: auto;
-}
-.PayMenu {
-    background: paleturquoise;
-    height: 30vh;
-    position: absolute;
-    bottom: -31vh;
-    z-index: 20;
-    width: 100%;
-    border-radius: 10% 10% 0 0 ;
-    border-top: 1px solid rgb(245, 210, 150);
-    background: rgb(19, 18, 18);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease-out, opacity 0.4s ease-out;
-    opacity: 0;
 }
-.Backdrop {
+
+.Img {
+    background-color: var(--imgBg);
+    @include flex-c;
+    overflow: hidden;
+    border-radius: 0 0 10% 10%;
+    height: 55%;
+    img {
+        width: 100%;
+        max-height: 100%;
+        display: block;
+        margin:  auto;
+    }
+}
+
+main {
+    height: 45%;
+
+    .Info {
+        height: 60%;
+        padding-top: 5%;
+        padding-left: 5%;
+        
+        .InfoSmall {
+            display: block;
+            font-size: 2.5vh;
+            padding: 0 1.5vh;
+            margin-top: 1vh;
+        }
+        .InfoLarge {
+            display: block;
+            padding: 1vh 4vh;
+            font-weight: 800;
+            font-size: 6vh;
+        }
+        .InfoLarge:nth-of-type(4) {
+            text-align: right;
+            font-weight: 600;
+        }
+    }
+
+    .Btn {
+        color: wheat;
+        width: 40%;
+        font-size: 2vh;
+        font-weight: 600;
+        text-align: center;
+        padding: 1vh 0;
+        border-radius: 0 5px 5px 0;
+        background-color: var(--btnBg);
+    }
+
+    .Buy {
+        margin-top: 2vh;
+        width: 60%;
+    }
+}
+
+.Window {
     position: absolute;
-    display: none;
     height: 100%;
     width: 100%;
-    top: 0;
-    z-index: 10;
+    font-size: 2.5vh;
+    text-align: justify;
+    overflow-y: scroll;
+    background: var(--bg);
+    transform: translateY(100%);
+    box-sizing: border-box;
+    padding: 12% 10%;
+    transition: all 0.2s;
+
+    .Back {
+        position: fixed;
+        font-size: 3vh;
+        top: 1%;
+        left: 5%;
+        background: var(--font);
+        padding: 0 1vh;
+        color:  var(--bg);
+    }
+    h2 {
+        border-bottom: 1px solid var(--font);
+        padding-bottom: 0.5rem;
+    }
+
+    .Counter {
+        margin: auto;
+        display: flex;
+        width: fit-content;
+        padding: 4vh 0;
+    
+        .Left, .Right {
+            height: 10vh;
+            width: 6vh;
+            background:var(--font);
+        }
+        .Left {
+            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        }
+        .Right {
+            clip-path: polygon(0 0, 0 100%, 100% 50%);
+        }
+    
+        .Count {
+            font-size: 8vh;
+            padding: 0 2vh;
+        }
+    }
+    
+    .Delivery {
+        text-align: right;
+        font-size: 5vh;
+        padding: 4vh 0;
+    
+        span {
+            margin: 0 1vh;
+            transition: opacity 0.5s;
+        }
+    }
+    
+    .Method {
+        background: var(--font);
+        color:  rgba(238, 236, 225, 0.836);
+        border: none;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        height: 5vh;
+        margin: 1.5vh auto;
+    }
 }
+
+
+

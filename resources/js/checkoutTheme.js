@@ -1,4 +1,10 @@
-document.body.style.background = theme.background;
-document.body.style.color = theme.font;
-document.getElementById('imgBg').style.background = theme.image;
+
+let root = document.documentElement;
+
+root.style.setProperty('--bg', theme.background);
+root.style.setProperty('--font', theme.font)
+root.style.setProperty('--imgBg', theme.image)
+root.style.setProperty('--btnBg', theme.buttons)
+
+
 

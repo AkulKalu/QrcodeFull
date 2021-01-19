@@ -19377,25 +19377,87 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ./checkoutTheme */ "./resources/js/checkoutTheme.js");
 
-var menu = document.getElementById('payMenu');
-var backdrop = document.getElementById('backdrop');
+var aboutBtn = document.getElementById('aboutBtn');
+var buyBtn = document.getElementById('buyBtn');
+var description = document.getElementById('description');
+var buyMenu = document.getElementById('buyMenu');
+var quantaty = document.getElementById('counter');
+var quantatyCount = document.getElementById('qTotal');
+var delivery = document.getElementById('delivery');
+var deliverOn = document.getElementById('yes');
+var deliverOff = document.getElementById('no');
+var stripeBtn = document.getElementById('stripe');
+var paymentInfo = {
+  quantaty: 1,
+  delivery: true
+};
 
-function openPayMenu() {
-  menu.style.cssText = 'transform: translateY(-31vh); opacity: 1';
-  backdrop.style.display = 'block';
-  backdrop.onclick = closePayMenu;
+function openWindow(windowObject) {
+  windowObject.style.cssText = 'opacity: 1; transform: translateY(0)';
+  var close = document.createElement('div');
+  close.className = "Back";
+  close.textContent = 'back';
+
+  close.onclick = function () {
+    return closeWindow(close, windowObject);
+  };
+
+  windowObject.appendChild(close);
 }
 
-function closePayMenu() {
-  menu.style.cssText = '';
-  backdrop.style.display = 'none';
-  backdrop.onclick = null;
+function closeWindow(closeBtn, windowObject) {
+  windowObject.style.cssText = 'opacity: 0; transform: translateY(100%)';
+
+  windowObject.ontransitionend = function () {
+    closeBtn.remove();
+  };
 }
 
+function setQuantaty(e) {
+  if (e.target.id === 'qL') {
+    if (paymentInfo.quantaty > 1) {
+      paymentInfo.quantaty--;
+      quantatyCount.textContent = paymentInfo.quantaty;
+    }
+  } else if (e.target.id === 'qR') {
+    if (paymentInfo.quantaty < stock) {
+      paymentInfo.quantaty++;
+      quantatyCount.textContent = paymentInfo.quantaty;
+    }
+  }
+}
+
+function setDelivery(e) {
+  var setActive = function setActive(state) {
+    deliverOn.style.opacity = state ? '1' : '0.6';
+    deliverOff.style.opacity = !state ? '1' : '0.6';
+  };
+
+  if (e.target.id === 'yes') {
+    paymentInfo.delivery = true;
+    setActive(paymentInfo.delivery);
+  } else if (e.target.id === 'no') {
+    paymentInfo.delivery = false;
+    setActive(paymentInfo.delivery);
+  }
+}
+
+quantaty.onclick = setQuantaty;
+delivery.onclick = setDelivery;
+
+aboutBtn.onclick = function () {
+  return openWindow(description);
+};
+
+buyBtn.onclick = function () {
+  return openWindow(buyMenu);
+};
+
+stripeBtn.onclick = chargeWithStripe;
 var stripe = Stripe(publicKey);
 
 function chargeWithStripe() {
-  window.axios.post("/checkout/charge/stripe/".concat(productId)).then(function (response) {
+  window.axios.post("/checkout/charge/stripe/".concat(productId), paymentInfo).then(function (response) {
     return response;
   }).then(function (session) {
     return stripe.redirectToCheckout({
@@ -19413,9 +19475,6 @@ function chargeWithStripe() {
   });
 }
 
-document.getElementById('chargeStripe').onclick = chargeWithStripe;
-document.getElementById('buyBtn').onclick = openPayMenu;
-
 /***/ }),
 
 /***/ "./resources/js/checkoutTheme.js":
@@ -19425,9 +19484,11 @@ document.getElementById('buyBtn').onclick = openPayMenu;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-document.body.style.background = theme.background;
-document.body.style.color = theme.font;
-document.getElementById('imgBg').style.background = theme.image;
+var root = document.documentElement;
+root.style.setProperty('--bg', theme.background);
+root.style.setProperty('--font', theme.font);
+root.style.setProperty('--imgBg', theme.image);
+root.style.setProperty('--btnBg', theme.buttons);
 
 /***/ }),
 
