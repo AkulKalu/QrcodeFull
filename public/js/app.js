@@ -2180,7 +2180,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 10% 10%;\n  height: 48%;\n}\n.Preview .Img img {\n  width: 100%;\n  max-height: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .InfoSmall {\n  display: block;\n  font-size: 2vh;\n  padding: 0 1.5vh;\n  margin-top: 1vh;\n}\n.Preview .InfoLarge {\n  display: block;\n  padding: 1vh 1.5vh;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.Preview .InfoLarge:nth-of-type(4) {\n  text-align: right;\n  font-weight: 600;\n}\n.Preview .Buttons .Btn {\n  width: 50%;\n  font-size: 1.6vh;\n  font-weight: 600;\n  text-align: center;\n  padding: 0.4vh 0;\n  border-radius: 0 5px 5px 0;\n}\n.Preview .Buttons .Buy {\n  margin-top: 2vh;\n  width: 80%;\n}\n\n.Colors {\n  height: 100%;\n  width: 20%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .ThemeSegment {\n  display: flex;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: gold;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
+exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 10% 10%;\n  height: 48%;\n}\n.Preview .Img img {\n  width: 100%;\n  max-height: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .InfoSmall {\n  display: block;\n  font-size: 2vh;\n  padding: 0 1.5vh;\n  margin-top: 1vh;\n}\n.Preview .InfoLarge {\n  display: block;\n  padding: 1vh 1.5vh;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.Preview .InfoLarge:nth-of-type(4) {\n  text-align: right;\n  font-weight: 600;\n}\n.Preview .Buttons .Btn {\n  width: 50%;\n  font-size: 1.6vh;\n  font-weight: 600;\n  text-align: center;\n  padding: 0.4vh 0;\n  border-radius: 0 5px 5px 0;\n}\n.Preview .Buttons .Buy {\n  margin-top: 2vh;\n  width: 80%;\n}\n\n.Colors {\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: gold;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
 
 // exports
 
@@ -53461,9 +53461,10 @@ function editStore(storeId, storeData) {
     _method: 'PATCH'
   }, storeData));
 }
-function deleteStore(storeId) {
+function deleteStore(storeId, isActive) {
   return request('/stores' + "/".concat(storeId), 'post', {
-    _method: 'DELETE'
+    _method: 'DELETE',
+    active: isActive
   });
 }
 function getProducts(store) {
@@ -53815,25 +53816,23 @@ function StateProvider(_ref) {
   var storesActions = {
     create: function create(newStore) {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["createStore"](newStore).then(function (res) {
-        productsDispatch({
-          type: 'get',
-          payload: {
-            products: {
-              list: []
-            }
-          }
-        });
         return dispatcher(storesDispatch, 'CREATE', res);
       });
     },
-    edit: function edit(storeId, data, idx) {
+    edit: function edit(storeId, data) {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["editStore"](storeId, data).then(function (res) {
-        console.log(res);
+        return dispatcher(storesDispatch, 'EDIT', res);
       });
     },
-    "delete": function _delete(storeId, idx) {
-      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["deleteStore"](storeId).then(function (res) {
-        res.data['idx'] = idx;
+    "delete": function _delete(storeId, isActive) {
+      return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["deleteStore"](storeId, isActive).then(function (res) {
+        if (isActive) {
+          productsDispatch({
+            type: 'GET',
+            payload: res.data
+          });
+        }
+
         return dispatcher(storesDispatch, 'DELETE', res);
       });
     },
@@ -53853,15 +53852,13 @@ function StateProvider(_ref) {
         return dispatcher(productsDispatch, 'CREATE', res);
       });
     },
-    edit: function edit(prodId, data, idx) {
+    edit: function edit(prodId, data) {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["editProduct"](prodId, data).then(function (res) {
-        res.data['idx'] = idx;
         return dispatcher(productsDispatch, 'EDIT', res);
       });
     },
-    "delete": function _delete(prodId, storeId, idx) {
+    "delete": function _delete(prodId, storeId) {
       return _Functions_server__WEBPACK_IMPORTED_MODULE_4__["deleteProduct"](prodId, storeId).then(function (res) {
-        res.data['idx'] = idx;
         return dispatcher(productsDispatch, 'DELETE', res);
       });
     }
@@ -55169,6 +55166,46 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/Products/ColorPick.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Products/ColorPick.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ColorPick; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-color */ "./node_modules/react-color/es/index.js");
+
+ // import './scss/ProductPreview.scss';
+
+function ColorPick(_ref) {
+  var name = _ref.name,
+      color = _ref.color,
+      setThemeColor = _ref.setThemeColor,
+      activatePicker = _ref.activatePicker,
+      active = _ref.active;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ColorWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: activatePicker,
+    style: {
+      background: color.rgbStr
+    },
+    className: "Color"
+  }), active ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ColorPicker"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_color__WEBPACK_IMPORTED_MODULE_1__["SketchPicker"], {
+    color: color.rgb,
+    onChangeComplete: setThemeColor
+  })) : null);
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/Products/Product.js":
 /*!*****************************************************!*\
   !*** ./resources/js/components/Products/Product.js ***!
@@ -55538,15 +55575,19 @@ function ProductPanel(_ref) {
       return payload[key] = productData[key];
     });
     payload.theme = _ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].encode(colorPallete);
-    dispatch.products.edit(productData.id, payload, productData.idx).then(function (res) {
+    dispatch.products.edit(productData.id, payload).then(function (res) {
       close(res);
     });
   };
 
   var remove = function remove() {
-    dispatch.products["delete"](productData.id, productData.store_id, productData.idx).then(function (res) {
-      close(res);
-    });
+    var confirmed = window.confirm('Deleting this product. Are you sure?');
+
+    if (confirmed) {
+      dispatch.products["delete"](productData.id, productData.store_id).then(function (res) {
+        close(res);
+      });
+    }
   };
 
   var buttons = {
@@ -55698,7 +55739,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "themeCoder", function() { return themeCoder; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-color */ "./node_modules/react-color/es/index.js");
+/* harmony import */ var _ColorPick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ColorPick */ "./resources/js/components/Products/ColorPick.js");
 /* harmony import */ var _scss_ProductPreview_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/ProductPreview.scss */ "./resources/js/components/Products/scss/ProductPreview.scss");
 /* harmony import */ var _scss_ProductPreview_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_ProductPreview_scss__WEBPACK_IMPORTED_MODULE_2__);
 function _toConsumableArray(arr) {
@@ -55837,7 +55878,7 @@ function ProductPreview(_ref) {
       colorPicker = _useState2[0],
       setColorPicker = _useState2[1];
 
-  var activatePicker = function activatePicker(ind) {
+  var _activatePicker = function activatePicker(ind) {
     colorPicker === ind ? setColorPicker(false) : setColorPicker(ind);
   };
 
@@ -55849,25 +55890,18 @@ function ProductPreview(_ref) {
   };
 
   var colorPickers = Object.keys(colorPallete).map(function (segment, i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: "colPick".concat(i),
-      className: "ColorWrap"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      onClick: function onClick() {
-        return activatePicker(i);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ColorPick__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: "cpick".concat(i),
+      name: segment,
+      active: colorPicker === i,
+      color: colorPallete[segment],
+      activatePicker: function activatePicker() {
+        return _activatePicker(i);
       },
-      style: {
-        background: colorPallete[segment].rgbStr
-      },
-      className: "Color"
-    }, segment), colorPicker === i ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "ColorPicker"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_color__WEBPACK_IMPORTED_MODULE_1__["SketchPicker"], {
-      color: colorPallete[segment].rgb,
-      onChangeComplete: function onChangeComplete(col) {
+      setThemeColor: function setThemeColor(col) {
         return colorPalleteOnChange(segment, col);
       }
-    })) : null);
+    });
   });
   var styles = {
     container: {
@@ -56188,8 +56222,8 @@ function Products(_ref) {
 
   var markRow = function markRow(product) {
     var markup = {};
-    if (updated && updated.id === product.id) markup.backgroundColor = 'yellow';
-    if (created && created.id === product.id) markup.backgroundColor = 'green';
+    if (updated && updated.id === product.id) markup.backgroundColor = '#ffff008a';
+    if (created && created.id === product.id) markup.backgroundColor = '#94f03957';
     if (!Number(product.active)) markup.opacity = '0.6';
     return markup;
   };
@@ -56198,7 +56232,6 @@ function Products(_ref) {
     entry = applyFilter(entry);
 
     if (entry) {
-      entry.idx = i;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ProductSwitch, {
         key: "row".concat(i),
         button: {
@@ -56696,7 +56729,6 @@ function Shippments(_ref) {
     entry = applyFilter(entry);
 
     if (entry) {
-      entry.idx = i;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Row, {
         key: "row".concat(i),
         button: {
@@ -56888,8 +56920,7 @@ function SelectPanel(props) {
     props.close();
   };
 
-  var storeList = state.stores.list.map(function (store, i) {
-    store.idx = i;
+  var storeList = state.stores.all.map(function (store, i) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: "storeLI".concat(i),
       className: "StoreItem"
@@ -56960,12 +56991,12 @@ __webpack_require__.r(__webpack_exports__);
 var StoreSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__["default"])(_SelectPanel__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function Store(props) {
   var _props$stores = props.stores,
-      list = _props$stores.list,
+      all = _props$stores.all,
       active = _props$stores.active;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Store"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Store:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StoreSwitch, {
-    on: list ? !Boolean(list.length) : false,
+    on: !Boolean(all.length),
     button: {
       name: active ? active.name : '.....',
       className: "StoreBtn"
@@ -57138,7 +57169,7 @@ function StoreMenu(props) {
     Object.keys(state.stores["new"]).forEach(function (key) {
       return data[key] = storeData[key];
     });
-    dispatch.stores.edit(storeData.id, data, storeData.idx).then(function (res) {
+    dispatch.stores.edit(storeData.id, data).then(function (res) {
       close(res);
     });
   };
@@ -57147,7 +57178,7 @@ function StoreMenu(props) {
     var confirmed = window.confirm('Deleting the store will also remove all its product. Are you sure?');
 
     if (confirmed) {
-      dispatch.stores["delete"](storeData.id, storeData.idx).then(function (res) {
+      dispatch.stores["delete"](storeData.id, state.stores.active.id === storeData.id).then(function (res) {
         close(res);
       });
     }
@@ -57425,7 +57456,8 @@ function Navigator(_ref) {
   var inactiveLeft = position.start === 0 ? {
     opacity: 0.5
   } : null;
-  var inactiveRight = position.end === dataLength ? {
+  console.log(dataLength, position.end);
+  var inactiveRight = dataLength <= position.end ? {
     opacity: 0.5
   } : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -57674,10 +57706,15 @@ function _arrayWithHoles(arr) {
 function Table(_ref) {
   var display = _ref.display,
       search = _ref.search;
+  var _display = display,
+      data = _display.data,
+      columns = _display.columns,
+      Component = _display.Component,
+      controls = _display.controls;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     start: 0,
-    end: display.data.list.length
+    end: 10
   }),
       _useState2 = _slicedToArray(_useState, 2),
       slice = _useState2[0],
@@ -57691,12 +57728,6 @@ function Table(_ref) {
       _useState4 = _slicedToArray(_useState3, 2),
       sort = _useState4[0],
       setSort = _useState4[1];
-
-  var _display = display,
-      list = _display.list,
-      columns = _display.columns,
-      Component = _display.Component,
-      controls = _display.controls;
 
   var applyFilter = function applyFilter(entryData) {
     var value = search.value,
@@ -57733,7 +57764,7 @@ function Table(_ref) {
   };
 
   display = _objectSpread(_objectSpread({}, display), {}, {
-    list: _toConsumableArray(display.data.list).sort(sort.fun),
+    list: _toConsumableArray(data.all).sort(sort.fun),
     applyFilter: applyFilter,
     slice: slice
   });
@@ -57747,7 +57778,7 @@ function Table(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Nav"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Navigator__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    dataLength: display.data.list.length,
+    dataLength: display.data.all.length,
     position: slice,
     navigate: setSlice
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -58132,7 +58163,6 @@ function Transactions(_ref) {
     entry = applyFilter(entry);
 
     if (entry) {
-      entry.idx = i;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Row, {
         key: "row".concat(i),
         button: {
@@ -58542,41 +58572,6 @@ module.exports = "/images/SQCLogo.svg?d80bcea3e1feda67bb55bb3739360a45";
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "products", function() { return products; });
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -58627,7 +58622,7 @@ function _defineProperty(obj, key, value) {
 }
 
 var initalState = {
-  list: []
+  all: []
 };
 
 var reducer = function reducer(state, action) {
@@ -58639,26 +58634,13 @@ var reducer = function reducer(state, action) {
       return _objectSpread(_objectSpread({}, state), payload.products);
 
     case "CREATE":
-      return _objectSpread(_objectSpread(_objectSpread({}, state), payload), {}, {
-        list: [payload.created].concat(_toConsumableArray(state.list))
-      });
+      return _objectSpread(_objectSpread({}, state), payload);
 
     case "EDIT":
-      var editedList = _toConsumableArray(state.list);
-
-      console.log(payload.updated);
-      editedList[payload.idx] = payload.updated;
-      return _objectSpread(_objectSpread(_objectSpread({}, state), payload), {}, {
-        list: editedList
-      });
+      return _objectSpread(_objectSpread({}, state), payload);
 
     case "DELETE":
-      var deletedList = _toConsumableArray(state.list);
-
-      deletedList.splice(payload.idx, 1);
-      return _objectSpread(_objectSpread(_objectSpread({}, state), payload), {}, {
-        list: deletedList
-      });
+      return _objectSpread(_objectSpread({}, state), payload);
 
     default:
       return state;
@@ -58682,41 +58664,6 @@ var products = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "stores", function() { return stores; });
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
 
@@ -58768,46 +58715,34 @@ function _defineProperty(obj, key, value) {
 
 var initalState = {
   active: undefined,
-  list: null
+  all: []
 };
 
 var reducer = function reducer(state, action) {
-  switch (action.type) {
+  var payload = action.payload,
+      type = action.type;
+
+  switch (type) {
     case "GET":
       return {
-        active: action.payload.stores.list[0],
-        list: action.payload.stores.list,
-        "new": action.payload.stores["new"]
+        active: payload.stores.all[0],
+        all: payload.stores.all,
+        "new": payload.stores["new"]
       };
 
     case "SWITCH":
       return _objectSpread(_objectSpread({}, state), {}, {
-        active: action.payload
+        active: payload
       });
 
     case "CREATE":
-      return _objectSpread(_objectSpread({}, state), {}, {
-        active: action.payload.created,
-        list: [action.payload.created].concat(_toConsumableArray(state.list))
-      });
+      return _objectSpread(_objectSpread({}, state), payload);
 
     case "EDIT":
-      var editedList = _toConsumableArray(state.list);
-
-      editedList[action.payload.idx] = action.payload.updated;
-      return _objectSpread(_objectSpread({}, state), {}, {
-        list: editedList
-      });
+      return _objectSpread(_objectSpread({}, state), payload);
 
     case "DELETE":
-      var deletedList = _toConsumableArray(state.list);
-
-      deletedList.splice(action.payload.idx, 1);
-      var active = action.payload.deleted == state.active.id ? deletedList[0] : state.active;
-      return _objectSpread(_objectSpread({}, state), {}, {
-        active: active,
-        list: deletedList
-      });
+      return _objectSpread(_objectSpread({}, state), payload.stores);
 
     default:
       return state;
@@ -58834,10 +58769,10 @@ __webpack_require__.r(__webpack_exports__);
 var initalState = {
   info: null,
   transactions: {
-    list: []
+    all: []
   },
   shippments: {
-    list: []
+    all: []
   }
 };
 

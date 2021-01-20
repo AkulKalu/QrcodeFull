@@ -3,10 +3,10 @@
 const initalState = {
   info: null,
   transactions: {
-    list : []
+    all : []
   },
   shippments: {
-    list: []
+    all: []
   }
 }
 

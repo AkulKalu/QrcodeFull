@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -15,28 +13,28 @@ class CPanelController extends Controller
         $response = [
             'user'=> $user,
             'stores' => [
-                'list' => [], 
+                'all' => [], 
                 'new' =>  [
-                    'name' => '',
-                    'website' =>'',
-                    'email' => '',
-                    'phone' => '',
-                    'stripe_public_key' => '',
-                    'stripe_private_key' => '',
-                    'paypal_client_id' => '',
-                    'paypal_private_key' => '',
+                    'name' => 'SomeStore',
+                    'website' =>'https://i.gadgets360cdn.com/',
+                    'email' => 'asd@asd.com',
+                    'phone' => '123123',
+                    'stripe_public_key' => 'asd',
+                    'stripe_private_key' => 'asd',
+                    'paypal_client_id' => 'asd',
+                    'paypal_private_key' => 'asd',
                 ],
             ],
             'products' => [
-                'list' => [], 
+                'all' => [], 
                 'new' =>  [
-                    'category'=> '',
-                    'model'=> '',
-                    'manufacturer'=> '',
-                    'image_url'=>'',
-                    'url'=>'',
-                    'price'=> 0,
-                    'description'=>'',
+                    'category'=> 'TV',
+                    'model'=> 'asd',
+                    'manufacturer'=> 'asd',
+                    'image_url'=>'https://i.gadgets360cdn.com/products/large/realme-smart-tv-43-db-800x450-1590390507.jpg',
+                    'url'=>'https://i.gadgets360cdn.com/products/large/realme-smart-tv-43-db-800x450-1590390507.jpg',
+                    'price'=> 700,
+                    'description'=>'asd',
                     'active'=> true,
                     'shipping'=> true,
                     'stock'=> 1,
@@ -51,7 +49,7 @@ class CPanelController extends Controller
                 'categories' => []
             ],
             'transactions' => [
-                'list' => [],
+                'all' => [],
                 'stats' => [
                     'total'=>  0,
                     'today'=> 0,
@@ -59,7 +57,7 @@ class CPanelController extends Controller
                 ]
             ],
             'shippments' => [
-                'list' => [],
+                'all' => [],
                 'stats'=> [
                     'pending'=>  0,
                     'sent'=>  0,
@@ -68,19 +66,19 @@ class CPanelController extends Controller
         ];
        
         if($user->stores()->count()) {
-            $response['stores']['list'] = $user->stores()->latest()->get();
-            $store = $user->stores()->first(); 
-
+            $response['stores']['all'] = $user->stores()->latest()->get();
+          
+            $store = $user->stores()->latest()->first(); 
+            
             if($store->products()->count()) {
-                $response['products']['list'] =$store->products()->latest()->get();
-               
+                $response['products']['all'] =$store->products()->latest()->get();
                 $response['products']['stats'] = $this->getProductsStats($store);
                 $response['products']['categories'] = $this->getProductCategories($store);
 
                 if($user->transactions()->count()) {
-                    $response['transactions']['list'] = $user->transactions()->latest()->get();
+                    $response['transactions']['all'] = $user->transactions()->latest()->get();
                     $response['transactions']['stats'] = $this->getTransactionsStats($user);
-                    $response['shippments']['list'] = $user->shippments()->latest()->get();
+                    $response['shippments']['all'] = $user->shippments()->latest()->get();
                     $response['shippments']['stats'] = $this->getShippmentsStats($user);
                 }
             }

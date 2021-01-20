@@ -45,16 +45,19 @@ export default function ProductPanel({add, data, errors, close : closePanel, swi
         Object.keys(state.products.new).forEach(key => payload[key] = productData[key]);
         payload.theme = themeCoder.encode(colorPallete);
 
-        dispatch.products.edit(productData.id, payload, productData.idx)
+        dispatch.products.edit(productData.id, payload)
         .then( res =>{
             close(res);
         })
     }
     const remove = () => {
-        dispatch.products.delete(productData.id, productData.store_id, productData.idx)
-        .then( res =>{
-            close(res);    
-        })
+        const confirmed = window.confirm('Deleting this product. Are you sure?');
+        if(confirmed) {
+            dispatch.products.delete(productData.id, productData.store_id)
+            .then( res =>{
+                close(res);    
+            })
+        } 
     }
     const buttons = {
         create: { 

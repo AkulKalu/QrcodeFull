@@ -9,12 +9,12 @@ let StoreSwitch = AsSwitch(SelectPanel);
 
 
 export default function Store(props) {
-    const {list, active} = props.stores;
+    const {all, active} = props.stores;
  
     return <div className="Store">
                 <span>Store:</span>
                 <StoreSwitch
-                    on = {list ? !Boolean(list.length) : false}
+                    on = {!Boolean(all.length)}
                     button = {
                         {
                             name: active ? active.name : '.....' ,

@@ -39,15 +39,16 @@ function StateProvider({children}) {
 
     const storesActions = {
         create: newStore => server.createStore(newStore).then(res => {
-                   productsDispatch({type: 'get', payload : {products: {list: []}}})
             return dispatcher(storesDispatch, 'CREATE', res)
         }),
-        edit: (storeId, data, idx) => server.editStore(storeId, data).then(res => {
-            console.log(res);
+        edit: (storeId, data) => server.editStore(storeId, data).then(res => {
+            return dispatcher(storesDispatch, 'EDIT', res)
             
         }),
-        delete: (storeId, idx) => server.deleteStore(storeId).then(res => {
-            res.data['idx'] = idx;
+        delete: (storeId, isActive) => server.deleteStore(storeId, isActive).then(res => {
+            if(isActive) {
+                productsDispatch({type:'GET', payload: res.data})
+            } 
             return dispatcher(storesDispatch, 'DELETE', res)
         }),
         switch: store => {
@@ -61,13 +62,11 @@ function StateProvider({children}) {
         create: newProduct => server.createProduct(newProduct).then(res => {
             return dispatcher(productsDispatch, 'CREATE', res)
         }),
-        edit: (prodId, data, idx) => server.editProduct(prodId, data).then(res => {
-            res.data['idx'] = idx;
+        edit: (prodId, data) => server.editProduct(prodId, data).then(res => {
             return dispatcher(productsDispatch, 'EDIT', res)
         }),
       
-        delete: (prodId, storeId, idx) => server.deleteProduct(prodId, storeId).then(res => {
-            res.data['idx'] = idx;
+        delete: (prodId, storeId) => server.deleteProduct(prodId, storeId).then(res => {
             return dispatcher(productsDispatch, 'DELETE', res)
         }),
     }

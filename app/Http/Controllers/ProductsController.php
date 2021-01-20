@@ -19,7 +19,7 @@ class ProductsController extends Controller
         $store = Auth::user()->stores()->find($request->storeId);
         return response()->json([
             'products' => [
-                'list'=> $store->products()->latest()->get(),
+                'all'=> $store->products()->latest()->get(),
                 'stats' => $this->getProductsStats($store),
                 'categories'=> $this->getProductCategories($store),
                 ]
@@ -48,6 +48,7 @@ class ProductsController extends Controller
         $createdProduct = $store->products()->create($request->all());
         return response()->json([
             'created'=> $createdProduct,
+            'all'=> $store->products()->latest()->get(),
             'stats' => $this->getProductsStats($store),
             'categories'=> $this->getProductCategories($store),
             ]);
@@ -67,6 +68,7 @@ class ProductsController extends Controller
         $product->update($request->all());
         return response()->json([
             'updated'=>$product,
+            'all'=> $store->products()->latest()->get(),
             'stats' => $this->getProductsStats($store),
             'categories'=> $this->getProductCategories($store),
             ]);
@@ -84,7 +86,7 @@ class ProductsController extends Controller
         $product = $store->products()->find($id);
         $product->delete();
         return response()->json([
-            'deleted'=> $id,
+            'all'=> $store->products()->latest()->get(),
             'stats' => $this->getProductsStats($store),
             'categories'=> $this->getProductCategories($store),
             ]);

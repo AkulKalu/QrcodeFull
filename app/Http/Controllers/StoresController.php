@@ -16,7 +16,7 @@ class StoresController extends Controller
      */
     public function index()
     {
-        $stores = Auth::user()->stores;
+        $stores = Auth::user()->stores()->get();
 
         return response()->json($stores);
     }
@@ -31,7 +31,10 @@ class StoresController extends Controller
     {
         $store = Auth::user()->stores()->create($request->all());
 
-         return response()->json(['created' => $store ]);
+         return response()->json([
+             'created' => $store,
+             'all' =>  Auth::user()->stores()->latest()->get()
+             ]);
     }
 
 
@@ -47,7 +50,10 @@ class StoresController extends Controller
         $store = Auth::user()->stores()->find($id);
         $status = $store->update($request->all());
         if($status) {
-            return response()->json(['updated' => $store]);
+            return response()->json([
+                'updated' => $store,
+                'all' =>  Auth::user()->stores()->latest()->get(),
+                ]);
         }
     }
 
@@ -57,13 +63,25 @@ class StoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
        
-        $status = Auth::user()->stores()->find($id)->delete();
-        if( $status ) {
-            return response()->json(['deleted'=> $id]);
+        $store = Auth::user()->stores()->find($id);
+        $store->products()->delete();
+        $store->delete();
+        $response = [
+            'stores' => [
+                'all' =>  Auth::user()->stores()->latest()->get(),
+            ],
+        ];
+        if($request->active) {
+            $newActive = Auth::user()->stores()->latest()->first();
+            $response['products'] = [
+                'all'=> $newActive->products()->latest()->get(),
+                'stats' => $this->getProductsStats($newActive),
+            ];
+            $response['stores']['active'] = $newActive;
         }
-        
+        return response()->json($response); 
     }
 }

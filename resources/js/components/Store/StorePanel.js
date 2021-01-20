@@ -31,7 +31,7 @@ export default function StoreMenu(props) {
         const edit = () => {
             const data = {}
             Object.keys(state.stores.new).forEach( key => data[key]=storeData[key]);
-            dispatch.stores.edit(storeData.id, data, storeData.idx )
+            dispatch.stores.edit(storeData.id, data )
             .then( res => {
                 close(res); 
             });
@@ -40,7 +40,7 @@ export default function StoreMenu(props) {
         const remove = () => {
             const confirmed = window.confirm('Deleting the store will also remove all its product. Are you sure?');
             if(confirmed) {
-                dispatch.stores.delete(storeData.id, storeData.idx)
+                dispatch.stores.delete(storeData.id, (state.stores.active.id === storeData.id))
                 .then(res =>{
                     close(res);
                 })

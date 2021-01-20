@@ -4,12 +4,15 @@ import TableHeader from '../Table/TableHeader';
 import './scss/Table.scss';
 
 export default function Table({display, search}) {
+    const {data, columns, Component, controls} = display;
+
     const [slice, setSlice] = useState({
         start: 0,
-        end: display.data.list.length
+        end: 10
     })
     const [sort, setSort] = useState({fun: list => list});
-    const {list, columns, Component, controls} = display
+
+    
 
     const applyFilter = entryData => {
         const {value, filters} = search
@@ -42,7 +45,7 @@ export default function Table({display, search}) {
 
     display = {
         ...display,
-        list: [...display.data.list].sort(sort.fun),
+        list: [...data.all].sort(sort.fun),
         applyFilter : applyFilter,
         slice: slice
     }
@@ -51,7 +54,7 @@ export default function Table({display, search}) {
 
     return <div className="TableWrap">
                 <div className="Nav">
-                    <Navigator dataLength = {display.data.list.length} position={slice} navigate={setSlice} />
+                    <Navigator dataLength = {display.data.all.length} position={slice} navigate={setSlice} />
                     <div className="Controls">
                        {controllButtons}
                     </div>

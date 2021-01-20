@@ -19,8 +19,7 @@ export default function SelectPanel(props) {
         props.close()
     }
   
-    const storeList = state.stores.list.map((store, i) => {
-        store.idx = i;
+    const storeList = state.stores.all.map((store, i) => {
         return <div  key={`storeLI${i}`} className="StoreItem"> 
                         <div className="SelectBtn" onClick={() => switchStore(store)}  
                         >{store.name}</div>

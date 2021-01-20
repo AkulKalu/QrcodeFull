@@ -73,15 +73,11 @@
 
 .Colors {
     height: 100%;
-    width: 20%;
     @include position($r: -25%, $l: initial);
 
     .ColorWrap {
         @include flex-c();
         position: relative;
-        .ThemeSegment {
-            display: flex;
-        }
        
         .Color {
             height: 2vh;

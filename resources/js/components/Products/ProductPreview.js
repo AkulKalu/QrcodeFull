@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { SketchPicker } from 'react-color';
+import ColorPick from './ColorPick';
 import './scss/ProductPreview.scss';
 
 
@@ -16,13 +16,14 @@ export default function ProductPreview({ colorPallete, setColorPallete, product 
     
    
     let colorPickers = Object.keys(colorPallete).map( (segment, i) => {
-        return  <div  key={`colPick${i}`} className="ColorWrap">
-                    <div onClick={()=> activatePicker(i)} style={{background: colorPallete[segment].rgbStr}} className="Color">
-                        {segment}
-                    </div>
-                   
-                    {colorPicker === i ? <div className="ColorPicker"><SketchPicker color={colorPallete[segment].rgb} onChangeComplete={ col => colorPalleteOnChange(segment, col) } /></div>  : null}
-                </div>
+       
+        return  <ColorPick 
+                    key={`cpick${i}`}
+                    name = {segment}
+                    active={colorPicker === i} 
+                    color={colorPallete[segment]} 
+                    activatePicker = {()=> activatePicker(i)} 
+                    setThemeColor = { col => colorPalleteOnChange(segment, col) } />
     } )
 
     let styles = {

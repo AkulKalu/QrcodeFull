@@ -23,9 +23,10 @@ export function editStore(storeId, storeData) {
       ...storeData
     })
 }
-export function deleteStore(storeId) {
+export function deleteStore(storeId, isActive) {
     return request('/stores'+ `/${storeId}`, 'post', {
       _method: 'DELETE',
+      active: isActive
     })
 }
 

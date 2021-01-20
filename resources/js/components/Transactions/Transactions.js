@@ -11,7 +11,6 @@ export default function Transactions({columns, list, slice, applyFilter}) {
     let rows = list.map((entry, i) => {
         entry = applyFilter(entry);
         if(entry) {
-            entry.idx = i;
             return <Row 
                         key={`row${i}`}
                         button = {{
