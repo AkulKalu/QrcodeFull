@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import QRLogo from '../../storage/SQCLogo.svg';
 import './scss/Logo.scss';
 
@@ -14,6 +15,10 @@ export default function Logo(props) {
                     <div onAnimationEnd={props.procede} className="LogoBar"></div>
                 </div>
         </div>
-</div> 
-           
+</div>            
 }
+
+if (document.getElementById('mainLogo')) {
+    ReactDOM.render(<Logo type="LogoLoad"/>, document.getElementById('mainLogo'));
+}
+

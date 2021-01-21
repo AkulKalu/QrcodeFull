@@ -2,11 +2,14 @@
 
 .Currency {
     @include flex-c();
+    align-items: flex-end;
     margin-left: 1rem;
+   
 
     .Btn {
         display: inline-block;
         font-size: 2.2vh;
+        opacity: 0.6;
         color: rgb(53, 54, 52);
         transition: opacity 0.4s;
         padding: 0 0.3rem;

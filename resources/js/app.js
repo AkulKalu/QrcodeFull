@@ -13,6 +13,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+if(document.getElementById('ControlPanel')) {
+    require('./components/Layout/ControlPanel');
+}else {
+    require('./bootstrap');
+    require('./components/MainPage/Cards');
+    require('./components/Visual/logo');
+}
 
 
-require('./components/Layout/ControlPanel');

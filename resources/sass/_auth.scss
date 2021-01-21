@@ -1,0 +1,70 @@
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.over-link {
+    color: white;
+    font-weight: 500;
+    margin: 0 1vh;
+    &:hover {
+        color: yellow;
+    }
+}
+
+.over-btn {
+    background: rgb(100, 186, 229);
+    color: white;
+    width: 25%;
+    min-width: fit-content;
+    height: 100%;
+    min-height: 2.5rem;
+    border: 1px solid white;
+    outline: none;
+    &:hover {
+        color: yellow;
+        border-color: yellow;
+    }
+    &:focus {
+       outline: none;
+    }
+}
+
+.over-card {
+    background: rgb(132, 186, 229);
+    margin-top: 10%;
+    border-color: white;
+    color: white;
+}
+.over-card-header {
+    background: none;
+    font-weight:500;
+    border-color: white;
+}
+.over-input:focus {
+    box-shadow: 0 0 5px greenyellow;
+}
+.over-invalid-feedback {
+    color: #c32231;
+}
+.ham-line {
+    background: white;
+    width: 2rem;
+    margin: 0.5rem 0;
+    height: 1px;
+    background: white;
+}
+.over-ham-btn {
+    border: 1px solid white!important;
+}
+.over-ham-btn:focus {
+    outline: none;
+    border-color: yellow;
+}
+.over-ham-btn:focus .ham-line {
+    background: yellow;
+}

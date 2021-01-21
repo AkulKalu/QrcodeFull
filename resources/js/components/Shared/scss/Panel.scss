@@ -71,9 +71,10 @@
             display: flex;
             flex-direction: column;
             width: 80%;
+
             label {
                 font-size: $fontN;
-                padding: 0.5vh 0;
+                padding: 1vh 0;
                 font-weight: 600;
             }
         }

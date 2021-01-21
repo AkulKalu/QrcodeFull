@@ -1,5 +1,166 @@
 body {
+  background: #84bae5;
+  -webkit-animation: fade-in 0.2s ease-in;
+          animation: fade-in 0.2s ease-in;
   margin: 0;
   padding: 0;
+}
+
+.Background {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  background: #84bae5;
+}
+
+.Background .Header {
+  height: 5%;
+  position: relative;
+}
+
+.Background .Header .AccountCtrl {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  height: 100%;
+  display: flex;
+}
+
+.Background .Header .AccountCtrl .Link {
+  margin: 1vh;
+  color: white;
+  font-weight: 500;
+}
+
+.Background .Header .AccountCtrl .Link:hover {
+  color: yellow;
+}
+
+.Background .Main {
+  height: 95%;
+}
+
+.Background .Main .Content {
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+}
+
+.Background .Main .Content .LogoW {
+  width: 100%;
+  height: 20%;
+  margin-top: 5%;
+}
+
+.Background .Main .Content .LogoC {
+  width: 50%;
+  margin: auto;
+  height: 100%;
+}
+
+.Background .Main .Content .CardsW {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.over-link {
+  color: white;
+  font-weight: 500;
+  margin: 0 1vh;
+}
+
+.over-link:hover {
+  color: yellow;
+}
+
+.over-btn {
+  background: #64bae5;
+  color: white;
+  width: 25%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 100%;
+  min-height: 2.5rem;
+  border: 1px solid white;
+  outline: none;
+}
+
+.over-btn:hover {
+  color: yellow;
+  border-color: yellow;
+}
+
+.over-btn:focus {
+  outline: none;
+}
+
+.over-card {
+  background: #84bae5;
+  margin-top: 10%;
+  border-color: white;
+  color: white;
+}
+
+.over-card-header {
+  background: none;
+  font-weight: 500;
+  border-color: white;
+}
+
+.over-input:focus {
+  box-shadow: 0 0 5px greenyellow;
+}
+
+.over-invalid-feedback {
+  color: #c32231;
+}
+
+.ham-line {
+  background: white;
+  width: 2rem;
+  margin: 0.5rem 0;
+  height: 1px;
+  background: white;
+}
+
+.over-ham-btn {
+  border: 1px solid white !important;
+}
+
+.over-ham-btn:focus {
+  outline: none;
+  border-color: yellow;
+}
+
+.over-ham-btn:focus .ham-line {
+  background: yellow;
 }
 

@@ -1,0 +1,29 @@
+@import '../../Layout/scss/mixins';
+.Cards {
+    @include flex($dir: column);
+    height: 100%;
+    .Control {
+        height: 10%;
+        @include flex-c();
+        .Swap {
+            width: fit-content;
+            display: flex;
+            .Bubble {
+                background: whitesmoke;
+                margin: 0 1vh;
+                height: 2vh;
+                width: 2vh;
+                opacity: 0.8;
+                cursor: pointer;
+                transition: all 0.4s;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .Active {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

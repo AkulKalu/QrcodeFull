@@ -15,4 +15,5 @@ mix.react('resources/js/app.js', 'public/js')
     .js('resources/js/checkout.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/product.scss', 'public/css')
-    .sass('resources/sass/mail.scss', 'public/css');
+    .sass('resources/sass/bootstrap.scss', 'public/css')
+    .browserSync('laravel.test')

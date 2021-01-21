@@ -5,10 +5,7 @@
 // @import 'variables';
 
 // // Bootstrap
-// @import '~bootstrap/scss/bootstrap';
+@import './main';
+@import './auth';
 
 
-body {
-    margin: 0;
-    padding: 0;
-}
