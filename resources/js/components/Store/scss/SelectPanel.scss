@@ -5,7 +5,7 @@
 .SelectPanel {
     margin-top: 5%;
     padding: 1vh;
-    height: 60%;
+    height: 70%;
     width: 60%;
     box-shadow: 0 0 20px rgb(250, 251, 252);
     background-color: rgba(236, 238, 243, 0.938);
@@ -13,6 +13,8 @@
 .StoresList {
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
     animation: slideIn-down 0.3s;
     .StoreItem {
         position: relative;
@@ -20,21 +22,13 @@
         box-shadow: 2px 2px 5px gray;
         font-size: 2.3vh;
         min-width: 20%;
-        margin: 1vh 1vh;
+        height: 5%;
+        margin: 1vh 1%;
         cursor: pointer; 
 
         .Btn {
             height: 100%;
             width: 100%;
-            transition: all 0.4s;
-            background: $theme2;
-            color: $theme1;
-            text-align: center;
-
-            &:hover {
-                background-color:$theme1 ;
-                color: $theme2;
-            }
         }
         .SelectBtn {
             @extend .Btn;
@@ -46,12 +40,13 @@
             position: absolute;
             top: 0;
             right: -100%;
+            transition: all 0.2s;
             svg {
-                height: 90%;
-                fill: $theme1;
+                height: 80%;
+                fill: white;
             }
             &:hover svg {
-                fill: $theme2;
+                fill: $higlight;
             }
         }
 

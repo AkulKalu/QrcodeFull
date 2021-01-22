@@ -7,7 +7,7 @@ export default function Mail({shippmentId}) {
     const markAsSent = () => {
         dispatch.user.setShippingStatus(shippmentId);
     } 
-    return  <svg onClick={markAsSent} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    return  <svg data-escape onClick={markAsSent} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 512 512" className="Mail" xmlSpace="preserve">
     <g>
         <g>

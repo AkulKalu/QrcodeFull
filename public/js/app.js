@@ -6437,7 +6437,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "button {\n  background: none;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  padding: none;\n  margin: none;\n}\n\n.AddProduct {\n  font-size: 1.8vh;\n  font-weight: 600;\n  color: rgba(82, 82, 79, 0.815);\n  width: 20%;\n  height: 3vh;\n  text-align: center;\n  transition: all 0.5s;\n  background: transparent;\n  border: 1px solid rgba(82, 82, 79, 0.815);\n  border-radius: 10px;\n}\n.AddProduct:hover {\n  background: #e7ae0f;\n}\n\n.StoreBtnOpt {\n  background: #353634;\n  font-size: 1.5vh;\n  border-radius: 10px;\n  color: #d6e6d6;\n  padding: 5px 10px;\n  margin-left: 1rem;\n}", ""]);
+exports.push([module.i, "button {\n  background: none;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  padding: none;\n  margin: none;\n  color: inherit;\n}\n\n.Orange, .AddProduct {\n  font-size: 1.8vh;\n  text-align: center;\n  transition: all 0.5s;\n  border: 1px solid #cfcdcd;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  color: white;\n  font-weight: 700;\n  box-shadow: 2px 2px 5px #757774;\n  background: #e7ae0f;\n}\n.Orange:hover, .AddProduct:hover {\n  color: yellow;\n  border-color: yellow;\n}\n\n.AddProduct {\n  width: 10%;\n  height: 3vh;\n}\n\n.StoreBtnOpt {\n  background: #353634;\n  font-size: 1.5vh;\n  border-radius: 10px;\n  color: #d6e6d6;\n  padding: 5px 10px;\n  margin-left: 1rem;\n}", ""]);
 
 // exports
 
@@ -6513,7 +6513,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "input {\n  outline: none;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n  width: 15vw;\n  border-right: 1px solid rgba(128, 128, 128, 0.795);\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
+exports.push([module.i, "input {\n  outline: none;\n}\n\nbody {\n  color: #4b4e61;\n}\n\n* {\n  font-family: \"Abhaya Libre\", serif;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n  width: 15vw;\n  border-right: 1px solid rgba(128, 128, 128, 0.795);\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  box-sizing: border-box;\n  padding-top: 1vh;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 35%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 65%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
 
 // exports
 
@@ -6532,7 +6532,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Search {\n  font-size: 2vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Search label {\n  flex-basis: 10%;\n  text-align: center;\n}\n.Search .Bar {\n  position: relative;\n  flex-basis: 90%;\n}\n.Search .Bar input {\n  height: 4vh;\n  width: 80%;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid rgba(128, 128, 128, 0.795);\n  box-shadow: 2px 2px 5px #414040;\n}\n.Search .Bar input:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Search .Bar .Filters {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n  height: 3vh;\n  padding-top: 0.5rem;\n  font-size: 1.6vh;\n}\n.Search .Bar .Filters .Filter {\n  padding: 0 0.6vh;\n  color: #606486;\n  text-shadow: 0px 0px 1px gray;\n  cursor: pointer;\n  opacity: 0.7;\n  transition: all 0.3s;\n}\n.Search .Bar .Filters .Filter:hover {\n  opacity: 1;\n}\n.Search .Bar .Filters .Active {\n  color: gold;\n  opacity: 1;\n  text-shadow: 1px 1px 2px #414040;\n}", ""]);
+exports.push([module.i, ".Search {\n  font-size: 2vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.Search label {\n  flex-basis: 10%;\n  text-align: center;\n  font-weight: 600;\n  color: inherit;\n}\n.Search .Bar {\n  position: relative;\n  flex-basis: 70%;\n}\n.Search .Bar input {\n  height: 4vh;\n  width: 80%;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid #7999a3;\n}\n.Search .Bar input:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Search .Bar .Filters {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n  height: 3vh;\n  padding-top: 0.5rem;\n  font-size: 1.6vh;\n}\n.Search .Bar .Filters .Filter {\n  padding: 0 0.6vh;\n  color: #606486;\n  text-shadow: 0px 0px 1px gray;\n  cursor: pointer;\n  opacity: 0.7;\n  transition: all 0.3s;\n}\n.Search .Bar .Filters .Filter:hover {\n  opacity: 1;\n}\n.Search .Bar .Filters .Active {\n  color: yellow;\n  opacity: 1;\n  text-shadow: 1px 1px 2px #414040;\n}", ""]);
 
 // exports
 
@@ -6551,7 +6551,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".SMbutton {\n  display: block;\n  width: 85%;\n  height: 3.5vh;\n  border: 1px solid #cfcdcd;\n  border-left: none;\n  color: #d6e6d6;\n  background: #353634;\n  margin-top: 1.2vh;\n  border-radius: 0 15px 15px 0;\n  transform-origin: left;\n  transition: 0.4s;\n}\n.SMbutton:hover {\n  width: 90%;\n  border-color: gold;\n  color: gold;\n}\n\n.StatsDisplay {\n  width: 100%;\n}\n\n.SMActive {\n  width: 90%;\n  color: #353634;\n  font-weight: 700;\n  box-shadow: 2px 2px 5px #353634;\n  border-color: transparent;\n  background: #e7ae0f;\n}", ""]);
+exports.push([module.i, ".SMbutton {\n  width: 85%;\n  height: 3.5vh;\n  border-left: none;\n  margin-top: 1.2vh;\n  transform-origin: left;\n  text-shadow: none;\n  background: #353634;\n  font-size: 1.5vh;\n}\n.SMbutton:hover {\n  width: 90%;\n}\n\n.StatsDisplay {\n  width: 100%;\n}\n\n.SMActive {\n  width: 90%;\n  background: #e7ae0f;\n}", ""]);
 
 // exports
 
@@ -6570,7 +6570,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.UserMenu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.UserMenu .Name {\n  position: relative;\n  width: 100%;\n  text-align: center;\n  margin: auto;\n  padding: 1vh 0;\n  background: linear-gradient(90deg, rgba(196, 188, 188, 0.068) 0%, rgba(128, 128, 128, 0.315) 50%, rgba(196, 188, 188, 0.068) 100%);\n  font-size: 2.5vh;\n  text-align: center;\n  color: #646780;\n}\n.UserMenu .Name .User, .UserMenu .Name .Logout {\n  -webkit-animation: fadeIn 0.2s ease-in;\n          animation: fadeIn 0.2s ease-in;\n  cursor: pointer;\n}\n.UserMenu .Name .Logout {\n  font-size: 1.8vh;\n  font-weight: 200;\n}\n.UserMenu .Name .Logout:hover {\n  color: gold;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.UserMenu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.UserMenu .Name {\n  position: relative;\n  width: 100%;\n  text-align: center;\n  margin: auto;\n  padding: 1vh 0;\n  background: linear-gradient(90deg, rgba(196, 188, 188, 0.068) 0%, rgba(128, 128, 128, 0.315) 50%, rgba(196, 188, 188, 0.068) 100%);\n  font-size: 2.5vh;\n  text-align: center;\n}\n.UserMenu .Name .User, .UserMenu .Name .Logout {\n  -webkit-animation: fadeIn 0.2s ease-in;\n          animation: fadeIn 0.2s ease-in;\n  cursor: pointer;\n}\n.UserMenu .Name .Logout {\n  font-size: 1.8vh;\n  font-weight: 200;\n}\n.UserMenu .Name .Logout:hover {\n  color: yellow;\n}", ""]);
 
 // exports
 
@@ -6627,7 +6627,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".QrImg {\n  height: 6vh;\n  border: 1px solid rgba(128, 128, 128, 0.795);\n  transition: 0.5s;\n}\n.QrImg:hover {\n  filter: invert(100%);\n}\n\n.PDImg {\n  height: 6vh;\n}\n\n.Cell:nth-of-type(1) {\n  width: 15%;\n}\n\n.Cell:nth-of-type(2) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(3) {\n  width: 15%;\n}\n\n.Cell:nth-of-type(4) {\n  width: 20%;\n}\n\n.Cell:nth-of-type(5) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(6) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(7) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(8) {\n  width: 10%;\n}", ""]);
+exports.push([module.i, ".QrImg {\n  transition: 0.5s;\n}\n.QrImg:hover {\n  filter: invert(100%);\n}\n.QrImg svg {\n  height: 6vh;\n}\n\n.PDImg {\n  height: 6vh;\n}\n\n.Cell:nth-of-type(1) {\n  width: 15%;\n}\n\n.Cell:nth-of-type(2) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(3) {\n  width: 15%;\n}\n\n.Cell:nth-of-type(4) {\n  width: 20%;\n}\n\n.Cell:nth-of-type(5) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(6) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(7) {\n  width: 10%;\n}\n\n.Cell:nth-of-type(8) {\n  width: 10%;\n}", ""]);
 
 // exports
 
@@ -6646,7 +6646,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 10% 10%;\n  height: 48%;\n}\n.Preview .Img img {\n  width: 100%;\n  max-height: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .InfoSmall {\n  display: block;\n  font-size: 2vh;\n  padding: 0 1.5vh;\n  margin-top: 1vh;\n}\n.Preview .InfoLarge {\n  display: block;\n  padding: 1vh 1.5vh;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.Preview .InfoLarge:nth-of-type(4) {\n  text-align: right;\n  font-weight: 600;\n}\n.Preview .Buttons .Btn {\n  width: 50%;\n  font-size: 1.6vh;\n  font-weight: 600;\n  text-align: center;\n  padding: 0.4vh 0;\n  border-radius: 0 5px 5px 0;\n}\n.Preview .Buttons .Buy {\n  margin-top: 2vh;\n  width: 80%;\n}\n\n.Colors {\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: gold;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
+exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 10% 10%;\n  height: 48%;\n}\n.Preview .Img img {\n  width: 100%;\n  max-height: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .InfoSmall {\n  display: block;\n  font-size: 2vh;\n  padding: 0 1.5vh;\n  margin-top: 1vh;\n}\n.Preview .InfoLarge {\n  display: block;\n  padding: 1vh 1.5vh;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.Preview .InfoLarge:nth-of-type(4) {\n  text-align: right;\n  font-weight: 600;\n}\n.Preview .Buttons .Btn {\n  width: 50%;\n  font-size: 1.6vh;\n  font-weight: 600;\n  text-align: center;\n  padding: 0.4vh 0;\n  border-radius: 0 5px 5px 0;\n}\n.Preview .Buttons .Buy {\n  margin-top: 2vh;\n  width: 80%;\n}\n\n.Colors {\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: yellow;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
 
 // exports
 
@@ -6779,7 +6779,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.SelectPanel {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 60%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n}\n\n.StoresList {\n  display: flex;\n  flex-wrap: wrap;\n  -webkit-animation: slideIn-down 0.3s;\n          animation: slideIn-down 0.3s;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  box-shadow: 2px 2px 5px gray;\n  font-size: 2.3vh;\n  min-width: 20%;\n  margin: 1vh 1vh;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n  transition: all 0.4s;\n  background: #e7ae0f;\n  color: #353634;\n  text-align: center;\n}\n.StoresList .StoreItem .Btn:hover, .StoresList .StoreItem .EditBtn:hover, .StoresList .StoreItem .SelectBtn:hover {\n  background-color: #353634;\n  color: #e7ae0f;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  right: -100%;\n}\n.StoresList .StoreItem .EditBtn svg {\n  height: 90%;\n  fill: #353634;\n}\n.StoresList .StoreItem .EditBtn:hover svg {\n  fill: #e7ae0f;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.SelectPanel {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 70%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n}\n\n.StoresList {\n  display: flex;\n  flex-wrap: wrap;\n  height: 100%;\n  width: 100%;\n  -webkit-animation: slideIn-down 0.3s;\n          animation: slideIn-down 0.3s;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  box-shadow: 2px 2px 5px gray;\n  font-size: 2.3vh;\n  min-width: 20%;\n  height: 5%;\n  margin: 1vh 1%;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  right: -100%;\n  transition: all 0.2s;\n}\n.StoresList .StoreItem .EditBtn svg {\n  height: 80%;\n  fill: white;\n}\n.StoresList .StoreItem .EditBtn:hover svg {\n  fill: yellow;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
 
 // exports
 
@@ -6798,7 +6798,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Store {\n  display: flex;\n  align-items: center;\n  margin-left: 10%;\n  font-weight: 600;\n  width: 100%;\n  font-size: 2vh;\n}\n.Store .StoreBtn {\n  background: #e7ae0f;\n  color: #353634;\n  font-size: 3.5vh;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  text-align: center;\n  min-width: 20vw;\n  padding: 0.5vh 2vh;\n  border-radius: 5px;\n  margin-left: 1vh;\n  box-shadow: 2px 2px 5px #353634;\n  transition: all 0.4s;\n}\n.Store .StoreBtn:hover {\n  color: #e7ae0f;\n  background: #353634;\n  box-shadow: 4px 4px 5px #353634;\n}", ""]);
+exports.push([module.i, ".Store {\n  display: flex;\n  align-items: center;\n  margin-left: 10%;\n  font-weight: 600;\n  width: 100%;\n  font-size: 2vh;\n}\n.Store .StoreBtn {\n  font-size: 3.5vh;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  min-width: 20vw;\n  padding: 0.5vh 2vh;\n  margin-left: 1vh;\n}", ""]);
 
 // exports
 
@@ -6817,7 +6817,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Navigator, .BtnWrap, .Tracker {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n\n.Navigator {\n  flex-basis: 20%;\n  justify-content: flex-start;\n}\n.Navigator .Tracker {\n  font-weight: 600;\n  margin-left: 1.2vh;\n  justify-content: flex-start;\n}\n.Navigator .Tracker span {\n  padding: 0 0.5vh;\n}\n.Navigator .Tracker .TrackField {\n  width: 2.5vh;\n  height: 2.5vh;\n  font-size: 1.6vh;\n  text-align: center;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid rgba(128, 128, 128, 0.795);\n}\n.Navigator .Tracker .TrackField:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Navigator .BtnWrap {\n  filter: drop-shadow(2px 2px 3px #414040);\n}\n.Navigator .BtnWrap .Btn {\n  height: 1.8vh;\n  width: 2.8vh;\n  margin-left: 1vh;\n  background: #353634;\n  cursor: pointer;\n}\n.Navigator .BtnWrap .Btn:hover {\n  background: gold;\n}\n.Navigator .BtnWrap .LeftBtn {\n  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);\n          clip-path: polygon(100% 0, 0 50%, 100% 100%);\n}\n.Navigator .BtnWrap .RightBtn {\n  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);\n          clip-path: polygon(0 0, 0 100%, 100% 50%);\n}", ""]);
+exports.push([module.i, ".Navigator, .BtnWrap, .Tracker {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n\n.Navigator {\n  flex-basis: 20%;\n  justify-content: flex-start;\n}\n.Navigator .Tracker {\n  font-weight: 600;\n  margin-left: 1.2vh;\n  justify-content: flex-start;\n}\n.Navigator .Tracker span {\n  padding: 0 0.5vh;\n}\n.Navigator .Tracker .TrackField {\n  width: 2.5vh;\n  height: 2.5vh;\n  font-size: 1.6vh;\n  text-align: center;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid rgba(128, 128, 128, 0.795);\n}\n.Navigator .Tracker .TrackField:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Navigator .BtnWrap {\n  filter: drop-shadow(2px 2px 3px #414040);\n}\n.Navigator .BtnWrap .Btn {\n  height: 1.8vh;\n  width: 2.8vh;\n  margin-left: 1vh;\n  background: #353634;\n  cursor: pointer;\n}\n.Navigator .BtnWrap .Btn:hover {\n  background: yellow;\n}\n.Navigator .BtnWrap .LeftBtn {\n  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);\n          clip-path: polygon(100% 0, 0 50%, 100% 100%);\n}\n.Navigator .BtnWrap .RightBtn {\n  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);\n          clip-path: polygon(0 0, 0 100%, 100% 50%);\n}", ""]);
 
 // exports
 
@@ -6836,7 +6836,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Stats {\n  width: 80%;\n  margin-top: 1vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.Stats .StatCont {\n  width: 100%;\n  font-size: 1.6vh;\n  margin: 0.5vh 0;\n  color: #646780;\n  filter: drop-shadow(0px 0px 10px #f5f5f7);\n}\n.Stats .StatCont .Stat {\n  display: flex;\n  padding: 1vh;\n  border-radius: 0 10px 10px 0;\n  background: linear-gradient(to right, rgba(128, 128, 128, 0.445), rgba(196, 188, 188, 0.055));\n}\n.Stats .StatCont .Stat .Value {\n  flex-basis: 50%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Stats {\n  width: 80%;\n  margin-top: 1vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.Stats .StatCont {\n  width: 100%;\n  font-size: 1.6vh;\n  margin: 0.5vh 0;\n  filter: drop-shadow(0px 0px 10px #f5f5f7);\n}\n.Stats .StatCont .Stat {\n  display: flex;\n  padding: 1vh;\n  border-radius: 0 10px 10px 0;\n  background: linear-gradient(to right, rgba(128, 128, 128, 0.445), rgba(196, 188, 188, 0.055));\n}\n.Stats .StatCont .Stat .Value {\n  flex-basis: 50%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}", ""]);
 
 // exports
 
@@ -6855,7 +6855,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.TableWrap {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.TableWrap .Nav {\n  flex-basis: 5%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.TableWrap .Nav .Controls {\n  flex-basis: 80%;\n}\n.TableWrap .Nav .Controls .Btn {\n  width: 25%;\n}\n.TableWrap .Table {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  flex-basis: 92%;\n  -webkit-animation: fadeIn 0.4s ease-out;\n          animation: fadeIn 0.4s ease-out;\n}\n.TableWrap .Table .Row {\n  height: 10%;\n  display: flex;\n  border-bottom: 1px solid rgba(92, 90, 90, 0.541);\n  background: rgba(128, 128, 128, 0.205);\n}\n.TableWrap .Table .Row .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n  border-left: 1px solid rgba(92, 90, 90, 0.541);\n}\n.TableWrap .Table .Row .Cell:nth-of-type(1) {\n  border-left: none;\n}\n.TableWrap .Table .Row .Cell .Text {\n  padding: 0 0.5rem;\n  position: absolute;\n  width: 90%;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n}\n.TableWrap .Table .Row .Cell .Text:hover {\n  z-index: 100;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  overflow: visible;\n  background-color: #353634;\n  color: #d6e6d6;\n  padding: 0.5rem;\n  font-size: 2vh;\n}\n.TableWrap .Table .Row:hover {\n  background: rgba(128, 128, 128, 0.342);\n}\n.TableWrap .Table .Message {\n  margin: 20% auto;\n  font-size: 8vh;\n  font-weight: 800;\n  opacity: 0.3;\n}\n.TableWrap .Table .bd-l {\n  border-left: 1px solid rgba(43, 42, 42, 0.918);\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.TableWrap {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.TableWrap .Nav {\n  flex-basis: 5%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.TableWrap .Nav .Controls {\n  flex-basis: 80%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: center;\n  box-sizing: border-box;\n  padding-right: 2rem;\n}\n.TableWrap .Table {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  flex-basis: 92%;\n  -webkit-animation: fadeIn 0.4s ease-out;\n          animation: fadeIn 0.4s ease-out;\n}\n.TableWrap .Table .Row {\n  height: 10%;\n  display: flex;\n  border-bottom: 1px solid rgba(92, 90, 90, 0.541);\n  background: rgba(128, 128, 128, 0.205);\n}\n.TableWrap .Table .Row .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n  border-left: 1px solid rgba(92, 90, 90, 0.541);\n}\n.TableWrap .Table .Row .Cell:nth-of-type(1) {\n  border-left: none;\n}\n.TableWrap .Table .Row .Cell .Text {\n  padding: 0 0.5rem;\n  position: absolute;\n  width: 90%;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n}\n.TableWrap .Table .Row .Cell .Text:hover {\n  z-index: 100;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  overflow: visible;\n  background-color: #353634;\n  color: #d6e6d6;\n  padding: 0.5rem;\n  font-size: 2vh;\n}\n.TableWrap .Table .Row:hover {\n  background: rgba(128, 128, 128, 0.342);\n}\n.TableWrap .Table .Message {\n  margin: 20% auto;\n  font-size: 8vh;\n  font-weight: 800;\n  opacity: 0.3;\n}\n.TableWrap .Table .bd-l {\n  border-left: 1px solid rgba(43, 42, 42, 0.918);\n}", ""]);
 
 // exports
 
@@ -6874,7 +6874,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".TableHeader {\n  display: flex;\n  font-weight: 600;\n  font-size: 1.6vh;\n  color: #d6e6d6;\n  background: #353634;\n  flex-basis: 3%;\n}\n.TableHeader .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid rgba(128, 128, 128, 0.795);\n  border-bottom: none;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n.TableHeader .Cell:hover {\n  border-color: gold;\n  color: gold;\n}", ""]);
+exports.push([module.i, ".TableHeader {\n  display: flex;\n  font-weight: 600;\n  font-size: 1.6vh;\n  color: #d6e6d6;\n  background: #353634;\n  flex-basis: 3%;\n}\n.TableHeader .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid rgba(128, 128, 128, 0.795);\n  border-bottom: none;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n.TableHeader .Cell:hover {\n  border-color: yellow;\n  color: yellow;\n}", ""]);
 
 // exports
 
@@ -6950,7 +6950,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n  box-shadow: 2px 2px 5px #757774;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
 
 // exports
 
@@ -88654,19 +88654,7 @@ function generateQrCode(storeId, productId) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes React and other helpers. It's a great starting point while
- * building robust, powerful web applications using React + Laravel.
- */
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // require('./bootstrap');
-
-/**
- * Next, we will create a fresh React component instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+__webpack_require__(/*! ./axios */ "./resources/js/axios.js");
 
 if (document.getElementById('ControlPanel')) {
   __webpack_require__(/*! ./components/Layout/ControlPanel */ "./resources/js/components/Layout/ControlPanel.js");
@@ -88677,6 +88665,23 @@ if (document.getElementById('ControlPanel')) {
 
   __webpack_require__(/*! ./components/Visual/logo */ "./resources/js/components/Visual/logo.js");
 }
+
+/***/ }),
+
+/***/ "./resources/js/axios.js":
+/*!*******************************!*\
+  !*** ./resources/js/axios.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes React and other helpers. It's a great starting point while
+ * building robust, powerful web applications using React + Laravel.
+ */
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
@@ -89993,7 +89998,7 @@ function SearchBar(_ref) {
     className: "Search"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "search"
-  }, "search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Bar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     onBlur: function onBlur(e) {},
@@ -90092,14 +90097,14 @@ function SideMenu(_ref) {
   var stats = _ref.stats,
       switchTable = _ref.switchTable;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(["SMbutton SMActive", "SMbutton", "SMbutton"]),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(["Orange SMbutton SMActive ", "Orange SMbutton", "Orange SMbutton"]),
       _useState2 = _slicedToArray(_useState, 2),
       activeBtn = _useState2[0],
       setActiveBtn = _useState2[1];
 
   var buttonClick = function buttonClick(table, ind) {
     setActiveBtn(activeBtn.map(function (val, i) {
-      return i === ind ? "SMbutton SMActive" : "SMbutton";
+      return i === ind ? "Orange SMbutton SMActive" : "Orange SMbutton";
     }));
     switchTable(table);
   };
@@ -90731,17 +90736,11 @@ function Product(_ref) {
     }), data.idx);
   };
 
-  var downloadQrCode = function downloadQrCode() {
-    Object(_Functions_server__WEBPACK_IMPORTED_MODULE_4__["generateQrCode"])(data.store_id, data.id).then(function (res) {
-      downloadFile(res.data.qrCode, "".concat(data.manufacturer, "-").concat(data.model), 'svg');
-    });
-  };
-
-  function downloadFile(file, name, ext) {
-    var url = window.URL.createObjectURL(new Blob([file]));
+  function downloadSVG(svgString, name) {
+    var url = window.URL.createObjectURL(new Blob([svgString]));
     var link = document.createElement('a');
     link.href = url;
-    link.setAttribute('download', "".concat(name, ".").concat(ext));
+    link.setAttribute('download', "".concat(name, ".svg"));
     link.click();
   }
 
@@ -90772,12 +90771,15 @@ function Product(_ref) {
         });
 
       case 'QrCode':
-        return cell( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          onClick: downloadQrCode,
+        return cell( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          onClick: function onClick() {
+            return downloadSVG(data.qrCode, data.model);
+          },
           className: "QrImg",
           "data-escape": true,
-          alt: "Generate QrCode",
-          src: _storage_SQCLogo_svg__WEBPACK_IMPORTED_MODULE_3___default.a
+          dangerouslySetInnerHTML: {
+            __html: data.qrcode
+          }
         }), {
           'data-escape': true
         });
@@ -92029,6 +92031,7 @@ function Mail(_ref) {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    "data-escape": true,
     onClick: markAsSent,
     version: "1.1",
     id: "Capa_1",
@@ -92292,7 +92295,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _EditBtn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EditBtn */ "./resources/js/components/Store/EditBtn.js");
 /* harmony import */ var _Shared_Backdrop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Shared/Backdrop */ "./resources/js/components/Shared/Backdrop.js");
 /* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
-/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
+/* harmony import */ var _InputElements_Button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../InputElements/Button */ "./resources/js/components/InputElements/Button.js");
+/* harmony import */ var _HOC_WithValidator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../HOC/WithValidator */ "./resources/js/components/HOC/WithValidator.js");
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -92319,8 +92323,9 @@ function _extends() {
 
 
 
-var EditPanelSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_7__["default"])(_StorePanel__WEBPACK_IMPORTED_MODULE_3__["default"]), _EditBtn__WEBPACK_IMPORTED_MODULE_4__["default"]);
-var CreatePanelSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_7__["default"])(_StorePanel__WEBPACK_IMPORTED_MODULE_3__["default"]));
+
+var EditPanelSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_8__["default"])(_StorePanel__WEBPACK_IMPORTED_MODULE_3__["default"]), _EditBtn__WEBPACK_IMPORTED_MODULE_4__["default"]);
+var CreatePanelSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_HOC_WithValidator__WEBPACK_IMPORTED_MODULE_8__["default"])(_StorePanel__WEBPACK_IMPORTED_MODULE_3__["default"]));
 function SelectPanel(props) {
   var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_2__["store"]),
       state = _useContext.state,
@@ -92336,12 +92341,13 @@ function SelectPanel(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: "storeLI".concat(i),
       className: "StoreItem"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "SelectBtn",
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_Button__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      className: "Orange SelectBtn",
+      name: store.name,
       onClick: function onClick() {
         return switchStore(store);
       }
-    }, store.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EditPanelSwitch, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(EditPanelSwitch, {
       view: {
         store: store
       },
@@ -92364,7 +92370,7 @@ function SelectPanel(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CreatePanelSwitch, {
     button: {
       name: '+',
-      className: "SelectBtn"
+      className: "Orange SelectBtn"
     },
     view: {
       create: true
@@ -92411,7 +92417,7 @@ function Store(props) {
     on: !Boolean(all.length),
     button: {
       name: active ? active.name : '.....',
-      className: "StoreBtn"
+      className: "StoreBtn Orange"
     },
     atOpen: {
       animate: 'fadeIn 0.2s forwards'
@@ -94187,6 +94193,55 @@ var stores = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "user", function() { return user; });
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
 var initalState = {
   info: null,
   transactions: {
@@ -94215,7 +94270,7 @@ var reducer = function reducer(state, action) {
 
     case "SHIPPMENT_SENT":
       console.log(payload);
-      return state;
+      return _objectSpread({}, state);
 
     default:
       return state;

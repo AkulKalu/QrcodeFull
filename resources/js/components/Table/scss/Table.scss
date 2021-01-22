@@ -3,18 +3,21 @@
 @import '../../Layout/scss/anim'; 
 
 .TableWrap {
-    
     @include flex(column);
     height: 100%;
     .Nav {
         flex-basis: 5%;
         @include flex($aitems: center);
-
+       
         .Controls {
             flex-basis: 80%;
-            .Btn {
-                width: 25%;
-            }
+            height: 100%;
+            
+           
+            @include flex($jcont : flex-end,$aitems: center );
+            box-sizing: border-box;
+            padding-right: 2rem;
+            
         }
     }
     .Table {

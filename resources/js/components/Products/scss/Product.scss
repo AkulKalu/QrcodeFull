@@ -2,11 +2,12 @@
 
 
 .QrImg {
-    height: 6vh;
-    border: 1px solid $border1;
     transition: 0.5s;
     &:hover {
         filter: invert(100%);
+    }
+    svg {
+        height: 6vh;
     }
 }
 

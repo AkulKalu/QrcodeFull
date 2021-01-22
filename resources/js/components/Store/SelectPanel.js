@@ -5,6 +5,7 @@ import StorePanel from './StorePanel';
 import EditBtn from './EditBtn';
 import Backdrop from '../Shared/Backdrop';
 import AsSwitch from '../HOC/AsSwitch';
+import Button from '../InputElements/Button';
 import WithValidator from '../HOC/WithValidator';
 
 
@@ -21,8 +22,8 @@ export default function SelectPanel(props) {
   
     const storeList = state.stores.all.map((store, i) => {
         return <div  key={`storeLI${i}`} className="StoreItem"> 
-                        <div className="SelectBtn" onClick={() => switchStore(store)}  
-                        >{store.name}</div>
+                        <Button className="Orange SelectBtn"  name={store.name} onClick={() => switchStore(store)} />
+                    
                         <EditPanelSwitch
                             view = {{
                                 store : store
@@ -45,7 +46,7 @@ export default function SelectPanel(props) {
                             <CreatePanelSwitch
                                 button={{
                                     name : '+',
-                                    className: "SelectBtn",
+                                    className: "Orange SelectBtn",
                                 }}
                                 view = {{
                                     create : true

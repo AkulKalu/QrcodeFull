@@ -3,6 +3,14 @@
 
 input {
     outline: none;
+    
+}
+body {
+    color: rgb(75, 78, 97);
+}
+* {
+    font-family: 'Abhaya Libre', serif;
+
 }
 
 .CPanel {
@@ -31,14 +39,16 @@ input {
         @include flex(column);
         width: 85vw ;
         .TopBar {
-            @include flex($aitems : center);
+            @include flex();
+            box-sizing: border-box;
+            padding-top: 1vh;
             flex-basis: 10%;
            
             .BarStore {
-                flex-basis: 50%;
+                flex-basis: 35%;
             }
             .BarSearch {
-                flex-basis: 50%;
+                flex-basis: 65%;
             }
             
         }

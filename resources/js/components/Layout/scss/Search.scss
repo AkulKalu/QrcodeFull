@@ -3,22 +3,23 @@
 
 .Search {
     font-size: $fontM;
-    @include flex($jcont: center, $aitems: center );
+    @include flex( $aitems: center );
     
     label {
         flex-basis: 10%;
         text-align: center;
+        font-weight: 600;
+        color: inherit;
     }
     .Bar {
         position: relative;
-        flex-basis: 90%;
+        flex-basis: 70%;
 
         input {
             height: 4vh;
             width: 80%;
             background: $bgField;
-            border: 1px solid $border1;
-            box-shadow: 2px 2px 5px $shadowL;
+            border: 1px solid rgb(121, 153, 163);
             
             &:focus {
                 background: $bgFieldH;

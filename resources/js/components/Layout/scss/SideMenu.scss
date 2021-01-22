@@ -1,19 +1,16 @@
+@import './variables';
 .SMbutton {
-    display: block;
     width: 85%;
     height: 3.5vh;
-    border: 1px solid rgb(207, 205, 205);
     border-left: none;
-    color: rgb(214, 230, 214);
-    background: rgb(53, 54, 52);
     margin-top: 1.2vh;
-    border-radius: 0 15px 15px 0;
     transform-origin: left;
-    transition: 0.4s;
+    text-shadow: none;
+    background: $theme1;
+    font-size: 1.5vh;
     &:hover {
         width: 90%;
-        border-color: gold;
-        color: gold;
+       
     }
 }
 .StatsDisplay {
@@ -22,11 +19,7 @@
 
 .SMActive {
     width: 90%;
-    color: rgb(53, 54, 52);
-    font-weight: 700;
-    box-shadow: 2px 2px 5px rgb(53, 54, 52);
-    border-color:transparent;
-    background: rgb(231, 174, 15);
+    background: $theme2;
 }
 
 

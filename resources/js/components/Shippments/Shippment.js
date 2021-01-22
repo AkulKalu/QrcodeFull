@@ -17,7 +17,7 @@ export default function Shippment({columns, data, onClick}) {
             if(data[col.dataKey]) {
                 cellContent = <div className="Text">{data.updated_at}</div> ;
             }else {
-                return  <div data-escape style={{cursor: 'unset'}} key={`row${i}`} className="Cell"><Mail shippmentId = {data.id} /></div>
+                return  <div  data-escape style={{cursor: 'unset'}} key={`row${i}`} className="Cell"><Mail shippmentId = {data.id} /></div>
             }
         }
         return  <div key={`row${i}`} className="Cell">{cellContent}</div>

@@ -26,6 +26,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock')->default(1);
             $table->float('price', 10, 4);
             $table->string('currency')->default('$');
+            $table->text('qrcode')->nullable();
             $table->tinyInteger('active')->default(1);
             $table->tinyInteger('shipping')->default(1);
             $table->timestamps();

@@ -13,7 +13,7 @@ use Stripe\Customer;
 
 class StripeController extends Controller
 {   
-    public function charge($productId)
+    public function charge(Request $request, $productId)
     {
         $product = Product::find($productId);
         Stripe::setApiKey($product->store->stripe_private_key);
@@ -34,7 +34,7 @@ class StripeController extends Controller
                   'images' => [$product->image_url],
                 ],
               ],
-              'quantity' => 1,
+              'quantity' => $request->quantity,
             ]],
             'mode' => 'payment',
             'success_url' => url('/checkout/success/stripe?session_id={CHECKOUT_SESSION_ID}&product_id='.$product->id),
@@ -71,6 +71,7 @@ class StripeController extends Controller
           $shipping = json_decode(json_encode($session->shipping->address), true);
           $shipping['user_id'] = $product->store->user_id;
           $shipping['product_id'] = $product->id;
+          $shipping['email'] =  $customer->email;
           $shipping['name'] = $session->shipping->name;
           $shipping =  $transaction->shippment()->create($shipping);
         }

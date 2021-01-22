@@ -6,7 +6,7 @@ const initalState = {
     all : []
   },
   shippments: {
-    all: []
+    all: [],
   }
 }
 
@@ -25,7 +25,7 @@ const reducer = (state, action) => {
         return null;
       case "SHIPPMENT_SENT":
         console.log(payload);
-        return state;
+        return {...state};
       default:
         return state;
     }

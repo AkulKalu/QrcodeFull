@@ -1,4 +1,4 @@
-require('./bootstrap');
+require('./axios');
 require('./checkoutTheme');
 
 let aboutBtn = document.getElementById('aboutBtn');
@@ -7,8 +7,8 @@ let buyBtn = document.getElementById('buyBtn');
 let description = document.getElementById('description');
 let buyMenu = document.getElementById('buyMenu');
 
-let quantaty = document.getElementById('counter');
-let quantatyCount =  document.getElementById('qTotal');
+let quantity = document.getElementById('counter');
+let quantityCount =  document.getElementById('qTotal');
 
 let delivery =  document.getElementById('delivery');
 let deliverOn =  document.getElementById('yes');
@@ -18,7 +18,7 @@ let stripeBtn =  document.getElementById('stripe');
 
 
 const paymentInfo = {
-    quantaty : 1, 
+    quantity : 1, 
     delivery : true,
 }
 
@@ -39,15 +39,15 @@ function closeWindow(closeBtn, windowObject) {
 
 function setQuantaty(e) {
     if(e.target.id === 'qL') {
-        if(paymentInfo.quantaty > 1) {
-            paymentInfo.quantaty--
-            quantatyCount.textContent = paymentInfo.quantaty
+        if(paymentInfo.quantity > 1) {
+            paymentInfo.quantity--
+            quantityCount.textContent = paymentInfo.quantity
         }
     }
     else if (e.target.id === 'qR') {
-        if(paymentInfo.quantaty < stock) {
-            paymentInfo.quantaty++
-            quantatyCount.textContent = paymentInfo.quantaty
+        if(paymentInfo.quantity < stock) {
+            paymentInfo.quantity++
+            quantityCount.textContent = paymentInfo.quantity
         }
     }
    
@@ -66,7 +66,7 @@ function setDelivery(e) {
         setActive(paymentInfo.delivery);
     }
 }
-quantaty.onclick = setQuantaty;
+quantity.onclick = setQuantaty;
 delivery.onclick = setDelivery;
 aboutBtn.onclick = () => openWindow(description);
 buyBtn.onclick = () => openWindow(buyMenu);

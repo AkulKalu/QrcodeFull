@@ -31,6 +31,6 @@ class ShippmentSent extends Mailable
     public function build()
     {
         return $this->from($this->store->email)
-                    ->view('view.name');
+                    ->view('mail.order_shipped');
     }
 }

@@ -18,7 +18,7 @@ export default function Store(props) {
                     button = {
                         {
                             name: active ? active.name : '.....' ,
-                            className:"StoreBtn"
+                            className:"StoreBtn Orange"
                         }
                     }
                     atOpen = {{

@@ -22,18 +22,13 @@ export default function Product({ data, columns, onClick, style }) {
             active:  data.active ? 0 : 1
         }, data.idx); 
     }
-    const downloadQrCode = () => {
-        generateQrCode(data.store_id, data.id)
-        .then( res =>{
-            downloadFile( res.data.qrCode, `${data.manufacturer}-${data.model}`, 'svg' )
-        })
-    }
+ 
 
-    function downloadFile(file, name, ext) {
-        const url = window.URL.createObjectURL(new Blob([file]));
+    function downloadSVG(svgString, name) {
+        const url = window.URL.createObjectURL(new Blob([svgString]));
         const link = document.createElement('a');
         link.href = url;
-        link.setAttribute('download', `${name}.${ext}`); 
+        link.setAttribute('download', `${name}.svg`); 
         link.click();
     }
  
@@ -67,13 +62,12 @@ export default function Product({ data, columns, onClick, style }) {
                 )
              case 'QrCode':
                 return cell(
-                    <img 
-                        onClick={downloadQrCode}  
+                    <div 
+                        onClick={() => downloadSVG(data.qrCode, data.model)}  
                         className="QrImg" 
                         data-escape 
-                        alt="Generate QrCode" 
-                        src={QrCodeImg}>
-                    </img> , {'data-escape':true}
+                        dangerouslySetInnerHTML={{__html : data.qrcode }}>
+                    </div> , {'data-escape':true}
                 )
             case 'Price':
                 return cell(

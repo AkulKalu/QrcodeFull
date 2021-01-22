@@ -6,6 +6,7 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class ProductsController extends Controller
 {
@@ -46,8 +47,12 @@ class ProductsController extends Controller
     {
         $store = Auth::user()->stores()->find( $request->store_id);
         $createdProduct = $store->products()->create($request->all());
+        $qrcode = QrCode::format('svg')->generate(url('shop/'.$store->name.'/'.$createdProduct->id))->__toString(); 
+        $newProduct = $createdProduct->update([
+            'qrcode' => $qrcode
+        ]);
         return response()->json([
-            'created'=> $createdProduct,
+            'created'=> $newProduct,
             'all'=> $store->products()->latest()->get(),
             'stats' => $this->getProductsStats($store),
             'categories'=> $this->getProductCategories($store),
