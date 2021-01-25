@@ -24,7 +24,8 @@ export default function Product({ data, columns, onClick, style }) {
     }
  
 
-    function downloadSVG(svgString, name) {
+    function downloadSVG(e,svgString, name) {
+        e.stopPropagation();
         const url = window.URL.createObjectURL(new Blob([svgString]));
         const link = document.createElement('a');
         link.href = url;
@@ -58,16 +59,17 @@ export default function Product({ data, columns, onClick, style }) {
                     <Toggle
                     onToggle = {setActiveStatus}
                     on = {data.active}
-                    />, {'data-escape':true}
+                    />, {'data-escape':true, style: {cursor: 'unset'}}
                 )
              case 'QrCode':
+                
                 return cell(
                     <div 
-                        onClick={() => downloadSVG(data.qrCode, data.model)}  
+                        onClick={(e) => downloadSVG(e, data.qrcode, data.model)}  
                         className="QrImg" 
                         data-escape 
                         dangerouslySetInnerHTML={{__html : data.qrcode }}>
-                    </div> , {'data-escape':true}
+                    </div> , {'data-escape':true, style: {cursor: 'unset'}}
                 )
             case 'Price':
                 return cell(

@@ -14,7 +14,7 @@
             height: 100%;
             
            
-            @include flex($jcont : flex-end,$aitems: center );
+            @include flex($aitems: center );
             box-sizing: border-box;
             padding-right: 2rem;
             

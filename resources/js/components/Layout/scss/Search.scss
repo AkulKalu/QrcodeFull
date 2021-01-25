@@ -13,11 +13,11 @@
     }
     .Bar {
         position: relative;
-        flex-basis: 70%;
-
+        flex-basis: 80%;
         input {
-            height: 4vh;
-            width: 80%;
+            height: 5vh;
+            font-size: 2vh;
+            width: 100%;
             background: $bgField;
             border: 1px solid rgb(121, 153, 163);
             
@@ -27,10 +27,13 @@
         }
 
         .Filters {
-            @include position($t: 100%);
-            width: 100%;
+            @include position($t: 75%, $l:10%);
+            width: fit-content;
+            margin: auto;
             height: 3vh;
-            padding-top: 0.5rem;
+            @include flex-c;
+            background: rgb(180, 204, 219);
+            border: 1px solid rgb(121, 153, 163);
             font-size: $fontN;
          
            

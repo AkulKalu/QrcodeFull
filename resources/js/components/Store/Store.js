@@ -5,9 +5,6 @@ import './scss/Store.scss';
 
 let StoreSwitch = AsSwitch(SelectPanel);
 
-
-
-
 export default function Store(props) {
     const {all, active} = props.stores;
  

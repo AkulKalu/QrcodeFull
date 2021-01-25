@@ -41,7 +41,10 @@ Route::patch('/shippments/send/{id}', [ShippmentsController::class, 'markAsSent'
 
 Route::get('/shop/{store}/{productId}', [CheckoutController::class, 'index']);
 Route::post('/checkout/charge/stripe/{productId}', [StripeController::class, 'charge']);
-Route::post('/checkout/charge/paypal', [PayPalController::class, 'charge']);
+// Route::post('/checkout/charge/paypal', [PayPalController::class, 'charge']);
+Route::post('/checkout/charge/paypal_create', [PayPalController::class, 'create']);
+Route::post('/checkout/charge/paypal_execute', [PayPalController::class, 'execute']);
+
 Route::get('/checkout/success/stripe', [StripeController::class, 'success']);
 Route::get('/checkout/success/paypal', [PayPalController::class, 'success']);
 Route::get('/checkout/fail', [CheckoutController::class, 'fail']);

@@ -94,6 +94,35 @@ function chargeWithStripe() {
       console.error("Error:", error.response);
     });
 }
+paypal.Button.render({
+    env: 'sandbox', // Or 'production'
+    // Set up the payment:
+    // 1. Add a payment callback
+    payment: function(data, actions) {
+      // 2. Make a request to your server
+      return window.axios.post(`/checkout/charge/paypal_create`, {id:productId, ...paymentInfo})
+      .then(response => {
+          console.log(response);
+        return response.data.id;
+      })
+      
+    },
+    // Execute the payment:
+    // 1. Add an onAuthorize callback
+    onAuthorize: function(data, actions) {
+        console.log(data);
+      // 2. Make a request to your server
+      return window.axios.post(`/checkout/charge/paypal_execute`,{
+        paymentID: data.paymentID,
+        payerID:   data.payerID
+      })
+      .then(response => {
+          console.log(response);
+      });
+    }
+  }, '#paypalBtn');
+
+
 
 
 

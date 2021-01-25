@@ -2118,6 +2118,55 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
 __webpack_require__(/*! ./axios */ "./resources/js/axios.js");
 
 __webpack_require__(/*! ./checkoutTheme */ "./resources/js/checkoutTheme.js");
@@ -2219,6 +2268,34 @@ function chargeWithStripe() {
     console.error("Error:", error.response);
   });
 }
+
+paypal.Button.render({
+  env: 'sandbox',
+  // Or 'production'
+  // Set up the payment:
+  // 1. Add a payment callback
+  payment: function payment(data, actions) {
+    // 2. Make a request to your server
+    return window.axios.post("/checkout/charge/paypal_create", _objectSpread({
+      id: productId
+    }, paymentInfo)).then(function (response) {
+      console.log(response);
+      return response.data.id;
+    });
+  },
+  // Execute the payment:
+  // 1. Add an onAuthorize callback
+  onAuthorize: function onAuthorize(data, actions) {
+    console.log(data); // 2. Make a request to your server
+
+    return window.axios.post("/checkout/charge/paypal_execute", {
+      paymentID: data.paymentID,
+      payerID: data.payerID
+    }).then(function (response) {
+      console.log(response);
+    });
+  }
+}, '#paypalBtn');
 
 /***/ }),
 

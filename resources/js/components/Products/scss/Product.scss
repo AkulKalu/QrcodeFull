@@ -1,13 +1,20 @@
 @import '../../Layout/scss/variables';
+@import '../../Layout/scss/mixins';
 
 
 .QrImg {
     transition: 0.5s;
+    height: 7vh;
+    width: 7vh;
+    @include flex-c;
+    cursor: pointer;
+    background: white;
     &:hover {
         filter: invert(100%);
     }
     svg {
         height: 6vh;
+        width: 6vh;    
     }
 }
 

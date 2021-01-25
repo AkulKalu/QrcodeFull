@@ -37,7 +37,7 @@ export default function SearchBar({columns, table, search }) {
     })
 
     return <div className="Search">
-                <label htmlFor="search">Search</label>
+                <label htmlFor="search">Search:</label>
                 <div className="Bar">
                     <input onBlur={e=> {
                     }} onChange={e => setSearchVal(e.target.value)} value={searchVal} name="search" type="text" ></input>

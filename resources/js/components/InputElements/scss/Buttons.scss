@@ -22,12 +22,15 @@ button {
     &:hover {
         color: $higlight;
         border-color: $higlight;
+       
       }
 }
 .AddProduct {
     @extend .Orange;
     width: 10%;
     height: 3vh;
+    background: $theme1;
+    text-shadow: none;
 }
 
 .StoreBtnOpt {

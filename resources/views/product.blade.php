@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="{{ asset('css/product.css') }}">
     <script src="{{ asset('js/checkout.js') }}"  defer ></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <title>Product</title>
 </head>
@@ -47,11 +48,12 @@
         </div>
         <h2>Payment</h2>
         <div class="Payment">
-            <form action="{{ url('/checkout/charge/paypal') }}" method="post">
+            <div id="paypalBtn"><div>
+            <!-- <form action="{{ url('/checkout/charge/paypal') }}" method="post">
                 <input type="hidden" name="productId" value={{$product->id}} />
                 {{ csrf_field() }}
                 <input class="Method" type="submit" name="submit" value="PayPal">
-            </form>
+            </form> -->
             <input id="stripe" class="Method" type="button" value="Stripe">
         </div>
     </div>
