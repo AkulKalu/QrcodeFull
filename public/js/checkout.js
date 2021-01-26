@@ -2183,7 +2183,7 @@ var deliverOff = document.getElementById('no');
 var stripeBtn = document.getElementById('stripe');
 var paymentInfo = {
   quantity: 1,
-  delivery: true
+  delivery: 1
 };
 
 function openWindow(windowObject) {
@@ -2228,10 +2228,10 @@ function setDelivery(e) {
   };
 
   if (e.target.id === 'yes') {
-    paymentInfo.delivery = true;
+    paymentInfo.delivery = 1;
     setActive(paymentInfo.delivery);
   } else if (e.target.id === 'no') {
-    paymentInfo.delivery = false;
+    paymentInfo.delivery = 0;
     setActive(paymentInfo.delivery);
   }
 }
@@ -2279,18 +2279,17 @@ paypal.Button.render({
     return window.axios.post("/checkout/charge/paypal_create", _objectSpread({
       id: productId
     }, paymentInfo)).then(function (response) {
-      console.log(response);
       return response.data.id;
     });
   },
   // Execute the payment:
   // 1. Add an onAuthorize callback
   onAuthorize: function onAuthorize(data, actions) {
-    console.log(data); // 2. Make a request to your server
-
+    // 2. Make a request to your server
     return window.axios.post("/checkout/charge/paypal_execute", {
       paymentID: data.paymentID,
-      payerID: data.payerID
+      payerID: data.payerID,
+      productId: productId
     }).then(function (response) {
       console.log(response);
     });

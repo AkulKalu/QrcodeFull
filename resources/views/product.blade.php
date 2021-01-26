@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="{{ asset('css/product.css') }}">
     <script src="{{ asset('js/checkout.js') }}"  defer ></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
@@ -15,23 +17,28 @@
     </div>
     <main>
         <div class="Info">
-            <span class="InfoSmall">{{ $product->category}}</span>
-            <span class="InfoLarge">{{ $product->manufacturer}}</span>
-            <span class="InfoSmall">{{ $product->model}} </span>
-            <span class="InfoLarge"> {{ $product->currency}}{{ $product->price}} </span>    
+            <div class="InfoLarge">{{ $product->manufacturer}}</div>
+            <div class="InfoSmall">
+                <span >{{ $product->category}}</span>
+                <span class="border-left">{{ $product->model}} </span>
+            </div>
+            
+            <div class="Price"> {{ $product->currency}}{{ $product->price}} </div>
         </div>
         <div class="Buttons">
             <div id="aboutBtn" class="Btn About">
-                <span>About</span>
-            </div>
+                <span>Info</span>
+            </div>    
             <div id="buyBtn" class="Btn Buy">
                 <span>Buy</span>
             </div>
         </div>
     </main>
+    <!-- product info -->
     <div id="description"  class="Window  Description" >
         {{ $product->description}}
     </div>
+    <!--  -->
     <div id="buyMenu"  class="Window BuyMenu" >
         <div class="Quantaty">
             <h2>Quantaty</h2>
@@ -49,11 +56,6 @@
         <h2>Payment</h2>
         <div class="Payment">
             <div id="paypalBtn"><div>
-            <!-- <form action="{{ url('/checkout/charge/paypal') }}" method="post">
-                <input type="hidden" name="productId" value={{$product->id}} />
-                {{ csrf_field() }}
-                <input class="Method" type="submit" name="submit" value="PayPal">
-            </form> -->
             <input id="stripe" class="Method" type="button" value="Stripe">
         </div>
     </div>

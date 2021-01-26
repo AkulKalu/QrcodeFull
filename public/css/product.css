@@ -11,9 +11,22 @@ body {
   height: 100vh;
   width: 100vw;
   color: var(--font);
+  border-color: var(--font);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: "Iceland", cursive;
+}
+
+.Hover:hover,
+.Window .Method:hover,
+.Window .Delivery span:hover,
+.Window .Counter .Left:hover,
+.Window .Counter .Right:hover,
+.Window .Back:hover,
+main .Btn:hover {
+  cursor: pointer;
+  filter: invert(100%);
 }
 
 .Img {
@@ -23,60 +36,77 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 0 0 10% 10%;
-  height: 55%;
+  height: 40%;
 }
 
 .Img img {
-  width: 100%;
-  max-height: 100%;
+  height: 100%;
+  max-width: 100%;
   display: block;
   margin: auto;
 }
 
 main {
-  height: 45%;
+  height: 60%;
+  padding: 0 5%;
 }
 
 main .Info {
   height: 60%;
-  padding-top: 5%;
-  padding-left: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 main .Info .InfoSmall {
-  display: block;
-  font-size: 2.5vh;
-  padding: 0 1.5vh;
-  margin-top: 1vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+main .Info .InfoSmall span {
+  display: inline-block;
+  font-size: 3vh;
+  padding: 1vh;
+}
+
+main .Info .InfoSmall .border-left {
+  border-left: 1px solid;
 }
 
 main .Info .InfoLarge {
   display: block;
-  padding: 1vh 4vh;
-  font-weight: 800;
+  font-size: 7vh;
+}
+
+main .Info .Price {
+  width: 100%;
   font-size: 6vh;
 }
 
-main .Info .InfoLarge:nth-of-type(4) {
-  text-align: right;
-  font-weight: 600;
+main .Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  flex-direction: column;
+  width: 100%;
 }
 
 main .Btn {
-  color: wheat;
-  width: 40%;
-  font-size: 2vh;
-  font-weight: 600;
-  text-align: center;
-  padding: 1vh 0;
-  border-radius: 0 5px 5px 0;
-  background-color: var(--btnBg);
-}
-
-main .Buy {
-  margin-top: 2vh;
+  color: var(--btnBg);
   width: 60%;
+  font-size: 3vh;
+  text-align: center;
+  margin: 2% auto;
+  padding: 2% 0;
+  border: 2px solid var(--btnBg);
 }
 
 .Window {
@@ -90,7 +120,7 @@ main .Buy {
   transform: translateY(100%);
   box-sizing: border-box;
   padding: 12% 10%;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 
 .Window .Back {
@@ -151,13 +181,80 @@ main .Buy {
 }
 
 .Window .Method {
-  background: var(--font);
-  color: rgba(238, 236, 225, 0.836);
+  display: block;
+  background: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  color: var(--font);
   border: none;
-  width: 100%;
   outline: none;
-  border-radius: 5px;
-  height: 5vh;
-  margin: 1.5vh auto;
+  font-size: 4vh;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+
+  .Img {
+    height: 100%;
+    width: 50%;
+    position: relative;
+  }
+
+  .Img img {
+    height: 60%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1400px) {
+  .Img img {
+    height: 40%;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .Img::after {
+    content: "";
+    display: block;
+    background-color: var(--font);
+    height: 90%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    z-index: 10;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  main {
+    height: 100%;
+    width: 50%;
+    padding: unset;
+  }
+
+  main .Info {
+    height: 50%;
+    margin-top: 10%;
+  }
+
+  main .Btn {
+    width: 30%;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .Window {
+    width: 50%;
+    right: 0;
+    top: 0;
+    padding: 5% 10%;
+  }
 }
 
