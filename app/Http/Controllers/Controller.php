@@ -38,4 +38,17 @@ class Controller extends BaseController
             'sent'=>  $user->shippments()->where('shipped', '=', '1')->count(),
         ];
     }
+
+    public function decodeTheme($themeStr)
+    {
+        $theme = explode('&', $themeStr);
+        $theme = array_map(function($part) {
+            return explode('|',$part);
+        }, $theme);
+        $theme = array_reduce($theme, function($array, $segment) {
+            $array[$segment[0]] = $segment[1];
+            return $array;
+        });
+        return $theme;
+    }
 }

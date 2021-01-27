@@ -37,16 +37,17 @@ class StripeController extends Controller
               'quantity' => $request->quantity,
             ]],
             'mode' => 'payment',
-            'success_url' => url('/checkout/success/stripe?session_id={CHECKOUT_SESSION_ID}&product_id='.$product->id),
-            'cancel_url' =>  url('/checkout/fail'),
+            'success_url' => url('/shop/'.$product->store->name.'/'.$product->id.'/success_stripe'.'?session_id={CHECKOUT_SESSION_ID}'),
+            'cancel_url' =>  url('/shop/'.$product->store->name.'/'.$product->id),
           ]);
     
         return response()->json(['id'=> $checkout_session->id]);
     }
    
-    public function success(Request $request) {
+    public function success(Request $request, $store, $productId) {
 
-        $product = Product::find($request->query()['product_id']);
+        $product = Product::find($productId);
+
         Stripe::setApiKey( $product->store->stripe_private_key);
         $session = StripeSession::retrieve($request->query()['session_id']);
         $customer = Customer::retrieve( $session->customer);
@@ -78,12 +79,14 @@ class StripeController extends Controller
         
         Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product,  $shipping ));
 
-        return view('checkout.success');
+        return view('product', [
+          'purchaseCompleted' => 'Stripe',
+          'product'=> $product, 
+          'theme'=> $this->decodeTheme($product->theme), 
+          'public_key'=> $product->store->stripe_public_key,
+          ]);
     }
 
-    public function fail() {
-
-        return view('checkout.fail');
-    }
+    
 
 }

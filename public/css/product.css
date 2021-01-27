@@ -7,6 +7,7 @@
 
 body {
   background: var(--bg);
+  position: relative;
   margin: 0 0;
   height: 100vh;
   width: 100vw;
@@ -20,11 +21,12 @@ body {
 
 .Hover:hover,
 .Window .Method:hover,
+.Window .PayPal:hover,
 .Window .Delivery span:hover,
 .Window .Counter .Left:hover,
 .Window .Counter .Right:hover,
 .Window .Back:hover,
-main .Btn:hover {
+.Btn:hover {
   cursor: pointer;
   filter: invert(100%);
 }
@@ -44,6 +46,16 @@ main .Btn:hover {
   max-width: 100%;
   display: block;
   margin: auto;
+}
+
+.Btn {
+  color: var(--btnBg);
+  width: 60%;
+  font-size: 3vh;
+  text-align: center;
+  margin: 2% auto;
+  padding: 2% 0;
+  border: 2px solid var(--btnBg);
 }
 
 main {
@@ -97,16 +109,6 @@ main .Buttons {
   height: 40%;
   flex-direction: column;
   width: 100%;
-}
-
-main .Btn {
-  color: var(--btnBg);
-  width: 60%;
-  font-size: 3vh;
-  text-align: center;
-  margin: 2% auto;
-  padding: 2% 0;
-  border: 2px solid var(--btnBg);
 }
 
 .Window {
@@ -180,19 +182,75 @@ main .Btn {
   transition: opacity 0.5s;
 }
 
-.Window .Method {
+.Window .Method,
+.Window .PayPal {
+  font: inherit;
   display: block;
   background: none;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: auto;
+  margin: 1.5vh auto;
   color: var(--font);
   border: none;
   outline: none;
-  font-size: 4vh;
+  font-size: 5vh;
   font-weight: 600;
   cursor: pointer;
+}
+
+.Window .PayPal {
+  position: relative;
+}
+
+.Window .PayPalBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: -30%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  opacity: 0;
+}
+
+.Success {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.199);
+  transition: opacity 0.3s;
+}
+
+.Success .Message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  background: var(--bg);
+  font-size: 2vh;
+  text-align: center;
+  height: 90%;
+  width: 90%;
+  border: 1px solid;
+}
+
+.Success .Message .Btn {
+  width: 25%;
+  margin-top: 15%;
 }
 
 @media only screen and (orientation: landscape) {
@@ -227,7 +285,7 @@ main .Btn {
     position: absolute;
     right: 0;
     top: 5%;
-    z-index: 10;
+    z-index: 2;
   }
 }
 
@@ -255,6 +313,13 @@ main .Btn {
     right: 0;
     top: 0;
     padding: 5% 10%;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .Success .Message {
+    height: 60%;
+    width: 50%;
   }
 }
 

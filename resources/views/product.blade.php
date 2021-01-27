@@ -28,17 +28,39 @@
         <div class="Buttons">
             <div id="aboutBtn" class="Btn About">
                 <span>Info</span>
-            </div>    
+            </div> 
+            @if($product->stock)   
             <div id="buyBtn" class="Btn Buy">
                 <span>Buy</span>
             </div>
+            @else
+            <span>Not in stock!</span>
+            @endif
         </div>
     </main>
+    @isset($purchaseCompleted )        
+        <div class="Success" id="succesWindow">
+            <div class="Message">
+                <div>
+                    <p>Your {{$purchaseCompleted}} transaction has been successfull.</p>
+                    <p>Details have been sent to your email addres, if you have any questions contact us at:</p>
+                    <a href="mailto: {{ $product->store->email }}" >{{ $product->store->email }}</a>
+                    @isset($product->store->phone )
+                        <p>or by phone: {{ $product->store->phone }}</p>
+                    @endisset
+                    <div id="closeSuccessBtn" class="Btn">Thanks!</div>
+                </div>
+                
+            </div>
+        </div>
+    @endisset
     <!-- product info -->
     <div id="description"  class="Window  Description" >
         {{ $product->description}}
     </div>
     <!--  -->
+
+    <!-- buy window -->
     <div id="buyMenu"  class="Window BuyMenu" >
         <div class="Quantaty">
             <h2>Quantaty</h2>
@@ -55,10 +77,14 @@
         </div>
         <h2>Payment</h2>
         <div class="Payment">
-            <div id="paypalBtn"><div>
-            <input id="stripe" class="Method" type="button" value="Stripe">
+         <input id="stripe" class="Method" type="button" value="Stripe">
+         <div class="PayPal">Paypal 
+            <div class="PayPalBtn"  id="paypalBtn"><div>
+         </div>
+            
         </div>
     </div>
+    <!--  -->
     <script>
         // Create an instance of the Stripe object with your publishable API key
         let publicKey = "{{$public_key}}";

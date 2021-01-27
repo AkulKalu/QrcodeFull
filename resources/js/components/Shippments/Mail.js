@@ -4,10 +4,12 @@ import './scss/Mail.scss';
 
 export default function Mail({shippmentId}) {
     const {dispatch} = useContext(store);
-    const markAsSent = () => {
+    const markAsSent = e => {
+        e.stopPropagation();
         dispatch.user.setShippingStatus(shippmentId);
     } 
-    return  <svg data-escape onClick={markAsSent} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    return  <div className="MailWrap" onClick={markAsSent}>
+        <svg   version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 512 512" className="Mail" xmlSpace="preserve">
     <g>
         <g>
@@ -63,5 +65,6 @@ export default function Mail({shippmentId}) {
     <g>
     </g>
     </svg>
+    </div> 
     
 }

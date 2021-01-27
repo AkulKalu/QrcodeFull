@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ShippmentSent;
 use App\Mail\TransactionSuccesfull;
+use App\Models\Product;
 use App\Models\Store;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -33,8 +36,11 @@ class HomeController extends Controller
     }
     public function try()
     {
-        // Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull([]));
-        return view('mail.order_completed');
+        $product =Product::find(1);
+        $transaction = Transaction::find(1);
+        
+        Mail::to('krunaluka@gmail.com')->send(new ShippmentSent( $product,  $transaction->shippment));
+       
     }
 
 }

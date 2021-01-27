@@ -2,12 +2,16 @@
 
 @section('content')
         <div class="title">
-            <h2>ORDER COMPLETED</h2>
+            <h2>{{$product->store->name}} - ORDER SHIPPED</h2>
         </div>
         <div class="message">
-           <p>Shipped 
-               your order please contact us at <a href="mailto: abc@example.com">mail@gmail.com</a>. Make sure you provide your order id
-               in the email.
+           <p> Hello {{$shippment->name}}. We are happy to notify you that your order {{$product->manufacturer}} - {{$product->category}} {{$product->model}}
+               has been sent your way. You can expect delivery in the next few days.
+               
+           </p>
+           <p>
+               If you have any questions please contact us at <a href="mailto: {{$product->store->email}}">mail@gmail.com</a> 
+               {{$product->store->phone ? 'or by phone at ( '.$product->store->phone.' )' : ''}}.
            </p>
         </div>
        

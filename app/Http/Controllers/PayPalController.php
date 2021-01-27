@@ -59,7 +59,7 @@ class PayPalController extends Controller
     
         $amount = new Amount();
         $amount->setCurrency("USD")
-            ->setTotal($product->price);
+            ->setTotal($product->price * $request->quantity);
     
     
         $transaction = new Transaction();
@@ -69,8 +69,8 @@ class PayPalController extends Controller
             ->setInvoiceNumber(uniqid());
     
         $redirectUrls = new RedirectUrls();
-        $redirectUrls->setReturnUrl(url('/checkout/success/paypal'))
-            ->setCancelUrl(url('/checkout/fail'));
+        $redirectUrls->setReturnUrl(url('/shop/'.$product->store->name.'/'.$product->id.'/success_paypal'))
+            ->setCancelUrl(url('/shop/'.$product->store->name.'/'.$product->id));
 
     
         // Add NO SHIPPING OPTION
@@ -153,6 +153,18 @@ class PayPalController extends Controller
         }
     
         return  $result;
+    }
+
+    public function success($store, $productId)
+    {
+        $product = Product::find( $productId);
+
+        return view('product', [
+            'purchaseCompleted' => 'PayPal',
+            'product'=> $product, 
+            'theme'=> $this->decodeTheme($product->theme), 
+            'public_key'=> $product->store->stripe_public_key,
+            ]);
     }
  
 }

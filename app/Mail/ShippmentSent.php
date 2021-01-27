@@ -16,11 +16,10 @@ class ShippmentSent extends Mailable
      *
      * @return void
      */
-    public function __construct($order, $shippment, $store)
+    public function __construct($product, $shippment)
     {
-        $this->order = $order;
+        $this->product = $product;
         $this->shippment = $shippment;
-        $this->store = $store;
     }
 
     /**
@@ -30,7 +29,7 @@ class ShippmentSent extends Mailable
      */
     public function build()
     {
-        return $this->from($this->store->email)
-                    ->view('mail.order_shipped');
+        return $this->from($this->product->store->email)
+                    ->view('mail.order_shipped',['product'=> $this->product, 'shippment'=>$this->shippment]);
     }
 }

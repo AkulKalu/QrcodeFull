@@ -16,8 +16,7 @@ class ShippmentsController extends Controller
         ]);
         if($updated) {
             $product = $shippment->product;
-            $store = $product->store;
-            Mail::to('krunaluka@gmail.com')->send(new ShippmentSent( $product, $shippment, $store));
+            Mail::to('krunaluka@gmail.com')->send(new ShippmentSent( $product, $shippment));
             return response()->json(['shippment'=> $shippment]);
         }
 

@@ -16,6 +16,10 @@ let deliverOff =  document.getElementById('no');
 
 let stripeBtn =  document.getElementById('stripe');
 
+let closeSuccessBtn =  document.getElementById('closeSuccessBtn');
+
+
+
 
 const paymentInfo = {
     quantity : 1, 
@@ -37,7 +41,7 @@ function closeWindow(closeBtn, windowObject) {
     } 
 }
 
-function setQuantaty(e) {
+function setQuantity(e) {
     if(e.target.id === 'qL') {
         if(paymentInfo.quantity > 1) {
             paymentInfo.quantity--
@@ -66,11 +70,23 @@ function setDelivery(e) {
         setActive(paymentInfo.delivery);
     }
 }
-quantity.onclick = setQuantaty;
+quantity.onclick = setQuantity;
 delivery.onclick = setDelivery;
 aboutBtn.onclick = () => openWindow(description);
 buyBtn.onclick = () => openWindow(buyMenu);
 stripeBtn.onclick = chargeWithStripe;
+
+if( closeSuccessBtn ) {
+  closeSuccessBtn.onclick = e => {
+    let successWindow = document.getElementById('succesWindow');
+    successWindow.style.opacity = '0';
+    successWindow.ontransitionend = () => {
+      successWindow.style.display = 'none';
+    }
+  }
+}
+
+
 
 let stripe = Stripe(publicKey);
 
@@ -82,26 +98,31 @@ function chargeWithStripe() {
     .then(session => {
       return stripe.redirectToCheckout({ sessionId: session.data.id });
     })
-    .then(result => {
+    .then(response => {
       // If redirectToCheckout fails due to a browser or network
       // error, you should display the localized error message to your
       // customer using error.message.
-      if (result.error) {
-        alert(result.error.message);
+      if (response.error) {
+        alert(response.error.message);
       }
     })
-    .catch(error => {
-      console.error("Error:", error.response);
-    });
 }
+
 paypal.Button.render({
     env: 'sandbox', // Or 'production'
+    style: {
+      size: 'medium'
+    },
     // Set up the payment:
     // 1. Add a payment callback
     payment: function(data, actions) {
       // 2. Make a request to your server
+     
       return window.axios.post(`/checkout/charge/paypal_create`, {id: productId, ...paymentInfo})
       .then(response => {
+        if (response.error) {
+          alert(response.error.message);
+        }
         return response.data.id;
       })
       
@@ -116,7 +137,11 @@ paypal.Button.render({
         productId: productId,
       })
       .then(response => {
-          console.log(response);
+        if (response.error) {
+          alert(response.error.message);
+        }else {
+          window.location.href =  window.location.href + '/success_paypal';
+        }
       });
     }
   }, '#paypalBtn');

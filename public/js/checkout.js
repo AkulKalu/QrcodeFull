@@ -2181,6 +2181,7 @@ var delivery = document.getElementById('delivery');
 var deliverOn = document.getElementById('yes');
 var deliverOff = document.getElementById('no');
 var stripeBtn = document.getElementById('stripe');
+var closeSuccessBtn = document.getElementById('closeSuccessBtn');
 var paymentInfo = {
   quantity: 1,
   delivery: 1
@@ -2207,7 +2208,7 @@ function closeWindow(closeBtn, windowObject) {
   };
 }
 
-function setQuantaty(e) {
+function setQuantity(e) {
   if (e.target.id === 'qL') {
     if (paymentInfo.quantity > 1) {
       paymentInfo.quantity--;
@@ -2236,7 +2237,7 @@ function setDelivery(e) {
   }
 }
 
-quantity.onclick = setQuantaty;
+quantity.onclick = setQuantity;
 delivery.onclick = setDelivery;
 
 aboutBtn.onclick = function () {
@@ -2248,6 +2249,18 @@ buyBtn.onclick = function () {
 };
 
 stripeBtn.onclick = chargeWithStripe;
+
+if (closeSuccessBtn) {
+  closeSuccessBtn.onclick = function (e) {
+    var successWindow = document.getElementById('succesWindow');
+    successWindow.style.opacity = '0';
+
+    successWindow.ontransitionend = function () {
+      successWindow.style.display = 'none';
+    };
+  };
+}
+
 var stripe = Stripe(publicKey);
 
 function chargeWithStripe() {
@@ -2257,21 +2270,22 @@ function chargeWithStripe() {
     return stripe.redirectToCheckout({
       sessionId: session.data.id
     });
-  }).then(function (result) {
+  }).then(function (response) {
     // If redirectToCheckout fails due to a browser or network
     // error, you should display the localized error message to your
     // customer using error.message.
-    if (result.error) {
-      alert(result.error.message);
+    if (response.error) {
+      alert(response.error.message);
     }
-  })["catch"](function (error) {
-    console.error("Error:", error.response);
   });
 }
 
 paypal.Button.render({
   env: 'sandbox',
   // Or 'production'
+  style: {
+    size: 'medium'
+  },
   // Set up the payment:
   // 1. Add a payment callback
   payment: function payment(data, actions) {
@@ -2279,6 +2293,10 @@ paypal.Button.render({
     return window.axios.post("/checkout/charge/paypal_create", _objectSpread({
       id: productId
     }, paymentInfo)).then(function (response) {
+      if (response.error) {
+        alert(response.error.message);
+      }
+
       return response.data.id;
     });
   },
@@ -2291,7 +2309,11 @@ paypal.Button.render({
       payerID: data.payerID,
       productId: productId
     }).then(function (response) {
-      console.log(response);
+      if (response.error) {
+        alert(response.error.message);
+      } else {
+        window.location.href = window.location.href + '/success_paypal';
+      }
     });
   }
 }, '#paypalBtn');
