@@ -124,7 +124,7 @@ function StateProvider({children}) {
             },
             'Customer id': {
                 sort:true,
-                dataKey: 'transaction_id',
+                dataKey: 'customer_id',
                 search : false,
             },
             'Customer email': {
@@ -193,7 +193,12 @@ function StateProvider({children}) {
             tabelColumns: tabelColumns,
             user : userState,
             stores: storesState,
-            products: productsState
+            products: productsState,
+            stats : {
+                Products : productsState.stats,
+                Transactions : userState.transactions.stats,
+                Shippments : userState.shippments.stats,
+            }
         },
         dispatch: {
             user : userActions,

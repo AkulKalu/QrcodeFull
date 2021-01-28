@@ -35,8 +35,8 @@ export default function ProductPreview({ colorPallete, setColorPallete, product 
             background: colorPallete.image.rgbStr,
         },
         button: {
-            background: colorPallete.buttons.rgbStr,
-            color: colorPallete.background.rgbStr,
+            borderColor: colorPallete.buttons.rgbStr,
+            color: colorPallete.buttons.rgbStr,
         }
     }
 
@@ -55,22 +55,28 @@ export default function ProductPreview({ colorPallete, setColorPallete, product 
                         <div>IMAGE</div>
                         }
                     </div>
-                    <div>
-                        <span className="InfoSmall">{product.category}</span>
-                        <span className="InfoLarge">{product.manufacturer}</span>
-                        <span className="InfoSmall"> {product.model} </span>
-                        <span className="InfoLarge"> ${product.price} </span>
-                    </div>
-                    <div className="Buttons">
-                        <div style={styles.button} className="Btn PreviewAbout">
-                            <span>About</span>
+                    <div className="Main">
+                        <div class="Info">
+                            <div className="InfoLarge">{product.manufacturer}</div>
+                            <div class="InfoSmall">
+                                <span >{product.category}</span>
+                                <span className="border-left"> {product.model} </span>
+                            </div>
+                            
+                            <div class="Price">  ${product.price} </div>
                         </div>
-                        <div style={styles.button} className="Btn Buy">
-                            <span>Buy</span>
+                        <div className="Buttons">
+                            <div style={styles.button} className="Btn About">
+                                <span>Info</span>
+                            </div>
+                            <div style={styles.button} className="Btn Buy">
+                                <span>Buy</span>
+                            </div>
                         </div>
                     </div>
+                    </div>    
             </div>
-        </div> 
+        
 }
 export const themeCoder = {
     fromCode : ( code ) => {

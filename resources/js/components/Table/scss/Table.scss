@@ -46,6 +46,7 @@
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
+                    font-size: $fontN;
                     &:hover {
                         z-index: 100;
                         width: fit-content;

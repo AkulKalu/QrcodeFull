@@ -26,18 +26,48 @@ export default function ProductView({data, close, switchAction}) {
                                 <img alt="img" src={product.image_url}></img>
                             </div>
                             <div className="Right">
-                                <div className="StoreName"> 
-                                    <h1>{product.store.name}</h1> 
-                                </div>
-                                <div className="Product">
-                                    <h2>{product.category}</h2>
-                                    <h1>{product.manufacturer}</h1>
-                                    <h2>{product.model}</h2>
-                                </div>
-                                <div className="Info"> 
-                                    <h1>{product.price + product.currency}</h1>
-                                    <h2>In stock  -  {product.stock}</h2>
-                                </div>
+                                <table  >
+                                    <caption>
+                                        STORE
+                                    </caption>
+                                    <tr>
+                                        <td className="Title">name</td>
+                                        <td>{product.store.name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="Title">id</td>
+                                        <td>{product.store.id}</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <caption>
+                                        PRODUCT
+                                    </caption>
+                                    <tr>
+                                        <td className="Title">id</td>
+                                        <td>{product.id}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="Title">category</td>
+                                        <td>{product.category}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="Title">manufacturer</td>
+                                        <td>{product.manufacturer}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="Title">model</td>
+                                        <td>{product.model}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="Title">price</td>
+                                        <td>{product.price + product.currency}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="Title">stock</td>
+                                        <td>{product.stock}</td>
+                                    </tr>
+                                </table>
                             </div>
                         
                         </div>

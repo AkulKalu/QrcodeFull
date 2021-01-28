@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
     <link rel="stylesheet"  href="{{ asset('css/product.css') }}">
     <script src="{{ asset('js/checkout.js') }}"  defer ></script>
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
@@ -26,11 +26,11 @@
             <div class="Price"> {{ $product->currency}}{{ $product->price}} </div>
         </div>
         <div class="Buttons">
-            <div id="aboutBtn" class="Btn About">
+            <div id="aboutBtn" class="Btn">
                 <span>Info</span>
             </div> 
             @if($product->stock)   
-            <div id="buyBtn" class="Btn Buy">
+            <div id="buyBtn" class="Btn">
                 <span>Buy</span>
             </div>
             @else

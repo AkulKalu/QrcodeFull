@@ -28,38 +28,34 @@
 
         .Right {
             width: 50%;
-            @include flex($dir: column);
-            .StoreName {
-                color: $theme2;
-                text-shadow: 2px 2px 3px $shadowL;
-                flex-basis: 20%;
+            @include flex-c;
+            flex-direction: column;
+            table, th, td, caption {
+                border: 1px solid $theme1;
+                border-collapse: collapse;
+               
+            }
+            table {
+                width: 80%;
+                height: fit-content;
                 text-align: center;
-                h1 {
-                    font-size: 6vh;
+                margin: 5% 0;
+                font-size: 2vh;
+                color: initial;
+                caption {
+                    background: $bgGrad2;
+                    border-bottom: none;
+                    font-size: 3vh;
+                    color: white;
                 }
+                td {
+                    background: $bgGrad1;
+                    width: 50%;
+                }
+              
             }
-            .Product {
-                flex-basis: 50%;
-                padding-left: 15%;
-                @include flex($dir: column, $jcont: center);
-                h1 {
-                    text-indent: 5%;
-                    font-size: 5vh;
-                }
-            }
-            .Info {
-                flex-basis: 30%;
-                padding-left: 10%;
-                text-align: right;
-                h1 {
-                    font-size: 5vh;
-                    padding-right: 15%;
-                }
-                h2 {
-                    text-align: left;
-                    text-indent: 10%;
-                }
-            }
+            
+         
         }
     }
 }

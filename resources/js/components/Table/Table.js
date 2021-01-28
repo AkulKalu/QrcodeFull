@@ -1,21 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigator from '../Table/Navigator';
 import TableHeader from '../Table/TableHeader';
+import Products, {AddProduct} from '../Products/Products';
+import Transactions from '../Transactions/Transactions';
+import Shippments from '../Shippments/Shippments';
 import './scss/Table.scss';
 
-export default function Table({display, search}) {
-    const {data, columns, Component, controls} = display;
-
+export default function Table(props) {
+    const {display, state} = props;
+    const [displaying, setDisplaying] = useState(display);
     const [slice, setSlice] = useState({
         start: 0,
         end: 10
     })
     const [sort, setSort] = useState({fun: list => list});
-
-    
+   
+    useEffect(() => {
+        setSort({fun: list => list});
+        setDisplaying(display);
+    }, [display])
 
     const applyFilter = entryData => {
-        const {value, filters} = search
+        const {value, filters} = state.search
         if(!value.length || !filters) {
             return entryData
         }
@@ -42,26 +48,48 @@ export default function Table({display, search}) {
         return false
     }
     
-
-    display = {
-        ...display,
-        list: [...data.all].sort(sort.fun),
-        applyFilter : applyFilter,
-        slice: slice
+    const tables = {
+        Transactions : {
+            Component: Transactions,
+            data: state.user.transactions,
+            columns: state.tabelColumns.Transactions,
+            controls: []
+        },
+        Products: {
+            Component: Products,
+            data: state.products,
+            columns: state.tabelColumns.Products,
+            controls: [AddProduct]
+        },
+        Shippments: {
+            Component: Shippments,
+            data: state.user.shippments,
+            columns: state.tabelColumns.Shippments,
+            controls: []
+        },
     }
+
+    let {Component, data, columns} = tables[displaying];
+
+    let renderTable = () => <Component 
+                                columns={columns} 
+                                data={data} 
+                                list={[...data.all].sort(sort.fun)} 
+                                slice={slice} 
+                                applyFilter={applyFilter} />
     
-    let controllButtons = controls.map((Ctrl, i) => <Ctrl key={`ctrl${i}`} />)
+    let renderControls = () => tables[displaying].controls.map((Ctrl, i) => <Ctrl key={`ctrl${i}`} />);
 
     return <div className="TableWrap">
                 <div className="Nav">
-                    <Navigator dataLength = {display.data.all.length} position={slice} navigate={setSlice} />
+                    <Navigator dataLength = {data.all.length} position={slice} navigate={setSlice} />
                     <div className="Controls">
-                       {controllButtons}
+                       {renderControls()}
                     </div>
                 </div>
                 <TableHeader columns={columns}  setSort={setSort} />
                 <div className="Table">
-                    <Component {...display} />
+                  {renderTable()}
                 </div>
             </div>
 }

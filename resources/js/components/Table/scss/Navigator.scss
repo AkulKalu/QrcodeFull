@@ -11,6 +11,8 @@
     
     .Tracker {
         font-weight: 600;
+       
+        font: inherit;
         margin-left: 1.2vh;
         justify-content: flex-start;
 
@@ -21,9 +23,10 @@
         .TrackField {
             width: 2.5vh;
             height: 2.5vh;
-            font-size: $fontN;
+            font-size: $fontN!important;
             text-align: center;
             background: $bgField;
+            color: inherit;
             border: 1px solid $border1;
             &:focus {
                 background: $bgFieldH;

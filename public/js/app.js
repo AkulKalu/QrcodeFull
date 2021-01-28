@@ -6437,7 +6437,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "button {\n  background: none;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  padding: none;\n  margin: none;\n  color: inherit;\n}\n\n.Orange, .AddProduct {\n  font-size: 1.8vh;\n  text-align: center;\n  transition: all 0.5s;\n  border: 1px solid #cfcdcd;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  color: white;\n  font-weight: 700;\n  box-shadow: 2px 2px 5px #757774;\n  background: #e7ae0f;\n}\n.Orange:hover, .AddProduct:hover {\n  color: yellow;\n  border-color: yellow;\n}\n\n.AddProduct {\n  width: 10%;\n  height: 3vh;\n  background: #353634;\n  text-shadow: none;\n}\n\n.StoreBtnOpt {\n  background: #353634;\n  font-size: 1.5vh;\n  border-radius: 10px;\n  color: #d6e6d6;\n  padding: 5px 10px;\n  margin-left: 1rem;\n}", ""]);
+exports.push([module.i, "button {\n  background: none;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  padding: none;\n  margin: none;\n  color: inherit;\n  font-family: inherit;\n}\n\n.Orange, .AddProduct {\n  font-size: 1.8vh;\n  text-align: center;\n  transition: all 0.5s;\n  border: 1px solid #cfcdcd;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  color: white;\n  font-weight: 700;\n  box-shadow: 2px 2px 5px #757774;\n  background: #e7ae0f;\n}\n.Orange:hover, .AddProduct:hover {\n  color: yellow;\n  border-color: yellow;\n}\n\n.AddProduct {\n  width: 10%;\n  height: 3vh;\n  background: #0b920b;\n  text-shadow: none;\n}\n\n.StoreBtnOpt {\n  background: #353634;\n  font-size: 1.5vh;\n  border-radius: 10px;\n  color: initial;\n  padding: 5px 10px;\n  margin-left: 1rem;\n}", ""]);
 
 // exports
 
@@ -6475,7 +6475,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".TextInput {\n  width: 100%;\n  height: 2.6vh;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid rgba(128, 128, 128, 0.705);\n  box-shadow: 2px 2px 5px #414040;\n  font-size: 1.4vh;\n}\n.TextInput:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n\n.ValidationMessage {\n  text-align: right;\n  width: 100%;\n  color: crimson;\n}", ""]);
+exports.push([module.i, ".TextInput {\n  width: 100%;\n  height: 2.6vh;\n  font-family: inherit;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid rgba(128, 128, 128, 0.705);\n  box-shadow: 2px 2px 5px #414040;\n  font-size: 1.4vh;\n}\n.TextInput:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n\n.ValidationMessage {\n  text-align: right;\n  width: 100%;\n  color: crimson;\n}", ""]);
 
 // exports
 
@@ -6494,7 +6494,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Textarea {\n  height: 100%;\n  width: 100%;\n  outline: none;\n  box-shadow: 2px 2px 5px #414040;\n  background: rgba(128, 128, 128, 0.178);\n}\n.Textarea:focus {\n  background: rgba(128, 128, 128, 0.301);\n}", ""]);
+exports.push([module.i, ".Textarea {\n  height: 100%;\n  width: 100%;\n  outline: none;\n  box-shadow: 2px 2px 5px #414040;\n  background: rgba(128, 128, 128, 0.178);\n  font-family: inherit;\n  font-size: 1.6vh;\n}\n.Textarea:focus {\n  background: rgba(128, 128, 128, 0.301);\n}", ""]);
 
 // exports
 
@@ -6513,7 +6513,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "input {\n  outline: none;\n}\n\nbody {\n  color: #4b4e61;\n}\n\n* {\n  font-family: \"Abhaya Libre\", serif;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n  width: 15vw;\n  border-right: 1px solid rgba(128, 128, 128, 0.795);\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  box-sizing: border-box;\n  padding-top: 1vh;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\ninput {\n  outline: none;\n}\n\nbody {\n  color: #4b4e61;\n  font-family: \"Abhaya Libre\", serif;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel .Show {\n  width: 4vh;\n  height: 4vh;\n  position: absolute;\n  background: red;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n  width: 15vw;\n  border-right: 1px solid rgba(128, 128, 128, 0.795);\n  transition: width 0.2s;\n  position: relative;\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel aside .Show {\n  top: 2vh;\n  right: -1vw;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n  transition: width 0.2s;\n}\n.CPanel main .Show {\n  top: 2vh;\n  left: 2vh;\n  -webkit-animation: fadeIn 0.2s both 0.2s;\n          animation: fadeIn 0.2s both 0.2s;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  box-sizing: border-box;\n  padding-top: 1vh;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
 
 // exports
 
@@ -6570,7 +6570,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.UserMenu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.UserMenu .Name {\n  position: relative;\n  width: 100%;\n  text-align: center;\n  margin: auto;\n  padding: 1vh 0;\n  background: linear-gradient(90deg, rgba(196, 188, 188, 0.068) 0%, rgba(128, 128, 128, 0.315) 50%, rgba(196, 188, 188, 0.068) 100%);\n  font-size: 2.5vh;\n  text-align: center;\n}\n.UserMenu .Name .User, .UserMenu .Name .Logout {\n  -webkit-animation: fadeIn 0.2s ease-in;\n          animation: fadeIn 0.2s ease-in;\n  cursor: pointer;\n}\n.UserMenu .Name .Logout {\n  font-size: 1.8vh;\n  font-weight: 200;\n}\n.UserMenu .Name .Logout:hover {\n  color: yellow;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.UserMenu {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.UserMenu .Name {\n  position: relative;\n  width: 100%;\n  text-align: center;\n  margin: auto;\n  padding: 1vh 0;\n  background: linear-gradient(90deg, rgba(196, 188, 188, 0.068) 0%, rgba(128, 128, 128, 0.315) 50%, rgba(196, 188, 188, 0.068) 100%);\n  font-size: 2.5vh;\n  text-align: center;\n}\n.UserMenu .Name .User, .UserMenu .Name .Logout {\n  -webkit-animation: fadeIn 0.2s ease-in;\n          animation: fadeIn 0.2s ease-in;\n  cursor: pointer;\n}\n.UserMenu .Name .Logout {\n  font-size: 1.8vh;\n  font-weight: 200;\n}\n.UserMenu .Name .Logout:hover {\n  color: yellow;\n}", ""]);
 
 // exports
 
@@ -6646,7 +6646,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 10% 10%;\n  height: 48%;\n}\n.Preview .Img img {\n  width: 100%;\n  max-height: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .InfoSmall {\n  display: block;\n  font-size: 2vh;\n  padding: 0 1.5vh;\n  margin-top: 1vh;\n}\n.Preview .InfoLarge {\n  display: block;\n  padding: 1vh 1.5vh;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.Preview .InfoLarge:nth-of-type(4) {\n  text-align: right;\n  font-weight: 600;\n}\n.Preview .Buttons .Btn {\n  width: 50%;\n  font-size: 1.6vh;\n  font-weight: 600;\n  text-align: center;\n  padding: 0.4vh 0;\n  border-radius: 0 5px 5px 0;\n}\n.Preview .Buttons .Buy {\n  margin-top: 2vh;\n  width: 80%;\n}\n\n.Colors {\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: yellow;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
+exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n  font-family: \"Iceland\", cursive !important;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 0 0;\n  height: 40%;\n}\n.Preview .Img img {\n  height: 100%;\n  max-width: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .Main {\n  height: 60%;\n  padding: 0 5%;\n  display: flex;\n  flex-direction: column;\n}\n.Preview .Main .Info {\n  height: 60%;\n  text-align: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.Preview .Main .Info .InfoSmall {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: auto;\n  text-align: center;\n}\n.Preview .Main .Info .InfoSmall span {\n  display: inline-block;\n  font-size: 2vh;\n  padding: 1vh;\n}\n.Preview .Main .Info .InfoSmall .border-left {\n  border-left: 1px solid;\n}\n.Preview .Main .Info .InfoLarge {\n  display: block;\n  font-size: 5vh;\n}\n.Preview .Main .Info .Price {\n  width: 100%;\n  font-size: 4vh;\n}\n.Preview .Main .Buttons {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  height: 40%;\n  flex-direction: column;\n  width: 100%;\n}\n.Preview .Main .Buttons .Hover:hover, .Preview .Main .Buttons .Btn:hover {\n  cursor: pointer;\n  filter: invert(100%);\n}\n.Preview .Main .Buttons .Btn {\n  width: 50%;\n  font-size: 2vh;\n  text-align: center;\n  margin: 2% auto;\n  padding: 1.5% 0;\n  border: 2px solid;\n}\n\n.Colors {\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: yellow;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
 
 // exports
 
@@ -6665,7 +6665,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.ProductView {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 70%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.ProductView .Content {\n  -webkit-animation: fadeIn 0.5s ease-in both;\n          animation: fadeIn 0.5s ease-in both;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  color: #535353;\n}\n.ProductView .Content .Left {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 50%;\n}\n.ProductView .Content .Left img {\n  height: 50%;\n}\n.ProductView .Content .Right {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.ProductView .Content .Right .StoreName {\n  color: #e7ae0f;\n  text-shadow: 2px 2px 3px #414040;\n  flex-basis: 20%;\n  text-align: center;\n}\n.ProductView .Content .Right .StoreName h1 {\n  font-size: 6vh;\n}\n.ProductView .Content .Right .Product {\n  flex-basis: 50%;\n  padding-left: 15%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n}\n.ProductView .Content .Right .Product h1 {\n  text-indent: 5%;\n  font-size: 5vh;\n}\n.ProductView .Content .Right .Info {\n  flex-basis: 30%;\n  padding-left: 10%;\n  text-align: right;\n}\n.ProductView .Content .Right .Info h1 {\n  font-size: 5vh;\n  padding-right: 15%;\n}\n.ProductView .Content .Right .Info h2 {\n  text-align: left;\n  text-indent: 10%;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.ProductView {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 70%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.ProductView .Content {\n  -webkit-animation: fadeIn 0.5s ease-in both;\n          animation: fadeIn 0.5s ease-in both;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  color: #535353;\n}\n.ProductView .Content .Left {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 50%;\n}\n.ProductView .Content .Left img {\n  height: 50%;\n}\n.ProductView .Content .Right {\n  width: 50%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.ProductView .Content .Right table, .ProductView .Content .Right th, .ProductView .Content .Right td, .ProductView .Content .Right caption {\n  border: 1px solid #353634;\n  border-collapse: collapse;\n}\n.ProductView .Content .Right table {\n  width: 80%;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  text-align: center;\n  margin: 5% 0;\n  font-size: 2vh;\n  color: initial;\n}\n.ProductView .Content .Right table caption {\n  background: #84bae5;\n  border-bottom: none;\n  font-size: 3vh;\n  color: white;\n}\n.ProductView .Content .Right table td {\n  background: #d7e4f0;\n  width: 50%;\n}", ""]);
 
 // exports
 
@@ -6703,7 +6703,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Panel {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 1;\n  overflow-y: scroll;\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n}\n.Panel .Control {\n  display: inline-block;\n  box-sizing: border-box;\n  width: 80%;\n  height: 20%;\n  border-top: 1px solid #353634;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: initial;\n}\n.Panel .Control .PanelBtn {\n  width: 10vh;\n  height: 3vh;\n  margin: 2vh 1vh;\n  border-radius: 5px;\n  background: #353634;\n  box-shadow: 2px 2px 5px #353634;\n  color: #d6e6d6;\n  font-weight: 700;\n  font-size: 1.5vh;\n  border-color: transparent;\n  transition: 0.6s;\n}\n.Panel .Control .PanelBtn:hover {\n  border-color: #353634;\n  color: #353634;\n  background: #e7ae0f;\n}\n.Panel .Main {\n  display: flex;\n  height: 100%;\n}\n.Panel .Main h3 {\n  display: inline-block;\n  border-bottom: 1px solid #353634;\n  padding-bottom: 0.5rem;\n  width: 80%;\n}\n.Panel .Main .Left {\n  flex-basis: 50%;\n  -webkit-animation: slideIn-left 0.3s;\n          animation: slideIn-left 0.3s;\n}\n.Panel .Main .Left .Content {\n  padding-left: 15%;\n  height: 100%;\n}\n.Panel .Main .Right {\n  flex-basis: 50%;\n  -webkit-animation: slideIn-right 0.3s;\n          animation: slideIn-right 0.3s;\n}\n.Panel .Main .Right .Content {\n  height: 80%;\n}\n.Panel .Main .Right .Name {\n  font-size: 3vh;\n}\n.Panel .Main .Group-col, .Panel .Main .Group-text, .Panel .Main .Group-row {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n}\n.Panel .Main .Group-col label, .Panel .Main .Group-text label, .Panel .Main .Group-row label {\n  font-size: 1.6vh;\n  padding: 1vh 0;\n  font-weight: 600;\n}\n.Panel .Main .jus-end {\n  justify-content: flex-end;\n}\n.Panel .Main .Group-row {\n  flex-direction: row;\n}\n.Panel .Main .Group-text {\n  height: 20%;\n  padding-bottom: 2vh;\n}\n.Panel .Main .Group-half {\n  flex-basis: 50%;\n  display: flex;\n}\n\n.PayLogo {\n  width: 8vh;\n  margin: auto;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Panel {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 1;\n  overflow-y: scroll;\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n}\n.Panel .Control {\n  display: inline-block;\n  box-sizing: border-box;\n  width: 80%;\n  height: 20%;\n  border-top: 1px solid #353634;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: initial;\n}\n.Panel .Control .PanelBtn {\n  width: 10vh;\n  height: 3vh;\n  margin: 2vh 1vh;\n  border-radius: 2px;\n  background: #353634;\n  box-shadow: 2px 2px 5px #353634;\n  color: #d6e6d6;\n  font-weight: 700;\n  font-size: 1.5vh;\n  border-color: transparent;\n  transition: 0.6s;\n}\n.Panel .Control .PanelBtn:hover {\n  border-color: #353634;\n  color: #353634;\n  background: #e7ae0f;\n}\n.Panel .Main {\n  display: flex;\n  height: 100%;\n}\n.Panel .Main h3 {\n  display: inline-block;\n  border-bottom: 1px solid #353634;\n  font-size: 2vh;\n  padding-bottom: 0.5rem;\n  width: 80%;\n}\n.Panel .Main .Left {\n  flex-basis: 50%;\n  -webkit-animation: slideIn-left 0.2s ease-out;\n          animation: slideIn-left 0.2s ease-out;\n}\n.Panel .Main .Left .Content {\n  padding-left: 15%;\n  height: 100%;\n}\n.Panel .Main .Right {\n  flex-basis: 50%;\n  -webkit-animation: slideIn-right 0.2s ease-out;\n          animation: slideIn-right 0.2s ease-out;\n}\n.Panel .Main .Right .Content {\n  height: 80%;\n}\n.Panel .Main .Right .Name {\n  font-size: 3vh;\n}\n.Panel .Main .Group-col, .Panel .Main .Group-text, .Panel .Main .Group-row {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n}\n.Panel .Main .Group-col label, .Panel .Main .Group-text label, .Panel .Main .Group-row label {\n  font-size: 1.6vh;\n  padding: 1vh 0;\n  font-weight: 600;\n}\n.Panel .Main .jus-end {\n  justify-content: flex-end;\n}\n.Panel .Main .Group-row {\n  flex-direction: row;\n}\n.Panel .Main .Group-text {\n  height: 20%;\n  padding-bottom: 2vh;\n}\n.Panel .Main .Group-half {\n  flex-basis: 50%;\n  display: flex;\n}\n\n.PayLogo {\n  width: 8vh;\n  margin: auto;\n}", ""]);
 
 // exports
 
@@ -6722,7 +6722,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Toggle {\n  width: 4vh;\n  height: 2vh;\n  cursor: pointer;\n  border-radius: 10px;\n  border: 1px solid rgba(57, 80, 57, 0.562);\n  background-color: #d4d4d4;\n  opacity: 0.8;\n  transition: opacity 0.5s;\n  box-shadow: inset 0px 0px 8px grey;\n}\n.Toggle .Switch {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 50%;\n  background-color: #4f6d4f;\n  transition: all 0.4s;\n}\n.Toggle:hover {\n  opacity: 1;\n}", ""]);
+exports.push([module.i, ".Toggle {\n  width: 4vh;\n  height: 2vh;\n  cursor: pointer;\n  border-radius: 20px;\n  border: 1px solid rgba(57, 80, 57, 0.562);\n  background-color: #d4d4d4;\n  opacity: 0.8;\n  transition: opacity 0.5s;\n  box-shadow: inset 0px 0px 8px grey;\n}\n.Toggle .Switch {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 50%;\n  background-color: #4f6d4f;\n  transition: all 0.4s;\n}\n.Toggle:hover {\n  opacity: 1;\n}", ""]);
 
 // exports
 
@@ -6779,7 +6779,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.SelectPanel {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 70%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n}\n\n.StoresList {\n  display: flex;\n  flex-wrap: wrap;\n  height: 100%;\n  width: 100%;\n  -webkit-animation: slideIn-down 0.3s;\n          animation: slideIn-down 0.3s;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  box-shadow: 2px 2px 5px gray;\n  font-size: 2.3vh;\n  min-width: 20%;\n  height: 5%;\n  margin: 1vh 1%;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  right: -100%;\n  transition: all 0.2s;\n}\n.StoresList .StoreItem .EditBtn svg {\n  height: 80%;\n  fill: white;\n}\n.StoresList .StoreItem .EditBtn:hover svg {\n  fill: yellow;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.SelectPanel {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 70%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n}\n\n.StoresList {\n  display: flex;\n  flex-wrap: wrap;\n  height: 100%;\n  width: 100%;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  box-shadow: 2px 2px 5px gray;\n  font-size: 2.3vh;\n  min-width: 20%;\n  height: 5%;\n  margin: 1vh 1%;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  right: -100%;\n  transition: all 0.2s;\n}\n.StoresList .StoreItem .EditBtn svg {\n  height: 80%;\n  fill: white;\n}\n.StoresList .StoreItem .EditBtn:hover svg {\n  fill: yellow;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
 
 // exports
 
@@ -6817,7 +6817,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Navigator, .BtnWrap, .Tracker {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n\n.Navigator {\n  flex-basis: 20%;\n  justify-content: flex-start;\n}\n.Navigator .Tracker {\n  font-weight: 600;\n  margin-left: 1.2vh;\n  justify-content: flex-start;\n}\n.Navigator .Tracker span {\n  padding: 0 0.5vh;\n}\n.Navigator .Tracker .TrackField {\n  width: 2.5vh;\n  height: 2.5vh;\n  font-size: 1.6vh;\n  text-align: center;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid rgba(128, 128, 128, 0.795);\n}\n.Navigator .Tracker .TrackField:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Navigator .BtnWrap {\n  filter: drop-shadow(2px 2px 3px #414040);\n}\n.Navigator .BtnWrap .Btn {\n  height: 1.8vh;\n  width: 2.8vh;\n  margin-left: 1vh;\n  background: #353634;\n  cursor: pointer;\n}\n.Navigator .BtnWrap .Btn:hover {\n  background: yellow;\n}\n.Navigator .BtnWrap .LeftBtn {\n  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);\n          clip-path: polygon(100% 0, 0 50%, 100% 100%);\n}\n.Navigator .BtnWrap .RightBtn {\n  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);\n          clip-path: polygon(0 0, 0 100%, 100% 50%);\n}", ""]);
+exports.push([module.i, ".Navigator, .BtnWrap, .Tracker {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n\n.Navigator {\n  flex-basis: 20%;\n  justify-content: flex-start;\n}\n.Navigator .Tracker {\n  font-weight: 600;\n  font: inherit;\n  margin-left: 1.2vh;\n  justify-content: flex-start;\n}\n.Navigator .Tracker span {\n  padding: 0 0.5vh;\n}\n.Navigator .Tracker .TrackField {\n  width: 2.5vh;\n  height: 2.5vh;\n  font-size: 1.6vh !important;\n  text-align: center;\n  background: rgba(128, 128, 128, 0.178);\n  color: inherit;\n  border: 1px solid rgba(128, 128, 128, 0.795);\n}\n.Navigator .Tracker .TrackField:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Navigator .BtnWrap {\n  filter: drop-shadow(2px 2px 3px #414040);\n}\n.Navigator .BtnWrap .Btn {\n  height: 1.8vh;\n  width: 2.8vh;\n  margin-left: 1vh;\n  background: #353634;\n  cursor: pointer;\n}\n.Navigator .BtnWrap .Btn:hover {\n  background: yellow;\n}\n.Navigator .BtnWrap .LeftBtn {\n  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);\n          clip-path: polygon(100% 0, 0 50%, 100% 100%);\n}\n.Navigator .BtnWrap .RightBtn {\n  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);\n          clip-path: polygon(0 0, 0 100%, 100% 50%);\n}", ""]);
 
 // exports
 
@@ -6836,7 +6836,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Stats {\n  width: 80%;\n  margin-top: 1vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.Stats .StatCont {\n  width: 100%;\n  font-size: 1.6vh;\n  margin: 0.5vh 0;\n  filter: drop-shadow(0px 0px 10px #f5f5f7);\n}\n.Stats .StatCont .Stat {\n  display: flex;\n  padding: 1vh;\n  border-radius: 0 10px 10px 0;\n  background: linear-gradient(to right, rgba(128, 128, 128, 0.445), rgba(196, 188, 188, 0.055));\n}\n.Stats .StatCont .Stat .Value {\n  flex-basis: 50%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Stats {\n  width: 80%;\n  margin-top: 1vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n}\n.Stats .StatCont {\n  width: 100%;\n  font-size: 1.6vh;\n  margin: 0.5vh 0;\n  filter: drop-shadow(0px 0px 10px #f5f5f7);\n}\n.Stats .StatCont .Stat {\n  display: flex;\n  padding: 1vh;\n  border-radius: 0 10px 10px 0;\n  background: linear-gradient(to right, rgba(128, 128, 128, 0.445), rgba(196, 188, 188, 0.055));\n}\n.Stats .StatCont .Stat .Value {\n  flex-basis: 50%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}", ""]);
 
 // exports
 
@@ -6855,7 +6855,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.TableWrap {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.TableWrap .Nav {\n  flex-basis: 5%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.TableWrap .Nav .Controls {\n  flex-basis: 80%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n  box-sizing: border-box;\n  padding-right: 2rem;\n}\n.TableWrap .Table {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  flex-basis: 92%;\n  -webkit-animation: fadeIn 0.4s ease-out;\n          animation: fadeIn 0.4s ease-out;\n}\n.TableWrap .Table .Row {\n  height: 10%;\n  display: flex;\n  border-bottom: 1px solid rgba(92, 90, 90, 0.541);\n  background: rgba(128, 128, 128, 0.205);\n}\n.TableWrap .Table .Row .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n  border-left: 1px solid rgba(92, 90, 90, 0.541);\n}\n.TableWrap .Table .Row .Cell:nth-of-type(1) {\n  border-left: none;\n}\n.TableWrap .Table .Row .Cell .Text {\n  padding: 0 0.5rem;\n  position: absolute;\n  width: 90%;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n}\n.TableWrap .Table .Row .Cell .Text:hover {\n  z-index: 100;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  overflow: visible;\n  background-color: #353634;\n  color: #d6e6d6;\n  padding: 0.5rem;\n  font-size: 2vh;\n}\n.TableWrap .Table .Row:hover {\n  background: rgba(128, 128, 128, 0.342);\n}\n.TableWrap .Table .Message {\n  margin: 20% auto;\n  font-size: 8vh;\n  font-weight: 800;\n  opacity: 0.3;\n}\n.TableWrap .Table .bd-l {\n  border-left: 1px solid rgba(43, 42, 42, 0.918);\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.TableWrap {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.TableWrap .Nav {\n  flex-basis: 5%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.TableWrap .Nav .Controls {\n  flex-basis: 80%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n  box-sizing: border-box;\n  padding-right: 2rem;\n}\n.TableWrap .Table {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  flex-basis: 92%;\n  -webkit-animation: fadeIn 0.4s ease-out;\n          animation: fadeIn 0.4s ease-out;\n}\n.TableWrap .Table .Row {\n  height: 10%;\n  display: flex;\n  border-bottom: 1px solid rgba(92, 90, 90, 0.541);\n  background: rgba(128, 128, 128, 0.205);\n}\n.TableWrap .Table .Row .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  text-align: center;\n  cursor: pointer;\n  border-left: 1px solid rgba(92, 90, 90, 0.541);\n}\n.TableWrap .Table .Row .Cell:nth-of-type(1) {\n  border-left: none;\n}\n.TableWrap .Table .Row .Cell .Text {\n  padding: 0 0.5rem;\n  position: absolute;\n  width: 90%;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  overflow: hidden;\n  font-size: 1.6vh;\n}\n.TableWrap .Table .Row .Cell .Text:hover {\n  z-index: 100;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  overflow: visible;\n  background-color: #353634;\n  color: #d6e6d6;\n  padding: 0.5rem;\n  font-size: 2vh;\n}\n.TableWrap .Table .Row:hover {\n  background: rgba(128, 128, 128, 0.342);\n}\n.TableWrap .Table .Message {\n  margin: 20% auto;\n  font-size: 8vh;\n  font-weight: 800;\n  opacity: 0.3;\n}\n.TableWrap .Table .bd-l {\n  border-left: 1px solid rgba(43, 42, 42, 0.918);\n}", ""]);
 
 // exports
 
@@ -6912,7 +6912,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.LoadScreen {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  height: 100vh;\n  width: 100vw;\n  z-index: 1;\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n}\n.LoadScreen .LogoWrap {\n  margin: auto;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-top: 10%;\n}\n.LoadScreen .LoadMessage {\n  text-align: center;\n  margin-top: 20%;\n  font-size: 4vh;\n  font-weight: 700;\n  -webkit-animation: fadeIn ease-out 0.8s both;\n          animation: fadeIn ease-out 0.8s both;\n}\n.LoadScreen .LoadMessage p {\n  margin: 0;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.LoadScreen {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  height: 100vh;\n  width: 100vw;\n  z-index: 1;\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n}\n.LoadScreen .LogoWrap {\n  margin: auto;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-top: 10%;\n}\n.LoadScreen .LoadMessage {\n  text-align: center;\n  margin-top: 20%;\n  font-size: 4vh;\n  font-weight: 700;\n  -webkit-animation: fadeIn ease-out 0.8s both;\n          animation: fadeIn ease-out 0.8s both;\n}\n.LoadScreen .LoadMessage p {\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -6950,7 +6950,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  15% {\n    filter: grayscale(100%);\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n  box-shadow: 2px 2px 5px #757774;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n  box-shadow: 2px 2px 5px #757774;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
 
 // exports
 
@@ -89110,7 +89110,7 @@ function StateProvider(_ref) {
       },
       'Customer id': {
         sort: true,
-        dataKey: 'transaction_id',
+        dataKey: 'customer_id',
         search: false
       },
       'Customer email': {
@@ -89180,7 +89180,12 @@ function StateProvider(_ref) {
       tabelColumns: tabelColumns,
       user: userState,
       stores: storesState,
-      products: productsState
+      products: productsState,
+      stats: {
+        Products: productsState.stats,
+        Transactions: userState.transactions.stats,
+        Shippments: userState.shippments.stats
+      }
     },
     dispatch: {
       user: userActions,
@@ -89628,16 +89633,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User */ "./resources/js/components/Layout/User.js");
 /* harmony import */ var _Visual_LoadScreen__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Visual/LoadScreen */ "./resources/js/components/Visual/LoadScreen.js");
 /* harmony import */ var _SideMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SideMenu */ "./resources/js/components/Layout/SideMenu.js");
-/* harmony import */ var _Products_Products__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Products/Products */ "./resources/js/components/Products/Products.js");
-/* harmony import */ var _Transactions_Transactions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Transactions/Transactions */ "./resources/js/components/Transactions/Transactions.js");
-/* harmony import */ var _Shippments_Shippments__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Shippments/Shippments */ "./resources/js/components/Shippments/Shippments.js");
-/* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
-/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/components/Layout/SearchBar.js");
-/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./scss/ControlPanel.scss */ "./resources/js/components/Layout/scss/ControlPanel.scss");
-/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
+/* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/components/Layout/SearchBar.js");
+/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scss/ControlPanel.scss */ "./resources/js/components/Layout/scss/ControlPanel.scss");
+/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -89723,50 +89725,29 @@ function _arrayWithHoles(arr) {
 
 
 
-
-
-
 function ControlPanel() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
       loading = _useState2[0],
       setLoading = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('Products'),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
       _useState4 = _slicedToArray(_useState3, 2),
-      table = _useState4[0],
-      setTable = _useState4[1];
+      showAside = _useState4[0],
+      setAside = _useState4[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_13__["store"]),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('Products'),
+      _useState6 = _slicedToArray(_useState5, 2),
+      table = _useState6[0],
+      setTable = _useState6[1];
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_10__["store"]),
       state = _useContext.state,
       dispatch = _useContext.dispatch;
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     dispatch.user.login();
   }, []);
-  var tables = {
-    Transactions: {
-      Component: _Transactions_Transactions__WEBPACK_IMPORTED_MODULE_7__["default"],
-      data: state.user.transactions,
-      columns: state.tabelColumns.Transactions,
-      stats: state.user.transactions.stats,
-      controls: []
-    },
-    Products: {
-      Component: _Products_Products__WEBPACK_IMPORTED_MODULE_6__["default"],
-      data: state.products,
-      columns: state.tabelColumns.Products,
-      stats: state.products.stats,
-      controls: [_Products_Products__WEBPACK_IMPORTED_MODULE_6__["AddProduct"]]
-    },
-    Shippments: {
-      Component: _Shippments_Shippments__WEBPACK_IMPORTED_MODULE_8__["default"],
-      data: state.user.shippments,
-      columns: state.tabelColumns.Shippments,
-      stats: state.user.shippments.stats,
-      controls: []
-    }
-  };
 
   var switchTable = function switchTable(table) {
     dispatch.search({
@@ -89783,7 +89764,17 @@ function ControlPanel() {
     user: state.user
   }) : null, state.user.info ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPanel"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", {
+    style: showAside ? null : {
+      width: 0,
+      overflow: 'hidden'
+    }
+  }, showAside && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return setAside(!showAside);
+    },
+    className: "Show"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "LogoWrap"
   }, !loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_logo__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "LogoPanel"
@@ -89793,8 +89784,17 @@ function ControlPanel() {
     className: "Menu"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_5__["default"], {
     switchTable: switchTable,
-    stats: _defineProperty({}, table, tables[table].stats)
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    stats: _defineProperty({}, table, state.stats[table])
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+    style: showAside ? null : {
+      width: '100vw'
+    }
+  }, !showAside && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: function onClick() {
+      return setAside(!showAside);
+    },
+    className: "Show"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TopBar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarStore"
@@ -89802,20 +89802,20 @@ function ControlPanel() {
     stores: state.stores
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarSearch"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
     table: table,
     columns: state.tabelColumns[table],
     search: dispatch.search
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableCont"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    display: tables[table],
-    search: state.search
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    display: table,
+    state: state
   })))) : null);
 }
 
 if (document.getElementById('ControlPanel')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_12___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_13__["StateProvider"], null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), " "), document.getElementById('ControlPanel'));
+  react_dom__WEBPACK_IMPORTED_MODULE_9___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_10__["StateProvider"], null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), " "), document.getElementById('ControlPanel'));
 }
 
 /***/ }),
@@ -90093,9 +90093,9 @@ function _arrayWithHoles(arr) {
 
 
 
-function SideMenu(_ref) {
-  var stats = _ref.stats,
-      switchTable = _ref.switchTable;
+function SideMenu(props) {
+  var stats = props.stats,
+      switchTable = props.switchTable;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(["Orange SMbutton SMActive ", "Orange SMbutton", "Orange SMbutton"]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -91333,8 +91333,8 @@ function ProductPreview(_ref) {
       background: colorPallete.image.rgbStr
     },
     button: {
-      background: colorPallete.buttons.rgbStr,
-      color: colorPallete.background.rgbStr
+      borderColor: colorPallete.buttons.rgbStr,
+      color: colorPallete.buttons.rgbStr
     }
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -91352,23 +91352,27 @@ function ProductPreview(_ref) {
   }, product.image_url.length ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: product.image_url,
     alt: "ProductImage"
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "IMAGE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "InfoSmall"
-  }, product.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "IMAGE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Main"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "Info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "InfoLarge"
-  }, product.manufacturer), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "InfoSmall"
-  }, " ", product.model, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "InfoLarge"
-  }, " $", product.price, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, product.manufacturer), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "InfoSmall"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "border-left"
+  }, " ", product.model, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    "class": "Price"
+  }, "  $", product.price, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Buttons"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: styles.button,
-    className: "Btn PreviewAbout"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Btn About"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Info")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: styles.button,
     className: "Btn Buy"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Buy")))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Buy"))))));
 }
 var themeCoder = {
   fromCode: function fromCode(code) {
@@ -91595,13 +91599,23 @@ function ProductView(_ref) {
     src: product.image_url
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Right"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "StoreName"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, product.store.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "Product"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, product.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, product.manufacturer), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, product.model)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "Info"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, product.price + product.currency), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "In stock  -  ", product.stock))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("caption", null, "STORE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.store.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "id"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.store.id))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("caption", null, "PRODUCT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "id"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.id)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "category"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.category)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "manufacturer"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.manufacturer)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "model"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.model)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "price"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.price + product.currency)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+    className: "Title"
+  }, "stock"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, product.stock)))))));
 }
 
 /***/ }),
@@ -91643,7 +91657,6 @@ function Products(_ref) {
 
   var markRow = function markRow(product) {
     var markup = {};
-    if (updated && updated.id === product.id) markup.backgroundColor = '#ffff008a';
     if (created && created.id === product.id) markup.backgroundColor = '#94f03957';
     if (!Number(product.active)) markup.opacity = '0.6';
     return markup;
@@ -92432,7 +92445,7 @@ function Store(props) {
       animate: 'fadeIn 0.2s forwards'
     },
     atClose: {
-      animate: 'fadeOut 0.2s forwards'
+      animate: 'slide-out-right 0.4s forwards'
     }
   }));
 }
@@ -93001,8 +93014,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Table_Navigator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Table/Navigator */ "./resources/js/components/Table/Navigator.js");
 /* harmony import */ var _Table_TableHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Table/TableHeader */ "./resources/js/components/Table/TableHeader.js");
-/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/Table.scss */ "./resources/js/components/Table/scss/Table.scss");
-/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_Table_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Products_Products__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Products/Products */ "./resources/js/components/Products/Products.js");
+/* harmony import */ var _Transactions_Transactions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Transactions/Transactions */ "./resources/js/components/Transactions/Transactions.js");
+/* harmony import */ var _Shippments_Shippments__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Shippments/Shippments */ "./resources/js/components/Shippments/Shippments.js");
+/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scss/Table.scss */ "./resources/js/components/Table/scss/Table.scss");
+/* harmony import */ var _scss_Table_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_Table_scss__WEBPACK_IMPORTED_MODULE_6__);
 function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
@@ -93130,35 +93146,48 @@ function _arrayWithHoles(arr) {
 
 
 
-function Table(_ref) {
-  var display = _ref.display,
-      search = _ref.search;
-  var _display = display,
-      data = _display.data,
-      columns = _display.columns,
-      Component = _display.Component,
-      controls = _display.controls;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+
+
+function Table(props) {
+  var display = props.display,
+      state = props.state;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(display),
+      _useState2 = _slicedToArray(_useState, 2),
+      displaying = _useState2[0],
+      setDisplaying = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     start: 0,
     end: 10
   }),
-      _useState2 = _slicedToArray(_useState, 2),
-      slice = _useState2[0],
-      setSlice = _useState2[1];
+      _useState4 = _slicedToArray(_useState3, 2),
+      slice = _useState4[0],
+      setSlice = _useState4[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
     fun: function fun(list) {
       return list;
     }
   }),
-      _useState4 = _slicedToArray(_useState3, 2),
-      sort = _useState4[0],
-      setSort = _useState4[1];
+      _useState6 = _slicedToArray(_useState5, 2),
+      sort = _useState6[0],
+      setSort = _useState6[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setSort({
+      fun: function fun(list) {
+        return list;
+      }
+    });
+    setDisplaying(display);
+  }, [display]);
 
   var applyFilter = function applyFilter(entryData) {
-    var value = search.value,
-        filters = search.filters;
+    var _state$search = state.search,
+        value = _state$search.value,
+        filters = _state$search.filters;
 
     if (!value.length || !filters) {
       return entryData;
@@ -93190,32 +93219,65 @@ function Table(_ref) {
     return false;
   };
 
-  display = _objectSpread(_objectSpread({}, display), {}, {
-    list: _toConsumableArray(data.all).sort(sort.fun),
-    applyFilter: applyFilter,
-    slice: slice
-  });
-  var controllButtons = controls.map(function (Ctrl, i) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ctrl, {
-      key: "ctrl".concat(i)
+  var tables = {
+    Transactions: {
+      Component: _Transactions_Transactions__WEBPACK_IMPORTED_MODULE_4__["default"],
+      data: state.user.transactions,
+      columns: state.tabelColumns.Transactions,
+      controls: []
+    },
+    Products: {
+      Component: _Products_Products__WEBPACK_IMPORTED_MODULE_3__["default"],
+      data: state.products,
+      columns: state.tabelColumns.Products,
+      controls: [_Products_Products__WEBPACK_IMPORTED_MODULE_3__["AddProduct"]]
+    },
+    Shippments: {
+      Component: _Shippments_Shippments__WEBPACK_IMPORTED_MODULE_5__["default"],
+      data: state.user.shippments,
+      columns: state.tabelColumns.Shippments,
+      controls: []
+    }
+  };
+  var _tables$displaying = tables[displaying],
+      Component = _tables$displaying.Component,
+      data = _tables$displaying.data,
+      columns = _tables$displaying.columns;
+
+  var renderTable = function renderTable() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, {
+      columns: columns,
+      data: data,
+      list: _toConsumableArray(data.all).sort(sort.fun),
+      slice: slice,
+      applyFilter: applyFilter
     });
-  });
+  };
+
+  var renderControls = function renderControls() {
+    return tables[displaying].controls.map(function (Ctrl, i) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Ctrl, {
+        key: "ctrl".concat(i)
+      });
+    });
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableWrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Nav"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Navigator__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    dataLength: display.data.all.length,
+    dataLength: data.all.length,
     position: slice,
     navigate: setSlice
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Controls"
-  }, controllButtons)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_TableHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, renderControls())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_TableHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
     columns: columns,
     setSort: setSort
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Table"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, display)));
+  }, renderTable()));
 }
 
 /***/ }),
@@ -93368,6 +93430,8 @@ function TableHeader(_ref) {
       };
     } else {
       sortFun = function sortFun(a, b) {
+        console.log(a, b, rule);
+
         if (isNaN(a[rule])) {
           return b[rule].localeCompare(a[rule]);
         }
@@ -93387,7 +93451,7 @@ function TableHeader(_ref) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: "TBC".concat(i),
       onClick: column.sort ? function () {
-        return sortBy(name.toLowerCase());
+        return sortBy(column.dataKey);
       } : null,
       style: {
         width: column.width

@@ -4,9 +4,6 @@ import Store from '../Store/Store';
 import User from './User';
 import LoadScreen from '../Visual/LoadScreen';
 import SideMenu from './SideMenu';
-import Products, {AddProduct} from '../Products/Products';
-import Transactions from '../Transactions/Transactions';
-import Shippments from '../Shippments/Shippments';
 import Table from '../Table/Table';
 import SearchBar from './SearchBar';
 import './scss/ControlPanel.scss';
@@ -15,6 +12,7 @@ import {store, StateProvider} from '../HOC/StateProvider';
 
 function ControlPanel() {
      const [loading, setLoading] = useState(false);
+     const [showAside, setAside] = useState(true);
      const [table, setTable] = useState('Products');
      const {state, dispatch} = useContext(store);
 
@@ -22,43 +20,19 @@ function ControlPanel() {
         dispatch.user.login()
     },[])
 
-    
-    
-    const tables = {
-        Transactions : {
-            Component: Transactions,
-            data: state.user.transactions,
-            columns: state.tabelColumns.Transactions,
-            stats: state.user.transactions.stats,
-            controls: []
-            
-        },
-        Products: {
-            Component: Products,
-            data: state.products,
-            columns: state.tabelColumns.Products,
-            stats: state.products.stats,
-            controls: [AddProduct]
-        },
-        Shippments: {
-            Component: Shippments,
-            data: state.user.shippments,
-            columns: state.tabelColumns.Shippments,
-            stats: state.user.shippments.stats,
-            controls: []
-        },
-    }
    
     const switchTable = table => {
         dispatch.search({value:'', filters: null});
         setTable(table);
     }
- 
+    
     return <Fragment  >
                 {loading ?  <LoadScreen panelLoaded={()=> setLoading(false)} user={state.user} /> : null }
                 {state.user.info ? 
                 <div className="CPanel">
-                    <aside>
+                  
+                   <aside style={showAside ? null : {width: 0, overflow: 'hidden'}}>
+                        {showAside && <div onClick={()=>setAside(!showAside)} className="Show"></div>}
                         <div className="LogoWrap">
                             {!loading ? <Logo type="LogoPanel"/> : null }
                         </div>
@@ -68,12 +42,14 @@ function ControlPanel() {
                         <div className="Menu">
                             <SideMenu 
                                 switchTable = {switchTable}
-                                stats = {{[table] : tables[table].stats}}
+                                stats = {{[table] : state.stats[table]}}
                             />
                         </div>
             
-                    </aside>
-                    <main>
+                    </aside> 
+                   
+                    <main style={ showAside ? null : {width: '100vw'} }>
+                        {!showAside && <div onClick={()=>setAside(!showAside)} className="Show"></div>}  
                         <div className="TopBar">
                             <div className="BarStore">
                                 <Store stores={state.stores} />
@@ -84,7 +60,7 @@ function ControlPanel() {
                         </div>
                       
                         <div className="TableCont">
-                            <Table display={tables[table]} search={state.search} />
+                            <Table display={table}  state={state} />
                         </div>
                     </main>
                 </div>: null

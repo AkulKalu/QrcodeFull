@@ -22,7 +22,7 @@ export default function Store(props) {
                         animate: 'fadeIn 0.2s forwards'
                     }}
                     atClose = {{
-                        animate: 'fadeOut 0.2s forwards',
+                        animate: 'slide-out-right 0.4s forwards',
                     }}
                 />
           </div>

@@ -19,6 +19,7 @@ export default function TableHeader({columns, setSort}) {
             } 
         }else {
             sortFun = (a, b) => {
+                console.log(a,b, rule);
                 if(isNaN(a[rule])) {
                     return b[rule].localeCompare(a[rule]);
                 }
@@ -35,7 +36,7 @@ export default function TableHeader({columns, setSort}) {
         let column = columns[name];
         return  <div 
                     key={`TBC${i}`}
-                    onClick={ column.sort ? ()=> sortBy(name.toLowerCase()) : null} 
+                    onClick={ column.sort ? ()=> sortBy(column.dataKey) : null} 
                     style={{width: column.width}} 
                     className="Cell">
                     {name}

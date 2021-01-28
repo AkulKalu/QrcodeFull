@@ -6,7 +6,8 @@
     outline: none;
     box-shadow: 2px 2px 5px $shadowL;
     background: $bgField;
-
+    font-family: inherit;
+    font-size: $fontN;
     &:focus {
         background: $bgFieldH;
     }
