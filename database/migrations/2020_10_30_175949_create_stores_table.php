@@ -18,12 +18,12 @@ class CreateStoresTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('website')->nullable();
-            $table->string('email')->nullable();
+            $table->string('email');
             $table->string('phone')->nullable();
-            $table->string('stripe_public_key')->nullable();
-            $table->string('stripe_private_key')->nullable();
-            $table->string('paypal_client_id')->nullable();
-            $table->string('paypal_private_key')->nullable();
+            $table->string('stripe_public_key');
+            $table->string('stripe_private_key');
+            $table->string('paypal_client_id');
+            $table->string('paypal_private_key');
             $table->timestamps();
         });
     }

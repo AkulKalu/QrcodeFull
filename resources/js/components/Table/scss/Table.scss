@@ -12,8 +12,6 @@
         .Controls {
             flex-basis: 80%;
             height: 100%;
-            
-           
             @include flex($aitems: center );
             box-sizing: border-box;
             padding-right: 2rem;

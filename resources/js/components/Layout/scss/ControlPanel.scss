@@ -18,12 +18,7 @@ body {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    .Show {
-        width: 4vh;
-        height: 4vh;
-        position: absolute;
-        background: red;
-    }
+  
     aside {
         @include background(right);
         width: 15vw ;
@@ -40,20 +35,13 @@ body {
         .User {
             height: 8%
         }  
-        .Show {
-            top: 2vh;
-            right: -1vw;
-        }
+        
     }
     main {
         @include flex(column);
         width: 85vw;
         transition: width 0.2s;
-        .Show {
-            top: 2vh;
-            left: 2vh;
-            animation: fadeIn 0.2s both 0.2s;
-        }
+        
         .TopBar {
             @include flex();
             box-sizing: border-box;

@@ -6437,7 +6437,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "button {\n  background: none;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  padding: none;\n  margin: none;\n  color: inherit;\n  font-family: inherit;\n}\n\n.Orange, .AddProduct {\n  font-size: 1.8vh;\n  text-align: center;\n  transition: all 0.5s;\n  border: 1px solid #cfcdcd;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  color: white;\n  font-weight: 700;\n  box-shadow: 2px 2px 5px #757774;\n  background: #e7ae0f;\n}\n.Orange:hover, .AddProduct:hover {\n  color: yellow;\n  border-color: yellow;\n}\n\n.AddProduct {\n  width: 10%;\n  height: 3vh;\n  background: #0b920b;\n  text-shadow: none;\n}\n\n.StoreBtnOpt {\n  background: #353634;\n  font-size: 1.5vh;\n  border-radius: 10px;\n  color: initial;\n  padding: 5px 10px;\n  margin-left: 1rem;\n}", ""]);
+exports.push([module.i, "button {\n  background: none;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  padding: none;\n  margin: none;\n  color: inherit;\n  font-family: inherit;\n}\n\n.Orange, .TableControl {\n  font-size: 1.8vh;\n  text-align: center;\n  transition: all 0.5s;\n  border: 1px solid #cfcdcd;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  color: white;\n  font-weight: 700;\n  box-shadow: 2px 2px 5px #757774;\n  background: #e7ae0f;\n}\n.Orange:hover, .TableControl:hover {\n  color: yellow;\n  border-color: yellow;\n}\n\n.TableControl {\n  width: 10%;\n  height: 3vh;\n  font-weight: unset;\n  background: rgba(128, 128, 128, 0.205);\n  color: #4b4e61;\n  border-color: #80839b;\n  text-shadow: none;\n  box-shadow: none;\n}\n\n.StoreBtnOpt {\n  background: #353634;\n  font-size: 1.5vh;\n  border-radius: 10px;\n  color: initial;\n  padding: 5px 10px;\n  margin-left: 1rem;\n}", ""]);
 
 // exports
 
@@ -6501,6 +6501,25 @@ exports.push([module.i, ".Textarea {\n  height: 100%;\n  width: 100%;\n  outline
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Layout/scss/AsideToggle.scss":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Layout/scss/AsideToggle.scss ***!
+  \***************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".AsideToggle {\n  width: 4vh;\n  height: 4vh;\n  display: block;\n  position: absolute;\n  background: #a5b0d6;\n  border: 1px solid #727171;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  transition: all 0.5s;\n  cursor: pointer;\n}\n.AsideToggle .Line {\n  width: 80%;\n  border-radius: 5px;\n  height: 1px;\n  margin: 10% 0;\n  background: #727171;\n  transition: all 0.5s;\n}\n.AsideToggle .Middle {\n  transform: scaleX(0.6);\n  transform-origin: left;\n}\n.AsideToggle:hover {\n  border-color: yellow;\n}\n.AsideToggle:hover .Line {\n  background: yellow;\n}\n\naside .AsideToggle {\n  top: 1.5vh;\n  right: -2vh;\n}\n\nmain .AsideToggle {\n  top: 1.5vh;\n  left: 2vh;\n  -webkit-animation: fadeIn 0.2s both 0.2s;\n          animation: fadeIn 0.2s both 0.2s;\n}\nmain .AsideToggle .Middle {\n  transform: scaleX(1);\n  transform-origin: left;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Layout/scss/ControlPanel.scss":
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Layout/scss/ControlPanel.scss ***!
@@ -6513,7 +6532,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\ninput {\n  outline: none;\n}\n\nbody {\n  color: #4b4e61;\n  font-family: \"Abhaya Libre\", serif;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel .Show {\n  width: 4vh;\n  height: 4vh;\n  position: absolute;\n  background: red;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n  width: 15vw;\n  border-right: 1px solid rgba(128, 128, 128, 0.795);\n  transition: width 0.2s;\n  position: relative;\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel aside .Show {\n  top: 2vh;\n  right: -1vw;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n  transition: width 0.2s;\n}\n.CPanel main .Show {\n  top: 2vh;\n  left: 2vh;\n  -webkit-animation: fadeIn 0.2s both 0.2s;\n          animation: fadeIn 0.2s both 0.2s;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  box-sizing: border-box;\n  padding-top: 1vh;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\ninput {\n  outline: none;\n}\n\nbody {\n  color: #4b4e61;\n  font-family: \"Abhaya Libre\", serif;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n  width: 15vw;\n  border-right: 1px solid #727171;\n  transition: width 0.2s;\n  position: relative;\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n  transition: width 0.2s;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  box-sizing: border-box;\n  padding-top: 1vh;\n  flex-basis: 10%;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  flex-basis: 90%;\n}", ""]);
 
 // exports
 
@@ -6646,7 +6665,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n  font-family: \"Iceland\", cursive !important;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 0 0;\n  height: 40%;\n}\n.Preview .Img img {\n  height: 100%;\n  max-width: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .Main {\n  height: 60%;\n  padding: 0 5%;\n  display: flex;\n  flex-direction: column;\n}\n.Preview .Main .Info {\n  height: 60%;\n  text-align: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.Preview .Main .Info .InfoSmall {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: auto;\n  text-align: center;\n}\n.Preview .Main .Info .InfoSmall span {\n  display: inline-block;\n  font-size: 2vh;\n  padding: 1vh;\n}\n.Preview .Main .Info .InfoSmall .border-left {\n  border-left: 1px solid;\n}\n.Preview .Main .Info .InfoLarge {\n  display: block;\n  font-size: 5vh;\n}\n.Preview .Main .Info .Price {\n  width: 100%;\n  font-size: 4vh;\n}\n.Preview .Main .Buttons {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  height: 40%;\n  flex-direction: column;\n  width: 100%;\n}\n.Preview .Main .Buttons .Hover:hover, .Preview .Main .Buttons .Btn:hover {\n  cursor: pointer;\n  filter: invert(100%);\n}\n.Preview .Main .Buttons .Btn {\n  width: 50%;\n  font-size: 2vh;\n  text-align: center;\n  margin: 2% auto;\n  padding: 1.5% 0;\n  border: 2px solid;\n}\n\n.Colors {\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: yellow;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
+exports.push([module.i, ".Checkout {\n  height: 100%;\n}\n\n.Preview {\n  position: relative;\n  height: 60vh;\n  width: 30vh;\n  margin-left: 10%;\n  border-radius: 10px;\n  border: 5px solid #353634;\n  font-family: \"Iceland\", cursive !important;\n}\n.Preview .Cam {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n}\n.Preview .Cam div {\n  background-color: #353634;\n  height: 1.5vh;\n  width: 1.5vh;\n  margin: 0.5vh auto;\n  border-radius: 50%;\n}\n.Preview .Img {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  border-radius: 2% 2% 0 0;\n  height: 40%;\n}\n.Preview .Img img {\n  max-width: 100%;\n  display: block;\n  margin: auto;\n}\n.Preview .Main {\n  height: 60%;\n  padding: 0 5%;\n  display: flex;\n  flex-direction: column;\n}\n.Preview .Main .Info {\n  height: 60%;\n  text-align: center;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n}\n.Preview .Main .Info .InfoSmall {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: auto;\n  text-align: center;\n}\n.Preview .Main .Info .InfoSmall span {\n  display: inline-block;\n  font-size: 2vh;\n  padding: 1vh;\n}\n.Preview .Main .Info .InfoSmall .border-left {\n  border-left: 1px solid;\n}\n.Preview .Main .Info .InfoLarge {\n  display: block;\n  font-size: 5vh;\n}\n.Preview .Main .Info .Price {\n  width: 100%;\n  font-size: 4vh;\n}\n.Preview .Main .Buttons {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  height: 40%;\n  flex-direction: column;\n  width: 100%;\n}\n.Preview .Main .Buttons .Hover:hover, .Preview .Main .Buttons .Btn:hover {\n  cursor: pointer;\n  filter: invert(100%);\n}\n.Preview .Main .Buttons .Btn {\n  width: 50%;\n  font-size: 2vh;\n  text-align: center;\n  margin: 2% auto;\n  padding: 1.5% 0;\n  border: 2px solid;\n}\n\n.Colors {\n  height: 100%;\n  position: absolute;\n  top: 0;\n  left: initial;\n  right: -25%;\n  bottom: initial;\n}\n.Colors .ColorWrap {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\n.Colors .ColorWrap .Color {\n  height: 2vh;\n  width: 2vh;\n  border-radius: 5px;\n  border: 2px solid transparent;\n  cursor: pointer;\n  box-shadow: 2px 2px 2px gray;\n}\n.Colors .ColorWrap .Color:hover {\n  border-color: yellow;\n}\n.Colors .ColorWrap .ColorPicker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  transform: translateX(80%);\n}\n.Colors .ColorWrap:nth-of-type(1) {\n  height: 45%;\n}\n.Colors .ColorWrap:nth-of-type(2) {\n  height: 20%;\n}\n.Colors .ColorWrap:nth-of-type(3) {\n  height: 15%;\n}\n.Colors .ColorWrap:nth-of-type(4) {\n  height: 20%;\n}", ""]);
 
 // exports
 
@@ -6703,7 +6722,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Panel {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 1;\n  overflow-y: scroll;\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n}\n.Panel .Control {\n  display: inline-block;\n  box-sizing: border-box;\n  width: 80%;\n  height: 20%;\n  border-top: 1px solid #353634;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: initial;\n}\n.Panel .Control .PanelBtn {\n  width: 10vh;\n  height: 3vh;\n  margin: 2vh 1vh;\n  border-radius: 2px;\n  background: #353634;\n  box-shadow: 2px 2px 5px #353634;\n  color: #d6e6d6;\n  font-weight: 700;\n  font-size: 1.5vh;\n  border-color: transparent;\n  transition: 0.6s;\n}\n.Panel .Control .PanelBtn:hover {\n  border-color: #353634;\n  color: #353634;\n  background: #e7ae0f;\n}\n.Panel .Main {\n  display: flex;\n  height: 100%;\n}\n.Panel .Main h3 {\n  display: inline-block;\n  border-bottom: 1px solid #353634;\n  font-size: 2vh;\n  padding-bottom: 0.5rem;\n  width: 80%;\n}\n.Panel .Main .Left {\n  flex-basis: 50%;\n  -webkit-animation: slideIn-left 0.2s ease-out;\n          animation: slideIn-left 0.2s ease-out;\n}\n.Panel .Main .Left .Content {\n  padding-left: 15%;\n  height: 100%;\n}\n.Panel .Main .Right {\n  flex-basis: 50%;\n  -webkit-animation: slideIn-right 0.2s ease-out;\n          animation: slideIn-right 0.2s ease-out;\n}\n.Panel .Main .Right .Content {\n  height: 80%;\n}\n.Panel .Main .Right .Name {\n  font-size: 3vh;\n}\n.Panel .Main .Group-col, .Panel .Main .Group-text, .Panel .Main .Group-row {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n}\n.Panel .Main .Group-col label, .Panel .Main .Group-text label, .Panel .Main .Group-row label {\n  font-size: 1.6vh;\n  padding: 1vh 0;\n  font-weight: 600;\n}\n.Panel .Main .jus-end {\n  justify-content: flex-end;\n}\n.Panel .Main .Group-row {\n  flex-direction: row;\n}\n.Panel .Main .Group-text {\n  height: 20%;\n  padding-bottom: 2vh;\n}\n.Panel .Main .Group-half {\n  flex-basis: 50%;\n  display: flex;\n}\n\n.PayLogo {\n  width: 8vh;\n  margin: auto;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Panel {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 1;\n  overflow-y: scroll;\n  background: linear-gradient(to left, #d7e4f0, #84bae5);\n}\n.Panel .Control {\n  display: inline-block;\n  box-sizing: border-box;\n  width: 80%;\n  height: 20%;\n  border-top: 1px solid #353634;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: initial;\n}\n.Panel .Control .PanelBtn {\n  width: 10vh;\n  height: 3vh;\n  margin: 2vh 1vh;\n  border-radius: 2px;\n  background: #353634;\n  box-shadow: 2px 2px 5px #353634;\n  color: #d6e6d6;\n  font-weight: 700;\n  font-size: 1.5vh;\n  border-color: transparent;\n  transition: 0.6s;\n}\n.Panel .Control .PanelBtn:hover {\n  border-color: #353634;\n  color: #353634;\n  background: #e7ae0f;\n}\n.Panel .Main {\n  display: flex;\n  height: 100%;\n}\n.Panel .Main h3 {\n  display: inline-block;\n  border-bottom: 1px solid #727171;\n  font-size: 2vh;\n  padding-bottom: 0.5rem;\n  width: 80%;\n}\n.Panel .Main .Left {\n  flex-basis: 50%;\n}\n.Panel .Main .Left .Content {\n  padding-left: 15%;\n  height: 100%;\n}\n.Panel .Main .Right {\n  flex-basis: 50%;\n}\n.Panel .Main .Right .Content {\n  height: 80%;\n}\n.Panel .Main .Right .Name {\n  font-size: 3vh;\n}\n.Panel .Main .Group-col, .Panel .Main .Group-text, .Panel .Main .Group-row {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n}\n.Panel .Main .Group-col label, .Panel .Main .Group-text label, .Panel .Main .Group-row label {\n  font-size: 1.6vh;\n  padding: 1vh 0;\n  font-weight: 600;\n}\n.Panel .Main .jus-end {\n  justify-content: flex-end;\n}\n.Panel .Main .Group-row {\n  flex-direction: row;\n}\n.Panel .Main .Group-text {\n  height: 20%;\n  padding-bottom: 2vh;\n}\n.Panel .Main .Group-half {\n  flex-basis: 50%;\n  display: flex;\n}\n\n.PayLogo {\n  width: 8vh;\n  margin: auto;\n}", ""]);
 
 // exports
 
@@ -6817,7 +6836,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".Navigator, .BtnWrap, .Tracker {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n\n.Navigator {\n  flex-basis: 20%;\n  justify-content: flex-start;\n}\n.Navigator .Tracker {\n  font-weight: 600;\n  font: inherit;\n  margin-left: 1.2vh;\n  justify-content: flex-start;\n}\n.Navigator .Tracker span {\n  padding: 0 0.5vh;\n}\n.Navigator .Tracker .TrackField {\n  width: 2.5vh;\n  height: 2.5vh;\n  font-size: 1.6vh !important;\n  text-align: center;\n  background: rgba(128, 128, 128, 0.178);\n  color: inherit;\n  border: 1px solid rgba(128, 128, 128, 0.795);\n}\n.Navigator .Tracker .TrackField:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Navigator .BtnWrap {\n  filter: drop-shadow(2px 2px 3px #414040);\n}\n.Navigator .BtnWrap .Btn {\n  height: 1.8vh;\n  width: 2.8vh;\n  margin-left: 1vh;\n  background: #353634;\n  cursor: pointer;\n}\n.Navigator .BtnWrap .Btn:hover {\n  background: yellow;\n}\n.Navigator .BtnWrap .LeftBtn {\n  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);\n          clip-path: polygon(100% 0, 0 50%, 100% 100%);\n}\n.Navigator .BtnWrap .RightBtn {\n  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);\n          clip-path: polygon(0 0, 0 100%, 100% 50%);\n}", ""]);
+exports.push([module.i, ".Navigator, .BtnWrap, .Tracker {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n\n.Navigator {\n  flex-basis: 20%;\n  justify-content: flex-start;\n}\n.Navigator .Tracker {\n  font-weight: 600;\n  font: inherit;\n  margin-left: 1.2vh;\n  justify-content: flex-start;\n}\n.Navigator .Tracker span {\n  padding: 0 0.5vh;\n}\n.Navigator .Tracker .TrackField {\n  width: 2.5vh;\n  height: 2.5vh;\n  font-size: 1.6vh !important;\n  text-align: center;\n  background: rgba(128, 128, 128, 0.178);\n  color: inherit;\n  border: 1px solid #727171;\n}\n.Navigator .Tracker .TrackField:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Navigator .BtnWrap {\n  filter: drop-shadow(2px 2px 3px #414040);\n}\n.Navigator .BtnWrap .Btn {\n  height: 1.8vh;\n  width: 2.8vh;\n  margin-left: 1vh;\n  background: #353634;\n  cursor: pointer;\n}\n.Navigator .BtnWrap .Btn:hover {\n  background: yellow;\n}\n.Navigator .BtnWrap .LeftBtn {\n  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);\n          clip-path: polygon(100% 0, 0 50%, 100% 100%);\n}\n.Navigator .BtnWrap .RightBtn {\n  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);\n          clip-path: polygon(0 0, 0 100%, 100% 50%);\n}", ""]);
 
 // exports
 
@@ -6874,7 +6893,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, ".TableHeader {\n  display: flex;\n  font-weight: 600;\n  font-size: 1.6vh;\n  color: #d6e6d6;\n  background: #353634;\n  flex-basis: 3%;\n}\n.TableHeader .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid rgba(128, 128, 128, 0.795);\n  border-bottom: none;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n.TableHeader .Cell:hover {\n  border-color: yellow;\n  color: yellow;\n}", ""]);
+exports.push([module.i, ".TableHeader {\n  display: flex;\n  font-weight: 600;\n  font-size: 1.6vh;\n  color: #d6e6d6;\n  background: #353634;\n  flex-basis: 3%;\n}\n.TableHeader .Cell {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  border: 1px solid #727171;\n  border-bottom: none;\n  position: relative;\n  cursor: pointer;\n  transition: all 0.5s;\n}\n.TableHeader .Cell:hover {\n  border-color: yellow;\n  color: yellow;\n}\n.TableHeader .Cell .Arrow, .TableHeader .Cell .ArrowDown {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0;\n  top: 0;\n  height: 100%;\n  width: 20%;\n}\n.TableHeader .Cell .ArrowDown {\n  transform: rotateX(180deg);\n  transform-origin: center;\n}", ""]);
 
 // exports
 
@@ -6912,7 +6931,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.LoadScreen {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  height: 100vh;\n  width: 100vw;\n  z-index: 1;\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n}\n.LoadScreen .LogoWrap {\n  margin: auto;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin-top: 10%;\n}\n.LoadScreen .LoadMessage {\n  text-align: center;\n  margin-top: 20%;\n  font-size: 4vh;\n  font-weight: 700;\n  -webkit-animation: fadeIn ease-out 0.8s both;\n          animation: fadeIn ease-out 0.8s both;\n}\n.LoadScreen .LoadMessage p {\n  margin: 0;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.LoadScreen {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  height: 100vh;\n  width: 100vw;\n  z-index: 2;\n  background: linear-gradient(to right, #d7e4f0, #84bae5);\n}\n.LoadScreen .LogoWrap {\n  margin: auto;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  height: 15%;\n  margin-top: 10%;\n}\n.LoadScreen .LoadMessage {\n  text-align: center;\n  margin-top: 10%;\n  font-size: 4vh;\n  font-weight: 700;\n  -webkit-animation: fadeIn ease-out 0.8s both;\n          animation: fadeIn ease-out 0.8s both;\n}\n.LoadScreen .LoadMessage p {\n  margin: 0;\n}\n.LoadScreen .Loader {\n  margin-top: 10%;\n}", ""]);
 
 // exports
 
@@ -6950,7 +6969,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n  box-shadow: 2px 2px 5px #757774;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
 
 // exports
 
@@ -89381,7 +89400,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Currency(props) {
-  console.log(props.current);
   var currency = ['$', '£', '€'].map(function (curr) {
     var active = {
       opacity: 1
@@ -89617,6 +89635,38 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/Layout/AsideToggle.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/Layout/AsideToggle.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AsideToggle; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_AsideToggle_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/AsideToggle.scss */ "./resources/js/components/Layout/scss/AsideToggle.scss");
+/* harmony import */ var _scss_AsideToggle_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_AsideToggle_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function AsideToggle(props) {
+  var toggle = props.toggle;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onClick: toggle,
+    className: "AsideToggle"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Line"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Line Middle"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Line"
+  }));
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/Layout/ControlPanel.js":
 /*!********************************************************!*\
   !*** ./resources/js/components/Layout/ControlPanel.js ***!
@@ -89635,11 +89685,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _SideMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./SideMenu */ "./resources/js/components/Layout/SideMenu.js");
 /* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
 /* harmony import */ var _SearchBar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./SearchBar */ "./resources/js/components/Layout/SearchBar.js");
-/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scss/ControlPanel.scss */ "./resources/js/components/Layout/scss/ControlPanel.scss");
-/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony import */ var _AsideToggle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AsideToggle */ "./resources/js/components/Layout/AsideToggle.js");
+/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./scss/ControlPanel.scss */ "./resources/js/components/Layout/scss/ControlPanel.scss");
+/* harmony import */ var _scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_scss_ControlPanel_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -89725,8 +89776,9 @@ function _arrayWithHoles(arr) {
 
 
 
+
 function ControlPanel() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
       _useState2 = _slicedToArray(_useState, 2),
       loading = _useState2[0],
       setLoading = _useState2[1];
@@ -89741,7 +89793,7 @@ function ControlPanel() {
       table = _useState6[0],
       setTable = _useState6[1];
 
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_10__["store"]),
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_11__["store"]),
       state = _useContext.state,
       dispatch = _useContext.dispatch;
 
@@ -89757,28 +89809,32 @@ function ControlPanel() {
     setTable(table);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_LoadScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  var sessionInfo = {
+    skipLoad: function skipLoad() {
+      return Boolean(sessionStorage.getItem('QrNoLoadScreen'));
+    }
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, loading && !sessionInfo.skipLoad() && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_LoadScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {
     panelLoaded: function panelLoaded() {
       return setLoading(false);
     },
     user: state.user
-  }) : null, state.user.info ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), state.user.info ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CPanel"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", {
     style: showAside ? null : {
       width: 0,
       overflow: 'hidden'
     }
-  }, showAside && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: function onClick() {
+  }, showAside && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AsideToggle__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    toggle: function toggle() {
       return setAside(!showAside);
-    },
-    className: "Show"
+    }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "LogoWrap"
-  }, !loading ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_logo__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, sessionInfo.skipLoad() && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_logo__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "LogoPanel"
-  }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "User"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Menu"
@@ -89789,11 +89845,10 @@ function ControlPanel() {
     style: showAside ? null : {
       width: '100vw'
     }
-  }, !showAside && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onClick: function onClick() {
+  }, !showAside && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_AsideToggle__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    toggle: function toggle() {
       return setAside(!showAside);
-    },
-    className: "Show"
+    }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TopBar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -89815,7 +89870,7 @@ function ControlPanel() {
 }
 
 if (document.getElementById('ControlPanel')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_9___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_10__["StateProvider"], null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), " "), document.getElementById('ControlPanel'));
+  react_dom__WEBPACK_IMPORTED_MODULE_10___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_11__["StateProvider"], null, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ControlPanel, null), " "), document.getElementById('ControlPanel'));
 }
 
 /***/ }),
@@ -90238,6 +90293,36 @@ function User(props) {
     className: "User"
   }, state.user.info.name)));
 }
+
+/***/ }),
+
+/***/ "./resources/js/components/Layout/scss/AsideToggle.scss":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/Layout/scss/AsideToggle.scss ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./AsideToggle.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Layout/scss/AsideToggle.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
@@ -90964,7 +91049,7 @@ function ProductPanel(_ref) {
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].fromCode(add ? state.products["new"].theme : data.theme)),
       _useState4 = _slicedToArray(_useState3, 2),
       colorPallete = _useState4[0],
-      setcolorPallete = _useState4[1];
+      setColorPallete = _useState4[1];
 
   var inputChange = function inputChange(value, key) {
     setProductData(_objectSpread(_objectSpread({}, productData), {}, _defineProperty({}, key, value)));
@@ -90976,27 +91061,25 @@ function ProductPanel(_ref) {
     }
   };
 
-  var create = function create() {
-    var payload = _objectSpread(_objectSpread({
-      store_id: state.stores.active.id
-    }, productData), {}, {
-      theme: _ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].encode(colorPallete)
+  var prepareData = function prepareData() {
+    var preparedData = {};
+    Object.keys(state.products["new"]).forEach(function (key) {
+      (productData[key] || productData[key] === 0) && (preparedData[key] = productData[key]);
     });
+    preparedData['store_id'] = state.stores.active.id;
+    preparedData['theme'] = _ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].encode(colorPallete);
+    return preparedData;
+  };
 
-    dispatch.products.create(payload).then(function (res) {
+  var create = function create() {
+    console.log(prepareData());
+    dispatch.products.create(prepareData()).then(function (res) {
       close(res);
     });
   };
 
   var edit = function edit() {
-    var payload = {
-      store_id: productData.store_id
-    };
-    Object.keys(state.products["new"]).forEach(function (key) {
-      return payload[key] = productData[key];
-    });
-    payload.theme = _ProductPreview__WEBPACK_IMPORTED_MODULE_4__["themeCoder"].encode(colorPallete);
-    dispatch.products.edit(productData.id, payload).then(function (res) {
+    dispatch.products.edit(productData.id, prepareData()).then(function (res) {
       close(res);
     });
   };
@@ -91005,9 +91088,8 @@ function ProductPanel(_ref) {
     var confirmed = window.confirm('Deleting this product. Are you sure?');
 
     if (confirmed) {
-      dispatch.products["delete"](productData.id, productData.store_id).then(function (res) {
-        close(res);
-      });
+      close(true);
+      dispatch.products["delete"](productData.id, productData.store_id);
     }
   };
 
@@ -91041,7 +91123,7 @@ function ProductPanel(_ref) {
     switchAction: switchAction,
     right: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ProductPreview__WEBPACK_IMPORTED_MODULE_4__["default"], {
       colorPallete: colorPallete,
-      setColorPallete: setcolorPallete,
+      setColorPallete: setColorPallete,
       product: productData
     }),
     left: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Product"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -91355,15 +91437,15 @@ function ProductPreview(_ref) {
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "IMAGE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Main"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "Info"
+    className: "Info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "InfoLarge"
   }, product.manufacturer), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "InfoSmall"
+    className: "InfoSmall"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, product.category), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "border-left"
   }, " ", product.model, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    "class": "Price"
+    className: "Price"
   }, "  $", product.price, " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Buttons"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -91693,7 +91775,7 @@ function AddProduct() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AddProductSwitch, {
     button: {
       name: 'add product',
-      className: 'AddProduct'
+      className: 'TableControl'
     },
     view: {
       add: true
@@ -92109,7 +92191,7 @@ function Shippment(_ref) {
       if (data[col.dataKey]) {
         cellContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "Text"
-        }, data.updated_at);
+        }, new Date(data.updated_at).toDateString());
       } else {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           "data-escape": true,
@@ -92592,6 +92674,14 @@ function StoreMenu(props) {
     setStoreData(_objectSpread(_objectSpread({}, storeData), {}, _defineProperty({}, key, value)));
   };
 
+  var prepareData = function prepareData() {
+    var preparedData = {};
+    Object.keys(state.stores["new"]).forEach(function (key) {
+      storeData[key].length && (preparedData[key] = storeData[key]);
+    });
+    return preparedData;
+  };
+
   var close = function close(statusOk) {
     if (statusOk) {
       props.close();
@@ -92599,17 +92689,13 @@ function StoreMenu(props) {
   };
 
   var create = function create() {
-    dispatch.stores.create(storeData).then(function (res) {
+    dispatch.stores.create(prepareData()).then(function (res) {
       close(res);
     });
   };
 
   var edit = function edit() {
-    var data = {};
-    Object.keys(state.stores["new"]).forEach(function (key) {
-      return data[key] = storeData[key];
-    });
-    dispatch.stores.edit(storeData.id, data).then(function (res) {
+    dispatch.stores.edit(storeData.id, prepareData()).then(function (res) {
       close(res);
     });
   };
@@ -92896,7 +92982,6 @@ function Navigator(_ref) {
   var inactiveLeft = position.start === 0 ? {
     opacity: 0.5
   } : null;
-  console.log(dataLength, position.end);
   var inactiveRight = dataLength <= position.end ? {
     opacity: 0.5
   } : null;
@@ -93405,41 +93490,56 @@ function _arrayWithHoles(arr) {
 
 
 
-function TableHeader(_ref) {
-  var columns = _ref.columns,
-      setSort = _ref.setSort;
+function TableHeader(props) {
+  var columns = props.columns,
+      setSort = props.setSort;
   var columnNames = Object.keys(columns);
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(Object.fromEntries(columnNames.map(function (name) {
-    return [name.toLowerCase(), true];
-  }))),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
       _useState2 = _slicedToArray(_useState, 2),
       ascending = _useState2[0],
       setAscending = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(),
+      _useState4 = _slicedToArray(_useState3, 2),
+      activeSort = _useState4[0],
+      setActiveSort = _useState4[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    setAscending(Object.fromEntries(columnNames.map(function (name) {
+      return [columns[name].dataKey, true];
+    })));
+    setActiveSort(false);
+  }, [columns]);
 
   var sortBy = function sortBy(rule) {
     var sortFun = undefined;
 
     if (ascending[rule]) {
       sortFun = function sortFun(a, b) {
-        if (isNaN(a[rule])) {
-          return a[rule].localeCompare(b[rule]);
-        }
+        a = a[rule] ? a[rule] : 0;
+        b = b[rule] ? b[rule] : 0;
 
-        return a[rule] - b[rule];
+        if (!isNaN(a) && !isNaN(b)) {
+          return a - b;
+        } else {
+          return String(a).localeCompare(String(b));
+        }
       };
     } else {
       sortFun = function sortFun(a, b) {
-        console.log(a, b, rule);
+        a = a[rule];
+        b = b[rule];
 
-        if (isNaN(a[rule])) {
-          return b[rule].localeCompare(a[rule]);
+        if (!isNaN(a) && !isNaN(b)) {
+          return b - a;
+        } else {
+          return String(b).localeCompare(String(a));
         }
-
-        return b[rule] - a[rule];
       };
     }
 
+    setActiveSort([rule, ascending[rule]]);
     setAscending(_objectSpread(_objectSpread({}, ascending), {}, _defineProperty({}, rule, !ascending[rule])));
     setSort({
       fun: sortFun
@@ -93457,7 +93557,9 @@ function TableHeader(_ref) {
         width: column.width
       },
       className: "Cell"
-    }, name);
+    }, name, activeSort && activeSort[0] === column.dataKey && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: activeSort[1] ? "ArrowDown" : "Arrow"
+    }, "\u25B2"));
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableHeader"
@@ -93722,8 +93824,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./logo */ "./resources/js/components/Visual/logo.js");
-/* harmony import */ var _scss_LoadScreen_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/LoadScreen.scss */ "./resources/js/components/Visual/scss/LoadScreen.scss");
-/* harmony import */ var _scss_LoadScreen_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_LoadScreen_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Loader */ "./resources/js/components/Visual/Loader.js");
+/* harmony import */ var _scss_LoadScreen_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/LoadScreen.scss */ "./resources/js/components/Visual/scss/LoadScreen.scss");
+/* harmony import */ var _scss_LoadScreen_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_LoadScreen_scss__WEBPACK_IMPORTED_MODULE_3__);
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -93785,6 +93888,7 @@ function _arrayWithHoles(arr) {
 
 
 
+
 function LoadScreen(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -93793,21 +93897,24 @@ function LoadScreen(props) {
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      loadPanel = _useState4[0],
-      setLoadPanel = _useState4[1];
+      showPanel = _useState4[0],
+      setShowPanel = _useState4[1];
 
-  var welcome = props.user ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onAnimationEnd: function onAnimationEnd() {
-      return setLoadPanel(true);
-    },
+  var afterLoad = function afterLoad() {
+    sessionStorage.setItem('QrNoLoadScreen', 'true');
+    setShowPanel(true);
+  };
+
+  var welcome = props.user.info ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onAnimationEnd: afterLoad,
     className: "LoadMessage"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Welcome"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.user.name)) : null;
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hi!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.user.info.name)) : null;
   var removeScreen = {
     animation: 'slide-out-right 0.8s ease-in both'
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onAnimationEnd: loadPanel ? props.panelLoaded : null,
-    style: loadPanel ? removeScreen : null,
+    onAnimationEnd: showPanel ? props.panelLoaded : null,
+    style: showPanel ? removeScreen : null,
     className: "LoadScreen"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "LogoWrap"
@@ -93816,7 +93923,7 @@ function LoadScreen(props) {
     procede: function procede() {
       return checkUser(true);
     }
-  }), user ? welcome : null));
+  })), user ? welcome : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Loader__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 }
 
 /***/ }),
@@ -94338,11 +94445,11 @@ var reducer = function reducer(state, action) {
       };
 
     case "LOGOUT":
+      sessionStorage.removeItem('QrNoLoadScreen');
       window.location.replace(window.location.origin);
       return null;
 
     case "SHIPPMENT_SENT":
-      console.log(payload);
       return _objectSpread({}, state);
 
     default:

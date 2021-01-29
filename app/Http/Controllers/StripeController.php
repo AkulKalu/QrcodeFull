@@ -60,8 +60,8 @@ class StripeController extends Controller
           'customer_id'=>  $customer->id,
           'customer_email'=>  $customer->email,
           'amount'=> $session->amount_total / 100 ,
-          'currency'=> $session->currency,
-          'status'=>$session->payment_status,
+          'currency'=> strtoupper($session->currency),
+          'status'=>'completed',
         ];
         $transaction = Transaction::create($transaction);
 

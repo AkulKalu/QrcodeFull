@@ -21,10 +21,11 @@ const reducer = (state, action) => {
         }
         
       case "LOGOUT":
+        sessionStorage.removeItem('QrNoLoadScreen');
         window.location.replace( window.location.origin);
         return null;
       case "SHIPPMENT_SENT":
-        console.log(payload);
+       
         return {...state};
       default:
         return state;

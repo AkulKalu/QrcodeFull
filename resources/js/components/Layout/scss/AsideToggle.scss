@@ -1,0 +1,52 @@
+@import './variables';
+@import './mixins';
+
+.AsideToggle {
+    width: 4vh;
+    height: 4vh;
+    display: block;
+    position: absolute;
+    background: rgb(165, 176, 214);
+    border: 1px solid  $border1;
+    @include flex-c;
+    flex-direction: column;
+    transition: all 0.5s ;
+    cursor: pointer;
+    .Line {
+        width: 80%;
+        border-radius: 5px;
+        height: 1px;
+        margin: 10% 0;
+        background: $border1;
+        transition: all 0.5s ;
+    }
+    .Middle {
+        transform: scaleX(0.6);
+        transform-origin: left;
+    }
+    &:hover {
+        border-color: yellow;
+        .Line {
+            background: yellow;
+        }
+    }
+}
+
+aside {
+    .AsideToggle {
+        top: 1.5vh;
+        right: -2vh;
+    }
+}
+main {
+    .AsideToggle {
+        top: 1.5vh;
+        left: 2vh;
+        animation: fadeIn 0.2s both 0.2s;
+        .Middle {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+   
+}

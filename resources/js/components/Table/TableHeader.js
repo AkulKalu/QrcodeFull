@@ -1,45 +1,63 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './scss/TableHeader.scss';
 
 
 
-export default function TableHeader({columns, setSort}) {
-
+export default function TableHeader(props) {
+    let {columns, setSort} = props;
     let columnNames = Object.keys(columns);
-    const [ascending , setAscending ] = useState(Object.fromEntries(columnNames.map( name => [name.toLowerCase(), true])));
+    const [ascending , setAscending ] = useState();
+    const [activeSort , setActiveSort ] = useState();
+
+    useEffect(() => {
+        setAscending(Object.fromEntries(columnNames.map( name => [columns[name].dataKey, true])));
+        setActiveSort(false)
+    }, [columns])
 
     const sortBy = rule => {
         let sortFun = undefined;
+       
         if(ascending[rule]) {
             sortFun = (a, b) => {
-                if(isNaN(a[rule])) {
-                    return a[rule].localeCompare(b[rule]);
+                a = a[rule] ? a[rule]: 0 ;
+                b = b[rule] ?  b[rule]: 0 ;
+                if(!isNaN(a) && !isNaN(b)) {
+                    return a - b;
+                    
+                }else {
+                    return String(a).localeCompare(String(b));
                 }
-                return a[rule] - b[rule];
+                
             } 
         }else {
             sortFun = (a, b) => {
-                console.log(a,b, rule);
-                if(isNaN(a[rule])) {
-                    return b[rule].localeCompare(a[rule]);
+                a = a[rule];
+                b = b[rule];
+                if(!isNaN(a) && !isNaN(b)) {
+                    return b - a;
+                    
+                }else {
+                    return String(b).localeCompare(String(a));
                 }
-                return b[rule] - a[rule];
             } 
         } 
-    
+        setActiveSort([rule, ascending[rule]]);
         setAscending({...ascending, [rule] : !ascending[rule] });
+       
        
         setSort({fun:sortFun});
     }
 
     let columnHeads = columnNames.map( (name, i) => {
         let column = columns[name];
+       
         return  <div 
                     key={`TBC${i}`}
                     onClick={ column.sort ? ()=> sortBy(column.dataKey) : null} 
                     style={{width: column.width}} 
                     className="Cell">
                     {name}
+                    {(activeSort && activeSort[0] === column.dataKey ) && <div className={activeSort[1] ? "ArrowDown":"Arrow" }>▲</div>}
                 </div>
     } )
     return <div className="TableHeader">

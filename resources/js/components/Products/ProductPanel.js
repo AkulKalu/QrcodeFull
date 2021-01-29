@@ -10,7 +10,7 @@ import {store} from '../HOC/StateProvider';
 export default function ProductPanel({add, data, errors, close : closePanel, switchAction})  {
     const {state, dispatch} = useContext(store);
     const [productData, setProductData] = useState( add ? {...state.products.new} :  {...data} );
-    const [colorPallete, setcolorPallete] = useState(themeCoder.fromCode(add ? state.products.new.theme:  data.theme));
+    const [colorPallete, setColorPallete] = useState(themeCoder.fromCode(add ? state.products.new.theme:  data.theme));
     
     const inputChange = (value, key) => {
         setProductData({
@@ -24,28 +24,29 @@ export default function ProductPanel({add, data, errors, close : closePanel, swi
         }
     }
 
+    const prepareData = () => {
+        let preparedData = {}
+        Object.keys(state.products.new).forEach( key => {
+            (productData[key] || productData[key] === 0 ) && (preparedData[key] = productData[key])
+        });
+
+        preparedData['store_id'] = state.stores.active.id
+        preparedData['theme'] = themeCoder.encode(colorPallete)
+
+        return preparedData;
+    }
+
     const create = () => {
-        const payload = {
-            store_id : state.stores.active.id,
-            ...productData,
-            theme: themeCoder.encode(colorPallete)
-        };
-        
-        dispatch.products.create(payload)
+        console.log(prepareData());
+        dispatch.products.create(prepareData())
         .then( res =>{
            close(res);
         })
     }
 
     const edit = () => {
-     
-        const payload = {
-            store_id: productData.store_id,
-        };
-        Object.keys(state.products.new).forEach(key => payload[key] = productData[key]);
-        payload.theme = themeCoder.encode(colorPallete);
 
-        dispatch.products.edit(productData.id, payload)
+        dispatch.products.edit(productData.id, prepareData())
         .then( res =>{
             close(res);
         })
@@ -53,10 +54,8 @@ export default function ProductPanel({add, data, errors, close : closePanel, swi
     const remove = () => {
         const confirmed = window.confirm('Deleting this product. Are you sure?');
         if(confirmed) {
+            close(true);
             dispatch.products.delete(productData.id, productData.store_id)
-            .then( res =>{
-                close(res);    
-            })
         } 
     }
     const buttons = {
@@ -88,7 +87,7 @@ export default function ProductPanel({add, data, errors, close : closePanel, swi
                 right={
                     <ProductPreview 
                         colorPallete={colorPallete} 
-                        setColorPallete={setcolorPallete} 
+                        setColorPallete={setColorPallete} 
                         product={productData}
                     />} 
                 left = {

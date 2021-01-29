@@ -25,12 +25,16 @@ button {
        
       }
 }
-.AddProduct {
+.TableControl {
     @extend .Orange;
     width: 10%;
     height: 3vh;
-    background: rgb(11, 146, 11);
+    font-weight: unset;
+    background: rgba(128, 128, 128, 0.205);
+    color: rgb(75, 78, 97);
+    border-color :rgb(128, 131, 155);
     text-shadow: none;
+    box-shadow: none;
 }
 
 .StoreBtnOpt {

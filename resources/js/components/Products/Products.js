@@ -54,7 +54,7 @@ export function AddProduct() {
     return <AddProductSwitch 
                 button = {{
                     name: 'add product',
-                    className: 'AddProduct',
+                    className: 'TableControl',
                 }}
                 view = {{
                     add:true

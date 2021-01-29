@@ -6,24 +6,28 @@
     @include position();
     height: 100vh;
     width: 100vw;
-    z-index: 1;
+    z-index: 2;
     background: linear-gradient(to right, $bgGrad1, $bgGrad2);
 
     .LogoWrap {
         margin: auto;
         width: fit-content;
+        height: 15%;
         margin-top: 10%;
     }
 
     .LoadMessage {
         text-align: center;
-        margin-top: 20% ;
+        margin-top: 10% ;
         font-size: 4vh;
         font-weight: 700;  
         animation: fadeIn ease-out 0.8s both;
         p {
             margin: 0;
         }
+    }
+    .Loader {
+        margin-top: 10% ;
     }
 }
 

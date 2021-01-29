@@ -2,7 +2,7 @@ import React from 'react';
 import './scss/Currency.scss';
 
 export default function Currency(props) {
-    console.log(props.current);
+   
     let currency = ['$', '£', '€' ].map( curr => {
         let active = {
             opacity: 1

@@ -16,7 +16,7 @@ export default function ProductPreview({ colorPallete, setColorPallete, product 
     
    
     let colorPickers = Object.keys(colorPallete).map( (segment, i) => {
-       
+      
         return  <ColorPick 
                     key={`cpick${i}`}
                     name = {segment}
@@ -39,7 +39,7 @@ export default function ProductPreview({ colorPallete, setColorPallete, product 
             color: colorPallete.buttons.rgbStr,
         }
     }
-
+  
     return <div className="Checkout">
             <h3>Checkout</h3>
             <div style={styles.container} className="Preview">
@@ -56,14 +56,14 @@ export default function ProductPreview({ colorPallete, setColorPallete, product 
                         }
                     </div>
                     <div className="Main">
-                        <div class="Info">
+                        <div className="Info">
                             <div className="InfoLarge">{product.manufacturer}</div>
-                            <div class="InfoSmall">
+                            <div className="InfoSmall">
                                 <span >{product.category}</span>
                                 <span className="border-left"> {product.model} </span>
                             </div>
                             
-                            <div class="Price">  ${product.price} </div>
+                            <div className="Price">  ${product.price} </div>
                         </div>
                         <div className="Buttons">
                             <div style={styles.button} className="Btn About">

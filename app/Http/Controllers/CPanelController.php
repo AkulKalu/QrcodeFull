@@ -35,8 +35,8 @@ class CPanelController extends Controller
                     'url'=>'https://i.gadgets360cdn.com/products/large/realme-smart-tv-43-db-800x450-1590390507.jpg',
                     'price'=> 700,
                     'description'=>'asd',
-                    'active'=> true,
-                    'shipping'=> true,
+                    'active'=> 1,
+                    'shipping'=> 1,
                     'stock'=> 1,
                     'currency'=> '$',
                     'theme' => 'image|rgb(255, 255, 255, 1)&font|rgb(196, 235, 108, 1)&background|rgb(16, 17, 17, 1)&buttons|rgb(196, 235, 108, 1)'
@@ -83,7 +83,6 @@ class CPanelController extends Controller
                 }
             }
         }
-    
         return response()->json($response);
     }
 

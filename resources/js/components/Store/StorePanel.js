@@ -13,6 +13,14 @@ export default function StoreMenu(props) {
                 [key]: value,
             });
         }
+
+        const prepareData = () => {
+            let preparedData = {}
+            Object.keys(state.stores.new).forEach( key => {
+                storeData[key].length && (preparedData[key] = storeData[key])
+            });
+            return preparedData;
+        }
       
         const close = (statusOk) => {
             if(statusOk) {
@@ -21,7 +29,7 @@ export default function StoreMenu(props) {
         }
 
         const create = () => {
-            dispatch.stores.create(storeData)
+            dispatch.stores.create(prepareData())
             .then( res => {
                 close(res); 
             })
@@ -29,9 +37,7 @@ export default function StoreMenu(props) {
         }
 
         const edit = () => {
-            const data = {}
-            Object.keys(state.stores.new).forEach( key => data[key]=storeData[key]);
-            dispatch.stores.edit(storeData.id, data )
+            dispatch.stores.edit(storeData.id, prepareData() )
             .then( res => {
                 close(res); 
             });

@@ -13,11 +13,25 @@
         @include flex-c();
         border: 1px solid $border1;
         border-bottom: none;
+        position: relative;
         cursor: pointer;
         transition: all 0.5s;
         &:hover {
             border-color: $higlight;
             color: $higlight;
+        }
+        .Arrow {
+            @include flex-c();
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 20%;
+        }
+        .ArrowDown {
+            @extend .Arrow;
+            transform: rotateX(180deg);
+            transform-origin: center;
         }
     }
     

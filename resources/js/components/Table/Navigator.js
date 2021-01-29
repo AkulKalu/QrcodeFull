@@ -44,7 +44,6 @@ export default function Navigator({navigate, position, dataLength}) {
         e.target.select();
     }
     let inactiveLeft = position.start === 0 ? {opacity: 0.5} : null
-    console.log(dataLength, position.end);
     let inactiveRight = dataLength <=  position.end ? {opacity: 0.5} : null
 
     return <div className="Navigator">
