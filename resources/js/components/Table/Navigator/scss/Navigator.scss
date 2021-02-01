@@ -1,5 +1,4 @@
-@import '../../Layout/scss/variables';
-@import '../../Layout/scss/mixins';
+@import '../../../imports.scss';
 
 .Navigator, .BtnWrap, .Tracker {
     @include flex-c();

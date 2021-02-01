@@ -2,13 +2,14 @@ import React, {useState, useEffect} from 'react';
 import './scss/ProductView.scss';
 import Backdrop from '../Shared/Backdrop';
 import Loader from '../Visual/Loader';
-import {showProduct} from '../../Functions/server';
+import {showProduct} from '../server';
 
 
-export default function ProductView({data, close, switchAction}) {
+export default function ProductView(props) {
+    let {data, close, switchAction} = props;
+    
     const [product , setProduct] = useState(null)
-    useEffect(() => {
-       
+    useEffect(() => { 
         showProduct(data.product_id)
         .then( ({data : {product , store}}) => {
            setProduct({

@@ -43,8 +43,7 @@ export default function TableHeader(props) {
         } 
         setActiveSort([rule, ascending[rule]]);
         setAscending({...ascending, [rule] : !ascending[rule] });
-       
-       
+
         setSort({fun:sortFun});
     }
 

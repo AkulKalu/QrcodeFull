@@ -2,7 +2,8 @@ import React, {useContext}  from 'react';
 import {store} from '../HOC/StateProvider';
 import './scss/Mail.scss';
 
-export default function Mail({shippmentId}) {
+export default function Mail(props) {
+    let { shippmentId } = props;
     const {dispatch} = useContext(store);
     const markAsSent = e => {
         e.stopPropagation();

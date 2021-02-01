@@ -1,20 +1,16 @@
 import React, {useEffect, useState, Fragment, useContext} from 'react';
-import Logo from '../Visual/logo';
-import Store from '../Store/Store';
-import User from './User';
-import LoadScreen from '../Visual/LoadScreen';
-import SideMenu from './SideMenu';
-import Table from '../Table/Table';
-import SearchBar from './SearchBar';
-import AsideToggle from './AsideToggle';
+import LoadScreen from './LoadScreen';
+import Aside from './Aside/Aside';
+import Main from './Main';
+import {store, StateProvider} from '../HOC/StateProvider';
 import './scss/ControlPanel.scss';
 import ReactDOM from 'react-dom';
-import {store, StateProvider} from '../HOC/StateProvider';
+
 
 function ControlPanel() {
      const [loading, setLoading] = useState(true);
-     const [showAside, setAside] = useState(true);
      const [table, setTable] = useState('Products');
+     const [showAside, setAside] = useState(true);
      const {state, dispatch} = useContext(store);
 
     useEffect(()=> {
@@ -30,45 +26,27 @@ function ControlPanel() {
         skipLoad : () => Boolean(sessionStorage.getItem('QrNoLoadScreen')),
     }
   
- 
     
     return <Fragment  >
                 {( loading && !sessionInfo.skipLoad()) &&  <LoadScreen panelLoaded={()=> setLoading(false)} user={state.user} />  }
                 {state.user.info ? 
-                <div className="CPanel">
-                   <aside style={showAside ? null : {width: 0, overflow: 'hidden'}}>
-                        {showAside && <AsideToggle toggle={()=>setAside(!showAside)} />}
-                        <div className="LogoWrap">
-                            {(sessionInfo.skipLoad()) && <Logo type="LogoPanel"/>  }
-                        </div>
-                        <div className="User">
-                            <User />
-                        </div>
-                        <div className="Menu">
-                            <SideMenu 
-                                switchTable = {switchTable}
-                                stats = {{[table] : state.stats[table]}}
-                            />
-                        </div>
-            
-                    </aside> 
-                   
-                    <main style={ showAside ? null : {width: '100vw'} }>
-                        {!showAside && <AsideToggle toggle={()=>setAside(!showAside)} /> }  
-                        <div className="TopBar">
-                            <div className="BarStore">
-                                <Store stores={state.stores} />
-                            </div>
-                            <div className="BarSearch">
-                                <SearchBar table={table} columns={state.tabelColumns[table]} search={dispatch.search} />
-                            </div>
-                        </div>
-                      
-                        <div className="TableCont">
-                            <Table display={table}  state={state} />
-                        </div>
-                    </main>
-                </div>: null
+                    <div className="CPanel">
+                        <Aside
+                            show = {showAside}
+                            toogleAside = {()=>setAside(false)}
+                            switchTable = { switchTable }
+                            showLogo = { sessionInfo.skipLoad() }
+                            stats = {{[table] : state.stats[table]}}
+                        />
+                        <Main 
+                            fullScreen = {showAside}
+                            toogleAside = {()=>{
+                                setAside(true)}}
+                            state = { state }
+                            dispatch = { dispatch }
+                            table = { table }
+                        />
+                    </div>  : null
                 }
             </Fragment>
     

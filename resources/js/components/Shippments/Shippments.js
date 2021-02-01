@@ -5,7 +5,9 @@ import AsSwitch from '../HOC/AsSwitch';
 
 let Row = AsSwitch(View, Shippment);
 
-export default function Shippments({columns, list, slice, applyFilter}) {
+export default function Shippments(props) {
+
+   let {columns, list, slice, applyFilter} = props;
    
     let rows = list.map((entry, i) => {
         entry = applyFilter(entry);

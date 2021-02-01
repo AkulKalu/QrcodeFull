@@ -6,8 +6,9 @@ import AsSwitch from '../HOC/AsSwitch';
 let Row = AsSwitch(View, Transaction);
 
 
-export default function Transactions({columns, list, slice, applyFilter}) {
-  
+export default function Transactions(props) {
+    let {columns, list, slice, applyFilter} = props;
+
     let rows = list.map((entry, i) => {
         entry = applyFilter(entry);
         if(entry) {
@@ -30,7 +31,6 @@ export default function Transactions({columns, list, slice, applyFilter}) {
         }
     })
     
-   
  
     return <Fragment>
                {rows.length ? rows.slice(slice.start, slice.end) : <span className="Message">No Transactions</span>}

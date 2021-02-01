@@ -1,6 +1,4 @@
-@import '../../Layout/scss/variables';
-@import '../../Layout/scss/anim';
-@import '../../Layout/scss/mixins';
+@import '../../imports.scss';
 
 .SelectPanel {
     margin-top: 5%;
@@ -12,16 +10,17 @@
 }
 .StoresList {
     display: flex;
-    flex-wrap: wrap;
-    height: 100%;
+    flex-flow: wrap;
+    height: fit-content;
     width: 100%;
+
     .StoreItem {
         position: relative;
         overflow: hidden;
         box-shadow: 2px 2px 5px gray;
         font-size: 2.3vh;
         min-width: 20%;
-        height: 5%;
+        height: 3vh;
         margin: 1vh 1%;
         cursor: pointer; 
 

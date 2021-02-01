@@ -2,11 +2,14 @@ import React from 'react';
 import Stat from './Stat';
 import './scss/Stats.scss';
 
-export default function Stats({show}) {
+export default function Stats(props) {
+
+    let {show} = props;
 
     let stats = Object.keys(show).map( (stat, i) => {
         return <Stat  key={`stat${i}`} title={stat} value={show[stat]} />
     } )
+    
     return <div className="Stats">
         {stats}
     </div>

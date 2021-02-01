@@ -21,8 +21,8 @@
         <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     @endguest
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}" defer > </script>
     
-
     
 </head>
 <body >
@@ -67,6 +67,6 @@
         <div  id="ControlPanel">
         </div>
         @endguest
-    <script src="{{ asset('js/app.js') }}" ></script>
+   
 </body>
 </html>

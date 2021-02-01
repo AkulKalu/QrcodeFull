@@ -2,7 +2,7 @@ import React, {createContext, useReducer, useState} from 'react';
 import {user} from '../../store/user';
 import {stores} from '../../store/stores';
 import {products} from '../../store/products';
-import * as server from '../../Functions/server';
+import * as server from '../server';
 
 const store = createContext();
 

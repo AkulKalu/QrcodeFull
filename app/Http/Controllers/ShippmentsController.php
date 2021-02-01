@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Mail;
 
 class ShippmentsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function markAsSent(Request $request, $id) {
         $shippment = Auth::user()->shippments()->find($id);
         $updated = $shippment->update([

@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import './scss/Search.scss';
+import './scss/SearchBar.scss';
 
-export default function SearchBar({columns, table, search }) {
+export default function SearchBar(props) {
+    let {columns, table, search } = props;
     const [searchVal, setSearchVal] = useState('');
     const [searchFilters, setSearchFilters] = useState({});
     

@@ -1,4 +1,4 @@
-@import '../../Layout/scss/mixins';
+@import '../../imports.scss';
 .Cards {
     @include flex($dir: column);
     height: 100%;

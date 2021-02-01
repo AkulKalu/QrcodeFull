@@ -1,11 +1,13 @@
 import React, {useContext} from 'react';
 import './scss/Product.scss';
-import Toggle from '../Shared/Toggle'
-import QrCodeImg from '../../storage/SQCLogo.svg';
-import {generateQrCode} from '../../Functions/server';
+import Toggle from '../InputElements/Toggle';
+import Cell from '../Table/Cell';
+import QrCode from './QrCode';
+
 import {store} from '../HOC/StateProvider';
 
-export default function Product({ data, columns, onClick, style }) {
+export default function Product(props) {
+    let { data, columns, onClick, style } = props;
     const {state, dispatch} = useContext(store);
 
     const setActiveStatus = () => {
@@ -23,66 +25,35 @@ export default function Product({ data, columns, onClick, style }) {
         }, data.idx); 
     }
  
-
-    function downloadSVG(e,svgString, name) {
-        e.stopPropagation();
-        const url = window.URL.createObjectURL(new Blob([svgString]));
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', `${name}.svg`); 
-        link.click();
-    }
- 
     
-    let columnFields = Object.keys(columns).map((key, i) => {
-        let col = columns[key];
-        const cell = (cont, props) => {
-            return <div 
-                    key={`row${i}`} 
-                    className="Cell"
-                    {...props}
-                    >
-                    {cont}
-                    </div>
-        }
-        switch (key) {
+    let columnFields = Object.keys(columns).map((name, i) => {
+        let col = columns[name];
+        let lKey = name;
+        switch (name) {
             case 'Image':
-                return cell( 
+                return <Cell key = {lKey}>
                             <img 
                                 className="PDImg" 
                                 alt="Product" 
                                 src={data[col.dataKey]}> 
                             </img>
-                        )  
+                         </Cell>
+                            
             case 'Active':
-                return  cell(
-                    <Toggle
-                    onToggle = {setActiveStatus}
-                    on = {data.active}
-                    />, {'data-escape':true, style: {cursor: 'unset'}}
-                )
+                return   <Cell key = {lKey} data-escape  style = {{cursor: 'unset'}}  >
+                                <Toggle
+                                onToggle = {setActiveStatus}
+                                on = {data.active}
+                                />
+                         </Cell>
              case 'QrCode':
-                
-                return cell(
-                    <div 
-                        onClick={(e) => downloadSVG(e, data.qrcode, data.model)}  
-                        className="QrImg" 
-                        data-escape 
-                        dangerouslySetInnerHTML={{__html : data.qrcode }}>
-                    </div> , {'data-escape':true, style: {cursor: 'unset'}}
-                )
+                return  <QrCode key = {lKey} data={data} />
+
             case 'Price':
-                return cell(
-                    <div className="Text">
-                      {`${data[col.dataKey]}${data['currency']}`}
-                    </div>
-                )  
+                return <Cell key = {lKey} text = {`${data[col.dataKey]}${data['currency']}`} />
             default:
-                return cell(
-                    <div className="Text">
-                      {data[col.dataKey]}
-                    </div>
-                ) 
+                return <Cell key = {lKey} text = {data[col.dataKey]} />
+                      
         }
         
     })

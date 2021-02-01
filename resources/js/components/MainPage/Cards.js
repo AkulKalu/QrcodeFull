@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
-import './scss/cards.scss';
+import './scss/Cards.scss';
 
 
 

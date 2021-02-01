@@ -4,14 +4,19 @@ import './scss/ProductPreview.scss';
 
 
 
-export default function ProductPreview({ colorPallete, setColorPallete, product }) {
+export default function ProductPreview(props) {
+    let { colorPallete, setColorPallete, product } = props;
+
     const [colorPicker, setColorPicker] = useState(false);
     const activatePicker = ind => {
         colorPicker === ind ? setColorPicker(false) : setColorPicker(ind);
     }
 
     const colorPalleteOnChange = (segment, col) =>{ 
-        setColorPallete({...colorPallete, [segment]: {rgbStr: themeCoder.rgbString(col.rgb), rgb:col.rgb}})
+        setColorPallete({
+            ...colorPallete, 
+            [segment]: {rgbStr: themeCoder.rgbString(col.rgb), rgb:col.rgb}
+        })
     };
     
    

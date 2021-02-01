@@ -13,17 +13,17 @@ let EditPanelSwitch = AsSwitch(WithValidator(StorePanel), EditBtn);
 let CreatePanelSwitch = AsSwitch(WithValidator(StorePanel));
 
 export default function SelectPanel(props) {
+    let {switchAction, close} = props;
     const {state, dispatch} = useContext(store);
 
     const switchStore = (store = false) => {
         dispatch.stores.switch(store);
-        props.close()
+        close()
     }
   
     const storeList = state.stores.all.map((store, i) => {
         return <div  key={`storeLI${i}`} className="StoreItem"> 
                         <Button className="Orange SelectBtn"  name={store.name} onClick={() => switchStore(store)} />
-                    
                         <EditPanelSwitch
                             view = {{
                                 store : store
@@ -38,8 +38,8 @@ export default function SelectPanel(props) {
                    </div>;
         
     });
-    return <Backdrop close={props.close} >
-                <div {...props.switchAction} className="SelectPanel">
+    return <Backdrop close={close} >
+                <div {...switchAction} className="SelectPanel">
                     <div  className="StoresList">
                         {storeList}
                         <div className="StoreItem">

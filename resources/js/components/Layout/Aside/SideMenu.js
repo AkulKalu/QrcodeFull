@@ -1,9 +1,7 @@
 import React, {useState, Fragment} from 'react';
+import Button from '../../InputElements/Button';
+import Stats from './Stats';
 import './scss/SideMenu.scss';
-import Button from '../InputElements/Button';
-import Stats from '../Table/Stats';
-
-
 
 export default function SideMenu(props) {
     const {stats, switchTable} = props;

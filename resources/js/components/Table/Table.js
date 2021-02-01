@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navigator from '../Table/Navigator';
+import Navigator from './Navigator/Navigator';
 import TableHeader from '../Table/TableHeader';
 import Products, {AddProduct} from '../Products/Products';
 import Transactions from '../Transactions/Transactions';
@@ -7,7 +7,9 @@ import Shippments from '../Shippments/Shippments';
 import './scss/Table.scss';
 
 export default function Table(props) {
+
     const {display, state} = props;
+    
     const [displaying, setDisplaying] = useState(display);
     const [slice, setSlice] = useState({
         start: 0,

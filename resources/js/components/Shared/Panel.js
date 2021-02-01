@@ -4,29 +4,29 @@ import './scss/Panel.scss';
 
 export default function Panel(props) {
 
-    const buttons = props.buttons.map( (btn, i) => {
-            return <Button key={`${props.name}Btn${i}`} className="PanelBtn" {...btn}  />
+    let {name, left, right, buttons, switchAction} = props;
+
+    const control = buttons.map( (btn, i) => {
+            return <Button key={`${name}Btn${i}`} className="PanelBtn" {...btn}  />
     })
     
 
-    return  <div {...props.switchAction} className="Panel">
+    return  <div {...switchAction} className="Panel">
                <div className="Main">
                     <div className="Left" >
                         <div className="Content">
-                            {props.left}
+                            {left}
                         </div>
                     </div>
                     <div className="Right">
                         <div className="Content">
-                            {props.right} 
-                           
+                            {right} 
                         </div>
-                        <span className="Name">{props.name}</span>
+                        <span className="Name">{name}</span>
                         <div className="Control">
-                            {buttons}
+                            {control}
                         </div>
                     </div>
-                   
                </div>
             </div>
 }

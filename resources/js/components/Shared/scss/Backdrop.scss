@@ -1,4 +1,4 @@
-@import '../../Layout/scss/mixins';
+@import '../../imports.scss';
 
 .Backdrop {
     @include position($b:0, $r:0);

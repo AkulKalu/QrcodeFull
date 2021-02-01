@@ -1,11 +1,10 @@
 import React  from 'react';
 import { SketchPicker } from 'react-color';
-// import './scss/ProductPreview.scss';
 
 
 
-export default function ColorPick({name, color, setThemeColor ,activatePicker, active}) {
-
+export default function ColorPick(props) {
+    let {color, setThemeColor ,activatePicker, active} = props;
     return <div  className="ColorWrap">
                  <div onClick={activatePicker} style={{background : color.rgbStr}} className="Color">
 

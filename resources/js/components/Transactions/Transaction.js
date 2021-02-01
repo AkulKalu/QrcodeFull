@@ -1,13 +1,18 @@
 import React from 'react';
-import './scss/Transaction.scss'
+import Cell from '../Table/Cell';
+import './scss/Transaction.scss';
 
 
-export default function Transaction({columns, data, onClick}) {
-    let columnFields = Object.keys(columns).map((key, i) => {
-        let col = columns[key];
+export default function Transaction(props) {
+    
+    let {columns, data, onClick} = props;
+
+    let columnFields = Object.keys(columns).map((name, i) => {
+        let col = columns[name];
         let value = data[col.dataKey];
-        if(key === 'Date') value = new Date(value).toDateString();
-        return  <div key={`row${i}`}  className="Cell"><div className="Text">{value}</div></div>
+        if(name === 'Date') value = new Date(value).toDateString();
+       
+        return  <Cell key={name} text = {value} />
     })
     
     return   <div onClick={onClick}  className="Row">
