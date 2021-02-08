@@ -93,9 +93,11 @@ let stripe = Stripe(publicKey);
 function chargeWithStripe() {
     window.axios.post(`/checkout/charge/stripe/${productId}`, paymentInfo)
     .then(response => {
+     console.log(response);
       return response;
     })
     .then(session => {
+  
       return stripe.redirectToCheckout({ sessionId: session.data.id });
     })
     .then(response => {

@@ -25,8 +25,12 @@ const reducer = (state, action) => {
         window.location.replace( window.location.origin);
         return null;
       case "SHIPPMENT_SENT":
-       
-        return {...state};
+        return {
+          ...state,
+          shippments: {
+            all : payload.shippments
+            }
+          };
       default:
         return state;
     }

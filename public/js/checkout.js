@@ -2265,6 +2265,7 @@ var stripe = Stripe(publicKey);
 
 function chargeWithStripe() {
   window.axios.post("/checkout/charge/stripe/".concat(productId), paymentInfo).then(function (response) {
+    console.log(response);
     return response;
   }).then(function (session) {
     return stripe.redirectToCheckout({

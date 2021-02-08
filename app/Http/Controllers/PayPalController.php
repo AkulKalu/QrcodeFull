@@ -69,8 +69,8 @@ class PayPalController extends Controller
             ->setInvoiceNumber(uniqid());
     
         $redirectUrls = new RedirectUrls();
-        $redirectUrls->setReturnUrl(url('/shop/'.$product->store->name.'/'.$product->id.'/success_paypal'))
-            ->setCancelUrl(url('/shop/'.$product->store->name.'/'.$product->id));
+        $redirectUrls->setReturnUrl(url('/shop/'.urlencode($product->store->name).'/'.$product->id.'/success_paypal'))
+            ->setCancelUrl(url('/shop/'.urlencode($product->store->name).'/'.$product->id));
 
     
         // Add NO SHIPPING OPTION

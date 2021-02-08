@@ -31,7 +31,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-// Route::get('/try', [CPanelController::class, 'load']);
+
 
 Route::post('/products/activate/{id}', [ProductsController::class, 'toogleActive']);
 Route::get('/user', [HomeController::class, 'load']);

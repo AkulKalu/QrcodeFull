@@ -1,25 +1,23 @@
 @import './mixins';
 
 body {
-    background: rgb(132, 186, 229);
     animation: fade-in 0.2s ease-in;
     margin: 0;
     padding: 0;
+   
 }
+
 
 
 .Background {
     height: 100vh;
     width: 100vw;
     @include flex($dir: column);
-    background: rgb(132, 186, 229);
+    background: rgb(56, 136, 201);
     .Header {
         height: 5%;
         position: relative;
         
-        .HContent {
-           
-        }
         .AccountCtrl {
             position: absolute;
             top: 0;
@@ -31,10 +29,14 @@ body {
                 margin: 1vh;
                 color:white;
                 font-weight: 500;
+                font-size: 1.8vh;
+                text-decoration: none;
                 &:hover {
-                    color: yellow
+                    color: yellow;
+                    text-decoration: underline;
                 }
             }
+            
         }
     }
     .Main {

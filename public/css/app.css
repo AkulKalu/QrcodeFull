@@ -1,5 +1,4 @@
 body {
-  background: #84bae5;
   -webkit-animation: fade-in 0.2s ease-in;
           animation: fade-in 0.2s ease-in;
   margin: 0;
@@ -13,7 +12,7 @@ body {
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
-  background: #84bae5;
+  background: #3888c9;
 }
 
 .Background .Header {
@@ -33,10 +32,13 @@ body {
   margin: 1vh;
   color: white;
   font-weight: 500;
+  font-size: 1.8vh;
+  text-decoration: none;
 }
 
 .Background .Header .AccountCtrl .Link:hover {
   color: yellow;
+  text-decoration: underline;
 }
 
 .Background .Main {
@@ -88,6 +90,10 @@ body {
   to {
     opacity: 1;
   }
+}
+
+* {
+  font-family: "Abhaya Libre", serif;
 }
 
 .over-link {

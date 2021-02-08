@@ -17,7 +17,8 @@ class StripeController extends Controller
     {
         $product = Product::find($productId);
         Stripe::setApiKey($product->store->stripe_private_key);
-  
+        $success_url = url('/shop/'.urlencode($product->store->name).'/'.$product->id.'/success_stripe'.'?session_id={CHECKOUT_SESSION_ID}');
+        $cancel_url = url('/shop/'.urlencode($product->store->name).'/'.$product->id);
         $checkout_session = StripeSession::create([
             'payment_method_types' => ['card'],
             'shipping_address_collection'=> [
@@ -37,17 +38,16 @@ class StripeController extends Controller
               'quantity' => $request->quantity,
             ]],
             'mode' => 'payment',
-            'success_url' => url('/shop/'.$product->store->name.'/'.$product->id.'/success_stripe'.'?session_id={CHECKOUT_SESSION_ID}'),
-            'cancel_url' =>  url('/shop/'.$product->store->name.'/'.$product->id),
+            'success_url' =>  $success_url,
+            'cancel_url' =>  $cancel_url,
           ]);
-    
-        return response()->json(['id'=> $checkout_session->id]);
+          return response()->json(['id'=> $checkout_session->id, 'ss'=> $success_url]);
+       
     }
    
     public function success(Request $request, $store, $productId) {
 
         $product = Product::find($productId);
-
         Stripe::setApiKey( $product->store->stripe_private_key);
         $session = StripeSession::retrieve($request->query()['session_id']);
         $customer = Customer::retrieve( $session->customer);

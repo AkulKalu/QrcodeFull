@@ -5,10 +5,12 @@
     height: 100%;
     .Nav {
         flex-basis: 5%;
+        min-height: 5%;
         @include flex($aitems: center);
        
         .Controls {
             flex-basis: 80%;
+         
             height: 100%;
             @include flex($aitems: center );
             box-sizing: border-box;

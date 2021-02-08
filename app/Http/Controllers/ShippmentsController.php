@@ -22,7 +22,7 @@ class ShippmentsController extends Controller
         if($updated) {
             $product = $shippment->product;
             Mail::to('krunaluka@gmail.com')->send(new ShippmentSent( $product, $shippment));
-            return response()->json(['shippment'=> $shippment]);
+            return response()->json(['shippment'=> $shippment, 'shippments' => Auth::user()->shippments()->latest()->get()]);
         }
 
     }

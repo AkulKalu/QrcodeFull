@@ -1,0 +1,22 @@
+@import '../../imports.scss';
+
+.Card {
+    @include flex-c($dir:column);
+    .Text {
+        width: 100%;
+        color: white;
+        text-align: center;
+
+    }
+    .Images {
+        width: 100%;
+        @include flex-c;
+
+        img {
+            height: 30vh;
+            width: fit-content;
+            border: 1px solid white;
+            margin: 0 1rem;
+        }
+    }
+}

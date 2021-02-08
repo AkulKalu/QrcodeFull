@@ -14,26 +14,16 @@ export default function Cards(props) {
         clearTimeout(nextSwitch.current)
         setCard(card);
     }
-    let deck = {
-        1 : {
-            text: "asdasd   asdas d asd das d asd a"
-        },
-        2 : {
-            text: "sdfd   asdasdasd sadas da "
-        },
-        3 : {
-            text: "asdasd   8888888888888888888"
-        }
-    }
+    
 
     useEffect(() => {
-        let cardNum = Number(card)
-        nextSwitch.current = setTimeout(() => {
-            setCard((cardNum === 3 ? 1 : cardNum + 1 ).toString());
-        }, 5000)
+        // let cardNum = Number(card)
+        // nextSwitch.current = setTimeout(() => {
+        //     setCard((cardNum === 3 ? 1 : cardNum + 1 ).toString());
+        // }, 5000)
     }, [card])
     
-    let cards = Object.keys(deck).map( cKey => {
+    let cards = [1,2,3].map( cKey => {
         let bubbleClass = cKey === card ? "Bubble Active" : "Bubble";
         return <div onClick={ () => switchCard(cKey)} key={`B${cKey}`} className= {bubbleClass}></div>
     } )
@@ -45,7 +35,7 @@ export default function Cards(props) {
                     </div>
                 </div>
                 <div className = "Display">
-                    <Card content = {deck[card]} />
+                    <Card cardNumber = {card} />
                 </div>
             </div>
 }
