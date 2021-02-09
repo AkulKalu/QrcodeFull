@@ -1,0 +1,344 @@
+:root {
+  --bg: rgb(211, 209, 198);
+  --font: rgb(100, 68, 13);
+  --imgBg: #f0ffff;
+  --btnBg: rgb(60, 68, 52);
+}
+
+body {
+  background: var(--bg);
+  position: relative;
+  margin: 0 0;
+  height: 100vh;
+  width: 100vw;
+  color: var(--font);
+  border-color: var(--font);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: "Iceland", cursive;
+}
+
+.Hover:hover,
+.Window .Method:hover,
+.Window .PayPal:hover,
+.Window .Delivery span:hover,
+.Window .Counter .Left:hover,
+.Window .Counter .Right:hover,
+.Window .Back:hover,
+.Btn:hover {
+  cursor: pointer;
+  filter: invert(100%);
+}
+
+.Img {
+  background-color: var(--imgBg);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 40%;
+}
+
+.Img img {
+  height: 100%;
+  max-height: 95%;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.Btn {
+  color: var(--btnBg);
+  width: 60%;
+  font-size: 3vh;
+  text-align: center;
+  margin: 2% auto;
+  padding: 2% 0;
+  border: 2px solid var(--btnBg);
+}
+
+.Barrier {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
+  font-size: 6vh;
+  font-weight: 600;
+  color: yellow;
+}
+
+main {
+  height: 60%;
+  padding: 0 5%;
+}
+
+main .Info {
+  height: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .Info .InfoSmall {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+}
+
+main .Info .InfoSmall span {
+  display: inline-block;
+  font-size: 3vh;
+  padding: 1vh;
+}
+
+main .Info .InfoSmall .border-left {
+  border-left: 1px solid;
+}
+
+main .Info .InfoLarge {
+  display: block;
+  font-size: 7vh;
+}
+
+main .Info .Price {
+  width: 100%;
+  font-size: 6vh;
+}
+
+main .Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Window {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 2.5vh;
+  text-align: justify;
+  overflow-y: scroll;
+  background: var(--bg);
+  transform: translateY(100%);
+  box-sizing: border-box;
+  padding: 12% 10%;
+  transition: all 0.3s;
+}
+
+.Window .Back {
+  position: fixed;
+  font-size: 3vh;
+  top: 1%;
+  left: 5%;
+  background: var(--font);
+  padding: 0 1vh;
+  color: var(--bg);
+}
+
+.Window h2 {
+  border-bottom: 1px solid var(--font);
+  padding-bottom: 0.5rem;
+}
+
+.Window .Counter {
+  margin: auto;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4vh 0;
+}
+
+.Window .Counter .Left,
+.Window .Counter .Right {
+  height: 10vh;
+  width: 6vh;
+  background: var(--font);
+}
+
+.Window .Counter .Left {
+  -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
+          clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.Window .Counter .Right {
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
+          clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+.Window .Counter .Count {
+  font-size: 8vh;
+  padding: 0 2vh;
+}
+
+.Window .Delivery {
+  text-align: right;
+  font-size: 5vh;
+  padding: 4vh 0;
+}
+
+.Window .Delivery span {
+  margin: 0 1vh;
+  transition: opacity 0.5s;
+}
+
+.Window .Method,
+.Window .PayPal {
+  font: inherit;
+  display: block;
+  background: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1.5vh auto;
+  color: var(--font);
+  border: none;
+  outline: none;
+  font-size: 5vh;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.Window .PayPal {
+  position: relative;
+}
+
+.Window .PayPalBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25%;
+  left: -30%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  opacity: 0;
+}
+
+.Success {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.199);
+  transition: opacity 0.3s;
+}
+
+.Success .Message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  background: var(--bg);
+  font-size: 2vh;
+  text-align: center;
+  height: 90%;
+  width: 90%;
+  border: 1px solid;
+}
+
+.Success .Message .Btn {
+  width: 25%;
+  margin-top: 15%;
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+
+  .Img {
+    height: 100%;
+    width: 50%;
+    position: relative;
+  }
+
+  .Img img {
+    height: 60%;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1400px) {
+  .Img img {
+    height: 40%;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .Img::after {
+    content: "";
+    display: block;
+    background-color: var(--font);
+    height: 90%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    z-index: 2;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  main {
+    height: 100%;
+    width: 50%;
+    padding: unset;
+  }
+
+  main .Info {
+    height: 50%;
+    margin-top: 10%;
+  }
+
+  main .Btn {
+    width: 30%;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .Window {
+    width: 50%;
+    right: 0;
+    top: 0;
+    padding: 5% 10%;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .Success .Message {
+    height: 60%;
+    width: 50%;
+  }
+}
+
