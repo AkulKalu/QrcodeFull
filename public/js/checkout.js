@@ -2265,7 +2265,6 @@ var stripe = Stripe(publicKey);
 
 function chargeWithStripe() {
   window.axios.post("/checkout/charge/stripe/".concat(productId), paymentInfo).then(function (response) {
-    console.log(response);
     return response;
   }).then(function (session) {
     return stripe.redirectToCheckout({
@@ -2282,8 +2281,7 @@ function chargeWithStripe() {
 }
 
 paypal.Button.render({
-  env: 'sandbox',
-  // Or 'production'
+  env: isDemo === '1' ? 'sandbox' : 'production',
   style: {
     size: 'medium'
   },
@@ -2305,11 +2303,11 @@ paypal.Button.render({
   // 1. Add an onAuthorize callback
   onAuthorize: function onAuthorize(data, actions) {
     // 2. Make a request to your server
-    return window.axios.post("/checkout/charge/paypal_execute", {
+    return window.axios.post("/checkout/charge/paypal_execute", _objectSpread(_objectSpread({}, paymentInfo), {}, {
       paymentID: data.paymentID,
       payerID: data.payerID,
       productId: productId
-    }).then(function (response) {
+    })).then(function (response) {
       if (response.error) {
         alert(response.error.message);
       } else {
@@ -2358,10 +2356,10 @@ root.style.setProperty('--btnBg', theme.buttons);
 
 /***/ }),
 
-/***/ "./resources/sass/product.scss":
-/*!*************************************!*\
-  !*** ./resources/sass/product.scss ***!
-  \*************************************/
+/***/ "./resources/sass/checkout.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/checkout.scss ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2370,15 +2368,15 @@ root.style.setProperty('--btnBg', theme.buttons);
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************!*\
-  !*** multi ./resources/js/checkout.js ./resources/sass/app.scss ./resources/sass/product.scss ./resources/sass/bootstrap.scss ***!
-  \********************************************************************************************************************************/
+/*!*********************************************************************************************************************************!*\
+  !*** multi ./resources/js/checkout.js ./resources/sass/app.scss ./resources/sass/checkout.scss ./resources/sass/bootstrap.scss ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\js\checkout.js */"./resources/js/checkout.js");
 __webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\product.scss */"./resources/sass/product.scss");
+__webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\checkout.scss */"./resources/sass/checkout.scss");
 module.exports = __webpack_require__(/*! C:\xampp\htdocs\QrCode\resources\sass\bootstrap.scss */"./resources/sass/bootstrap.scss");
 
 

@@ -1,15 +1,5 @@
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-* {
-    font-family: 'Abhaya Libre', serif;
-}
+
 .over-link {
     color: white;
     font-weight: 500;
@@ -20,7 +10,7 @@
 }
 
 .over-btn {
-    background: rgb(100, 186, 229);
+    background: rgb(63, 172, 226);
     color: white;
     width: 25%;
     min-width: fit-content;
@@ -38,7 +28,8 @@
 }
 
 .over-card {
-    background: rgb(132, 186, 229);
+    background: rgb(56, 136, 201);
+   
     margin-top: 10%;
     border-color: white;
     color: white;

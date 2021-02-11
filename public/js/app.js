@@ -6646,7 +6646,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Card {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.Card .Text {\n  width: 100%;\n  color: white;\n  text-align: center;\n}\n.Card .Images {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Card .Images img {\n  height: 30vh;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  border: 1px solid white;\n  margin: 0 1rem;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Card {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.8vh;\n}\n.Card .Text {\n  width: 100%;\n  color: white;\n  text-align: center;\n  -webkit-animation: fadeIn 0.5s ease-in-out;\n          animation: fadeIn 0.5s ease-in-out;\n}\n.Card .Text h2 {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: auto;\n  padding: 0.2rem 1rem;\n}\n.Card .Images {\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  -webkit-animation: fadeIn 0.5s ease-in-out 0.4s both;\n          animation: fadeIn 0.5s ease-in-out 0.4s both;\n}\n.Card .Images img {\n  height: 30vh;\n  width: 60vh;\n  box-shadow: 2px 2px 6px #494949;\n  margin: 0 1rem;\n  transition: transform 0.1s;\n  transform-origin: top;\n}\n.Card .Images img:hover {\n  transform: scale(1.08);\n}\n\n@media only screen and (orientation: portrait) {\n  .Card .Images {\n    flex-direction: column;\n  }\n  .Card .Images img {\n    height: 25vh;\n    width: 50vh;\n    margin: 1rem 0;\n  }\n}", ""]);
 
 // exports
 
@@ -6665,7 +6665,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Cards {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.Cards .Control {\n  height: 10%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Cards .Control .Swap {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  display: flex;\n}\n.Cards .Control .Swap .Bubble {\n  background: whitesmoke;\n  margin: 0 1vh;\n  height: 2vh;\n  width: 2vh;\n  opacity: 0.8;\n  cursor: pointer;\n  transition: all 0.4s;\n}\n.Cards .Control .Swap .Bubble:hover {\n  opacity: 1;\n}\n.Cards .Control .Swap .Active {\n  opacity: 1;\n  transform: scale(1.1);\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Cards {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  height: 100%;\n}\n.Cards .Control {\n  height: 8vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Cards .Control .Swap {\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  display: flex;\n}\n.Cards .Control .Swap .Bubble {\n  background: whitesmoke;\n  margin: 0 1vh;\n  height: 2.2vh;\n  width: 2.2vh;\n  opacity: 0.8;\n  cursor: pointer;\n  transition: all 0.4s;\n}\n.Cards .Control .Swap .Bubble:hover {\n  opacity: 1;\n}\n.Cards .Control .Swap .Active {\n  opacity: 1;\n  transform: scale(1.1);\n}", ""]);
 
 // exports
 
@@ -6966,10 +6966,10 @@ exports.push([module.i, ".Loader {\n  margin: auto;\n  background: none;\n  disp
 
 exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Merienda&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n  font-family: \"Merienda\", cursive;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background-color: #e7ae0f;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s;\n          animation: load 1.5s ease-out both 1s;\n}", ""]);
 
 // exports
 
@@ -90499,24 +90499,37 @@ __webpack_require__.r(__webpack_exports__);
 function Card(props) {
   var cardNumber = props.cardNumber;
   var textContent = null;
-  var images = null; // <a href="https://ibb.co/M2gmXKV"><img src="https://i.ibb.co/0Dnxw1M/qrcode-5.jpg" alt="qrcode-5" border="0"></a>
-  // <a href="https://ibb.co/44tg8LX"><img src="https://i.ibb.co/5s4xr3S/qrcode-3.jpg" alt="qrcode-3" border="0"></a>
-  // <a href="https://ibb.co/bXDcMdV"><img src="https://i.ibb.co/KWSTpyg/qrcode-4.jpg" alt="qrcode-4" border="0"></a>
-  // <a href="https://ibb.co/xf6vm2v"><img src="https://i.ibb.co/mX4svRs/qrcode-2.jpg" alt="qrcode-2" border="0"></a>
-  // <a href="https://ibb.co/8zYQ8cK"><img src="https://i.ibb.co/SQfZvrs/qrcode-1.jpg" alt="qrcode-1" border="0"></a>
+  var images = [];
 
   switch (cardNumber) {
-    case '1':
-      textContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Alow your customers to pay for your merchandise withe their phone, with a simple QrCode scan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Manage your items, generate QrCodes, use our premade customizable checkup and automaticaly email purchase and shipping notifications."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Step 1:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Simply, create a store and add your contact and api keys."));
+    case 1:
+      textContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Alow your customers to pay for your merchandise withe their phone, with a simple QrCode scan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Manage your items, generate QrCodes, use our premade customizable checkup and automaticaly email purchase and shipping notifications."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "Underlinie"
+      }, "Step 1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Simply, create a store and add your contact and api keys."));
       images = ['https://i.ibb.co/5s4xr3S/qrcode-3.jpg'];
       break;
 
-    case '2':
+    case 2:
+      textContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "Underlinie"
+      }, "Step 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Add items, and make your own color theme for the checkout page. "));
+      images = ['https://i.ibb.co/KWSTpyg/qrcode-4.jpg'];
+      break;
+
+    case 3:
+      textContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Use our modern control panel to keep track of your items, generate or download codes, and make changes."));
       images = ['https://i.ibb.co/SQfZvrs/qrcode-1.jpg'];
       break;
 
+    case 4:
+      textContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You can also keep track of any transactions and related shippments that need to be sent"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Simply click the envelope button when merch is on the way and the customer will be notified"));
+      images = ['https://i.ibb.co/0Dnxw1M/qrcode-5.jpg', 'https://i.ibb.co/mX4svRs/qrcode-2.jpg'];
+      break;
+
     default:
-      images = ['https://i.ibb.co/SQfZvrs/qrcode-1.jpg'];
+      textContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "Underlinie"
+      }, "Final step"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Make money!"));
       break;
   }
 
@@ -90618,7 +90631,7 @@ function _arrayWithHoles(arr) {
 
 
 function Cards(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('1'),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(1),
       _useState2 = _slicedToArray(_useState, 2),
       card = _useState2[0],
       setCard = _useState2[1];
@@ -90627,15 +90640,21 @@ function Cards(props) {
 
   var switchCard = function switchCard(card) {
     clearTimeout(nextSwitch.current);
-    setCard(card);
+    setCard(null);
+    setTimeout(function () {
+      return setCard(card);
+    }, 0);
   };
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {// let cardNum = Number(card)
-    // nextSwitch.current = setTimeout(() => {
-    //     setCard((cardNum === 3 ? 1 : cardNum + 1 ).toString());
-    // }, 5000)
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (card) {
+      nextSwitch.current = setTimeout(function () {
+        setCard(null);
+        setCard(card === 5 ? 1 : card + 1);
+      }, 10000);
+    }
   }, [card]);
-  var cards = [1, 2, 3].map(function (cKey) {
+  var cards = [1, 2, 3, 4, 5].map(function (cKey) {
     var bubbleClass = cKey === card ? "Bubble Active" : "Bubble";
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       onClick: function onClick() {
@@ -90653,9 +90672,9 @@ function Cards(props) {
     className: "Swap"
   }, cards)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Display"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, card ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card__WEBPACK_IMPORTED_MODULE_2__["default"], {
     cardNumber: card
-  })));
+  }) : null));
 }
 
 if (document.getElementById('mainCards')) {

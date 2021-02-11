@@ -1,8 +1,10 @@
 body {
-  -webkit-animation: fade-in 0.2s ease-in;
-          animation: fade-in 0.2s ease-in;
   margin: 0;
   padding: 0;
+  font-family: "Abhaya Libre", serif;
+  background: #3888c9;
+  -webkit-animation: fadeIn 0.2s ease-in;
+          animation: fadeIn 0.2s ease-in;
 }
 
 .Background {
@@ -12,7 +14,6 @@ body {
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
-  background: #3888c9;
 }
 
 .Background .Header {
@@ -21,18 +22,24 @@ body {
 }
 
 .Background .Header .AccountCtrl {
-  position: absolute;
-  top: 0;
-  right: 1rem;
   height: 100%;
   display: flex;
+  justify-content: flex-end;
+  font-size: 1.8vh;
+  padding-right: 1vh;
+}
+
+@media only screen and (orientation: portrait) {
+  .Background .Header .AccountCtrl {
+    justify-content: center;
+    font-size: 2vh;
+  }
 }
 
 .Background .Header .AccountCtrl .Link {
   margin: 1vh;
   color: white;
   font-weight: 500;
-  font-size: 1.8vh;
   text-decoration: none;
 }
 
@@ -58,7 +65,6 @@ body {
 .Background .Main .Content .LogoW {
   width: 100%;
   height: 20%;
-  margin-top: 5%;
 }
 
 .Background .Main .Content .LogoC {
@@ -72,28 +78,27 @@ body {
   height: 100%;
 }
 
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.Background .Main .Content form {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+.Background .Main .Content form .Demo {
+  margin-top: 2vh;
+  font-size: 2vh;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.8vh 2.5vh;
+  cursor: pointer;
+  outline: none;
 }
 
-* {
-  font-family: "Abhaya Libre", serif;
+.Background .Main .Content form .Demo:hover {
+  color: yellow;
+  border-color: yellow;
 }
 
 .over-link {
@@ -107,7 +112,7 @@ body {
 }
 
 .over-btn {
-  background: #64bae5;
+  background: #3face2;
   color: white;
   width: 25%;
   min-width: -webkit-fit-content;
@@ -129,7 +134,7 @@ body {
 }
 
 .over-card {
-  background: #84bae5;
+  background: #3888c9;
   margin-top: 10%;
   border-color: white;
   color: white;

@@ -59,6 +59,24 @@ body {
   border: 2px solid var(--btnBg);
 }
 
+.Barrier {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
+  font-size: 6vh;
+  font-weight: 600;
+  color: yellow;
+}
+
 main {
   height: 60%;
   padding: 0 5%;

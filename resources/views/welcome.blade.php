@@ -18,6 +18,7 @@
                             @auth
                                 <a class="Link" href="{{ url('/home') }}" >Home</a>
                             @else 
+                          
                                 <a class="Link" href="{{ route('login') }}" >Login</a>
 
                                 @if (Route::has('register'))
@@ -35,6 +36,14 @@
                            
                         </div>
                     </div>
+                    <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <input id="email" type="email"   name="email" value="friend@gmail.com" hidden>
+                            <input  id="password" type="password" name="password" value="12345678" required hidden>
+                            <button  type="submit" class="Demo">
+                                   DEMO
+                                </button>
+                            </form>
                     <div id="mainCards" class = "CardsW" >
                       
                     </div>

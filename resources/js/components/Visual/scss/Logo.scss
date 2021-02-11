@@ -1,5 +1,8 @@
 @import '../../imports.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+
 .Logo {
     height: 100%;
     width: 100%;
@@ -28,6 +31,7 @@
         height: 100%;
         @include flex($dir: column, $jcont: center,);
         padding: 0 8%;
+        font-family: 'Merienda', cursive;
 
         span {
             position: relative;

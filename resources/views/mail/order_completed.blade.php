@@ -6,7 +6,7 @@
         </div>
         
         <div class="message">
-           <p> Hello {{$shipping->name}}. Thank you for doing buisness with us. If you have any questions or issues regearding 
+           <p> Dear {{$shipping ? $shipping->name : 'customer' }}. Thank you for doing buisness with us. If you have any questions or issues regearding 
                your order please contact us at <a href="mailto: {{$product->store->email}}">mail@gmail.com</a> 
                {{$product->store->phone ? 'or by phone at ( '.$product->store->phone.' )' : ''}}. Make sure you provide your order id
                in the email.

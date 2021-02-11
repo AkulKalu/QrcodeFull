@@ -17,30 +17,38 @@ class StripeController extends Controller
     {
         $product = Product::find($productId);
         Stripe::setApiKey($product->store->stripe_private_key);
-        $success_url = url('/shop/'.urlencode($product->store->name).'/'.$product->id.'/success_stripe'.'?session_id={CHECKOUT_SESSION_ID}');
+        $success_url = url('/shop/'.urlencode($product->store->name).'/'.$product->id.'/success_stripe'.'?session_id={CHECKOUT_SESSION_ID}&quantity='.$request->quantity);
         $cancel_url = url('/shop/'.urlencode($product->store->name).'/'.$product->id);
-        $checkout_session = StripeSession::create([
-            'payment_method_types' => ['card'],
-            'shipping_address_collection'=> [
+
+        $session = [
+          'payment_method_types' => ['card'],
+          'line_items' => [[
+            'price_data' => [
+              'currency' => 'usd',
+              'unit_amount' =>  $product->price * 100,
+              'product_data' => [
+                'name' => $product->model,
+                'images' => [$product->image_url],
+              ],
+            ],
+            'quantity' => $request->quantity,
+          ]],
+          'mode' => 'payment',
+          'success_url' =>  $success_url,
+          'cancel_url' =>  $cancel_url,
+        ];
+
+        if($request->delivery){ 
+          $session['shipping_address_collection'] =  [
               'allowed_countries' => [
                 'US','CA'
               ]
-            ],
-            'line_items' => [[
-              'price_data' => [
-                'currency' => 'usd',
-                'unit_amount' =>  $product->price * 100,
-                'product_data' => [
-                  'name' => $product->model,
-                  'images' => [$product->image_url],
-                ],
-              ],
-              'quantity' => $request->quantity,
-            ]],
-            'mode' => 'payment',
-            'success_url' =>  $success_url,
-            'cancel_url' =>  $cancel_url,
-          ]);
+            ];
+        }
+
+        $checkout_session = StripeSession::create($session);
+          
+
           return response()->json(['id'=> $checkout_session->id, 'ss'=> $success_url]);
        
     }
@@ -51,6 +59,11 @@ class StripeController extends Controller
         Stripe::setApiKey( $product->store->stripe_private_key);
         $session = StripeSession::retrieve($request->query()['session_id']);
         $customer = Customer::retrieve( $session->customer);
+        
+        $product->update([
+          'stock' => $product->stock - intval($request->query()['quantity']),
+        ]);
+
 
         $transaction = [
           'user_id'=> $product->store->user_id,
@@ -79,7 +92,7 @@ class StripeController extends Controller
         
         Mail::to('krunaluka@gmail.com')->send(new TransactionSuccesfull($transaction, $product,  $shipping ));
 
-        return view('product', [
+        return view('checkout', [
           'purchaseCompleted' => 'Stripe',
           'product'=> $product, 
           'theme'=> $this->decodeTheme($product->theme), 

@@ -115,6 +115,10 @@ class PayPalController extends Controller
             $shipping = $result->payer->payer_info->shipping_address; 
             $transInfo = $result->transactions[0]; 
             $product = Product::find($request->productId);
+            
+            $product->update([
+                'stock' => $product->stock - $request->quantity,
+              ]);
 
             $transaction = [
                 'user_id'=> $product->store->user_id,
@@ -159,7 +163,7 @@ class PayPalController extends Controller
     {
         $product = Product::find( $productId);
 
-        return view('product', [
+        return view('checkout', [
             'purchaseCompleted' => 'PayPal',
             'product'=> $product, 
             'theme'=> $this->decodeTheme($product->theme), 
