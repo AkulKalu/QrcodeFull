@@ -78,13 +78,27 @@ class StoresController extends Controller
                 'all' =>  Auth::user()->stores()->latest()->get(),
             ],
         ];
-        if($request->active) {
+
+        if($request->active ) {
             $newActive = Auth::user()->stores()->latest()->first();
-            $response['products'] = [
-                'all'=> $newActive->products()->latest()->get(),
-                'stats' => $this->getProductsStats($newActive),
-            ];
-            $response['stores']['active'] = $newActive;
+            if($newActive) {
+                $response['products'] = [
+                    'all'=> $newActive->products()->latest()->get(),
+                    'stats' => $this->getProductsStats($newActive),
+                ];
+                $response['stores']['active'] = $newActive;
+            }else {
+                $response['products'] = [
+                    'all'=> [],
+                    'stats' =>[
+                        'total'=> 0,
+                        'active'=> 0,
+                        'categories'=>0.
+                    ],
+                ];
+                $response['stores']['active'] = null;
+            }
+           
         }
         return response()->json($response); 
     }

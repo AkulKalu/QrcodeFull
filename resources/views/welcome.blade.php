@@ -44,11 +44,14 @@
                                    DEMO
                                 </button>
                             </form>
-                    <div id="mainCards" class = "CardsW" >
-                      
-                    </div>
+                   
                 </div>
             </div>
+            <div class="Info">
+                <div id="mainCards" class = "CardsW" >
+                </div>
+            </div>
+            
         </div>
    
            

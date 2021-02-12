@@ -12,11 +12,9 @@ body {
 
 
 .Background {
-    height: 100vh;
-    width: 100vw;
     @include flex($dir: column);
     .Header {
-        height: 5%;
+        height: 5vh;
         position: relative;
         
         .AccountCtrl {
@@ -44,7 +42,7 @@ body {
         }
     }
     .Main {
-        height: 95%;
+        height: fit-content;
         .Content {
             width: 50%;
             height: 100%;
@@ -58,22 +56,19 @@ body {
             .LogoC {
                 width: 50%;
                 margin: auto;
-                height: 100%;
+                height: 20vh;
             }
-            .CardsW {
-                width: 100%; 
-                height: 100%;
-            }
+           
             form {
                 width: fit-content;
                 margin: auto;
                 .Demo {
-                    margin-top: 2vh;
-                    font-size: 2vh;
+                    margin: 4vh;
+                    font-size: 3vh;
                     background: none;
                     border: 1px solid white;
                     color:white;
-                    padding: 0.8vh 2.5vh;
+                    padding: 1vh 3vh;
                     cursor: pointer;
                     outline: none;
                     &:hover {
@@ -85,5 +80,8 @@ body {
             
         }
        
+    }
+    .Info {
+       height: fit-content;
     }
 }

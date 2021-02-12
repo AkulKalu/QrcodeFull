@@ -24,6 +24,7 @@ const reducer = (state, action) => {
           return {
             ...state,
             ...payload,
+            active : !state.active ? payload.all[0] : state.active
           }
         case "EDIT":
           return {
@@ -31,6 +32,7 @@ const reducer = (state, action) => {
             ...payload,
           }
       case "DELETE":
+        console.log(payload);
           return {
             ...state,
             ...payload.stores,

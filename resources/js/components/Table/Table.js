@@ -81,12 +81,12 @@ export default function Table(props) {
                                 applyFilter={applyFilter} />
     
     let renderControls = () => tables[displaying].controls.map((Ctrl, i) => <Ctrl key={`ctrl${i}`} />);
-
+    
     return <div className="TableWrap">
                 <div className="Nav">
                     <Navigator dataLength = {data.all.length} position={slice} navigate={setSlice} />
                     <div className="Controls">
-                       {renderControls()}
+                       {state.stores.all.length > 0 && renderControls()}
                     </div>
                 </div>
                 <TableHeader columns={columns}  setSort={setSort} />
