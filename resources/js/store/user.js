@@ -28,7 +28,7 @@ const reducer = (state, action) => {
         return {
           ...state,
           shippments: {
-            all : payload.shippments
+            ...payload
             }
           };
       default:
