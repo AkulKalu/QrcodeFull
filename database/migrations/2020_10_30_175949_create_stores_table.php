@@ -17,9 +17,9 @@ class CreateStoresTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->string('website')->nullable();
+            $table->string('website')->default('');
             $table->string('email');
-            $table->string('phone')->nullable();
+            $table->string('phone')->default('');
             $table->string('stripe_public_key');
             $table->string('stripe_private_key');
             $table->string('paypal_client_id');
