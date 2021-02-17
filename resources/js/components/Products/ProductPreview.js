@@ -55,7 +55,7 @@ export default function ProductPreview(props) {
                         {colorPickers}
                     </div>
                     <div style={styles.image} className="Img" >
-                        {(product.image_url.length ) ?  
+                        {product.image_url  ?  
                         <img src={product.image_url} alt="ProductImage"></img> : 
                         <div>IMAGE</div>
                         }
