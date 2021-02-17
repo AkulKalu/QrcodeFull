@@ -49,9 +49,10 @@ class ProductsController extends Controller
      */
     public function store(ProductRequest $request)
     {
+        
         $store = Auth::user()->stores()->find( $request->store_id);
         $createdProduct = $store->products()->create($request->all());
-        $qrcode = QrCode::format('svg')->generate(url('shop/'.$store->name.'/'.$createdProduct->id))->__toString(); 
+        $qrcode = QrCode::format('svg')->generate(url('shop/'.urlencode($store->name).'/'.$createdProduct->id))->__toString(); 
         $newProduct = $createdProduct->update([
             'qrcode' => $qrcode
         ]);
