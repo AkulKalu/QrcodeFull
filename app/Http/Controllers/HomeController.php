@@ -98,13 +98,12 @@ class HomeController extends Controller
                 $response['products']['all'] =$store->products()->latest()->get();
                 $response['products']['stats'] = $this->getProductsStats($store);
                 $response['products']['categories'] = $this->getProductCategories($store);
-
-                if($user->transactions()->count()) {
-                    $response['transactions']['all'] = $user->transactions()->latest()->get();
-                    $response['transactions']['stats'] = $this->getTransactionsStats($user);
-                    $response['shippments']['all'] = $user->shippments()->latest()->get();
-                    $response['shippments']['stats'] = $this->getShippmentsStats($user);
-                }
+            }
+            if($user->transactions()->count()) {
+                $response['transactions']['all'] = $user->transactions()->latest()->get();
+                $response['transactions']['stats'] = $this->getTransactionsStats($user);
+                $response['shippments']['all'] = $user->shippments()->latest()->get();
+                $response['shippments']['stats'] = $this->getShippmentsStats($user);
             }
         }
         return response()->json($response);

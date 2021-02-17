@@ -94829,10 +94829,9 @@ var reducer = function reducer(state, action) {
       return null;
 
     case "SHIPPMENT_SENT":
+      console.log(payload);
       return _objectSpread(_objectSpread({}, state), {}, {
-        shippments: {
-          all: payload.shippments
-        }
+        shippments: _objectSpread({}, payload)
       });
 
     default:
