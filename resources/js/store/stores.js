@@ -32,7 +32,7 @@ const reducer = (state, action) => {
             ...payload,
           }
       case "DELETE":
-        console.log(payload);
+      
           return {
             ...state,
             ...payload.stores,

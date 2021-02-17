@@ -18,11 +18,12 @@ export default function SelectPanel(props) {
 
     const switchStore = (store = false) => {
         dispatch.stores.switch(store);
-        close()
+        close();
     }
   
     const storeList = state.stores.all.map((store, i) => {
         return <div  key={`storeLI${i}`} className="StoreItem"> 
+                        
                         <Button style={state.stores.active === store ? {background : 'orange'} : null} className="Orange SelectBtn"  name={store.name} onClick={() => switchStore(store)} />
                         <EditPanelSwitch
                             view = {{

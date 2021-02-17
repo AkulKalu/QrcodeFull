@@ -11,7 +11,7 @@ export default function Store(props) {
     return <div className="Store">
                 <span>Store:</span>
                 <StoreSwitch
-                    on = {true}
+                    on = {!all.length}
                     button = {
                         {
                             name: active ? active.name : '.....' ,

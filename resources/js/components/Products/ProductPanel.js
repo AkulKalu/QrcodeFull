@@ -38,7 +38,6 @@ export default function ProductPanel(props)  {
     }
 
     const create = () => {
-        console.log(prepareData());
         dispatch.products.create(prepareData())
         .then( res =>{
            close(res);

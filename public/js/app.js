@@ -91229,7 +91229,6 @@ function ProductPanel(props) {
   };
 
   var create = function create() {
-    console.log(prepareData());
     dispatch.products.create(prepareData()).then(function (res) {
       close(res);
     });
@@ -92851,7 +92850,7 @@ function Store(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Store"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Store:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StoreSwitch, {
-    on: true,
+    on: !all.length,
     button: {
       name: active ? active.name : '.....',
       className: "StoreBtn Orange"
@@ -94729,7 +94728,6 @@ var reducer = function reducer(state, action) {
       return _objectSpread(_objectSpread({}, state), payload);
 
     case "DELETE":
-      console.log(payload);
       return _objectSpread(_objectSpread({}, state), payload.stores);
 
     default:
