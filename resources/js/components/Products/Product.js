@@ -50,7 +50,9 @@ export default function Product(props) {
                 return  <QrCode key = {lKey} data={data} />
 
             case 'Price':
-                return <Cell key = {lKey} text = {`${data[col.dataKey]}${data['currency']}`} />
+                return <Cell key = {lKey} >
+                    <div className="Text">{data[col.dataKey]}{data['currency']}</div>
+                </Cell>
             default:
                 return <Cell key = {lKey} text = {data[col.dataKey]} />
                       

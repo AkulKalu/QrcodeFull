@@ -91037,9 +91037,10 @@ function Product(props) {
 
       case 'Price':
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          key: lKey,
-          text: "".concat(data[col.dataKey]).concat(data['currency'])
-        });
+          key: lKey
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "Text"
+        }, data[col.dataKey], data['currency']));
 
       default:
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], {
