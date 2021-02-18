@@ -21,14 +21,11 @@
         animation: fadeIn 0.5s ease-in-out 0.4s both;
         img {
             height: 30vh;
-            width: 60vh;
             box-shadow: 2px 2px 6px rgb(73, 73, 73);
+            border: 1px solid rgb(197, 197, 197);
             margin: 0 1rem;
             transition: transform 0.1s;
             transform-origin: top;
-            &:hover {
-                transform: scale(1.08);
-            }
         }
     }
 }
@@ -38,8 +35,8 @@
             flex-direction: column;
             
             img {
-                height: 25vh;
-                width:  50vh;
+                height: 20vh;
+                width: unset;
                 margin: 1rem 0;
                
             }
