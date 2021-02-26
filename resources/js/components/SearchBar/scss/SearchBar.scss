@@ -19,7 +19,7 @@
             color: inherit;
             width: 100%;
             background: $bgField;
-            border: 1px solid rgb(121, 153, 163);
+            border: 1px solid $border1;
             
             &:focus {
                 background: $bgFieldH;
@@ -32,17 +32,17 @@
             margin: auto;
             height: 3vh;
             @include flex-c;
-            background: rgb(180, 204, 219);
-            border: 1px solid rgb(121, 153, 163);
+            background:rgb(218, 218, 218);
+            border: 1px solid $border1;
             font-size: $fontN;
          
            
             .Filter {
                 padding: 0 0.6vh;
-                color: rgb(96, 100, 134);
+                color: $theme1;
                 text-shadow: 0px 0px 1px gray;
                 cursor: pointer;
-                opacity: 0.7;
+                opacity: 0.8;
                 transition: all 0.3s;
                
                &:hover {
