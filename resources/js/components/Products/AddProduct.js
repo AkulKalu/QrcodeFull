@@ -2,15 +2,18 @@ import React from 'react';
 import Panel from './ProductPanel';
 import AsSwitch from '../HOC/AsSwitch'; 
 
-let AddProductSwitch = AsSwitch(Panel);
+function Button(props) {
+    return <div {...props} className="TableControl">
+        <div className="Name"  >ADD</div>
+    </div> 
+}
+
+let AddProductSwitch = AsSwitch(Panel, Button);
 
 export default function AddProduct() {
 
     return <AddProductSwitch 
-                button = {{
-                    name: 'add product',
-                    className: 'TableControl',
-                }}
+              
                 view = {{
                     add:true
                 }}

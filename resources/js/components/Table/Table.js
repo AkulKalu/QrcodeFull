@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navigator from './Navigator/Navigator';
 import TableHeader from '../Table/TableHeader';
 import Products from '../Products/Products';
-import AddProduct from '../Products/AddProduct';
 import Transactions from '../Transactions/Transactions';
 import Shippments from '../Shippments/Shippments';
 import './scss/Table.scss';
@@ -62,7 +61,7 @@ export default function Table(props) {
             Component: Products,
             data: state.products,
             columns: state.tabelColumns.Products,
-            controls: [AddProduct]
+            controls: []
         },
         Shippments: {
             Component: Shippments,

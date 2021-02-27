@@ -24,36 +24,40 @@
             height: 2.5vh;
             font-size: $fontN!important;
             text-align: center;
-            background: $bgField;
+            background: none;
             color: inherit;
-            border: 1px solid $border1;
+            border: 1px solid transparent;
+            transition: border 0.2s;
+           
             &:focus {
                 background: $bgFieldH;
+                border: 1px solid $theme1;
+            }  
+            &:hover {
+                border: 1px solid $theme1;
             }   
         }
     }
 
     .BtnWrap {
-         filter: drop-shadow( 2px 2px 3px $shadowL);
          
         .Btn {
-            height: 1.8vh;
-            width: 2.8vh;
+            height:2vh;
             margin-left: 1vh;
-            background: rgb(53, 54, 52);
+            fill: $theme1;
             cursor: pointer;
 
             &:hover {
-                background: $higlight;
+                fill: $higlight;
             }
+           
         }
 
         .LeftBtn {
-            clip-path: polygon(100% 0, 0 50%, 100% 100%);
+            transform-origin: center;
+           transform: rotate(180deg);
         }
-        .RightBtn {
-            clip-path: polygon(0 0, 0 100%, 100% 50%);
-        }
+        
     }
 }
 

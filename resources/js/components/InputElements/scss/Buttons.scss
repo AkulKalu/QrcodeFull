@@ -27,15 +27,29 @@ button {
       }
 }
 .TableControl {
-    @extend .Orange;
-    width: 10%;
+    
+    @include flex-c;
+    position: relative;
+    font-size: 2vh;
     height: 3vh;
-    font-weight: unset;
-    background: rgba(128, 128, 128, 0.205);
-    color: rgb(75, 78, 97);
-    border-color :rgb(128, 131, 155);
-    text-shadow: none;
-    box-shadow: none;
+    border-bottom: 1px solid $theme2;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 70%;
+    overflow: hidden;
+    .Name {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-right: 0.5vh solid $theme2;
+        transition: transform 0.1s ease-in;
+    }
+    &:hover {
+        .Name {
+            transform: translateX(5px);
+        }
+    }
+   
 }
 
 .StoreBtnOpt {

@@ -1,26 +1,30 @@
 @import '../../../imports.scss';
 
 .Stats{
-    width: 80%;
-    margin-top: 1vh;
+    width: 70%;
+    margin: 1.5vh 0;
     @include flex(column); 
+    animation: slideIn-right 0.2s ease-out both;
+   
 
     .StatCont {
         width: 100%;
         font-size: $fontN;
         margin: 0.5vh 0;
-        filter: drop-shadow(0px 0px 10px rgb(245, 245, 247));
+      
     
         .Stat {
             display: flex;
             padding:  1vh;
-            border-radius: 0 10px 10px 0;
-            background: linear-gradient(to right, rgba(128, 128, 128, 0.445), rgba(196, 188, 188, 0.055));
+            position: relative;
+            @include flex-c();
+           
         
             .Value {
                 flex-basis: 50%;
                 @include flex-c();
             }
+           
         } 
          
     }
