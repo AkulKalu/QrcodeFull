@@ -4,12 +4,14 @@
     height: 100%;
     width: 100%;
     outline: none;
-    box-shadow: 2px 2px 5px $shadowL;
-    background: $bgField;
+    border: none;
+    border-bottom: 1px solid $border1;
+    background: none;
     font-family: inherit;
     font-size: $fontN;
     &:focus {
-        background: $bgFieldH;
+        background:none;
+        border-color: $theme2;
     }
 }
 

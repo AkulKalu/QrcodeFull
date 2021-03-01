@@ -9,7 +9,7 @@ export default function Form(props) {
     let {inputChange, productData, errors, state} = props;
 
     return <Fragment>
-                <h3>Product</h3>
+                <h3>PRODUCT</h3>
             <div className = "Group-row">
                 <div className = "Group-half">
                         <TextInput
@@ -68,7 +68,7 @@ export default function Form(props) {
                     </div>
                 </div>  
             
-            <h3>Additional</h3>
+           
             
                 <TextInput
                     wrap = "Group-col"

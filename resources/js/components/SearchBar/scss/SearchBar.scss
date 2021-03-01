@@ -2,38 +2,33 @@
 
 .Search {
     font-size: $fontM;
-    @include flex( $aitems: center );
+    @include flex-c;
     
-    label {
-        flex-basis: 10%;
-        text-align: center;
-        font-weight: 600;
-        color: inherit;
-    }
     .Bar {
         position: relative;
         flex-basis: 80%;
         input {
             height: 5vh;
+            box-sizing: border-box;
             font-size: 1.8vh;
             color: inherit;
             width: 100%;
-            background: $bgField;
-            border: 1px solid $border1;
-            
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $theme1;
+    
             &:focus {
-                background: $bgFieldH;
+                border-bottom: 2px solid $theme1;
             }
         }
 
         .Filters {
-            @include position($t: 75%, $l:10%);
-            width: fit-content;
-            margin: auto;
-            height: 3vh;
+            @include position($t: 100%, $l:0);
+            width: 100%;
             @include flex-c;
-            background:rgb(218, 218, 218);
-            border: 1px solid $border1;
+            justify-content: flex-end;
+            height: 3vh;
+            
             font-size: $fontN;
          
            
@@ -50,9 +45,9 @@
                }
             }
             .Active {
-                color: $higlight;
+                text-decoration: underline;
                 opacity: 1;
-                text-shadow: 1px 1px 2px $shadowL;
+               
             }          
         }
         

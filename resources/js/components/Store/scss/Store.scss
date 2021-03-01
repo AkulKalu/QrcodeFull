@@ -1,20 +1,22 @@
 @import '../../imports.scss';
 
 .Store {
-    display: flex;
-    align-items: center;
-    margin-left:10%;
-    font-weight: 600;
     width: 100%;
     font-size: 2vh;
+    
 
     .StoreBtn {
-        font-size: 3.5vh;
-        width: 80%;
-        min-width: 20vw;
+        display: block;
+        background: $theme2;
+        color: white;
+        font-size: 2.2vh;
+        width: 90%;
+        margin: 0 auto;
         height: 5vh;
-        margin-left: 1vh;
+        
+
     }
+
 }
 
 

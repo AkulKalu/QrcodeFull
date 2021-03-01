@@ -46,7 +46,7 @@ export default function ProductPreview(props) {
     }
   
     return <div className="Checkout">
-            <h3>Checkout</h3>
+            <h3>CHECKOUT</h3>
             <div style={styles.container} className="Preview">
                     <div className="Cam">
                         <div></div>

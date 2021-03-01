@@ -1,9 +1,9 @@
-@import '../../../imports.scss';
+@import '../../imports.scss';
 
 .UserMenu {
-    width: 100%;
-    margin-top: 5vh;
     @include flex();
+    height: 80%;
+    width: 20%;
     .Circles {
         width: 30%;
         @include flex-c;
@@ -22,6 +22,7 @@
     .Name {
         position: relative;
         @include flex-c;
+        width: 70%;
         .Logout {
             animation: fadeIn 0.2s ease-in;
             cursor: pointer;

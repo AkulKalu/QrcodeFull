@@ -1,5 +1,5 @@
 import React from 'react';
-import Store from '../Store/Store';
+import User from '../User/User'
 import AsideToggle from './Aside/AsideToggle';
 import Table from '../Table/Table';
 import SearchBar from '../SearchBar/SearchBar';
@@ -14,9 +14,10 @@ export default function Main(props) {
 
                 <div className="TopBar">
 
-                    <div className="BarStore">
+                    {/* <div className="BarStore">
                         <Store stores={state.stores} />
-                    </div>
+                    </div> */}
+                   
 
                     <div className="BarSearch">
                         <SearchBar 
@@ -24,6 +25,9 @@ export default function Main(props) {
                             columns={state.tabelColumns[table]} 
                             search={dispatch.search} 
                         />
+                    </div>
+                    <div className="BarUser">
+                        <User />
                     </div>
 
                 </div>

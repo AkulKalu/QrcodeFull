@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {store} from '../../HOC/StateProvider';
+import {store} from '../HOC/StateProvider';
 import './scss/User.scss';
 
 export default function User(props) {

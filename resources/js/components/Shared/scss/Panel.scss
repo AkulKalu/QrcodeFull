@@ -39,7 +39,8 @@
         height: 100%;
         h3 {
             display: inline-block;
-            border-bottom: 1px solid $border1;
+            text-align: right;
+            border-bottom: 2px solid $border1;
             font-size: $fontM;
             padding-bottom: 0.5rem;
             width: 80%;
@@ -83,11 +84,13 @@
         
         .Group-row {
             @extend .Group-col;
+            margin: 1vh 0;
             flex-direction: row;
         }
         .Group-text {
             @extend .Group-col;
             height: 20%;
+            margin-top: 2vh;
             padding-bottom: 2vh;
         }
         .Group-half {

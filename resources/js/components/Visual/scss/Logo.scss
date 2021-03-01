@@ -49,10 +49,10 @@
         z-index: 0;
         height: 100%;
         width: 100%;
-        background: linear-gradient(284deg, $theme2 0%, rgb(247, 241, 225) 25%, $theme2 100%);
+        background: linear-gradient(284deg, $theme2 0%, rgb(247, 237, 210) 50%, $theme2 100%);
         background-size: 700% 700%;
         transform-origin: left;
-        animation: load 1.5s ease-out  both 1s , AnimationName 9s ease infinite;
+        animation: load 1.5s ease-out  both 1s , AnimationName 15s ease infinite;
     }
 }
 

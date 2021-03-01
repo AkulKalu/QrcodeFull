@@ -6475,7 +6475,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.TextInput {\n  width: 100%;\n  height: 2.6vh;\n  font-family: inherit;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid rgba(128, 128, 128, 0.705);\n  box-shadow: 2px 2px 5px #414040;\n  font-size: 1.4vh;\n}\n.TextInput:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n\n.ValidationMessage {\n  text-align: right;\n  width: 100%;\n  color: crimson;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.TextInput {\n  width: 100%;\n  height: 2.6vh;\n  font-family: inherit;\n  background: none;\n  border: none;\n  border-bottom: 1px solid #727171;\n  font-size: 1.4vh;\n}\n.TextInput:focus {\n  background: none;\n  border-color: #f59c16;\n}\n\n.ValidationMessage {\n  text-align: right;\n  width: 100%;\n  color: crimson;\n}", ""]);
 
 // exports
 
@@ -6494,7 +6494,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Textarea {\n  height: 100%;\n  width: 100%;\n  outline: none;\n  box-shadow: 2px 2px 5px #414040;\n  background: rgba(128, 128, 128, 0.178);\n  font-family: inherit;\n  font-size: 1.6vh;\n}\n.Textarea:focus {\n  background: rgba(128, 128, 128, 0.301);\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Textarea {\n  height: 100%;\n  width: 100%;\n  outline: none;\n  border: none;\n  border-bottom: 1px solid #727171;\n  background: none;\n  font-family: inherit;\n  font-size: 1.6vh;\n}\n.Textarea:focus {\n  background: none;\n  border-color: #f59c16;\n}", ""]);
 
 // exports
 
@@ -6551,7 +6551,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../../node_module
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.SMbutton, .SMActive {\n  width: 85%;\n  height: 3.5vh;\n  border-left: none;\n  margin-top: 1.2vh;\n  text-align: right;\n  overflow: hidden;\n  border-bottom: 1px solid #422121;\n  cursor: pointer;\n}\n.SMbutton .BtnContent, .SMActive .BtnContent {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  transform: translateX(15%);\n  transition: transform 0.2s;\n}\n.SMbutton .BtnContent .Indicator, .SMActive .BtnContent .Indicator {\n  height: 100%;\n  width: 15%;\n  display: flex;\n  justify-content: flex-end;\n}\n.SMbutton .BtnContent .Indicator div, .SMActive .BtnContent .Indicator div {\n  width: 30%;\n  height: 100%;\n  background: #422121;\n  margin-right: 0;\n}\n.SMbutton .BtnContent .Text, .SMActive .BtnContent .Text {\n  color: #422121;\n  display: block;\n  font-size: 2.2vh;\n  font-weight: 500;\n  height: 100%;\n  width: 85%;\n}\n.SMbutton:hover .BtnContent, .SMActive:hover .BtnContent {\n  transform: translateX(0);\n}\n\n.StatsDisplay {\n  width: 100%;\n}\n\n.SMActive {\n  border-color: #f59c16;\n}\n.SMActive .BtnContent {\n  transform: unset;\n}\n.SMActive .BtnContent .Indicator div {\n  background: #f59c16;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.SMbutton, .SMActive {\n  width: 85%;\n  height: 3.5vh;\n  border-left: none;\n  margin-top: 1.2vh;\n  text-align: right;\n  overflow: hidden;\n  border-bottom: 1px solid #422121;\n  cursor: pointer;\n}\n.SMbutton .BtnContent, .SMActive .BtnContent {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  transform: translateX(3%);\n  transition: transform 0.2s;\n}\n.SMbutton .BtnContent .Indicator, .SMActive .BtnContent .Indicator {\n  height: 100%;\n  width: 15%;\n  display: flex;\n  justify-content: flex-end;\n}\n.SMbutton .BtnContent .Indicator div, .SMActive .BtnContent .Indicator div {\n  width: 40%;\n  height: 100%;\n  background: #422121;\n  margin-right: 0;\n}\n.SMbutton .BtnContent .Text, .SMActive .BtnContent .Text {\n  color: #422121;\n  display: block;\n  font-size: 2.2vh;\n  font-weight: 500;\n  height: 100%;\n  width: 85%;\n}\n.SMbutton:hover .BtnContent, .SMActive:hover .BtnContent {\n  transform: translateX(0);\n}\n\n.StatsDisplay {\n  width: 100%;\n}\n\n.SMActive {\n  border-color: #f59c16;\n}\n.SMActive .BtnContent {\n  transform: unset;\n}\n.SMActive .BtnContent .Indicator div {\n  background: #f59c16;\n}", ""]);
 
 // exports
 
@@ -6577,25 +6577,6 @@ exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Layout/Aside/scss/User.scss":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Layout/Aside/scss/User.scss ***!
-  \**************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.UserMenu {\n  width: 100%;\n  margin-top: 5vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n}\n.UserMenu .Circles {\n  width: 30%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.UserMenu .Circles .Circle {\n  height: 1vh;\n  width: 1vh;\n  border-radius: 50%;\n  margin: 0 0.2vh;\n  box-shadow: 0 0 2px #929292;\n  -webkit-animation: circle 7s ease-in-out both infinite;\n          animation: circle 7s ease-in-out both infinite;\n}\n.UserMenu .Name {\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.UserMenu .Name .Logout {\n  -webkit-animation: fadeIn 0.2s ease-in;\n          animation: fadeIn 0.2s ease-in;\n  cursor: pointer;\n}\n.UserMenu .Name .Logout {\n  font-size: 2.5vh;\n  font-weight: 200;\n}\n.UserMenu .Name .Logout:hover {\n  text-decoration: underline;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Layout/scss/ControlPanel.scss":
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Layout/scss/ControlPanel.scss ***!
@@ -6608,7 +6589,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\ninput {\n  outline: none;\n}\n\nbody {\n  color: #4b4e61;\n  font-family: \"Abhaya Libre\", serif;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #eeecd5, #fcfbf5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #eeecd5, #fcfbf5);\n  width: 15vw;\n  border-right: 1px solid #727171;\n  transition: width 0.2s;\n  position: relative;\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .User {\n  height: 8%;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n  height: 100vh;\n  transition: width 0.2s;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  box-sizing: border-box;\n  padding-top: 1vh;\n  height: 10vh;\n}\n.CPanel main .TopBar .BarStore {\n  flex-basis: 50%;\n}\n.CPanel main .TopBar .BarSearch {\n  flex-basis: 50%;\n}\n.CPanel main .TableCont {\n  height: 90vh;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\ninput {\n  outline: none;\n}\n\nbody {\n  color: #4b4e61;\n  font-family: \"Abhaya Libre\", serif;\n}\n\n.CPanel {\n  background: linear-gradient(to left, #eeecd5, #fcfbf5);\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  overflow: hidden;\n  height: 100vh;\n  width: 100vw;\n}\n.CPanel aside {\n  background: linear-gradient(to right, #eeecd5, #fcfbf5);\n  width: 15vw;\n  height: 100%;\n  border-right: 1px solid #727171;\n  transition: width 0.2s;\n  position: relative;\n}\n.CPanel aside .LogoWrap {\n  height: 8vh;\n  width: 60%;\n  margin: 1vh auto;\n}\n.CPanel aside .StoresWrap {\n  height: 20%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.CPanel main {\n  display: flex;\n  flex-direction: column;\n  justify-content: initial;\n  align-items: initial;\n  width: 85vw;\n  height: 100vh;\n  transition: width 0.2s;\n}\n.CPanel main .TopBar {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  box-sizing: border-box;\n  height: 10vh;\n}\n.CPanel main .TopBar .BarUser {\n  width: 50%;\n  display: flex;\n  justify-content: flex-end;\n}\n.CPanel main .TopBar .BarSearch {\n  width: 50%;\n}\n.CPanel main .TableCont {\n  height: 90vh;\n}", ""]);
 
 // exports
 
@@ -6741,7 +6722,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Search {\n  font-size: 2vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: center;\n}\n.Search label {\n  flex-basis: 10%;\n  text-align: center;\n  font-weight: 600;\n  color: inherit;\n}\n.Search .Bar {\n  position: relative;\n  flex-basis: 80%;\n}\n.Search .Bar input {\n  height: 5vh;\n  font-size: 1.8vh;\n  color: inherit;\n  width: 100%;\n  background: rgba(128, 128, 128, 0.178);\n  border: 1px solid #727171;\n}\n.Search .Bar input:focus {\n  background: rgba(128, 128, 128, 0.301);\n}\n.Search .Bar .Filters {\n  position: absolute;\n  top: 75%;\n  left: 10%;\n  right: initial;\n  bottom: initial;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: auto;\n  height: 3vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  background: #dadada;\n  border: 1px solid #727171;\n  font-size: 1.6vh;\n}\n.Search .Bar .Filters .Filter {\n  padding: 0 0.6vh;\n  color: #422121;\n  text-shadow: 0px 0px 1px gray;\n  cursor: pointer;\n  opacity: 0.8;\n  transition: all 0.3s;\n}\n.Search .Bar .Filters .Filter:hover {\n  opacity: 1;\n}\n.Search .Bar .Filters .Active {\n  color: yellow;\n  opacity: 1;\n  text-shadow: 1px 1px 2px #414040;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Search {\n  font-size: 2vh;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Search .Bar {\n  position: relative;\n  flex-basis: 80%;\n}\n.Search .Bar input {\n  height: 5vh;\n  box-sizing: border-box;\n  font-size: 1.8vh;\n  color: inherit;\n  width: 100%;\n  background: transparent;\n  border: none;\n  border-bottom: 1px solid #422121;\n}\n.Search .Bar input:focus {\n  border-bottom: 2px solid #422121;\n}\n.Search .Bar .Filters {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  justify-content: flex-end;\n  height: 3vh;\n  font-size: 1.6vh;\n}\n.Search .Bar .Filters .Filter {\n  padding: 0 0.6vh;\n  color: #422121;\n  text-shadow: 0px 0px 1px gray;\n  cursor: pointer;\n  opacity: 0.8;\n  transition: all 0.3s;\n}\n.Search .Bar .Filters .Filter:hover {\n  opacity: 1;\n}\n.Search .Bar .Filters .Active {\n  text-decoration: underline;\n  opacity: 1;\n}", ""]);
 
 // exports
 
@@ -6779,7 +6760,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Panel {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 1;\n  overflow-y: scroll;\n  background: linear-gradient(to left, #eeecd5, #fcfbf5);\n}\n.Panel .Control {\n  display: inline-block;\n  box-sizing: border-box;\n  width: 80%;\n  height: 20%;\n  border-top: 1px solid #422121;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: initial;\n}\n.Panel .Control .PanelBtn {\n  width: 10vh;\n  height: 3vh;\n  margin: 2vh 1vh;\n  border-radius: 2px;\n  background: #353634;\n  box-shadow: 2px 2px 5px #353634;\n  color: #d6e6d6;\n  font-weight: 700;\n  font-size: 1.5vh;\n  border-color: transparent;\n  transition: 0.6s;\n}\n.Panel .Control .PanelBtn:hover {\n  border-color: #353634;\n  color: #353634;\n  background: #e7ae0f;\n}\n.Panel .Main {\n  display: flex;\n  height: 100%;\n}\n.Panel .Main h3 {\n  display: inline-block;\n  border-bottom: 1px solid #727171;\n  font-size: 2vh;\n  padding-bottom: 0.5rem;\n  width: 80%;\n}\n.Panel .Main .Left {\n  flex-basis: 50%;\n}\n.Panel .Main .Left .Content {\n  padding-left: 15%;\n  height: 100%;\n}\n.Panel .Main .Right {\n  flex-basis: 50%;\n}\n.Panel .Main .Right .Content {\n  height: 80%;\n}\n.Panel .Main .Right .Name {\n  font-size: 3vh;\n}\n.Panel .Main .Group-col, .Panel .Main .Group-text, .Panel .Main .Group-row {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n}\n.Panel .Main .Group-col label, .Panel .Main .Group-text label, .Panel .Main .Group-row label {\n  font-size: 1.6vh;\n  padding: 1vh 0;\n  font-weight: 600;\n}\n.Panel .Main .jus-end {\n  justify-content: flex-end;\n}\n.Panel .Main .Group-row {\n  flex-direction: row;\n}\n.Panel .Main .Group-text {\n  height: 20%;\n  padding-bottom: 2vh;\n}\n.Panel .Main .Group-half {\n  flex-basis: 50%;\n  display: flex;\n}\n\n.PayLogo {\n  width: 8vh;\n  margin: auto;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Panel {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 1;\n  overflow-y: scroll;\n  background: linear-gradient(to left, #eeecd5, #fcfbf5);\n}\n.Panel .Control {\n  display: inline-block;\n  box-sizing: border-box;\n  width: 80%;\n  height: 20%;\n  border-top: 1px solid #422121;\n  display: flex;\n  flex-direction: row;\n  justify-content: flex-end;\n  align-items: initial;\n}\n.Panel .Control .PanelBtn {\n  width: 10vh;\n  height: 3vh;\n  margin: 2vh 1vh;\n  border-radius: 2px;\n  background: #353634;\n  box-shadow: 2px 2px 5px #353634;\n  color: #d6e6d6;\n  font-weight: 700;\n  font-size: 1.5vh;\n  border-color: transparent;\n  transition: 0.6s;\n}\n.Panel .Control .PanelBtn:hover {\n  border-color: #353634;\n  color: #353634;\n  background: #e7ae0f;\n}\n.Panel .Main {\n  display: flex;\n  height: 100%;\n}\n.Panel .Main h3 {\n  display: inline-block;\n  text-align: right;\n  border-bottom: 2px solid #727171;\n  font-size: 2vh;\n  padding-bottom: 0.5rem;\n  width: 80%;\n}\n.Panel .Main .Left {\n  flex-basis: 50%;\n}\n.Panel .Main .Left .Content {\n  padding-left: 15%;\n  height: 100%;\n}\n.Panel .Main .Right {\n  flex-basis: 50%;\n}\n.Panel .Main .Right .Content {\n  height: 80%;\n}\n.Panel .Main .Right .Name {\n  font-size: 3vh;\n}\n.Panel .Main .Group-col, .Panel .Main .Group-text, .Panel .Main .Group-row {\n  display: flex;\n  flex-direction: column;\n  width: 80%;\n}\n.Panel .Main .Group-col label, .Panel .Main .Group-text label, .Panel .Main .Group-row label {\n  font-size: 1.6vh;\n  padding: 1vh 0;\n  font-weight: 600;\n}\n.Panel .Main .jus-end {\n  justify-content: flex-end;\n}\n.Panel .Main .Group-row {\n  margin: 1vh 0;\n  flex-direction: row;\n}\n.Panel .Main .Group-text {\n  height: 20%;\n  margin-top: 2vh;\n  padding-bottom: 2vh;\n}\n.Panel .Main .Group-half {\n  flex-basis: 50%;\n  display: flex;\n}\n\n.PayLogo {\n  width: 8vh;\n  margin: auto;\n}", ""]);
 
 // exports
 
@@ -6836,7 +6817,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.SelectPanel {\n  margin-top: 5%;\n  padding: 1vh;\n  height: 70%;\n  width: 60%;\n  box-shadow: 0 0 20px #fafbfc;\n  background-color: rgba(236, 238, 243, 0.938);\n}\n\n.StoresList {\n  display: flex;\n  flex-flow: wrap;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  width: 100%;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  box-shadow: 2px 2px 5px gray;\n  font-size: 2.3vh;\n  width: 16%;\n  min-width: -webkit-fit-content;\n  min-width: -moz-fit-content;\n  min-width: fit-content;\n  height: 5vh;\n  margin: 1vh 1%;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n}\n.StoresList .StoreItem .SelectBtn {\n  opacity: 0.8;\n  transition: opacity 0.3s;\n  background: #422121;\n}\n.StoresList .StoreItem .SelectBtn:hover {\n  opacity: 1;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  padding: 0 0.5vh;\n  background: rgba(0, 0, 0, 0.212);\n  top: 0;\n  right: -100%;\n  transition: all 0.2s;\n}\n.StoresList .StoreItem .EditBtn svg {\n  height: 70%;\n  fill: white;\n}\n.StoresList .StoreItem .EditBtn:hover svg {\n  fill: yellow;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.SelectPanel {\n  position: absolute;\n  box-sizing: border-box;\n  top: 0;\n  left: 0;\n  z-index: 10;\n  padding: 1vh;\n  padding-top: 0;\n  height: 100%;\n  width: 100%;\n  background: linear-gradient(to right, #eeecd5, #fcfbf5);\n}\n.SelectPanel .StoresClose {\n  text-align: center;\n  height: 8%;\n  font-weight: 800;\n  font-size: 4vh;\n}\n.SelectPanel .StoresClose span:hover {\n  color: crimson;\n  cursor: pointer;\n}\n\n.StoresList {\n  display: flex;\n  flex-direction: column;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n  width: 100%;\n}\n.StoresList .CreateBtn {\n  margin: 0 auto;\n  border-top: 1px solid #422121;\n  padding-top: 1vh;\n  text-align: right;\n}\n.StoresList .StoreItem {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  padding: 0.5vh 0;\n  cursor: pointer;\n}\n.StoresList .StoreItem .Btn, .StoresList .StoreItem .EditBtn, .StoresList .StoreItem .SelectBtn {\n  height: 100%;\n  width: 100%;\n}\n.StoresList .StoreItem .SelectBtn {\n  font-size: 2.3vh;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  max-width: 80%;\n  color: #422121;\n  padding: 0 1rem;\n  transition: opacity 0.3s;\n}\n.StoresList .StoreItem .SelectBtn:hover {\n  background: #ffd588;\n}\n.StoresList .StoreItem .EditBtn {\n  width: 20%;\n  height: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  padding: 0 0.5vh;\n  top: 0;\n  right: -100%;\n  transition: all 0.2s;\n}\n.StoresList .StoreItem .EditBtn svg {\n  height: 65%;\n  fill: #422121;\n}\n.StoresList .StoreItem .EditBtn:hover svg {\n  fill: yellow;\n}\n.StoresList .StoreItem:hover .EditBtn {\n  right: 0;\n}", ""]);
 
 // exports
 
@@ -6855,7 +6836,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Store {\n  display: flex;\n  align-items: center;\n  margin-left: 10%;\n  font-weight: 600;\n  width: 100%;\n  font-size: 2vh;\n}\n.Store .StoreBtn {\n  font-size: 3.5vh;\n  width: 80%;\n  min-width: 20vw;\n  height: 5vh;\n  margin-left: 1vh;\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Store {\n  width: 100%;\n  font-size: 2vh;\n}\n.Store .StoreBtn {\n  display: block;\n  background: #f59c16;\n  color: white;\n  font-size: 2.2vh;\n  width: 90%;\n  margin: 0 auto;\n  height: 5vh;\n}", ""]);
 
 // exports
 
@@ -6938,6 +6919,25 @@ exports.push([module.i, ".Cell:nth-of-type(1) {\n  width: 15%;\n}\n\n.Cell:nth-o
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/User/scss/User.scss":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/User/scss/User.scss ***!
+  \******************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.UserMenu {\n  display: flex;\n  flex-direction: row;\n  justify-content: initial;\n  align-items: initial;\n  height: 80%;\n  width: 20%;\n}\n.UserMenu .Circles {\n  width: 30%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.UserMenu .Circles .Circle {\n  height: 1vh;\n  width: 1vh;\n  border-radius: 50%;\n  margin: 0 0.2vh;\n  box-shadow: 0 0 2px #929292;\n  -webkit-animation: circle 7s ease-in-out both infinite;\n          animation: circle 7s ease-in-out both infinite;\n}\n.UserMenu .Name {\n  position: relative;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n  width: 70%;\n}\n.UserMenu .Name .Logout {\n  -webkit-animation: fadeIn 0.2s ease-in;\n          animation: fadeIn 0.2s ease-in;\n  cursor: pointer;\n}\n.UserMenu .Name .Logout {\n  font-size: 2.5vh;\n  font-weight: 200;\n}\n.UserMenu .Name .Logout:hover {\n  text-decoration: underline;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Visual/scss/Loader.scss":
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--10-2!./node_modules/sass-loader/dist/cjs.js??ref--10-3!./resources/js/components/Visual/scss/Loader.scss ***!
@@ -6969,7 +6969,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Merienda&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n  font-family: \"Merienda\", cursive;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background: linear-gradient(284deg, #f59c16 0%, #f7f1e1 25%, #f59c16 100%);\n  background-size: 700% 700%;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s, AnimationName 9s ease infinite;\n          animation: load 1.5s ease-out both 1s, AnimationName 9s ease infinite;\n}\n\n@-webkit-keyframes AnimationName {\n  0% {\n    background-position: 0% 57%;\n  }\n  50% {\n    background-position: 100% 44%;\n  }\n  100% {\n    background-position: 0% 57%;\n  }\n}\n\n@keyframes AnimationName {\n  0% {\n    background-position: 0% 57%;\n  }\n  50% {\n    background-position: 100% 44%;\n  }\n  100% {\n    background-position: 0% 57%;\n  }\n}", ""]);
+exports.push([module.i, "@-webkit-keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  from {\n    opacity: 0;\n  }\n  to {\n    opacity: 1;\n  }\n}\n@-webkit-keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  from {\n    opacity: 1;\n  }\n  to {\n    opacity: 0;\n  }\n}\n@-webkit-keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-left {\n  from {\n    opacity: 0;\n    transform: translateX(-100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@keyframes slideIn-right {\n  from {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n  to {\n    opacity: 1;\n    transform: translateX(0);\n  }\n}\n@-webkit-keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@keyframes load {\n  from {\n    opacity: 0.1;\n    transform: scaleX(0);\n  }\n  to {\n    opacity: 1;\n    transform: scaleX(100%);\n  }\n}\n@-webkit-keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@keyframes slide-out-right {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n    transform: translateX(100%);\n  }\n}\n@-webkit-keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@keyframes circle {\n  0% {\n    background-color: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  50% {\n    transform: scale(0.7);\n  }\n  70% {\n    background: #f5a717;\n  }\n  100% {\n    background-color: #353434;\n    transform: scale(1);\n  }\n}\n@-webkit-keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@keyframes color {\n  0% {\n    color: #353434;\n  }\n  40% {\n    color: #f5b94b;\n  }\n  70% {\n    color: #f0a10e;\n  }\n  100% {\n    color: #353434;\n  }\n}\n@-webkit-keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@keyframes bg-color {\n  0% {\n    background: #353434;\n  }\n  40% {\n    background: #f5b94b;\n  }\n  70% {\n    background: #f0a10e;\n  }\n  100% {\n    background: #353434;\n  }\n}\n@-webkit-keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n@keyframes border-color {\n  0% {\n    border-color: #353434;\n  }\n  40% {\n    border-color: #f5b94b;\n  }\n  70% {\n    border-color: #f0a10e;\n  }\n  100% {\n    border-color: #353434;\n  }\n}\n.Logo, .Logo .LogoPanel, .Logo .LogoLoad {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  align-items: center;\n}\n.Logo .LogoLoad {\n  font-size: 3vh;\n}\n.Logo .LogoPanel {\n  font-size: 2vh;\n  -webkit-animation: slideIn-left 0.6s ease-out both;\n          animation: slideIn-left 0.6s ease-out both;\n}\n.Logo img, .Logo .LogoLoad img, .Logo .LogoPanel img {\n  -webkit-animation: fadeIn 1s ease-out both;\n          animation: fadeIn 1s ease-out both;\n  height: 100%;\n}\n.Logo .LogoText {\n  position: relative;\n  color: white;\n  text-shadow: 1px 1px 2px #aaa9a9;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: initial;\n  padding: 0 8%;\n  font-family: \"Merienda\", cursive;\n}\n.Logo .LogoText span {\n  position: relative;\n  z-index: 1;\n  -webkit-animation: fadeIn 0.8s ease-in both 2s;\n          animation: fadeIn 0.8s ease-in both 2s;\n}\n.Logo .LogoText span:nth-of-type(2) {\n  font-weight: 800;\n}\n.Logo .LogoBar {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: initial;\n  bottom: initial;\n  z-index: 0;\n  height: 100%;\n  width: 100%;\n  background: linear-gradient(284deg, #f59c16 0%, #f7edd2 50%, #f59c16 100%);\n  background-size: 700% 700%;\n  transform-origin: left;\n  -webkit-animation: load 1.5s ease-out both 1s, AnimationName 15s ease infinite;\n          animation: load 1.5s ease-out both 1s, AnimationName 15s ease infinite;\n}\n\n@-webkit-keyframes AnimationName {\n  0% {\n    background-position: 0% 57%;\n  }\n  50% {\n    background-position: 100% 44%;\n  }\n  100% {\n    background-position: 0% 57%;\n  }\n}\n\n@keyframes AnimationName {\n  0% {\n    background-position: 0% 57%;\n  }\n  50% {\n    background-position: 100% 44%;\n  }\n  100% {\n    background-position: 0% 57%;\n  }\n}", ""]);
 
 // exports
 
@@ -89588,8 +89588,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Visual_logo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Visual/logo */ "./resources/js/components/Visual/logo.js");
-/* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./User */ "./resources/js/components/Layout/Aside/User.js");
-/* harmony import */ var _SideMenu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./SideMenu */ "./resources/js/components/Layout/Aside/SideMenu.js");
+/* harmony import */ var _SideMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SideMenu */ "./resources/js/components/Layout/Aside/SideMenu.js");
+/* harmony import */ var _Store_Store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Store/Store */ "./resources/js/components/Store/Store.js");
 /* harmony import */ var _AsideToggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./AsideToggle */ "./resources/js/components/Layout/Aside/AsideToggle.js");
 
 
@@ -89619,10 +89619,10 @@ function Aside(props) {
   }, showLogo && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Visual_logo__WEBPACK_IMPORTED_MODULE_1__["default"], {
     type: "LogoPanel"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "User"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "StoresWrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Store_Store__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Menu"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SideMenu__WEBPACK_IMPORTED_MODULE_2__["default"], {
     switchTable: switchTable,
     stats: stats
   })));
@@ -89846,133 +89846,6 @@ function Stats(props) {
 
 /***/ }),
 
-/***/ "./resources/js/components/Layout/Aside/User.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/Layout/Aside/User.js ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return User; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
-/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/User.scss */ "./resources/js/components/Layout/Aside/scss/User.scss");
-/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_User_scss__WEBPACK_IMPORTED_MODULE_2__);
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-
-
-
-function User(props) {
-  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_1__["store"]),
-      state = _useContext.state,
-      dispatch = _useContext.dispatch;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      hover = _useState2[0],
-      setHover = _useState2[1];
-
-  var exit = function exit() {
-    dispatch.user.logout();
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "UserMenu"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "Circles"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      animationDelay: '0.5s'
-    },
-    className: "Circle"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      animationDelay: '1s'
-    },
-    className: "Circle"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: {
-      animationDelay: '1.5s'
-    },
-    className: "Circle"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    onMouseEnter: function onMouseEnter() {
-      return setHover(1);
-    },
-    onMouseLeave: function onMouseLeave() {
-      return setHover(0);
-    },
-    className: "Name"
-  }, hover ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "Logout",
-    onClick: exit
-  }, "logut") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "Logout"
-  }, state.user.info.name)));
-}
-
-/***/ }),
-
 /***/ "./resources/js/components/Layout/Aside/scss/AsideToggle.scss":
 /*!********************************************************************!*\
   !*** ./resources/js/components/Layout/Aside/scss/AsideToggle.scss ***!
@@ -90042,36 +89915,6 @@ if(false) {}
 
 
 var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./Stats.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Layout/Aside/scss/Stats.scss");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./resources/js/components/Layout/Aside/scss/User.scss":
-/*!*************************************************************!*\
-  !*** ./resources/js/components/Layout/Aside/scss/User.scss ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./User.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Layout/Aside/scss/User.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -90394,7 +90237,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Main; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Store_Store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Store/Store */ "./resources/js/components/Store/Store.js");
+/* harmony import */ var _User_User__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../User/User */ "./resources/js/components/User/User.js");
 /* harmony import */ var _Aside_AsideToggle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Aside/AsideToggle */ "./resources/js/components/Layout/Aside/AsideToggle.js");
 /* harmony import */ var _Table_Table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Table/Table */ "./resources/js/components/Table/Table.js");
 /* harmony import */ var _SearchBar_SearchBar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SearchBar/SearchBar */ "./resources/js/components/SearchBar/SearchBar.js");
@@ -90423,16 +90266,14 @@ function Main(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TopBar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "BarStore"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Store_Store__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    stores: state.stores
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "BarSearch"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SearchBar_SearchBar__WEBPACK_IMPORTED_MODULE_4__["default"], {
     table: table,
     columns: state.tabelColumns[table],
     search: dispatch.search
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "BarUser"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User_User__WEBPACK_IMPORTED_MODULE_1__["default"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "TableCont"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Table_Table__WEBPACK_IMPORTED_MODULE_3__["default"], {
     display: table,
@@ -90890,7 +90731,7 @@ function Form(props) {
       productData = props.productData,
       errors = props.errors,
       state = props.state;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Product"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "PRODUCT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Group-row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Group-half"
@@ -90957,7 +90798,7 @@ function Form(props) {
     onToggle: function onToggle() {
       return inputChange(Number(!productData.shipping), 'shipping');
     }
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Additional"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_InputElements_TextInput__WEBPACK_IMPORTED_MODULE_1__["default"], {
     wrap: "Group-col",
     onChange: function onChange(e) {
       return inputChange(e.target.value, 'manufacturer');
@@ -91568,7 +91409,7 @@ function ProductPreview(props) {
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Checkout"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Checkout"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "CHECKOUT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     style: styles.container,
     className: "Preview"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -92229,11 +92070,10 @@ function SearchBar(props) {
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Search"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "search"
-  }, "Search:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Bar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    placeholder: "search",
     onBlur: function onBlur(e) {},
     onChange: function onChange(e) {
       return setSearchVal(e.target.value);
@@ -92843,7 +92683,7 @@ function SelectPanel(props) {
       style: state.stores.active === store ? {
         background: 'orange'
       } : null,
-      className: "Orange SelectBtn",
+      className: "SelectBtn",
       name: store.name,
       onClick: function onClick() {
         return switchStore(store);
@@ -92860,18 +92700,20 @@ function SelectPanel(props) {
       }
     }));
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Backdrop__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    close: close
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({}, switchAction, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", _extends({}, switchAction, {
     className: "SelectPanel"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "StoresClose"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    onClick: close
+  }, " ", '<', " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "StoresList"
   }, storeList, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "StoreItem"
+    className: "StoreItem CreateBtn"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CreatePanelSwitch, {
     button: {
-      name: '+',
-      className: "Orange SelectBtn"
+      name: 'CREATE STORE',
+      className: "SelectBtn"
     },
     view: {
       create: true
@@ -92882,7 +92724,7 @@ function SelectPanel(props) {
     atClose: {
       animate: 'slide-out-right 0.5s forwards'
     }
-  })))));
+  }))));
 }
 
 /***/ }),
@@ -92901,24 +92743,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SelectPanel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SelectPanel */ "./resources/js/components/Store/SelectPanel.js");
 /* harmony import */ var _HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../HOC/AsSwitch */ "./resources/js/components/HOC/AsSwitch.js");
-/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/Store.scss */ "./resources/js/components/Store/scss/Store.scss");
-/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_scss_Store_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/Store.scss */ "./resources/js/components/Store/scss/Store.scss");
+/* harmony import */ var _scss_Store_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_Store_scss__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
 
 var StoreSwitch = Object(_HOC_AsSwitch__WEBPACK_IMPORTED_MODULE_2__["default"])(_SelectPanel__WEBPACK_IMPORTED_MODULE_1__["default"]);
 function Store(props) {
-  var _props$stores = props.stores,
-      all = _props$stores.all,
-      active = _props$stores.active;
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_3__["store"]),
+      state = _useContext.state;
+
+  var _state$stores = state.stores,
+      all = _state$stores.all,
+      active = _state$stores.active;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Store"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Store:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StoreSwitch, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StoreSwitch, {
     on: !all.length,
     button: {
-      name: active ? active.name : '.....',
-      className: "StoreBtn Orange"
+      name: active ? active.name.toUpperCase() : 'CREATE STORE',
+      className: "StoreBtn"
     },
     atOpen: {
       animate: 'fadeIn 0.2s forwards'
@@ -94251,6 +94098,163 @@ function Transactions(props) {
 
 
 var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./Transaction.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/Transactions/scss/Transaction.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/components/User/User.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/User/User.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return User; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _HOC_StateProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../HOC/StateProvider */ "./resources/js/components/HOC/StateProvider.js");
+/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/User.scss */ "./resources/js/components/User/scss/User.scss");
+/* harmony import */ var _scss_User_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scss_User_scss__WEBPACK_IMPORTED_MODULE_2__);
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+
+
+
+function User(props) {
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_HOC_StateProvider__WEBPACK_IMPORTED_MODULE_1__["store"]),
+      state = _useContext.state,
+      dispatch = _useContext.dispatch;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      hover = _useState2[0],
+      setHover = _useState2[1];
+
+  var exit = function exit() {
+    dispatch.user.logout();
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "UserMenu"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Circles"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      animationDelay: '0.5s'
+    },
+    className: "Circle"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      animationDelay: '1s'
+    },
+    className: "Circle"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: {
+      animationDelay: '1.5s'
+    },
+    className: "Circle"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    onMouseEnter: function onMouseEnter() {
+      return setHover(1);
+    },
+    onMouseLeave: function onMouseLeave() {
+      return setHover(0);
+    },
+    className: "Name"
+  }, hover ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "Logout",
+    onClick: exit
+  }, "logut") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "Logout"
+  }, state.user.info.name)));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/User/scss/User.scss":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/User/scss/User.scss ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader!../../../../../node_modules/postcss-loader/src??ref--10-2!../../../../../node_modules/sass-loader/dist/cjs.js??ref--10-3!./User.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/js/components/User/scss/User.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

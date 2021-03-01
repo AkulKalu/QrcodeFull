@@ -38,9 +38,8 @@ export default function SearchBar(props) {
     })
 
     return <div className="Search">
-                <label htmlFor="search">Search:</label>
                 <div className="Bar">
-                    <input onBlur={e=> {
+                    <input placeholder="search" onBlur={e=> {
                     }} onChange={e => setSearchVal(e.target.value)} value={searchVal} name="search" type="text" ></input>
                     <div className="Filters">
                        {filters}

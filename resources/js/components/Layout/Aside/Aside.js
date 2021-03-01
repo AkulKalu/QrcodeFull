@@ -1,7 +1,7 @@
 import React  from 'react';
 import Logo from '../../Visual/logo';
-import User from './User';
 import SideMenu from './SideMenu';
+import Store from '../../Store/Store'
 import AsideToggle from './AsideToggle';
 
 
@@ -24,10 +24,9 @@ export default function Aside(props) {
                     { showLogo && <Logo type="LogoPanel"/> }
                 </div>
 
-                <div className="User">
-                    <User />
+                <div className="StoresWrap">
+                    <Store />
                 </div>
-
                 <div className="Menu">
                     <SideMenu 
                         switchTable = {switchTable}

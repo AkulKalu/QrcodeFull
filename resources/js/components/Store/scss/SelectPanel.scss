@@ -1,28 +1,47 @@
 @import '../../imports.scss';
 
 .SelectPanel {
-    margin-top: 5%;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    z-index: 10;
     padding: 1vh;
-    height: 70%;
-    width: 60%;
-    box-shadow: 0 0 20px rgb(250, 251, 252);
-    background-color: rgba(236, 238, 243, 0.938);
+    padding-top: 0;
+    height: 100%;
+    width: 100%;
+    @include background(right);
+    .StoresClose {
+        text-align: center;
+        height: 8%;
+        font-weight: 800;
+        font-size: 4vh;
+        span {
+          
+            &:hover {
+                color: crimson;
+                cursor: pointer;
+            }
+        }
+    }
 }
 .StoresList {
     display: flex;
-    flex-flow: wrap;
+    flex-direction: column;
     height: fit-content;
     width: 100%;
-
+    .CreateBtn {
+       margin: 0 auto;
+        border-top: 1px solid $theme1;
+        padding-top: 1vh;
+        text-align: right;
+    }
+   
     .StoreItem {
         position: relative;
         overflow: hidden;
-        box-shadow: 2px 2px 5px gray;
-        font-size: 2.3vh;
-        width: 16%;
-        min-width: fit-content;
-        height: 5vh;
-        margin: 1vh 1%;
+       width: 100%;
+        padding: 0.5vh 0;
         cursor: pointer; 
 
         .Btn {
@@ -31,14 +50,19 @@
         }
         .SelectBtn {
             @extend .Btn;
-            opacity: 0.8;
+            font-size: 2.3vh;
+            width: fit-content;
+            max-width: 80%;
+            color: $theme1;
+            padding: 0 1rem;
             transition: opacity 0.3s;
-            background:$theme1;
+           
             
             &:hover {
-                opacity: 1;
+                background: rgb(255, 213, 136);
             }
         }
+       
         .EditBtn {
             @extend .Btn;
             width: 20%;
@@ -46,13 +70,12 @@
             @include flex-c();
             position: absolute;
             padding: 0 0.5vh;
-            background: rgba(0, 0, 0, 0.212);
             top: 0;
             right: -100%;
             transition: all 0.2s;
             svg {
-                height: 70%;
-                fill: white;
+                height: 65%;
+                fill: $theme1;
             }
             &:hover svg {
                 fill: $higlight;

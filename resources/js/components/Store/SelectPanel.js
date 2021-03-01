@@ -24,7 +24,7 @@ export default function SelectPanel(props) {
     const storeList = state.stores.all.map((store, i) => {
         return <div  key={`storeLI${i}`} className="StoreItem"> 
                         
-                        <Button style={state.stores.active === store ? {background : 'orange'} : null} className="Orange SelectBtn"  name={store.name} onClick={() => switchStore(store)} />
+                        <Button style={state.stores.active === store ? {background : 'orange'} : null} className="SelectBtn"  name={store.name} onClick={() => switchStore(store)} />
                         <EditPanelSwitch
                             view = {{
                                 store : store
@@ -39,15 +39,15 @@ export default function SelectPanel(props) {
                    </div>;
         
     });
-    return <Backdrop close={close} >
-                <div {...switchAction} className="SelectPanel">
+    return <div {...switchAction} className="SelectPanel">
+                    <div className="StoresClose"><span  onClick={close}> {'<'} </span></div>
                     <div  className="StoresList">
                         {storeList}
-                        <div className="StoreItem">
+                        <div className="StoreItem CreateBtn">
                             <CreatePanelSwitch
                                 button={{
-                                    name : '+',
-                                    className: "Orange SelectBtn",
+                                    name : 'CREATE STORE',
+                                    className: "SelectBtn",
                                 }}
                                 view = {{
                                     create : true
@@ -62,6 +62,6 @@ export default function SelectPanel(props) {
                         </div>
                     </div>
                 </div>  
-            </Backdrop> 
+            
     }
 
