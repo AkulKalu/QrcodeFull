@@ -3,33 +3,30 @@
 .Panel {
     @include position($pos:fixed, $r: 0, $b:0);
     z-index: 1;
-    overflow-y: scroll;
-    background: linear-gradient(to left, $bgGrad1, $bgGrad2);
+    background: $bgGrad1;
 
     .Control {
         display: inline-block;
         box-sizing: border-box;
-        width: 80%;
+        width: 90%;
         height: 20%;
         border-top: 1px solid $theme1;
         @include flex($jcont: flex-end);
        
         .PanelBtn {
-            width: 10vh;
-            height: 3vh;
+            width: 11vh;
+            height: 3.5vh;
             margin: 2vh 1vh;
             border-radius: 2px;
-            background: rgb(53, 54, 52);
-            box-shadow: 2px 2px 5px rgb(53, 54, 52);
-            color: rgb(214, 230, 214);
+            color: $fontLight;
+
+            background: $theme1;
             font-weight: 700;
             font-size: 1.5vh;
-            border-color: transparent;
-            transition: 0.6s;
+            transition: 0.3s;
 
             &:hover {
-                border-color:rgb(53,54,52);
-                color: rgb(53,54,52);
+                color: $theme1;
                 background: rgb(231,174,15);
             }
         }
@@ -37,17 +34,11 @@
     .Main {
         display: flex;
         height: 100%;
-        h3 {
-            display: inline-block;
-            text-align: right;
-            border-bottom: 2px solid $border1;
-            font-size: $fontM;
-            padding-bottom: 0.5rem;
-            width: 80%;
-        }
+      
         .Left {
             flex-basis: 50%;
-           
+            height: 100%;
+            
             .Content {
                 padding-left: 15%;
                 height: 100%;
@@ -69,11 +60,12 @@
         .Group-col {
             display: flex;
             flex-direction: column;
-            width: 80%;
+            width: 90%;
 
             label {
                 font-size: $fontN;
                 padding: 1vh 0;
+                padding-top: 2vh;
                 font-weight: 600;
             }
         }
@@ -84,12 +76,11 @@
         
         .Group-row {
             @extend .Group-col;
-            margin: 1vh 0;
+            
             flex-direction: row;
         }
         .Group-text {
             @extend .Group-col;
-            height: 20%;
             margin-top: 2vh;
             padding-bottom: 2vh;
         }

@@ -7,7 +7,7 @@
     position: relative;
     height: 60vh;
     width:  30vh;
-    margin-left: 10%;
+   
     border-radius: 10px;
     border: 5px solid $theme1;
     border-bottom-width: 10px;
@@ -101,7 +101,7 @@
 
 .Colors {
     height: 100%;
-    @include position($r: -25%, $l: initial);
+    @include position($l: -25%);
 
     .ColorWrap {
         @include flex-c();
@@ -121,7 +121,7 @@
 
         .ColorPicker {
             @include position;
-            transform: translateX(80%);
+            transform: translate(-110%, -20%);
          }
     }
     $wrapH : (1 45%, 2 20%, 3 15%, 4 20%);

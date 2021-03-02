@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ColorPick from './ColorPick';
+import FormGroup from '../Shared/FormGroup'
 import './scss/ProductPreview.scss';
 
 
@@ -45,8 +46,8 @@ export default function ProductPreview(props) {
         }
     }
   
-    return <div className="Checkout">
-            <h3>CHECKOUT</h3>
+    return <FormGroup name = 'CHECKOUT'> 
+            <div className="Checkout">
             <div style={styles.container} className="Preview">
                     <div className="Cam">
                         <div></div>
@@ -81,6 +82,7 @@ export default function ProductPreview(props) {
                     </div>
                     </div>    
             </div>
+            </FormGroup>
         
 }
 export const themeCoder = {

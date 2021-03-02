@@ -1,7 +1,7 @@
 @import '../../imports.scss';
 
 .Textarea {
-    height: 100%;
+    min-height: 10vh;
     width: 100%;
     outline: none;
     border: none;

@@ -1,4 +1,4 @@
-
+@import './variables';
 @mixin background($dir: left) {
     background: linear-gradient(to #{$dir}, $bgGrad1, $bgGrad2);
 }

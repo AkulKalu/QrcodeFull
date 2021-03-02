@@ -27,7 +27,7 @@
 </head>
 <body >
     @guest
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-md navbar-light header">
             <div class="container">
                 <div class="nav-item">
                     <a class="over-link" href="{{ url('/') }}">Main</a>

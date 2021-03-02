@@ -5,10 +5,9 @@ input {
 }
 
 body {
-    color: rgb(75, 78, 97);
+    color:$theme1;
     font-family: 'Abhaya Libre', serif;
 }
-
 
 .CPanel {
     @include background(left);

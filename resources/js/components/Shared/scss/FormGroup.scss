@@ -1,0 +1,17 @@
+@import '../../imports.scss';
+.GroupWrap {
+    width: 100%;
+    h3 {
+        text-align: left;
+    }
+    .GroupContent {
+        width:90%;
+        height: 100%;
+        @include flex-c;
+        flex-direction: column;
+        background: linear-gradient(to right, $bgGrad1, $bgGrad2);
+        border-radius: 10px;
+        padding: 4vh 1vh;
+        box-shadow: inset 0 0 2px$theme1;
+    }
+}

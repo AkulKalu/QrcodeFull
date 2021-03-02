@@ -3,31 +3,23 @@
 .AsideToggle {
     width: 4vh;
     height: 4vh;
-    display: block;
-    position: absolute;
-    background:  rgb(235, 233, 233);
-    border: 1px solid  $border1;
+    margin: auto;
+    margin-top: 2vh;
     @include flex-c;
     flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 0 3px $theme1;
     transition: all 0.5s ;
     cursor: pointer;
-    .Line {
-        width: 80%;
-        border-radius: 5px;
-        height: 1px;
-        margin: 10% 0;
-        background: $border1;
-        transition: all 0.5s ;
-    }
-    .Middle {
-        transform: scaleX(0.6);
-        transform-origin: left;
-    }
+    font-weight: 600;
+    font-size: 2vh;
+    color: rgba(128, 128, 128, 0.836);
+
+   
     &:hover {
-        border-color: yellow;
-        .Line {
-            background: yellow;
-        }
+        color: white;
+        border-color: white;
+        background: crimson;
     }
 }
 
@@ -39,12 +31,13 @@ aside {
 }
 main {
     .AsideToggle {
+        position: absolute;
+        margin: unset;
         top: 1.5vh;
         left: 2vh;
         animation: fadeIn 0.2s both 0.2s;
-        .Middle {
-            transform: scaleX(1);
-            transform-origin: left;
+        &:hover {
+            background: rgb(3, 163, 3);
         }
     }
    

@@ -28,7 +28,7 @@ export default function Navigator(props) {
   
     return <div className="BtnWrap">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 492.004 492.004"  className={( left ? "LeftBtn Btn" : "RightBtn Btn")}   style={left ? inactiveLeft : inactiveRight}  xmlSpace="preserve">
+                    viewBox="0 0 492.004 492.004" onClick={navigateHandle}  className={( left ? "LeftBtn Btn" : "RightBtn Btn")}   style={left ? inactiveLeft : inactiveRight}  xmlSpace="preserve">
                     <g>
                         <g>
                             <path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12

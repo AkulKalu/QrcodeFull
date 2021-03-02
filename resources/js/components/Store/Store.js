@@ -16,14 +16,14 @@ export default function Store(props) {
                     button = {
                         {
                             name: active ? active.name.toUpperCase() : 'CREATE STORE' ,
-                            className:"StoreBtn"
+                            className: active ? "StoreBtn" : 'StoreBtn CreateStore'
                         }
                     }
                     atOpen = {{
                         animate: 'fadeIn 0.2s forwards'
                     }}
                     atClose = {{
-                        animate: 'slide-out-right 0.4s forwards',
+                        animate: 'fadeOut 0.2s forwards',
                     }}
                 />
           </div>

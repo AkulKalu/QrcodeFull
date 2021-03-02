@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="Background">
-        <div class = "Header">
+            <div class = "Header">
                    <div class="HContent"></div>
                    <div class = "AccountCtrl" >
                         @if (Route::has('login'))
@@ -29,7 +29,8 @@
                         @endif
                     </div>
             </div>
-            <div class = "Main">
+            <div class="Main">
+            <div class = "Left">
                 <div class = "Content">
                     <div class = "LogoW" >
                         <div id="mainLogo" class="LogoC">
@@ -47,10 +48,12 @@
                    
                 </div>
             </div>
-            <div class="Info">
+            <div class="Right">
                 <div id="mainCards" class = "CardsW" >
                 </div>
             </div>
+            </div>
+          
             
         </div>
    

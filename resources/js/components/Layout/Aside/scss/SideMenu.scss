@@ -1,6 +1,6 @@
 @import '../../../imports.scss';
 
-.SMbutton {
+.SideBtn {
     width: 85%;
     height: 3.5vh;
     border-left: none;
@@ -13,7 +13,7 @@
         width: 100%;
         height: 100%;
         display: flex;
-        transform: translateX(3%);
+        transform: translateX(15%);
         transition: transform 0.2s;
 
         .Indicator {
@@ -44,15 +44,21 @@
     &:hover {
         .BtnContent {
             transform: translateX(0);
+           
         }
+      
+        
     }
+}
+.SideBtnSub {
+    width: 60%;
 }
 .StatsDisplay {
     width: 100%;
 }
 
-.SMActive {
-    @extend .SMbutton;
+.SideBtnActive {
+    @extend .SideBtn;
     .BtnContent {
         transform: unset;
       

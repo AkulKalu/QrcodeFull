@@ -25,7 +25,7 @@ export default function Transactions(props) {
                             animate: 'fadeIn 0.3s forwards'
                         }}
                         atClose = {{
-                            animate: 'slide-out-right 0.5s forwards',
+                            animate: 'fadeOut 0.3s forwards',
                         }}
                     />
         }

@@ -4,18 +4,30 @@
     width: 100%;
     font-size: 2vh;
     
-
+    
     .StoreBtn {
         display: block;
-        background: $theme2;
-        color: white;
+        background: $bgGrad1;
+        color: $theme1;
         font-size: 2.2vh;
         width: 90%;
+        box-shadow: inset 0 0 2px $theme1;
         margin: 0 auto;
-        height: 5vh;
-        
-
+        font-weight: 500;
+        height: 5vh; 
+        border: 1px solid $theme1;
+        transition: background 0.3s;
+        &:hover {
+            background: $theme2;
+            animation: none;
+        }
+       
+       
     }
+
+   .CreateStore {
+    animation: blink 1.5s infinite;
+   }
 
 }
 

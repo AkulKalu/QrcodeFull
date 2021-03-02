@@ -26,7 +26,7 @@
             height: 10%;
             display: flex;
             border-bottom: 1px solid  rgba(92, 90, 90, 0.541);
-            background: rgba(128, 128, 128, 0.205);
+            background: rgba(255, 255, 255, 0.24);
         
             .Cell {
                 @include flex-c();
@@ -40,13 +40,16 @@
                 .Text {
                     padding: 0 0.5rem;
                     position: absolute;
-                    width: 90%;
+                    width: fit-content;
+                    max-width: 95%;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
                     font-size: $fontN;
+                    
                     &:hover {
                         z-index: 100;
+                        max-width: unset;
                         width: fit-content;
                         overflow: visible;
                         background-color: $theme1;
@@ -58,12 +61,13 @@
             }
             
             &:hover {
-                background: rgba(128, 128, 128, 0.342);
+                background: rgba(241, 169, 61, 0.342);
             }
         }
 
         .Message {
             margin: 20% auto;
+            
             font-size: $fontXLL;
             font-weight: 800;
             opacity: 0.3;

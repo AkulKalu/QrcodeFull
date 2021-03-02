@@ -18,11 +18,13 @@ export default function Aside(props) {
     
     return  <aside style={ hide() }>
 
-                {show && <AsideToggle toggle={toogleAside} />}
+                
 
                 <div className="LogoWrap">
                     { showLogo && <Logo type="LogoPanel"/> }
                 </div>
+
+                {show && <AsideToggle toggle={toogleAside} />}
 
                 <div className="StoresWrap">
                     <Store />

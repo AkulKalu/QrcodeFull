@@ -2,6 +2,7 @@ import React ,{Fragment} from 'react';
 import TextInput from '../InputElements/TextInput';
 import TextArea from '../InputElements/TextArea';
 import Currency from '../InputElements/Currency';
+import FormGroup from '../Shared/FormGroup'
 import Toggle from '../InputElements/Toggle';
 
 
@@ -9,49 +10,49 @@ export default function Form(props) {
     let {inputChange, productData, errors, state} = props;
 
     return <Fragment>
-                <h3>PRODUCT</h3>
-            <div className = "Group-row">
-                <div className = "Group-half">
-                        <TextInput
+            <FormGroup name = "PRODUCT">
+                <div className = "Group-row">
+                    <div className = "Group-half">
+                            <TextInput
+                                    wrap = "Group-col"
+                                    onChange = {e => inputChange(e.target.value, 'category')}
+                                    name = "Category"
+                                    dataList = {state.products.categories}
+                                    value={productData.category} 
+                                    error = {errors['category']}
+                                />
+                    </div>
+                    <div className = "Group-half jus-end ">
+                            <TextInput
                                 wrap = "Group-col"
-                                onChange = {e => inputChange(e.target.value, 'category')}
-                                name = "Category"
-                                dataList = {state.products.categories}
-                                value={productData.category} 
-                                error = {errors['category']}
+                                onChange = {e => inputChange(e.target.value, 'model')}
+                                name = "Model"
+                                value={productData.model}
                             />
+                    </div>
                 </div>
-                <div className = "Group-half jus-end ">
+
+                <div className="Group-row">
+                    <div className="Group-half">
+                        <TextInput 
+                            wrap = "Group-col"
+                            onChange = {e => inputChange(e.target.value, 'price')}
+                            name = "Price"
+                            value={productData.price}  
+                            error = {errors['price']}
+                        />
+                        <Currency current={productData.currency} onChange={inputChange}  />
+                    </div>
+                    <div className="Group-half jus-end ">
                         <TextInput
                             wrap = "Group-col"
-                            onChange = {e => inputChange(e.target.value, 'model')}
-                            name = "Model"
-                            value={productData.model}
+                            onChange = {e => inputChange(e.target.value, 'stock')}
+                            name = "Stock"
+                            value={productData.stock}  
+                            error = {errors['stock']}
                         />
-                </div>
-            </div>
-
-            <div className="Group-row">
-                <div className="Group-half">
-                    <TextInput 
-                        wrap = "Group-col"
-                        onChange = {e => inputChange(e.target.value, 'price')}
-                        name = "Price"
-                        value={productData.price}  
-                        error = {errors['price']}
-                    />
-                    <Currency current={productData.currency} onChange={inputChange}  />
-                </div>
-                <div className="Group-half jus-end ">
-                    <TextInput
-                        wrap = "Group-col"
-                        onChange = {e => inputChange(e.target.value, 'stock')}
-                        name = "Stock"
-                        value={productData.stock}  
-                        error = {errors['stock']}
-                    />
-                </div>
-                </div> 
+                    </div>
+                    </div> 
                 <div className = "Group-row">
                     <div className = "Group-half">
                         <div className="Group-col">
@@ -67,9 +68,10 @@ export default function Form(props) {
                         </div>
                     </div>
                 </div>  
+            </FormGroup>
             
            
-            
+            <FormGroup >
                 <TextInput
                     wrap = "Group-col"
                     onChange = {e => inputChange(e.target.value, 'manufacturer')}
@@ -96,5 +98,6 @@ export default function Form(props) {
                     value={productData.image_url} 
                     error = {errors['image_url']}
                 />  
+                </FormGroup>
                 </Fragment>
 }

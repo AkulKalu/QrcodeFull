@@ -1,26 +1,32 @@
-
-
 .over-link {
-    color: white;
-    font-weight: 500;
+    color: $theme1;
+    font-size: 2vh;
+    font-weight: 600;
     margin: 0 1vh;
     &:hover {
-        color: yellow;
+        color: $theme1;
+        text-decoration: underline;
+      
     }
 }
-
+.header {
+    height: 5vh;
+    @include background(top);
+    box-shadow: 0 1px 3px $theme1;
+}
 .over-btn {
-    background: rgb(63, 172, 226);
-    color: white;
+    @include background(right);
+    color: $theme1;
     width: 25%;
     min-width: fit-content;
     height: 100%;
     min-height: 2.5rem;
-    border: 1px solid white;
+    border: 1px solid $theme1;
     outline: none;
     &:hover {
-        color: yellow;
-        border-color: yellow;
+        color: white;
+        background: $theme1;
+        border-color: white;
     }
     &:focus {
        outline: none;
@@ -28,37 +34,40 @@
 }
 
 .over-card {
-    background: rgb(56, 136, 201);
+    @include background(right);
    
     margin-top: 10%;
-    border-color: white;
-    color: white;
+    border-color:$theme1;
+    color: $theme1;
 }
 .over-card-header {
     background: none;
     font-weight:500;
-    border-color: white;
+    border-color: $theme1;
+}
+.over-input {
+    border-color: $theme1;
 }
 .over-input:focus {
-    box-shadow: 0 0 5px greenyellow;
+    box-shadow: 0 0 5px rgb(150, 150, 22);
 }
 .over-invalid-feedback {
     color: #c32231;
 }
 .ham-line {
-    background: white;
+    background: $theme1;
     width: 2rem;
     margin: 0.5rem 0;
     height: 1px;
-    background: white;
+    background: $theme1;
 }
 .over-ham-btn {
-    border: 1px solid white!important;
+    border: 1px solid $theme1!important;
 }
 .over-ham-btn:focus {
     outline: none;
-    border-color: yellow;
+    border-color:  rgb(150, 150, 22);
 }
 .over-ham-btn:focus .ham-line {
-    background: yellow;
+    background: rgb(150, 150, 22);
 }
