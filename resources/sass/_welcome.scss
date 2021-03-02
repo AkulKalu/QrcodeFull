@@ -7,7 +7,7 @@ body {
     padding: 0;
     font-family: 'Abhaya Libre', serif;
     @include background(right);
-    animation: fadeIn 0.2s ease-in;
+    animation: fadeIn 0.2s ease-in both;
 }
 
 
