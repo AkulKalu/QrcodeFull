@@ -32,32 +32,17 @@
                 <div class="nav-item">
                     <a class="over-link" href="{{ url('/') }}">Main</a>
                 </div>
-               
-                <button  class="navbar-toggler over-ham-btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <div class="ham-line"></div>
-                    <div class="ham-line"></div>
-                    <div class="ham-line"></div>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                            <li class="nav-item">
-                                <a class="over-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="over-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                    </ul>
+                <div style="display:flex">
+                    <div class="nav-item">
+                        <a class="over-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </div>
+                    @if (Route::has('register'))
+                        <div class="nav-item">
+                            <a class="over-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </div>
+                    @endif
                 </div>
+               
             </div>
         </nav>
         <main class="py-4">

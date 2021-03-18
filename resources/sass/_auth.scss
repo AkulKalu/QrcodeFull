@@ -1,18 +1,20 @@
 .over-link {
     color: $theme1;
-    font-size: 2vh;
-    font-weight: 600;
-    margin: 0 1vh;
+    font-size: 2.1vh;
+    margin: 0 1.2vh;
     &:hover {
         color: $theme1;
         text-decoration: underline;
-      
     }
 }
 .header {
     height: 5vh;
     @include background(top);
     box-shadow: 0 1px 3px $theme1;
+    @media only screen and (max-width: 600px) {
+        background: none;
+        box-shadow: none;
+     }
 }
 .over-btn {
     @include background(right);

@@ -1,6 +1,7 @@
+@import '../../imports.scss';
 .Mail {
     fill:#ef295c;
-    height: 100%;
+    height: 3vh;
     transition:  fill 0.3s;
     cursor: pointer;
     &:hover {
@@ -8,5 +9,8 @@
     }
 }
 .MailWrap {
-    height: 40%;
+    height: 100%;
+    @include flex-c;
+
 }
+
