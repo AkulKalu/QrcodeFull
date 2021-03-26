@@ -9,12 +9,6 @@
 }
 .header {
     height: 5vh;
-    @include background(top);
-    box-shadow: 0 1px 3px $theme1;
-    @media only screen and (max-width: 600px) {
-        background: none;
-        box-shadow: none;
-     }
 }
 .over-btn {
     @include background(right);

@@ -1,8 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
   font-family: "Abhaya Libre", serif;
-  background-color: #f8f5ec;
+  background: linear-gradient(to bottom, #f2984a00, #ffda6c);
   -webkit-animation: fadeIn 0.2s ease-in both;
           animation: fadeIn 0.2s ease-in both;
 }
@@ -16,16 +17,7 @@ body {
 
 .Background .Header {
   height: 5vh;
-  background: linear-gradient(to top, #eeecd5, #fcfbf5);
-  box-shadow: 0 1px 3px #422121;
   position: relative;
-}
-
-@media only screen and (max-width: 600px) {
-  .Background .Header {
-    background: none;
-    box-shadow: none;
-  }
 }
 
 .Background .Header .AccountCtrl {
@@ -112,11 +104,11 @@ body {
 
 .Background .Left .Content form .Demo {
   margin: 4vh;
-  color: #422121;
+  color: white;
   border-radius: 5px;
   font-size: 3vh;
   border: 1px solid #422121;
-  background: linear-gradient(to left, #eeecd5, #fcfbf5);
+  background: #422121;
   padding: 1vh 3vh;
   cursor: pointer;
   outline: none;
@@ -124,8 +116,8 @@ body {
 }
 
 .Background .Left .Content form .Demo:hover {
-  color: white;
-  background: #422121;
+  color: #422121;
+  background: linear-gradient(to left, #eeecd5, #fcfbf5);
 }
 
 .Background .Right {
@@ -160,15 +152,6 @@ body {
 
 .header {
   height: 5vh;
-  background: linear-gradient(to top, #eeecd5, #fcfbf5);
-  box-shadow: 0 1px 3px #422121;
-}
-
-@media only screen and (max-width: 600px) {
-  .header {
-    background: none;
-    box-shadow: none;
-  }
 }
 
 .over-btn {

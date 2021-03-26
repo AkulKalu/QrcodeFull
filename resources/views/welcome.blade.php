@@ -30,31 +30,29 @@
                     </div>
             </div>
             <div class="Main">
-            <div class = "Left">
-                <div class = "Content">
-                    <div class = "LogoW" >
-                        <div id="mainLogo" class="LogoC">
-                           
+                <div class = "Left">
+                    <div class = "Content">
+                        <div class = "LogoW" >
+                            <div id="mainLogo" class="LogoC">
+                            
+                            </div>
                         </div>
+                        <form method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <input id="email" type="email"   name="email" value="friend@gmail.com" hidden>
+                                <input  id="password" type="password" name="password" value="12345678" required hidden>
+                                <button  type="submit" class="Demo">
+                                    DEMO
+                                    </button>
+                                </form>
+                    
                     </div>
-                    <form method="POST" action="{{ route('login') }}">
-                            @csrf
-                            <input id="email" type="email"   name="email" value="friend@gmail.com" hidden>
-                            <input  id="password" type="password" name="password" value="12345678" required hidden>
-                            <button  type="submit" class="Demo">
-                                   DEMO
-                                </button>
-                            </form>
-                   
+                </div>
+                <div class="Right">
+                    <div id="mainCards" class = "CardsW" >
+                    </div>
                 </div>
             </div>
-            <div class="Right">
-                <div id="mainCards" class = "CardsW" >
-                </div>
-            </div>
-            </div>
-          
-            
         </div>
    
            

@@ -2,12 +2,11 @@
 @import './variables';
 
 body {
-   
     margin: 0;
     padding: 0;
+    height: 100vh;
     font-family: 'Abhaya Libre', serif;
-    // @include background(right);
-    background-color: rgb(248, 245, 236);
+    background: linear-gradient(to bottom, #f2984a00, #ffda6c);
     animation: fadeIn 0.2s ease-in both;
 }
 
@@ -15,17 +14,12 @@ body {
 
 .Background {
     @include flex($dir: column);
+    
+  
     .Header {
         height: 5vh;
-        @include background(top);
-        box-shadow: 0 1px 3px $theme1;
         position: relative;
-        @media only screen and (max-width: 600px) {
-            background: none;
-            box-shadow: none;
-         }
-     
-        
+
         .AccountCtrl {
             height: 100%;
             @include flex-c;
@@ -86,19 +80,20 @@ body {
                 margin: auto;
                 .Demo {
                     margin: 4vh;
-                    color: $theme1;
+                    color: white;
                     border-radius: 5px;
                     font-size: 3vh;
                     border: 1px solid $theme1;
-                    @include background(left);
+                    background: $theme1;
+                  
                     padding: 1vh 3vh;
                     cursor: pointer;
                     outline: none;
                     filter: drop-shadow(1px 1px 4px rgba(58, 58, 58, 0.295));
                    
                     &:hover {
-                        color: white;
-                        background: $theme1;
+                        color: $theme1;
+                        @include background(left);
                         
                     }
                 }
